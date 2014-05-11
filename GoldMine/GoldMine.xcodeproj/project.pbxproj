@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04FC3CF0191F2CD000CB8F80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CEF191F2CD000CB8F80 /* Foundation.framework */; };
+		04FC3CF2191F2CD000CB8F80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CF1191F2CD000CB8F80 /* CoreGraphics.framework */; };
+		04FC3CF4191F2CD000CB8F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CF3191F2CD000CB8F80 /* UIKit.framework */; };
+		04FC3CFA191F2CD000CB8F80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3CF8191F2CD000CB8F80 /* InfoPlist.strings */; };
+		04FC3CFC191F2CD000CB8F80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3CFB191F2CD000CB8F80 /* main.m */; };
+		04FC3D00191F2CD000CB8F80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3CFF191F2CD000CB8F80 /* AppDelegate.m */; };
+		04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D01191F2CD000CB8F80 /* Main.storyboard */; };
+		04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D05191F2CD000CB8F80 /* ViewController.m */; };
+		04FC3D08191F2CD000CB8F80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D07191F2CD000CB8F80 /* Images.xcassets */; };
+		04FC3D0F191F2CD100CB8F80 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3D0E191F2CD100CB8F80 /* XCTest.framework */; };
+		04FC3D10191F2CD100CB8F80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CEF191F2CD000CB8F80 /* Foundation.framework */; };
+		04FC3D11191F2CD100CB8F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CF3191F2CD000CB8F80 /* UIKit.framework */; };
+		04FC3D19191F2CD100CB8F80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D17191F2CD100CB8F80 /* InfoPlist.strings */; };
+		04FC3D1B191F2CD100CB8F80 /* GoldMineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D1A191F2CD100CB8F80 /* GoldMineTests.m */; };
+		04FC3D35191F2D0300CB8F80 /* DrawerLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D26191F2D0300CB8F80 /* DrawerLeftTableViewCell.m */; };
+		04FC3D36191F2D0300CB8F80 /* MenuTopPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D28191F2D0300CB8F80 /* MenuTopPhotoView.m */; };
+		04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D2A191F2D0300CB8F80 /* MMDrawerBarButtonItem.m */; };
+		04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D2C191F2D0300CB8F80 /* MMDrawerController.m */; };
+		04FC3D39191F2D0300CB8F80 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D2E191F2D0300CB8F80 /* MMDrawerVisualState.m */; };
+		04FC3D3A191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D30191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m */; };
+		04FC3D3B191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D32191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m */; };
+		04FC3D3C191F2D0300CB8F80 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D34191F2D0300CB8F80 /* UIViewController+MMDrawerController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04FC3D12191F2CD100CB8F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04FC3CE4191F2CD000CB8F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04FC3CEB191F2CD000CB8F80;
+			remoteInfo = GoldMine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04FC3CEC191F2CD000CB8F80 /* GoldMine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldMine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FC3CEF191F2CD000CB8F80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04FC3CF1191F2CD000CB8F80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04FC3CF3191F2CD000CB8F80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04FC3CF7191F2CD000CB8F80 /* GoldMine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoldMine-Info.plist"; sourceTree = "<group>"; };
+		04FC3CF9191F2CD000CB8F80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04FC3CFB191F2CD000CB8F80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04FC3CFD191F2CD000CB8F80 /* GoldMine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoldMine-Prefix.pch"; sourceTree = "<group>"; };
+		04FC3CFE191F2CD000CB8F80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04FC3CFF191F2CD000CB8F80 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04FC3D02191F2CD000CB8F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04FC3D04191F2CD000CB8F80 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04FC3D05191F2CD000CB8F80 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04FC3D07191F2CD000CB8F80 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04FC3D0D191F2CD100CB8F80 /* GoldMineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldMineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FC3D0E191F2CD100CB8F80 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		04FC3D16191F2CD100CB8F80 /* GoldMineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoldMineTests-Info.plist"; sourceTree = "<group>"; };
+		04FC3D18191F2CD100CB8F80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04FC3D1A191F2CD100CB8F80 /* GoldMineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoldMineTests.m; sourceTree = "<group>"; };
+		04FC3D25191F2D0300CB8F80 /* DrawerLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerLeftTableViewCell.h; sourceTree = "<group>"; };
+		04FC3D26191F2D0300CB8F80 /* DrawerLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerLeftTableViewCell.m; sourceTree = "<group>"; };
+		04FC3D27191F2D0300CB8F80 /* MenuTopPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTopPhotoView.h; sourceTree = "<group>"; };
+		04FC3D28191F2D0300CB8F80 /* MenuTopPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTopPhotoView.m; sourceTree = "<group>"; };
+		04FC3D29191F2D0300CB8F80 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		04FC3D2A191F2D0300CB8F80 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		04FC3D2B191F2D0300CB8F80 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		04FC3D2C191F2D0300CB8F80 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		04FC3D2D191F2D0300CB8F80 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		04FC3D2E191F2D0300CB8F80 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		04FC3D2F191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineDrawerVisualStateManager.h; sourceTree = "<group>"; };
+		04FC3D30191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineDrawerVisualStateManager.m; sourceTree = "<group>"; };
+		04FC3D31191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineSideDrawerViewController.h; sourceTree = "<group>"; };
+		04FC3D32191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineSideDrawerViewController.m; sourceTree = "<group>"; };
+		04FC3D33191F2D0300CB8F80 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		04FC3D34191F2D0300CB8F80 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04FC3CE9191F2CD000CB8F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FC3CF2191F2CD000CB8F80 /* CoreGraphics.framework in Frameworks */,
+				04FC3CF4191F2CD000CB8F80 /* UIKit.framework in Frameworks */,
+				04FC3CF0191F2CD000CB8F80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FC3D0A191F2CD100CB8F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FC3D0F191F2CD100CB8F80 /* XCTest.framework in Frameworks */,
+				04FC3D11191F2CD100CB8F80 /* UIKit.framework in Frameworks */,
+				04FC3D10191F2CD100CB8F80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04FC3CE3191F2CD000CB8F80 = {
+			isa = PBXGroup;
+			children = (
+				04FC3CF5191F2CD000CB8F80 /* GoldMine */,
+				04FC3D14191F2CD100CB8F80 /* GoldMineTests */,
+				04FC3CEE191F2CD000CB8F80 /* Frameworks */,
+				04FC3CED191F2CD000CB8F80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04FC3CED191F2CD000CB8F80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3CEC191F2CD000CB8F80 /* GoldMine.app */,
+				04FC3D0D191F2CD100CB8F80 /* GoldMineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04FC3CEE191F2CD000CB8F80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3CEF191F2CD000CB8F80 /* Foundation.framework */,
+				04FC3CF1191F2CD000CB8F80 /* CoreGraphics.framework */,
+				04FC3CF3191F2CD000CB8F80 /* UIKit.framework */,
+				04FC3D0E191F2CD100CB8F80 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04FC3CF5191F2CD000CB8F80 /* GoldMine */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3D24191F2D0300CB8F80 /* DrawerController */,
+				04FC3CFE191F2CD000CB8F80 /* AppDelegate.h */,
+				04FC3CFF191F2CD000CB8F80 /* AppDelegate.m */,
+				04FC3D01191F2CD000CB8F80 /* Main.storyboard */,
+				04FC3D04191F2CD000CB8F80 /* ViewController.h */,
+				04FC3D05191F2CD000CB8F80 /* ViewController.m */,
+				04FC3D07191F2CD000CB8F80 /* Images.xcassets */,
+				04FC3CF6191F2CD000CB8F80 /* Supporting Files */,
+			);
+			path = GoldMine;
+			sourceTree = "<group>";
+		};
+		04FC3CF6191F2CD000CB8F80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3CF7191F2CD000CB8F80 /* GoldMine-Info.plist */,
+				04FC3CF8191F2CD000CB8F80 /* InfoPlist.strings */,
+				04FC3CFB191F2CD000CB8F80 /* main.m */,
+				04FC3CFD191F2CD000CB8F80 /* GoldMine-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04FC3D14191F2CD100CB8F80 /* GoldMineTests */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3D1A191F2CD100CB8F80 /* GoldMineTests.m */,
+				04FC3D15191F2CD100CB8F80 /* Supporting Files */,
+			);
+			path = GoldMineTests;
+			sourceTree = "<group>";
+		};
+		04FC3D15191F2CD100CB8F80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3D16191F2CD100CB8F80 /* GoldMineTests-Info.plist */,
+				04FC3D17191F2CD100CB8F80 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04FC3D24191F2D0300CB8F80 /* DrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3D25191F2D0300CB8F80 /* DrawerLeftTableViewCell.h */,
+				04FC3D26191F2D0300CB8F80 /* DrawerLeftTableViewCell.m */,
+				04FC3D27191F2D0300CB8F80 /* MenuTopPhotoView.h */,
+				04FC3D28191F2D0300CB8F80 /* MenuTopPhotoView.m */,
+				04FC3D29191F2D0300CB8F80 /* MMDrawerBarButtonItem.h */,
+				04FC3D2A191F2D0300CB8F80 /* MMDrawerBarButtonItem.m */,
+				04FC3D2B191F2D0300CB8F80 /* MMDrawerController.h */,
+				04FC3D2C191F2D0300CB8F80 /* MMDrawerController.m */,
+				04FC3D2D191F2D0300CB8F80 /* MMDrawerVisualState.h */,
+				04FC3D2E191F2D0300CB8F80 /* MMDrawerVisualState.m */,
+				04FC3D2F191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.h */,
+				04FC3D30191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m */,
+				04FC3D31191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.h */,
+				04FC3D32191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m */,
+				04FC3D33191F2D0300CB8F80 /* UIViewController+MMDrawerController.h */,
+				04FC3D34191F2D0300CB8F80 /* UIViewController+MMDrawerController.m */,
+			);
+			path = DrawerController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04FC3CEB191F2CD000CB8F80 /* GoldMine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04FC3D1E191F2CD100CB8F80 /* Build configuration list for PBXNativeTarget "GoldMine" */;
+			buildPhases = (
+				04FC3CE8191F2CD000CB8F80 /* Sources */,
+				04FC3CE9191F2CD000CB8F80 /* Frameworks */,
+				04FC3CEA191F2CD000CB8F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldMine;
+			productName = GoldMine;
+			productReference = 04FC3CEC191F2CD000CB8F80 /* GoldMine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04FC3D0C191F2CD100CB8F80 /* GoldMineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04FC3D21191F2CD100CB8F80 /* Build configuration list for PBXNativeTarget "GoldMineTests" */;
+			buildPhases = (
+				04FC3D09191F2CD100CB8F80 /* Sources */,
+				04FC3D0A191F2CD100CB8F80 /* Frameworks */,
+				04FC3D0B191F2CD100CB8F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04FC3D13191F2CD100CB8F80 /* PBXTargetDependency */,
+			);
+			name = GoldMineTests;
+			productName = GoldMineTests;
+			productReference = 04FC3D0D191F2CD100CB8F80 /* GoldMineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04FC3CE4191F2CD000CB8F80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = us;
+				TargetAttributes = {
+					04FC3D0C191F2CD100CB8F80 = {
+						TestTargetID = 04FC3CEB191F2CD000CB8F80;
+					};
+				};
+			};
+			buildConfigurationList = 04FC3CE7191F2CD000CB8F80 /* Build configuration list for PBXProject "GoldMine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04FC3CE3191F2CD000CB8F80;
+			productRefGroup = 04FC3CED191F2CD000CB8F80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04FC3CEB191F2CD000CB8F80 /* GoldMine */,
+				04FC3D0C191F2CD100CB8F80 /* GoldMineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04FC3CEA191F2CD000CB8F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FC3D08191F2CD000CB8F80 /* Images.xcassets in Resources */,
+				04FC3CFA191F2CD000CB8F80 /* InfoPlist.strings in Resources */,
+				04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FC3D0B191F2CD100CB8F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FC3D19191F2CD100CB8F80 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04FC3CE8191F2CD000CB8F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FC3D3C191F2D0300CB8F80 /* UIViewController+MMDrawerController.m in Sources */,
+				04FC3D3A191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m in Sources */,
+				04FC3D36191F2D0300CB8F80 /* MenuTopPhotoView.m in Sources */,
+				04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */,
+				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
+				04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */,
+				04FC3D39191F2D0300CB8F80 /* MMDrawerVisualState.m in Sources */,
+				04FC3D00191F2CD000CB8F80 /* AppDelegate.m in Sources */,
+				04FC3D3B191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m in Sources */,
+				04FC3CFC191F2CD000CB8F80 /* main.m in Sources */,
+				04FC3D35191F2D0300CB8F80 /* DrawerLeftTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FC3D09191F2CD100CB8F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FC3D1B191F2CD100CB8F80 /* GoldMineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04FC3D13191F2CD100CB8F80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04FC3CEB191F2CD000CB8F80 /* GoldMine */;
+			targetProxy = 04FC3D12191F2CD100CB8F80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04FC3CF8191F2CD000CB8F80 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04FC3CF9191F2CD000CB8F80 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		04FC3D01191F2CD000CB8F80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04FC3D02191F2CD000CB8F80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04FC3D17191F2CD100CB8F80 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04FC3D18191F2CD100CB8F80 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04FC3D1C191F2CD100CB8F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04FC3D1D191F2CD100CB8F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04FC3D1F191F2CD100CB8F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
+				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		04FC3D20191F2CD100CB8F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
+				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		04FC3D22191F2CD100CB8F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GoldMine.app/GoldMine";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GoldMineTests/GoldMineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		04FC3D23191F2CD100CB8F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GoldMine.app/GoldMine";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
+				INFOPLIST_FILE = "GoldMineTests/GoldMineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04FC3CE7191F2CD000CB8F80 /* Build configuration list for PBXProject "GoldMine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FC3D1C191F2CD100CB8F80 /* Debug */,
+				04FC3D1D191F2CD100CB8F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04FC3D1E191F2CD100CB8F80 /* Build configuration list for PBXNativeTarget "GoldMine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FC3D1F191F2CD100CB8F80 /* Debug */,
+				04FC3D20191F2CD100CB8F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		04FC3D21191F2CD100CB8F80 /* Build configuration list for PBXNativeTarget "GoldMineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FC3D22191F2CD100CB8F80 /* Debug */,
+				04FC3D23191F2CD100CB8F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04FC3CE4191F2CD000CB8F80 /* Project object */;
+}
