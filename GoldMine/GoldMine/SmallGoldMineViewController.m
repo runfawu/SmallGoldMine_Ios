@@ -44,7 +44,6 @@
 }
 
 -(void)viewDidLoad{
-    
     self.segmentedControl = [[CustomSegmentedControl alloc] initWithFrame:CGRectMake(0.0, 60.0, 320.0, 40)];
     if (IS_IOS7) {
         self.segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
@@ -55,6 +54,10 @@
     [self.view addSubview:segmentedControl];
 //    segmentedControl=nil;
     
+    UIImageView *bannerImageView=[[UIImageView alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY(self.segmentedControl.frame)-65.0, self.view.frame.size.width, 150.0)];
+    bannerImageView.userInteractionEnabled=YES;
+    bannerImageView.image=[UIImage imageNamed:@"banner"];
+    [self.view addSubview:bannerImageView];
     
     [super viewDidLoad];
 }
