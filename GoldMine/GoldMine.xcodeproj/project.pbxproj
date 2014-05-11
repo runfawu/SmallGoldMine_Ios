@@ -43,6 +43,11 @@
 		04FC3D57191F4FD200CB8F80 /* wealth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D4A191F4FD200CB8F80 /* wealth@2x.png */; };
 		04FC3D58191F4FD200CB8F80 /* wealth_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D4B191F4FD200CB8F80 /* wealth_bg@2x.png */; };
 		04FC3D5F191F56D500CB8F80 /* SmallGoldMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */; };
+		04FC3D62191F755900CB8F80 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D61191F755900CB8F80 /* SuperViewController.m */; };
+		04FC3D68191F88AD00CB8F80 /* add_ brand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D64191F88AD00CB8F80 /* add_ brand@2x.png */; };
+		04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D65191F88AD00CB8F80 /* banner@2x.png */; };
+		04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D66191F88AD00CB8F80 /* personal@2x.png */; };
+		04FC3D6B191F88AD00CB8F80 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D67191F88AD00CB8F80 /* scan@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +111,12 @@
 		04FC3D4B191F4FD200CB8F80 /* wealth_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wealth_bg@2x.png"; sourceTree = "<group>"; };
 		04FC3D5D191F56D500CB8F80 /* SmallGoldMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineViewController.h; sourceTree = "<group>"; };
 		04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineViewController.m; sourceTree = "<group>"; };
+		04FC3D60191F755900CB8F80 /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewController.h; sourceTree = "<group>"; };
+		04FC3D61191F755900CB8F80 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
+		04FC3D64191F88AD00CB8F80 /* add_ brand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_ brand@2x.png"; sourceTree = "<group>"; };
+		04FC3D65191F88AD00CB8F80 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
+		04FC3D66191F88AD00CB8F80 /* personal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personal@2x.png"; sourceTree = "<group>"; };
+		04FC3D67191F88AD00CB8F80 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +181,8 @@
 				04FC3D24191F2D0300CB8F80 /* DrawerController */,
 				04FC3CFE191F2CD000CB8F80 /* AppDelegate.h */,
 				04FC3CFF191F2CD000CB8F80 /* AppDelegate.m */,
+				04FC3D60191F755900CB8F80 /* SuperViewController.h */,
+				04FC3D61191F755900CB8F80 /* SuperViewController.m */,
 				04FC3D01191F2CD000CB8F80 /* Main.storyboard */,
 				04FC3D04191F2CD000CB8F80 /* ViewController.h */,
 				04FC3D05191F2CD000CB8F80 /* ViewController.m */,
@@ -234,6 +247,7 @@
 		04FC3D3D191F4FD200CB8F80 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				04FC3D63191F88AD00CB8F80 /* SmallGoldMine */,
 				04FC3D3E191F4FD200CB8F80 /* LeftMenu */,
 			);
 			path = Images;
@@ -266,6 +280,17 @@
 				04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */,
 			);
 			name = SmallGoldMine;
+			sourceTree = "<group>";
+		};
+		04FC3D63191F88AD00CB8F80 /* SmallGoldMine */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3D64191F88AD00CB8F80 /* add_ brand@2x.png */,
+				04FC3D65191F88AD00CB8F80 /* banner@2x.png */,
+				04FC3D66191F88AD00CB8F80 /* personal@2x.png */,
+				04FC3D67191F88AD00CB8F80 /* scan@2x.png */,
+			);
+			path = SmallGoldMine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,10 +370,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FC3D4C191F4FD200CB8F80 /* cell_seperate_line@2x.png in Resources */,
+				04FC3D6B191F88AD00CB8F80 /* scan@2x.png in Resources */,
 				04FC3D4D191F4FD200CB8F80 /* credit@2x.png in Resources */,
+				04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */,
 				04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */,
 				04FC3D53191F4FD200CB8F80 /* rank@2x.png in Resources */,
 				04FC3D08191F2CD000CB8F80 /* Images.xcassets in Resources */,
+				04FC3D68191F88AD00CB8F80 /* add_ brand@2x.png in Resources */,
 				04FC3CFA191F2CD000CB8F80 /* InfoPlist.strings in Resources */,
 				04FC3D55191F4FD200CB8F80 /* task_release@2x.png in Resources */,
 				04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */,
@@ -359,6 +387,7 @@
 				04FC3D4F191F4FD200CB8F80 /* guys@2x.png in Resources */,
 				04FC3D58191F4FD200CB8F80 /* wealth_bg@2x.png in Resources */,
 				04FC3D52191F4FD200CB8F80 /* portrait_bg@2x.png in Resources */,
+				04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */,
 				04FC3D56191F4FD200CB8F80 /* vip_phonebook@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FC3D62191F755900CB8F80 /* SuperViewController.m in Sources */,
 				04FC3D3C191F2D0300CB8F80 /* UIViewController+MMDrawerController.m in Sources */,
 				04FC3D3A191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m in Sources */,
 				04FC3D36191F2D0300CB8F80 /* MenuTopPhotoView.m in Sources */,

@@ -23,10 +23,11 @@
     SmallGoldMineSideDrawerViewController *leftMenuVC=[[SmallGoldMineSideDrawerViewController alloc] init];
     
     SmallGoldMineViewController *smallGoldMineVC=[[SmallGoldMineViewController alloc] init];
-    self.goldMineNav=[[UINavigationController alloc] initWithRootViewController:smallGoldMineVC];
+    
+    UINavigationController *goldMineNavGation=[[UINavigationController alloc] initWithRootViewController:smallGoldMineVC];
     
     MMDrawerController * drawerController = [[MMDrawerController alloc]
-                                             initWithCenterViewController:self.goldMineNav leftDrawerViewController:leftMenuVC];
+                                             initWithCenterViewController:goldMineNavGation leftDrawerViewController:leftMenuVC];
     [drawerController setMaximumRightDrawerWidth:277.0];
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
@@ -40,7 +41,7 @@
              block(drawerController, drawerSide, percentVisible);
          }
      }];
-    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController=drawerController;
     smallGoldMineVC=nil;
     

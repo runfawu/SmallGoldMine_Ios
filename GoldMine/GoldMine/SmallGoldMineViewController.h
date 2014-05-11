@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SmallGoldMineViewController : UIViewController
+@interface SmallGoldMineViewController :SuperViewController
 
 @end
