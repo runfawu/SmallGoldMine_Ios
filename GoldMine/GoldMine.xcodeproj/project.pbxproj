@@ -29,6 +29,20 @@
 		04FC3D3A191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D30191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m */; };
 		04FC3D3B191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D32191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m */; };
 		04FC3D3C191F2D0300CB8F80 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D34191F2D0300CB8F80 /* UIViewController+MMDrawerController.m */; };
+		04FC3D4C191F4FD200CB8F80 /* cell_seperate_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D3F191F4FD200CB8F80 /* cell_seperate_line@2x.png */; };
+		04FC3D4D191F4FD200CB8F80 /* credit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D40191F4FD200CB8F80 /* credit@2x.png */; };
+		04FC3D4E191F4FD200CB8F80 /* credit_git@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D41191F4FD200CB8F80 /* credit_git@2x.png */; };
+		04FC3D4F191F4FD200CB8F80 /* guys@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D42191F4FD200CB8F80 /* guys@2x.png */; };
+		04FC3D50191F4FD200CB8F80 /* hot_product@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D43191F4FD200CB8F80 /* hot_product@2x.png */; };
+		04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D44191F4FD200CB8F80 /* more@2x.png */; };
+		04FC3D52191F4FD200CB8F80 /* portrait_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D45191F4FD200CB8F80 /* portrait_bg@2x.png */; };
+		04FC3D53191F4FD200CB8F80 /* rank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D46191F4FD200CB8F80 /* rank@2x.png */; };
+		04FC3D54191F4FD200CB8F80 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D47191F4FD200CB8F80 /* setting@2x.png */; };
+		04FC3D55191F4FD200CB8F80 /* task_release@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D48191F4FD200CB8F80 /* task_release@2x.png */; };
+		04FC3D56191F4FD200CB8F80 /* vip_phonebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D49191F4FD200CB8F80 /* vip_phonebook@2x.png */; };
+		04FC3D57191F4FD200CB8F80 /* wealth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D4A191F4FD200CB8F80 /* wealth@2x.png */; };
+		04FC3D58191F4FD200CB8F80 /* wealth_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D4B191F4FD200CB8F80 /* wealth_bg@2x.png */; };
+		04FC3D5F191F56D500CB8F80 /* SmallGoldMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +91,21 @@
 		04FC3D32191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineSideDrawerViewController.m; sourceTree = "<group>"; };
 		04FC3D33191F2D0300CB8F80 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		04FC3D34191F2D0300CB8F80 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		04FC3D3F191F4FD200CB8F80 /* cell_seperate_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_seperate_line@2x.png"; sourceTree = "<group>"; };
+		04FC3D40191F4FD200CB8F80 /* credit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit@2x.png"; sourceTree = "<group>"; };
+		04FC3D41191F4FD200CB8F80 /* credit_git@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit_git@2x.png"; sourceTree = "<group>"; };
+		04FC3D42191F4FD200CB8F80 /* guys@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guys@2x.png"; sourceTree = "<group>"; };
+		04FC3D43191F4FD200CB8F80 /* hot_product@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot_product@2x.png"; sourceTree = "<group>"; };
+		04FC3D44191F4FD200CB8F80 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		04FC3D45191F4FD200CB8F80 /* portrait_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portrait_bg@2x.png"; sourceTree = "<group>"; };
+		04FC3D46191F4FD200CB8F80 /* rank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank@2x.png"; sourceTree = "<group>"; };
+		04FC3D47191F4FD200CB8F80 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
+		04FC3D48191F4FD200CB8F80 /* task_release@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_release@2x.png"; sourceTree = "<group>"; };
+		04FC3D49191F4FD200CB8F80 /* vip_phonebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_phonebook@2x.png"; sourceTree = "<group>"; };
+		04FC3D4A191F4FD200CB8F80 /* wealth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wealth@2x.png"; sourceTree = "<group>"; };
+		04FC3D4B191F4FD200CB8F80 /* wealth_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wealth_bg@2x.png"; sourceTree = "<group>"; };
+		04FC3D5D191F56D500CB8F80 /* SmallGoldMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineViewController.h; sourceTree = "<group>"; };
+		04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +165,8 @@
 		04FC3CF5191F2CD000CB8F80 /* GoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				04FC3D3D191F4FD200CB8F80 /* Images */,
+				04FC3D59191F561500CB8F80 /* SmallGoldMine */,
 				04FC3D24191F2D0300CB8F80 /* DrawerController */,
 				04FC3CFE191F2CD000CB8F80 /* AppDelegate.h */,
 				04FC3CFF191F2CD000CB8F80 /* AppDelegate.m */,
@@ -198,6 +229,43 @@
 				04FC3D34191F2D0300CB8F80 /* UIViewController+MMDrawerController.m */,
 			);
 			path = DrawerController;
+			sourceTree = "<group>";
+		};
+		04FC3D3D191F4FD200CB8F80 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3D3E191F4FD200CB8F80 /* LeftMenu */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		04FC3D3E191F4FD200CB8F80 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3D3F191F4FD200CB8F80 /* cell_seperate_line@2x.png */,
+				04FC3D40191F4FD200CB8F80 /* credit@2x.png */,
+				04FC3D41191F4FD200CB8F80 /* credit_git@2x.png */,
+				04FC3D42191F4FD200CB8F80 /* guys@2x.png */,
+				04FC3D43191F4FD200CB8F80 /* hot_product@2x.png */,
+				04FC3D44191F4FD200CB8F80 /* more@2x.png */,
+				04FC3D45191F4FD200CB8F80 /* portrait_bg@2x.png */,
+				04FC3D46191F4FD200CB8F80 /* rank@2x.png */,
+				04FC3D47191F4FD200CB8F80 /* setting@2x.png */,
+				04FC3D48191F4FD200CB8F80 /* task_release@2x.png */,
+				04FC3D49191F4FD200CB8F80 /* vip_phonebook@2x.png */,
+				04FC3D4A191F4FD200CB8F80 /* wealth@2x.png */,
+				04FC3D4B191F4FD200CB8F80 /* wealth_bg@2x.png */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		04FC3D59191F561500CB8F80 /* SmallGoldMine */ = {
+			isa = PBXGroup;
+			children = (
+				04FC3D5D191F56D500CB8F80 /* SmallGoldMineViewController.h */,
+				04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */,
+			);
+			name = SmallGoldMine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +344,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FC3D4C191F4FD200CB8F80 /* cell_seperate_line@2x.png in Resources */,
+				04FC3D4D191F4FD200CB8F80 /* credit@2x.png in Resources */,
+				04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */,
+				04FC3D53191F4FD200CB8F80 /* rank@2x.png in Resources */,
 				04FC3D08191F2CD000CB8F80 /* Images.xcassets in Resources */,
 				04FC3CFA191F2CD000CB8F80 /* InfoPlist.strings in Resources */,
+				04FC3D55191F4FD200CB8F80 /* task_release@2x.png in Resources */,
 				04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */,
+				04FC3D50191F4FD200CB8F80 /* hot_product@2x.png in Resources */,
+				04FC3D57191F4FD200CB8F80 /* wealth@2x.png in Resources */,
+				04FC3D54191F4FD200CB8F80 /* setting@2x.png in Resources */,
+				04FC3D4E191F4FD200CB8F80 /* credit_git@2x.png in Resources */,
+				04FC3D4F191F4FD200CB8F80 /* guys@2x.png in Resources */,
+				04FC3D58191F4FD200CB8F80 /* wealth_bg@2x.png in Resources */,
+				04FC3D52191F4FD200CB8F80 /* portrait_bg@2x.png in Resources */,
+				04FC3D56191F4FD200CB8F80 /* vip_phonebook@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +381,7 @@
 				04FC3D3C191F2D0300CB8F80 /* UIViewController+MMDrawerController.m in Sources */,
 				04FC3D3A191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m in Sources */,
 				04FC3D36191F2D0300CB8F80 /* MenuTopPhotoView.m in Sources */,
+				04FC3D5F191F56D500CB8F80 /* SmallGoldMineViewController.m in Sources */,
 				04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */,
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
 				04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */,

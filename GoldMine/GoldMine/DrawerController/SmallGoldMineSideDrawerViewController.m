@@ -32,7 +32,7 @@
     self=[super init];
     if (self) {
         self.titleArray=[NSArray arrayWithObjects:@"VIP通讯录",@"积分换礼",@"任务发布",@"主推产品",nil];
-        self.imageStringArray=[NSArray arrayWithObjects:@"left_menu_recommend",@"tab_bar_find_normal",@"left_menu_find",nil];
+        self.imageStringArray=[NSArray arrayWithObjects:@"vip_phonebook",@"credit_git",@"task_release",@"hot_product",nil];
     }
     return self;
 }
@@ -42,14 +42,21 @@
     [super viewDidLoad];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
-    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.tableView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
                                                        green:51.0/255.0
                                                         blue:51.0/255.0
                                                        alpha:1.0]];
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     [self.view addSubview:self.tableView];
+    
+    if (_photoView == nil) {
+        _photoView = [[MenuTopPhotoView alloc] initWithFrame:CGRectMake(0.0, 0.0, 277.0f, 220.0f)];
+        [_photoView setBackgroundColor:[UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]];
+    }
+    [_photoView setDelegate:self];
+    _tableView.tableHeaderView=_photoView;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -80,46 +87,47 @@
     if (cell==nil) {
         cell=[[DrawerLeftTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
     }
+
     
     UIView *selectedBgView=[[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320,59.0)];
     selectedBgView.backgroundColor=[UIColor colorWithRed:87.0/255 green:87.0/255 blue:87.0/255 alpha:1];
     cell.selectedBackgroundView=selectedBgView;
    
-    [cell setTileValueWithString:nil andGoodsImageViewWithImageString:nil];
+    [cell setTileValueWithString:[self.titleArray objectAtIndex:indexPath.row] andGoodsImageViewWithImageString:[self.imageStringArray objectAtIndex:indexPath.row]];
     
     return cell;
 }
 
 
--(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    
-    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(tableView.bounds), 150.0)];
-    [headerView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
-                                                   green:51.0/255.0
-                                                    blue:51.0/255.0
-                                                   alpha:1.0]];
-  
-    if (_photoView == nil) {
-        _photoView = [[MenuTopPhotoView alloc] initWithFrame:CGRectMake(0.0, 0.0, 240.f, 150.0f)];
-        [_photoView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
-                                                       green:51.0/255.0
-                                                        blue:51.0/255.0
-                                                       alpha:1.0]];
-    }
-    [headerView addSubview:_photoView];
-    [_photoView setDelegate:self];
-    return headerView;
-}
+//-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    
+//    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+//        self.edgesForExtendedLayout = UIRectEdgeNone;
+//    
+//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(tableView.bounds), 150.0)];
+//    [headerView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
+//                                                   green:51.0/255.0
+//                                                    blue:51.0/255.0
+//                                                   alpha:1.0]];
+//  
+////    if (_photoView == nil) {
+////        _photoView = [[MenuTopPhotoView alloc] initWithFrame:CGRectMake(0.0, 0.0, 240.f, 200.0f)];
+////        [_photoView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
+////                                                       green:51.0/255.0
+////                                                        blue:51.0/255.0
+////                                                       alpha:1.0]];
+////    }
+////    [headerView addSubview:_photoView];
+////    [_photoView setDelegate:self];
+//    return headerView;
+//}
 
 //-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 //    
 //}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80.0;
+    return 66.0;
 }
 
 #pragma mark - Table view delegate

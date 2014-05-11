@@ -13,13 +13,13 @@
     UIImageView *_goodsImageView;
     UILabel *_title;
     UIImageView *_accessoryImgaeView;
-    UIView *_cellSeperateLine;
+    UIImageView *_cellSeperateLine;
 }
 
 @property (nonatomic,strong) UIImageView *goodsImageView;
 @property (nonatomic,strong) UILabel *tile;
 @property (nonatomic,strong) UIImageView *accessoryImgaeView;
-@property (nonatomic,strong) UIView *cellSeperateLine;
+@property (nonatomic,strong) UIImageView *cellSeperateLine;
 
 -(void)setTileValueWithString:(NSString *)titleStr andGoodsImageViewWithImageString:(NSString *)imageStr;
 

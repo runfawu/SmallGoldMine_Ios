@@ -14,10 +14,21 @@
 
 @end
 
-@interface MenuTopPhotoView : UIView
+
+
+@interface MenuTopPhotoView : UIView{
+    __weak id <MenuTopPhotoViewDelegate> _delegate;
+    
+}
+
 @property (nonatomic,strong) UIImageView* photo;
-@property (nonatomic,strong) UILabel* nameLabel;
-@property (nonatomic,retain) id<MenuTopPhotoViewDelegate> delegate;
+@property (nonatomic,strong) UILabel *numberLabel;
+@property (nonatomic,strong) UILabel *creditLabel;
+@property (nonatomic,strong) UIImageView *wealthImageView;
+@property (nonatomic,strong) UIImageView *guysImageView;
+@property (nonatomic,strong) UIImageView *rankImageView;
+
+@property (nonatomic,weak) id<MenuTopPhotoViewDelegate> delegate;
 
 - (void)setUserInfo:(NSString *)nickname photo:(NSString*)photo hasLogin:(BOOL)login;
 @end

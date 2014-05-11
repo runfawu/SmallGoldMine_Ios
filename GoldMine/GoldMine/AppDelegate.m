@@ -7,12 +7,43 @@
 //
 
 #import "AppDelegate.h"
+#import "MMDrawerController.h"
+#import "SmallGoldMineSideDrawerViewController.h"
+#import "MMDrawerVisualState.h"
+#import "SmallGoldMineDrawerVisualStateManager.h"
+#import "SmallGoldMineViewController.h"
 
 @implementation AppDelegate
+
+@synthesize goldMineNav=_goldMineNav;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    SmallGoldMineSideDrawerViewController *leftMenuVC=[[SmallGoldMineSideDrawerViewController alloc] init];
+    
+    SmallGoldMineViewController *smallGoldMineVC=[[SmallGoldMineViewController alloc] init];
+    self.goldMineNav=[[UINavigationController alloc] initWithRootViewController:smallGoldMineVC];
+    
+    MMDrawerController * drawerController = [[MMDrawerController alloc]
+                                             initWithCenterViewController:self.goldMineNav leftDrawerViewController:leftMenuVC];
+    [drawerController setMaximumRightDrawerWidth:277.0];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [drawerController
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+         MMDrawerControllerDrawerVisualStateBlock block;
+         block = [[SmallGoldMineDrawerVisualStateManager sharedManager]
+                  drawerVisualStateBlockForDrawerSide:drawerSide];
+         if(block){
+             block(drawerController, drawerSide, percentVisible);
+         }
+     }];
+    
+    self.window.rootViewController=drawerController;
+    smallGoldMineVC=nil;
+    
     return YES;
 }
 							
