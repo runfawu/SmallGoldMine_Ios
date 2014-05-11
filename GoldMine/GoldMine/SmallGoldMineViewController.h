@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomSegmentedControl.h"
 
-@interface SmallGoldMineViewController :SuperViewController
+@interface SmallGoldMineViewController :SuperViewController{
+    
+}
+
+@property (nonatomic,strong) CustomSegmentedControl *segmentedControl;
+
+
 
 @end
