@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B36411192071E7001FD570 /* SmallGoldMineCell.m */; };
+		04B36415192071E7001FD570 /* SmallGoldMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B36413192071E7001FD570 /* SmallGoldMineViewController.m */; };
 		04FC3CF0191F2CD000CB8F80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CEF191F2CD000CB8F80 /* Foundation.framework */; };
 		04FC3CF2191F2CD000CB8F80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CF1191F2CD000CB8F80 /* CoreGraphics.framework */; };
 		04FC3CF4191F2CD000CB8F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CF3191F2CD000CB8F80 /* UIKit.framework */; };
@@ -42,14 +44,12 @@
 		04FC3D56191F4FD200CB8F80 /* vip_phonebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D49191F4FD200CB8F80 /* vip_phonebook@2x.png */; };
 		04FC3D57191F4FD200CB8F80 /* wealth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D4A191F4FD200CB8F80 /* wealth@2x.png */; };
 		04FC3D58191F4FD200CB8F80 /* wealth_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D4B191F4FD200CB8F80 /* wealth_bg@2x.png */; };
-		04FC3D5F191F56D500CB8F80 /* SmallGoldMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */; };
 		04FC3D62191F755900CB8F80 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D61191F755900CB8F80 /* SuperViewController.m */; };
 		04FC3D68191F88AD00CB8F80 /* add_ brand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D64191F88AD00CB8F80 /* add_ brand@2x.png */; };
 		04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D65191F88AD00CB8F80 /* banner@2x.png */; };
 		04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D66191F88AD00CB8F80 /* personal@2x.png */; };
 		04FC3D6B191F88AD00CB8F80 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D67191F88AD00CB8F80 /* scan@2x.png */; };
 		04FC3D70191F98E700CB8F80 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */; };
-		04FC3D73191FA92700CB8F80 /* SmallGoldMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D72191FA92700CB8F80 /* SmallGoldMineCell.m */; };
 		04FC3D75191FA99400CB8F80 /* vsquare_good@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D74191FA99400CB8F80 /* vsquare_good@2x.png */; };
 		71A9871319C1E2DC008402FF /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A9871219C1E2DC008402FF /* XMLParser.m */; };
 		71A9871619C1E3BA008402FF /* SoapRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A9871519C1E3BA008402FF /* SoapRequest.m */; };
@@ -78,6 +78,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04B36410192071E7001FD570 /* SmallGoldMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineCell.h; sourceTree = "<group>"; };
+		04B36411192071E7001FD570 /* SmallGoldMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineCell.m; sourceTree = "<group>"; };
+		04B36412192071E7001FD570 /* SmallGoldMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineViewController.h; sourceTree = "<group>"; };
+		04B36413192071E7001FD570 /* SmallGoldMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineViewController.m; sourceTree = "<group>"; };
 		04FC3CEC191F2CD000CB8F80 /* GoldMine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldMine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FC3CEF191F2CD000CB8F80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04FC3CF1191F2CD000CB8F80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,8 +130,6 @@
 		04FC3D49191F4FD200CB8F80 /* vip_phonebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_phonebook@2x.png"; sourceTree = "<group>"; };
 		04FC3D4A191F4FD200CB8F80 /* wealth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wealth@2x.png"; sourceTree = "<group>"; };
 		04FC3D4B191F4FD200CB8F80 /* wealth_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wealth_bg@2x.png"; sourceTree = "<group>"; };
-		04FC3D5D191F56D500CB8F80 /* SmallGoldMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineViewController.h; sourceTree = "<group>"; };
-		04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineViewController.m; sourceTree = "<group>"; };
 		04FC3D60191F755900CB8F80 /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewController.h; sourceTree = "<group>"; };
 		04FC3D61191F755900CB8F80 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
 		04FC3D64191F88AD00CB8F80 /* add_ brand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_ brand@2x.png"; sourceTree = "<group>"; };
@@ -136,8 +138,6 @@
 		04FC3D67191F88AD00CB8F80 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
 		04FC3D6E191F98E700CB8F80 /* CustomSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedControl.h; sourceTree = "<group>"; };
 		04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedControl.m; sourceTree = "<group>"; };
-		04FC3D71191FA92700CB8F80 /* SmallGoldMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineCell.h; sourceTree = "<group>"; };
-		04FC3D72191FA92700CB8F80 /* SmallGoldMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineCell.m; sourceTree = "<group>"; };
 		04FC3D74191FA99400CB8F80 /* vsquare_good@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vsquare_good@2x.png"; sourceTree = "<group>"; };
 		71A9871119C1E2DC008402FF /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
 		71A9871219C1E2DC008402FF /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
@@ -196,6 +196,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04B3640F192071E7001FD570 /* SmallGoldMine */ = {
+			isa = PBXGroup;
+			children = (
+				04B36410192071E7001FD570 /* SmallGoldMineCell.h */,
+				04B36411192071E7001FD570 /* SmallGoldMineCell.m */,
+				04B36412192071E7001FD570 /* SmallGoldMineViewController.h */,
+				04B36413192071E7001FD570 /* SmallGoldMineViewController.m */,
+			);
+			path = SmallGoldMine;
+			sourceTree = "<group>";
+		};
 		04FC3CE3191F2CD000CB8F80 = {
 			isa = PBXGroup;
 			children = (
@@ -230,10 +241,10 @@
 		04FC3CF5191F2CD000CB8F80 /* GoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				04B3640F192071E7001FD570 /* SmallGoldMine */,
 				71A9871019C1E2AF008402FF /* SoapRequest */,
 				04FC3D6C191F98E700CB8F80 /* Lib */,
 				04FC3D3D191F4FD200CB8F80 /* Images */,
-				04FC3D59191F561500CB8F80 /* SmallGoldMine */,
 				04FC3D24191F2D0300CB8F80 /* DrawerController */,
 				04FC3CFE191F2CD000CB8F80 /* AppDelegate.h */,
 				04FC3CFF191F2CD000CB8F80 /* AppDelegate.m */,
@@ -328,17 +339,6 @@
 				04FC3D4B191F4FD200CB8F80 /* wealth_bg@2x.png */,
 			);
 			path = LeftMenu;
-			sourceTree = "<group>";
-		};
-		04FC3D59191F561500CB8F80 /* SmallGoldMine */ = {
-			isa = PBXGroup;
-			children = (
-				04FC3D5D191F56D500CB8F80 /* SmallGoldMineViewController.h */,
-				04FC3D5E191F56D500CB8F80 /* SmallGoldMineViewController.m */,
-				04FC3D71191FA92700CB8F80 /* SmallGoldMineCell.h */,
-				04FC3D72191FA92700CB8F80 /* SmallGoldMineCell.m */,
-			);
-			name = SmallGoldMine;
 			sourceTree = "<group>";
 		};
 		04FC3D63191F88AD00CB8F80 /* SmallGoldMine */ = {
@@ -551,13 +551,13 @@
 				04FC3D3A191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m in Sources */,
 				04FC3D36191F2D0300CB8F80 /* MenuTopPhotoView.m in Sources */,
 				71A9871319C1E2DC008402FF /* XMLParser.m in Sources */,
-				04FC3D5F191F56D500CB8F80 /* SmallGoldMineViewController.m in Sources */,
+				04B36415192071E7001FD570 /* SmallGoldMineViewController.m in Sources */,
 				71A9873019C1E416008402FF /* ASIDataCompressor.m in Sources */,
 				04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */,
+				04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */,
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
 				71A9873319C1E416008402FF /* ASIFormDataRequest.m in Sources */,
 				71A9873119C1E416008402FF /* ASIDataDecompressor.m in Sources */,
-				04FC3D73191FA92700CB8F80 /* SmallGoldMineCell.m in Sources */,
 				04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */,
 				71A9871619C1E3BA008402FF /* SoapRequest.m in Sources */,
 				71A9873419C1E416008402FF /* ASIHTTPRequest.m in Sources */,
