@@ -20,14 +20,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //左侧栏
     SmallGoldMineSideDrawerViewController *leftMenuVC=[[SmallGoldMineSideDrawerViewController alloc] init];
+    UINavigationController *leftMenuNav=[[UINavigationController alloc] initWithRootViewController:leftMenuVC];
     
     SmallGoldMineViewController *smallGoldMineVC=[[SmallGoldMineViewController alloc] init];
     
     UINavigationController *goldMineNavGation=[[UINavigationController alloc] initWithRootViewController:smallGoldMineVC];
     
     MMDrawerController * drawerController = [[MMDrawerController alloc]
-                                             initWithCenterViewController:goldMineNavGation leftDrawerViewController:leftMenuVC];
+                                             initWithCenterViewController:goldMineNavGation leftDrawerViewController:leftMenuNav];
     [drawerController setMaximumRightDrawerWidth:277.0];
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];

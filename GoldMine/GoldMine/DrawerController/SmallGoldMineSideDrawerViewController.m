@@ -33,6 +33,25 @@
     if (self) {
         self.titleArray=[NSArray arrayWithObjects:@"VIP通讯录",@"积分换礼",@"任务发布",@"主推产品",nil];
         self.imageStringArray=[NSArray arrayWithObjects:@"vip_phonebook",@"credit_git",@"task_release",@"hot_product",nil];
+        
+        UILabel *titleLable=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 100.0, 44.0)];
+        titleLable.text=@"我的";
+        titleLable.font=[UIFont systemFontOfSize:24.0];
+        titleLable.textAlignment=NSTextAlignmentCenter;
+        titleLable.textColor=[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];;
+        self.navigationItem.titleView=titleLable;
+        titleLable=nil;
+        
+        UIButton* leftBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
+        [leftBarbutton setImage:[UIImage imageNamed:@"setting"] forState:UIControlStateNormal];
+        [leftBarbutton setImage:[UIImage imageNamed:@"setting"] forState:UIControlStateHighlighted];
+        
+        if (IS_IOS7) {
+            //            [leftBarbutton setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
+        }
+        UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBarbutton];
+        self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+        leftBarbutton=nil;
     }
     return self;
 }
@@ -87,7 +106,6 @@
     if (cell==nil) {
         cell=[[DrawerLeftTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
     }
-
     
     UIView *selectedBgView=[[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320,59.0)];
     selectedBgView.backgroundColor=[UIColor colorWithRed:87.0/255 green:87.0/255 blue:87.0/255 alpha:1];

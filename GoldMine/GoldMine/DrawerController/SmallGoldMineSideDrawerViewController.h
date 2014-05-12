@@ -36,7 +36,7 @@ typedef NS_ENUM(NSInteger, MMDrawerSection){
 };
 
 
-@interface SmallGoldMineSideDrawerViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MenuTopPhotoViewDelegate>{
+@interface SmallGoldMineSideDrawerViewController : SuperViewController <UITableViewDataSource,UITableViewDelegate,MenuTopPhotoViewDelegate>{
     NSArray *_titleArray;
     NSArray *_imageStringArray;
     
