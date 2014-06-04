@@ -20,7 +20,9 @@
 @property (weak,nonatomic) IBOutlet UILabel *money;
 @property (weak,nonatomic) IBOutlet UILabel *dOrder;
 
-@property (nonatomic, strong) SoapRequest *loginReqeust;
+@property (nonatomic, strong) SoapRequest *myMarkReqeust;
+@property (nonatomic,strong) SoapRequest *myVipsRequest;
+@property (nonatomic,strong) SoapRequest *myMarkCountRequest;
 
 @end
 
@@ -40,8 +42,20 @@
     [super viewDidLoad];
     [self setup];
     
-    self.loginReqeust = [[SoapRequest alloc] init];
+//    goodsCount=[[NSMutableArray alloc] init];
+    
+    self.myMarkReqeust = [[SoapRequest alloc] init];
+    self.myVipsRequest=[[SoapRequest alloc] init];
+    self.myMarkCountRequest=[[SoapRequest alloc] init];
+    
     [self getMyMarkDataWithUId:@"001" andVersion:[Tools getAppVersion]];
+    [self getMyMarkCountWithUID:@"001" andVersion:[Tools getAppVersion]];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+    
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,7 +101,7 @@ static const float goldenCellHeight = 55.0;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 12;
+    return [goodsCount count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,6 +114,7 @@ static const float goldenCellHeight = 55.0;
     static NSString *identifier = @"GoldenCell";
     GoldenCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
+    [cell setGoldenCellContentWithDictionary:[goodsCount objectAtIndex:indexPath.row]];
     return cell;
 }
 
@@ -115,7 +130,7 @@ static const float goldenCellHeight = 55.0;
     [paramDict setObject:uid forKey:@"uid"];
     [paramDict setObject:version forKey:@"version"];
 
-    [self.loginReqeust postRequestWithSoapNamespace:@"MyMark" params:paramDict successBlock:^(id result) {
+    [self.myMarkReqeust postRequestWithSoapNamespace:@"MyMark" params:paramDict successBlock:^(id result) {
         DLog(@"MyMark result=%@", result);
         
         self.vBoon.text=[(NSDictionary *)result objectForKey:@"Vboon"];
@@ -140,8 +155,30 @@ static const float goldenCellHeight = 55.0;
     [paramDict setObject:vId forKey:@"vid"];
     [paramDict setObject:uId forKey:@"uid"];
     [paramDict setObject:version forKey:@"version"];
-    [self.loginReqeust postRequestWithSoapNamespace:@"MyVips" params:paramDict successBlock:^(id result) {
+    [self.myVipsRequest postRequestWithSoapNamespace:@"MyVips" params:paramDict successBlock:^(id result) {
         DLog(@"MyMark result=%@", result);
+        
+    } failureBlock:^(NSString *requestError) {
+        
+    } errorBlock:^(NSMutableString *errorStr) {
+        
+    }];
+    paramDict=nil;
+}
+
+//获取主推产品累计
+-(void)getMyMarkCountWithUID:(NSString *)uid andVersion:(NSString *)version{
+    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
+    [paramDict setObject:uid forKey:@"uid"];
+    [paramDict setObject:version forKey:@"version"];
+    
+    [self.myMarkCountRequest postRequestWithSoapNamespace:@"MyMarkCount" params:paramDict successBlock:^(id result) {
+        DLog(@"MyMarkCount result=%@", result);
+        NSArray *ProFeatured=[(NSDictionary *)result objectForKey:@"ProFeatured"];
+        if (!goodsCount) {
+            goodsCount=[[NSMutableArray alloc] initWithArray:ProFeatured];
+        }
+        [self.tableView reloadData];
         
     } failureBlock:^(NSString *requestError) {
         

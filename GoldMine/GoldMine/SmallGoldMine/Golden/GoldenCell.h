@@ -10,4 +10,14 @@
 
 @interface GoldenCell : UITableViewCell
 
+@property (nonatomic,weak) IBOutlet  UILabel *ProName;
+@property (nonatomic,weak) IBOutlet UILabel *targetCount;
+@property (nonatomic,weak) IBOutlet UILabel *completeCount;
+
+
+-(void)setGoldenCellContentWithDictionary:(NSDictionary *)goodsDic;
+
+
+
+
 @end

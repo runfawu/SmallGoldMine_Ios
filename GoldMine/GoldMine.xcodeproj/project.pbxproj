@@ -51,6 +51,7 @@
 		0423481B19D418A400A058F4 /* vip_info_seperate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481919D418A400A058F4 /* vip_info_seperate@2x.png */; };
 		0423481C19D418A400A058F4 /* vip_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481A19D418A400A058F4 /* vip_share@2x.png */; };
 		0423482119D41A4A00A058F4 /* VIPDetailInfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423482019D41A4A00A058F4 /* VIPDetailInfoHeadView.m */; };
+		0423482419D436E600A058F4 /* GoldenListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423482319D436E600A058F4 /* GoldenListTableViewCell.m */; };
 		047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AC29F19D3EEBA0010A9DD /* VSquareViewController.m */; };
 		04806AF019C6B29100772BEF /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04806AEF19C6B29100772BEF /* TaskTableViewCell.m */; };
 		04806AF519C6B7A400772BEF /* task_tel_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF119C6B7A400772BEF /* task_tel_down@2x.png */; };
@@ -74,6 +75,8 @@
 		04B5FDF619C6829C00102BC1 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5FDE619C6829B00102BC1 /* UIImage+MultiFormat.m */; };
 		04B5FDF719C6829C00102BC1 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5FDE819C6829B00102BC1 /* UIImage+WebP.m */; };
 		04B5FDF819C6829C00102BC1 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5FDEA19C6829B00102BC1 /* UIImageView+WebCache.m */; };
+		04BB6813193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6811193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m */; };
+		04BB6814193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BB6812193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib */; };
 		04C6F7D719D266AC00863A86 /* credit_git@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D319D266AC00863A86 /* credit_git@2x.png */; };
 		04C6F7D819D266AC00863A86 /* hot_product@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D419D266AC00863A86 /* hot_product@2x.png */; };
 		04C6F7D919D266AC00863A86 /* task_release@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D519D266AC00863A86 /* task_release@2x.png */; };
@@ -219,6 +222,8 @@
 		0423481A19D418A400A058F4 /* vip_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_share@2x.png"; sourceTree = "<group>"; };
 		0423481F19D41A4A00A058F4 /* VIPDetailInfoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPDetailInfoHeadView.h; sourceTree = "<group>"; };
 		0423482019D41A4A00A058F4 /* VIPDetailInfoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPDetailInfoHeadView.m; sourceTree = "<group>"; };
+		0423482219D436E600A058F4 /* GoldenListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldenListTableViewCell.h; sourceTree = "<group>"; };
+		0423482319D436E600A058F4 /* GoldenListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldenListTableViewCell.m; sourceTree = "<group>"; };
 		047AC29E19D3EEBA0010A9DD /* VSquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSquareViewController.h; sourceTree = "<group>"; };
 		047AC29F19D3EEBA0010A9DD /* VSquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSquareViewController.m; sourceTree = "<group>"; };
 		04806AEE19C6B29100772BEF /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
@@ -265,6 +270,9 @@
 		04B5FDE819C6829B00102BC1 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		04B5FDE919C6829B00102BC1 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		04B5FDEA19C6829B00102BC1 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		04BB6810193EBF070003AB75 /* VIPDetailedInformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPDetailedInformationTableViewCell.h; sourceTree = "<group>"; };
+		04BB6811193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPDetailedInformationTableViewCell.m; sourceTree = "<group>"; };
+		04BB6812193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VIPDetailedInformationTableViewCell.xib; sourceTree = "<group>"; };
 		04C6F7D319D266AC00863A86 /* credit_git@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit_git@2x.png"; sourceTree = "<group>"; };
 		04C6F7D419D266AC00863A86 /* hot_product@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot_product@2x.png"; sourceTree = "<group>"; };
 		04C6F7D519D266AC00863A86 /* task_release@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_release@2x.png"; sourceTree = "<group>"; };
@@ -485,6 +493,11 @@
 				04C6F7E319D26C0600863A86 /* TaskViewController.m */,
 				0423481F19D41A4A00A058F4 /* VIPDetailInfoHeadView.h */,
 				0423482019D41A4A00A058F4 /* VIPDetailInfoHeadView.m */,
+				0423482219D436E600A058F4 /* GoldenListTableViewCell.h */,
+				0423482319D436E600A058F4 /* GoldenListTableViewCell.m */,
+				04BB6810193EBF070003AB75 /* VIPDetailedInformationTableViewCell.h */,
+				04BB6811193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m */,
+				04BB6812193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -953,6 +966,7 @@
 				033F739C19CD3D7B00F5DF52 /* input_confirm_n.png in Resources */,
 				04806AF719C6B7A400772BEF /* task_vip_down@2x.png in Resources */,
 				04FC3D4D191F4FD200CB8F80 /* credit@2x.png in Resources */,
+				04BB6814193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib in Resources */,
 				0318673719CD0FF0004C6DBD /* navi_back@2x.png in Resources */,
 				04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */,
 				036163E519CE956B00FDC231 /* RankCell.xib in Resources */,
@@ -1036,6 +1050,7 @@
 			files = (
 				033F738119CD1D4D00F5DF52 /* Utils.m in Sources */,
 				71A9873719C1E416008402FF /* Reachability.m in Sources */,
+				0423482419D436E600A058F4 /* GoldenListTableViewCell.m in Sources */,
 				04FC3D62191F755900CB8F80 /* SuperViewController.m in Sources */,
 				04B5FDF219C6829B00102BC1 /* SDWebImageManager.m in Sources */,
 				04B5FDF319C6829C00102BC1 /* SDWebImagePrefetcher.m in Sources */,
@@ -1045,6 +1060,7 @@
 				71A9871319C1E2DC008402FF /* XMLParser.m in Sources */,
 				04B5FDF119C6829B00102BC1 /* SDWebImageDownloaderOperation.m in Sources */,
 				04B36415192071E7001FD570 /* SmallGoldMineViewController.m in Sources */,
+				04BB6813193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m in Sources */,
 				71A9873019C1E416008402FF /* ASIDataCompressor.m in Sources */,
 				04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */,
 				0423482119D41A4A00A058F4 /* VIPDetailInfoHeadView.m in Sources */,

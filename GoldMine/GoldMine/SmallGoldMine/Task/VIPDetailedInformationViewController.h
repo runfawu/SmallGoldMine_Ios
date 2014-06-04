@@ -10,7 +10,11 @@
 
 @interface VIPDetailedInformationViewController : SuperViewController{
     NSString *customeID;
+    
+    NSMutableArray *goldenListArray;
 }
+
+@property (nonatomic,strong) UITableView *goldenListTableView;
 
 -(id)initWithCustomeID:(NSString *)cusId;
 

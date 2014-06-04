@@ -9,5 +9,10 @@
 #import "SuperViewController.h"
 
 @interface GoldenViewController : UIViewController
+{
+    //主推产品累计
+    NSMutableArray *goodsCount;
+}
+
 
 @end

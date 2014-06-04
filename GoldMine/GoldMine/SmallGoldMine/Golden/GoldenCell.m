@@ -28,4 +28,10 @@
     // Configure the view for the selected state
 }
 
+-(void)setGoldenCellContentWithDictionary:(NSDictionary *)goodsDic{
+    self.ProName.text=[goodsDic objectForKey:@"ProName"];
+    self.targetCount.text=[goodsDic objectForKey:@"Amount"];
+    self.completeCount.text=[goodsDic objectForKey:@"Completed"];
+}
+
 @end
