@@ -7,6 +7,7 @@
 //
 
 #import "SmallGoldMineViewController.h"
+#import "LoginController.h"
 
 @implementation SmallGoldMineViewController
 
@@ -26,6 +27,10 @@
         UIButton* leftBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
         [leftBarbutton setImage:[UIImage imageNamed:@"personal"] forState:UIControlStateNormal];
         [leftBarbutton setImage:[UIImage imageNamed:@"personal"] forState:UIControlStateHighlighted];
+        
+        //FIXME: Test test test
+        [leftBarbutton addTarget:self action:@selector(testLogin:) forControlEvents:UIControlEventTouchUpInside];
+        
         if (IS_IOS7) {
 //            [leftBarbutton setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
         }
@@ -93,6 +98,13 @@
     [self.segmentedControl.taskButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]  forState:UIControlStateNormal];
     [self.segmentedControl.goldMineButton setTitleColor:[UIColor colorWithRed:249.0/255 green:186.0/255 blue:8.0/255 alpha:1.0]  forState:UIControlStateNormal];
     self.segmentedControl.flagView.frame=CGRectMake(segmentedControl.goldMineButton.frame.origin.x,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
+}
+
+#pragma mark - Test
+- (void)testLogin:(id)sender
+{
+    LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
+    [self presentViewController:loginController animated:YES completion:nil];
 }
 
 @end
