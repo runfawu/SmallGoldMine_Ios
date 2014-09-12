@@ -33,7 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    DLog(@"0912 上午测试");
 }
 
 - (void)didReceiveMemoryWarning
