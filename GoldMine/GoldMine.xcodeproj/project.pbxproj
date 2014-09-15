@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04806AF019C6B29100772BEF /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04806AEF19C6B29100772BEF /* TaskTableViewCell.m */; };
+		04806AF519C6B7A400772BEF /* task_tel_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF119C6B7A400772BEF /* task_tel_down@2x.png */; };
+		04806AF619C6B7A400772BEF /* task_tel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF219C6B7A400772BEF /* task_tel@2x.png */; };
+		04806AF719C6B7A400772BEF /* task_vip_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF319C6B7A400772BEF /* task_vip_down@2x.png */; };
+		04806AF819C6B7A400772BEF /* task_vip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF419C6B7A400772BEF /* task_vip@2x.png */; };
+		04806AFB19C6BAD200772BEF /* TaskHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04806AFA19C6BAD200772BEF /* TaskHeadView.m */; };
 		04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B36411192071E7001FD570 /* SmallGoldMineCell.m */; };
 		04B36415192071E7001FD570 /* SmallGoldMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B36413192071E7001FD570 /* SmallGoldMineViewController.m */; };
 		04B5FDEB19C6829B00102BC1 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5FDCC19C6829B00102BC1 /* MKAnnotationView+WebCache.m */; };
@@ -103,6 +109,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04806AEE19C6B29100772BEF /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
+		04806AEF19C6B29100772BEF /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
+		04806AF119C6B7A400772BEF /* task_tel_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_tel_down@2x.png"; sourceTree = "<group>"; };
+		04806AF219C6B7A400772BEF /* task_tel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_tel@2x.png"; sourceTree = "<group>"; };
+		04806AF319C6B7A400772BEF /* task_vip_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_vip_down@2x.png"; sourceTree = "<group>"; };
+		04806AF419C6B7A400772BEF /* task_vip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_vip@2x.png"; sourceTree = "<group>"; };
+		04806AF919C6BAD200772BEF /* TaskHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskHeadView.h; sourceTree = "<group>"; };
+		04806AFA19C6BAD200772BEF /* TaskHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskHeadView.m; sourceTree = "<group>"; };
 		04B36410192071E7001FD570 /* SmallGoldMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineCell.h; sourceTree = "<group>"; };
 		04B36411192071E7001FD570 /* SmallGoldMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineCell.m; sourceTree = "<group>"; };
 		04B36412192071E7001FD570 /* SmallGoldMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineViewController.h; sourceTree = "<group>"; };
@@ -266,9 +280,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04806AED19C6B27600772BEF /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				04806AEE19C6B29100772BEF /* TaskTableViewCell.h */,
+				04806AEF19C6B29100772BEF /* TaskTableViewCell.m */,
+				04806AF919C6BAD200772BEF /* TaskHeadView.h */,
+				04806AFA19C6BAD200772BEF /* TaskHeadView.m */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
 		04B3640F192071E7001FD570 /* SmallGoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				04806AED19C6B27600772BEF /* Task */,
 				04B36410192071E7001FD570 /* SmallGoldMineCell.h */,
 				04B36411192071E7001FD570 /* SmallGoldMineCell.m */,
 				04B36412192071E7001FD570 /* SmallGoldMineViewController.h */,
@@ -454,6 +480,10 @@
 		04FC3D63191F88AD00CB8F80 /* SmallGoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				04806AF119C6B7A400772BEF /* task_tel_down@2x.png */,
+				04806AF219C6B7A400772BEF /* task_tel@2x.png */,
+				04806AF319C6B7A400772BEF /* task_vip_down@2x.png */,
+				04806AF419C6B7A400772BEF /* task_vip@2x.png */,
 				04FC3D74191FA99400CB8F80 /* vsquare_good@2x.png */,
 				04FC3D64191F88AD00CB8F80 /* add_ brand@2x.png */,
 				04FC3D65191F88AD00CB8F80 /* banner@2x.png */,
@@ -653,7 +683,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FC3D4C191F4FD200CB8F80 /* cell_seperate_line@2x.png in Resources */,
+				04806AF619C6B7A400772BEF /* task_tel@2x.png in Resources */,
 				04FC3D6B191F88AD00CB8F80 /* scan@2x.png in Resources */,
+				04806AF719C6B7A400772BEF /* task_vip_down@2x.png in Resources */,
 				04FC3D4D191F4FD200CB8F80 /* credit@2x.png in Resources */,
 				04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */,
 				71AD9D1319C4377300061009 /* login_password.png in Resources */,
@@ -663,6 +695,7 @@
 				04FC3D08191F2CD000CB8F80 /* Images.xcassets in Resources */,
 				04FC3D68191F88AD00CB8F80 /* add_ brand@2x.png in Resources */,
 				04FC3CFA191F2CD000CB8F80 /* InfoPlist.strings in Resources */,
+				04806AF819C6B7A400772BEF /* task_vip@2x.png in Resources */,
 				04FC3D55191F4FD200CB8F80 /* task_release@2x.png in Resources */,
 				71AD9D1219C4377300061009 /* login_mobile.png in Resources */,
 				04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */,
@@ -683,6 +716,7 @@
 				04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */,
 				04FC3D56191F4FD200CB8F80 /* vip_phonebook@2x.png in Resources */,
 				71AD9D1419C4377300061009 /* login_register_h.png in Resources */,
+				04806AF519C6B7A400772BEF /* task_tel_down@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +747,7 @@
 				04B36415192071E7001FD570 /* SmallGoldMineViewController.m in Sources */,
 				71A9873019C1E416008402FF /* ASIDataCompressor.m in Sources */,
 				04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */,
+				04806AFB19C6BAD200772BEF /* TaskHeadView.m in Sources */,
 				04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */,
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
 				71A9873319C1E416008402FF /* ASIFormDataRequest.m in Sources */,
@@ -725,6 +760,7 @@
 				71A9873E19C1E8F4008402FF /* LoginController.m in Sources */,
 				04FC3D70191F98E700CB8F80 /* CustomSegmentedControl.m in Sources */,
 				04B5FDF419C6829C00102BC1 /* UIButton+WebCache.m in Sources */,
+				04806AF019C6B29100772BEF /* TaskTableViewCell.m in Sources */,
 				04B5FDF819C6829C00102BC1 /* UIImageView+WebCache.m in Sources */,
 				04B5FDF019C6829B00102BC1 /* SDWebImageDownloader.m in Sources */,
 				04B5FDF719C6829C00102BC1 /* UIImage+WebP.m in Sources */,

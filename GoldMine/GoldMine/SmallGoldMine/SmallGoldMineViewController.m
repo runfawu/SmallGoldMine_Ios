@@ -154,11 +154,12 @@
 -(void)getSmallGoldMineDataRequest:(NSInteger)type{
     
     NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
-    [paramDict setObject:@"001" forKey:@"uid"];
-    [paramDict setObject:[NSNumber numberWithInteger:type] forKey:@"num"];
+//    [paramDict setObject:@"001" forKey:@"uid"];
+//    [paramDict setObject:[NSNumber numberWithInteger:type] forKey:@"num"];
     
     self.loginReqeust = [[SoapRequest alloc] init];
-    [self.loginReqeust postRequestWithSoapNamespace:@"Souye" params:paramDict successBlock:^(id result) {
+    //CusPhone  Souye
+    [self.loginReqeust postRequestWithSoapNamespace:@"CusPhone" params:paramDict successBlock:^(id result) {
         DLog(@"login success result = %@", result);
         if (type==4) {
             if ([brandArray count]>0) {
@@ -169,13 +170,11 @@
             for (NSDictionary *brandDic in brandInfo) {
                 [brandArray addObject:brandDic];
             }
-            
             [self.vSquareTableView reloadData];
         }
     } failureBlock:^(NSString *requestError) {
         
     } errorBlock:^(NSMutableString *errorStr) {
-        
         
     }];
     paramDict=nil;

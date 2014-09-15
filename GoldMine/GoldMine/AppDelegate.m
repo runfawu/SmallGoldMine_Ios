@@ -21,13 +21,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
     //左侧栏
     SmallGoldMineSideDrawerViewController *leftMenuVC=[[SmallGoldMineSideDrawerViewController alloc] init];
     UINavigationController *leftMenuNav=[[UINavigationController alloc] initWithRootViewController:leftMenuVC];
     
-//    SmallGoldMineViewController *smallGoldMineVC=[[SmallGoldMineViewController alloc] init];
-    
-    UINavigationController *goldMineNavGation=[[UINavigationController alloc] initWithRootViewController:nil];
+    SmallGoldMineViewController *smallGoldMineVC=[[SmallGoldMineViewController alloc] init];
+    UINavigationController *goldMineNavGation=[[UINavigationController alloc] initWithRootViewController:smallGoldMineVC];
     
     MMDrawerController * drawerController = [[MMDrawerController alloc]
                                              initWithCenterViewController:goldMineNavGation leftDrawerViewController:leftMenuNav];
@@ -45,11 +45,11 @@
          }
      }];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.window.rootViewController=drawerController;
+    self.window.rootViewController=drawerController;
     [self.window makeKeyAndVisible];
     
-    [self presentLoginVC];
-//    smallGoldMineVC=nil;
+//    [self presentLoginVC];
+    smallGoldMineVC=nil;
 
     return YES;
 }
