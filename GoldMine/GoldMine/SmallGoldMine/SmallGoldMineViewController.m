@@ -59,7 +59,6 @@
 -(void)viewDidLoad{
     brandArray=[[NSMutableArray alloc] init];
     
-    
     if (IS_IOS7) {
         self.segmentedControl = [[CustomSegmentedControl alloc] initWithFrame:CGRectMake(0.0, 60.0, 320.0, 40)];
         self.segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
@@ -180,7 +179,7 @@
         
     }];
     paramDict=nil;
-    self.loginReqeust=nil;
+//    self.loginReqeust=nil;
 }
 
 -(void)selectedVSquareButton:(id)sender{

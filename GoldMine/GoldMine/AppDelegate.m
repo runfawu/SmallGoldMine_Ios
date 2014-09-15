@@ -25,9 +25,9 @@
     SmallGoldMineSideDrawerViewController *leftMenuVC=[[SmallGoldMineSideDrawerViewController alloc] init];
     UINavigationController *leftMenuNav=[[UINavigationController alloc] initWithRootViewController:leftMenuVC];
     
-    SmallGoldMineViewController *smallGoldMineVC=[[SmallGoldMineViewController alloc] init];
+//    SmallGoldMineViewController *smallGoldMineVC=[[SmallGoldMineViewController alloc] init];
     
-    UINavigationController *goldMineNavGation=[[UINavigationController alloc] initWithRootViewController:smallGoldMineVC];
+    UINavigationController *goldMineNavGation=[[UINavigationController alloc] initWithRootViewController:nil];
     
     MMDrawerController * drawerController = [[MMDrawerController alloc]
                                              initWithCenterViewController:goldMineNavGation leftDrawerViewController:leftMenuNav];
@@ -45,11 +45,11 @@
          }
      }];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController=drawerController;
+//    self.window.rootViewController=drawerController;
     [self.window makeKeyAndVisible];
     
     [self presentLoginVC];
-    smallGoldMineVC=nil;
+//    smallGoldMineVC=nil;
 
     return YES;
 }
@@ -63,10 +63,12 @@
 //    transition.subtype = kCATransitionFromRight;
 //    [self.view.window.layer addAnimation:transition forKey:nil];
     
-    LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
-    loginController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//    LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
+//    loginController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
-    [self.window.rootViewController presentViewController:loginController animated:NO completion:nil];
+//    [self.window.rootViewController presentViewController:loginController animated:NO completion:nil];
+    self.window.rootViewController=[[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];;
+//    loginController=nil;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

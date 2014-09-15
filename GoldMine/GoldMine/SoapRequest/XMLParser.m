@@ -12,6 +12,7 @@
 
 - (void)dealloc
 {
+    xmlParser.delegate=nil;
     DLog(@"xml parser dealloc");
 }
 
@@ -77,7 +78,6 @@ didStartElement:(NSString *)elementName
         if (self.finishBlock) {
             self.finishBlock(parseResult == nil ? nil : parseResult);
         }
-
     }
     
     if ([elementName isEqualToString:@"faultstring"]) {

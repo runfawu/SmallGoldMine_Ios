@@ -84,14 +84,20 @@
 #pragma mark - ASIHTTPRequestDelegate methods
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-    __weak typeof(self) weakSelf = self;
+    __weak __typeof(&*self)weakSelf = self;
+    NSLog(@"weak self :%@",weakSelf.class);
     
     xmlParser = [[XMLParser alloc] init];
     [xmlParser parseXMLWithData:request.responseData matchElement:xmlNamespace finishParseBlock:^(NSMutableString *result) {
         [weakSelf dealWithSuceessData:result];
     } errorBlock:^(NSMutableString *errorStr) {
         [weakSelf dealWithErrorData:errorStr];
+//        DLog(@"服务器返回error = %@", errorStr);
+//        if (self.errBlock) {
+//            self.errBlock(errorStr);
+//        }
     }];
+    xmlParser=nil;
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request

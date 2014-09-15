@@ -35,6 +35,8 @@
 
 - (void)viewDidLoad
 {
+    self.loginReqeust = [[SoapRequest alloc] init];
+    
     [super viewDidLoad];
     DLog(@"0912 上午测试");
 }
@@ -84,9 +86,8 @@
     [paramDict setObject:userName forKey:@"uid"];
     [paramDict setObject:password forKey:@"pwd"];
     
-    __weak typeof(self) weakSelf = self;
+    __weak __typeof(&*self)weakSelf = self;
     
-    self.loginReqeust = [[SoapRequest alloc] init];
     [self.loginReqeust postRequestWithSoapNamespace:@"UserLogin" params:paramDict successBlock:^(id result) {
         DLog(@"login success result = %@", result);
         
