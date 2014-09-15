@@ -15,6 +15,6 @@
 
 @property (nonatomic,strong) CustomSegmentedControl *segmentedControl;
 
-
+- (void)presentLoginVC;
 
 @end

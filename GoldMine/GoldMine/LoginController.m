@@ -11,6 +11,8 @@
 @interface LoginController ()
 
 @property (nonatomic, strong) SoapRequest *loginReqeust;
+@property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -21,6 +23,7 @@
 {
     DLog(@"login dealloc");
 }
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -46,50 +49,134 @@
 {
     [super viewDidAppear:animated];
     
-    CFIndex selfRetainCount = CFGetRetainCount((__bridge typeof(CFTypeRef))self);
-    DLog(@"login retainCount = %lu", selfRetainCount);
+    self.userNameTextField.text = @"001";
+    self.passwordTextField.text = @"123456";
 }
 
 #pragma mark - Button events
 - (IBAction)login:(id)sender {
+//    [self dismiss];
+    [self theLoginCode];
+}
+
+- (IBAction)registerNewAccount:(id)sender {
     
-    NSString *userName = @"001";
-    NSString *password = @"123456";
+}
+
+- (void)theLoginCode
+{
+    if (self.userNameTextField.text.length == 0) {
+        [self.view makeToast:@"请输入手机号"];
+        return;
+    }
+    
+    if (self.passwordTextField.text.length == 0) {
+        [self.view makeToast:@"请输入密码"];
+        return;
+    }
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    NSString *userName = self.userNameTextField.text;
+    NSString *password = self.passwordTextField.text;
     
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
     [paramDict setObject:userName forKey:@"uid"];
     [paramDict setObject:password forKey:@"pwd"];
     
+    __weak typeof(self) weakSelf = self;
+    
     self.loginReqeust = [[SoapRequest alloc] init];
     [self.loginReqeust postRequestWithSoapNamespace:@"UserLogin" params:paramDict successBlock:^(id result) {
         DLog(@"login success result = %@", result);
-        __weak typeof(self) weakSelf = self; // 我擦这两行代码怎么没效果？？？
-        [weakSelf doTheSuccessJobWithReuslt:result];
-        //[weakSelf hideHUD];
+        
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        [weakSelf parseDataWithResult:result];
         
     } failureBlock:^(NSString *requestError) {
-        //[weakSelf hideHUD];
-        //[weakSelf.view showToast:........
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        
         
     } errorBlock:^(NSMutableString *errorStr) {
-        //[weakSelf hideHUD];
-        //[weakSelf.view showToast:........
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        
     }];
-    
+
 }
 
-- (IBAction)back:(id)sender {
-    CFIndex selfRetainCount = CFGetRetainCount((__bridge typeof(CFTypeRef))self);
-    DLog(@"login retainCount = %lu", selfRetainCount); //本来要 ＝ 3的
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-- (void)doTheSuccessJobWithReuslt:(id)result
+- (void)dismiss
 {
-    NSDictionary *resultDict = (NSDictionary *)result;
-    DLog(@"丧心病狂");
+//    CATransition *transition = [CATransition animation];
+//    transition.duration = 0.3;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromLeft;
+//    [self.view.window.layer addAnimation:transition forKey:nil];
+    
+    CFIndex selfRetainCount = CFGetRetainCount((__bridge CFTypeRef)self);
+    DLog(@"loginRetainCount = %lu", selfRetainCount);
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+#define kBirthday      @"kBirthday"
+#define kPicture       @"kPicture"
+#define kSex           @"kSex"
+#define kSignature     @"kSignature"
+#define kUserId        @"kUserId"
+#define kUserName      @"kUserName"
+#define kUserPhone     @"kUserPhone"
+#define kUserType      @"kUserType"
+#define USERINFO       @"userInfo"
+#define USERDEFAULT   [NSUserDefaults standardUserDefaults]
+
+#pragma mark - Parse data
+- (void)parseDataWithResult:(id)result
+{
+    if (result) {
+        NSDictionary *resultDict = result;
+        NSString *birthday = resultDict[@"Birthday"];
+        NSString *picture = resultDict[@"Picture"];
+        NSString *sex = resultDict[@"Sex"];
+        NSString *signature = resultDict[@"Signature"];
+        NSString *userId = resultDict[@"UserID"];
+        NSString *userName = resultDict[@"UserName"];
+        NSString *userPhone = resultDict[@"UserPhone"];
+        NSString *userType = resultDict[@"UserType"];
+        
+        NSMutableDictionary *userDict = [NSMutableDictionary dictionary];
+        if (birthday) {
+            [userDict setObject:birthday forKey:kBirthday];
+        }
+        if (picture) {
+            [userDict setObject:picture forKey:kPicture];
+        }
+        if (sex) {
+            [userDict setObject:sex forKey:kSex];
+        }
+        if (signature) {
+            [userDict setObject:signature forKey:kSignature];
+        }
+        if (userId) {
+            [userDict setObject:userId forKey:kUserId];
+        }
+        if (userName) {
+            [userDict setObject:userName forKey:kUserName];
+        }
+        if (userPhone) {
+            [userDict setObject:userPhone forKey:kUserPhone];
+        }
+        if (userType) {
+            [userDict setObject:userType forKey:kUserType];
+        }
+        
+        [USERDEFAULT setObject:userDict forKey:USERINFO];
+        [USERDEFAULT synchronize];
+        
+        [self dismiss];
+    } else {
+        [self.view makeToast:@"无用户数据"];
+    }
 }
 
 @end

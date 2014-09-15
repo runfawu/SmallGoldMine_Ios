@@ -12,6 +12,7 @@
 #import "MMDrawerVisualState.h"
 #import "SmallGoldMineDrawerVisualStateManager.h"
 #import "SmallGoldMineViewController.h"
+#import "LoginController.h"
 
 @implementation AppDelegate
 
@@ -45,11 +46,29 @@
      }];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController=drawerController;
-    smallGoldMineVC=nil;
+    [self.window makeKeyAndVisible];
     
+    [self presentLoginVC];
+    smallGoldMineVC=nil;
+
     return YES;
 }
-							
+
+- (void)presentLoginVC
+{
+//    CATransition *transition = [CATransition animation];
+//    transition.duration = 0.3;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromRight;
+//    [self.view.window.layer addAnimation:transition forKey:nil];
+    
+    LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
+    loginController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self.window.rootViewController presentViewController:loginController animated:NO completion:nil];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

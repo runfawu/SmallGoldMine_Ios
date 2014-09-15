@@ -8,6 +8,7 @@
 
 #import "SmallGoldMineViewController.h"
 #import "LoginController.h"
+#import "UIViewController+MMDrawerController.h"
 
 @implementation SmallGoldMineViewController
 
@@ -27,9 +28,7 @@
         UIButton* leftBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
         [leftBarbutton setImage:[UIImage imageNamed:@"personal"] forState:UIControlStateNormal];
         [leftBarbutton setImage:[UIImage imageNamed:@"personal"] forState:UIControlStateHighlighted];
-        
-        //FIXME: Test test test
-        [leftBarbutton addTarget:self action:@selector(testLogin:) forControlEvents:UIControlEventTouchUpInside];
+
         
         if (IS_IOS7) {
 //            [leftBarbutton setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
@@ -78,33 +77,57 @@
     [super viewWillAppear:animated];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+//    [super viewDidAppear:animated];
+//    [self presentLoginVC];
+}
 
 -(void)selectedVSquareButton:(id)sender{
     [self.segmentedControl.vSquareButton setTitleColor:[UIColor colorWithRed:249.0/255 green:186.0/255 blue:8.0/255 alpha:1.0] forState:UIControlStateNormal];
     [self.segmentedControl.taskButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]  forState:UIControlStateNormal];
     [self.segmentedControl.goldMineButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]  forState:UIControlStateNormal];
-    self.segmentedControl.flagView.frame=CGRectMake(0.0,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
+    [UIView animateWithDuration:0.2 animations:^{
+        self.segmentedControl.flagView.frame=CGRectMake(0.0,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
+    }];
 }
 
 -(void)selectedTaskButton:(id)sender{
     [self.segmentedControl.vSquareButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0] forState:UIControlStateNormal];
     [self.segmentedControl.taskButton setTitleColor:[UIColor colorWithRed:249.0/255 green:186.0/255 blue:8.0/255 alpha:1.0]  forState:UIControlStateNormal];
     [self.segmentedControl.goldMineButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]  forState:UIControlStateNormal];
+    [UIView animateWithDuration:0.2 animations:^{
     self.segmentedControl.flagView.frame=CGRectMake(segmentedControl.taskButton.frame.origin.x,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
+         }];
 }
 
 -(void)selectedGoldMineButton:(id)sender{
     [self.segmentedControl.vSquareButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0] forState:UIControlStateNormal];
     [self.segmentedControl.taskButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]  forState:UIControlStateNormal];
     [self.segmentedControl.goldMineButton setTitleColor:[UIColor colorWithRed:249.0/255 green:186.0/255 blue:8.0/255 alpha:1.0]  forState:UIControlStateNormal];
+    [UIView animateWithDuration:0.2 animations:^{
     self.segmentedControl.flagView.frame=CGRectMake(segmentedControl.goldMineButton.frame.origin.x,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
+     }];
 }
 
-#pragma mark - Test
-- (void)testLogin:(id)sender
+#pragma mark - Present to login
+- (void)presentLoginVC
 {
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.3;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromRight;
+    [self.view.window.layer addAnimation:transition forKey:nil];
+    
     LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
-    [self presentViewController:loginController animated:YES completion:nil];
+    
+    DLog(@"self.mmDrawer = %@", self.mm_drawerController);
+    DLog(@"self = %@", self);
+    UINavigationController *navi = (UINavigationController *)self.mm_drawerController.centerViewController;
+    DLog(@"sefl.mmDrawer.centerVC = %@", navi.topViewController);
+
+    [self.view.window.rootViewController presentViewController:loginController animated:NO completion:nil];
 }
 
 @end

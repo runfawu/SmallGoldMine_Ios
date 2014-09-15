@@ -71,19 +71,23 @@ didStartElement:(NSString *)elementName
  qualifiedName:(NSString *)qName
 {
     if ([elementName isEqualToString:matchElement]) {
+        elementFound = NO;
+        DLog(@"这里进几次啊");
+        [xmlParser abortParsing];
         if (self.finishBlock) {
             self.finishBlock(parseResult == nil ? nil : parseResult);
         }
-        elementFound = NO;
-        [xmlParser abortParsing];
+
     }
     
     if ([elementName isEqualToString:@"faultstring"]) {
+        elementFound = NO;
+        [xmlParser abortParsing];
+        
         if (self.errorBlock) {
             self.errorBlock(errorString == nil ? nil : errorString);
         }
-        elementFound = NO;
-        [xmlParser abortParsing];
+        
     }
 }
 
