@@ -15,4 +15,7 @@
 @property (nonatomic,strong) UILabel *goodsDescribeLabel;
 @property (nonatomic,strong) UIView *cellSeperateView;
 
+-(void)setSmallGoldMineCellWithDictionary:(NSDictionary *)brandDic;
+
+
 @end
