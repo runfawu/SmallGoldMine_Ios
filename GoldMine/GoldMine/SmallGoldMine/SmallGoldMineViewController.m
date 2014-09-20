@@ -10,6 +10,7 @@
 #import "SmallGoldMineCell.h"
 #import "LoginController.h"
 #import "UIViewController+MMDrawerController.h"
+#import "InputBarcodeController.h"
 
 @interface SmallGoldMineViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -51,6 +52,8 @@
         UIButton  *rightBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
         [rightBarbutton setImage:[UIImage imageNamed:@"scan"] forState:UIControlStateNormal];
         [rightBarbutton setImage:[UIImage imageNamed:@"scan"] forState:UIControlStateHighlighted];
+        [rightBarbutton addTarget:self action:@selector(jumpToInputBarcode) forControlEvents:UIControlEventTouchUpInside];
+        
         UIBarButtonItem* rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarbutton];
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
         rightBarbutton=nil;
@@ -228,6 +231,14 @@
     DLog(@"sefl.mmDrawer.centerVC = %@", navi.topViewController);
 
     [self.view.window.rootViewController presentViewController:loginController animated:NO completion:nil];
+}
+
+#pragma mark - Button events
+- (void)jumpToInputBarcode
+{
+    InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
+    
+    [self.navigationController pushViewController:inputController animated:YES];
 }
 
 @end

@@ -12,5 +12,6 @@
 
 + (UIColor *)colorWithHexString: (NSString *)color;
 + (BOOL)isValidMobile:(NSString *)mobile;
++ (BOOL)isValidNumber:(NSString *)number;
 
 @end

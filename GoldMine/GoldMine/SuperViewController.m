@@ -117,7 +117,7 @@
 #pragma mark - Button events
 - (void)clickedBack:(id)sender
 {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

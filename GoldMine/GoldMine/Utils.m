@@ -60,5 +60,12 @@
     return [phoneTest evaluateWithObject:mobile];
 }
 
++ (BOOL)isValidNumber:(NSString *)number
+{
+    NSString *numberRegex = @"^[0-9]*$";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegex];
+    
+    return [predicate evaluateWithObject:number];
+}
 
 @end

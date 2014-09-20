@@ -70,6 +70,8 @@
     [self.tableView setDataSource:self];
     [self.view addSubview:self.tableView];
     
+    DLog(@"sideDrawer frame = %@", NSStringFromCGRect(self.view.frame));
+    
     if (_photoView == nil) {
         _photoView = [[MenuTopPhotoView alloc] initWithFrame:CGRectMake(0.0, 0.0, 277.0f, 220.0f)];
         [_photoView setBackgroundColor:[UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]];

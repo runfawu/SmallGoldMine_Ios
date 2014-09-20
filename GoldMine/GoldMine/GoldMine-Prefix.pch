@@ -42,5 +42,8 @@
 
 #define SHOW_BAD_NETWORK_TOAST(view)   [view makeToast:@"网络不给力,服务器无响应"]
 
-
+/**
+ * 红色rgb值：237,29,27
+ * hex值：#ED1D1B
+ */
 
