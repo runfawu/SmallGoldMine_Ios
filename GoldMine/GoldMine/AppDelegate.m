@@ -48,7 +48,7 @@
     self.window.rootViewController=drawerController;
     [self.window makeKeyAndVisible];
     
-//    [self presentLoginVC];
+    [self presentLoginVC];
     smallGoldMineVC=nil;
 
     return YES;
@@ -63,11 +63,11 @@
 //    transition.subtype = kCATransitionFromRight;
 //    [self.view.window.layer addAnimation:transition forKey:nil];
     
-//    LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
-//    loginController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
+    loginController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
-//    [self.window.rootViewController presentViewController:loginController animated:NO completion:nil];
-    self.window.rootViewController=[[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];;
+    [self.window.rootViewController presentViewController:loginController animated:NO completion:nil];
+//    self.window.rootViewController=[[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];;
 //    loginController=nil;
 }
 

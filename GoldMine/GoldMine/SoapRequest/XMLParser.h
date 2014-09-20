@@ -24,7 +24,7 @@ typedef void (^ErrorBlock) (NSMutableString *errorStr);
 @property (nonatomic, copy) ErrorBlock errorBlock;
 
 - (void)parseXMLWithData:(NSData *)data
-                matchElement:(NSString *)element
-            finishParseBlock:(FinishBlock)finishblock
-                  errorBlock:(ErrorBlock)errBlock;
+            matchElement:(NSString *)element
+        finishParseBlock:(FinishBlock)finishblock
+              errorBlock:(ErrorBlock)errBlock;
 @end
