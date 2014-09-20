@@ -7,6 +7,7 @@
 //
 
 #import "LoginController.h"
+#import "RegisterController.h"
 
 @interface LoginController ()
 
@@ -47,6 +48,13 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -55,14 +63,26 @@
     self.passwordTextField.text = @"123456";
 }
 
+#pragma mark - TextField && Keyboard
+- (IBAction)textFieldReturn:(UITextField *)sender {
+    [self UIControlHideKeyboard:sender];
+}
+
+- (IBAction)UIControlHideKeyboard:(id)sender {
+    [self.userNameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+}
+
+
 #pragma mark - Button events
 - (IBAction)login:(id)sender {
-//    [self dismiss];
     [self theLoginCode];
 }
 
 - (IBAction)registerNewAccount:(id)sender {
+    RegisterController *registerController = [[RegisterController alloc] initWithNibName:@"RegisterController" bundle:nil];
     
+    [self.navigationController pushViewController:registerController animated:YES];
 }
 
 - (void)theLoginCode
@@ -81,26 +101,30 @@
     
     NSString *userName = self.userNameTextField.text;
     NSString *password = self.passwordTextField.text;
+    NSString *version = @"1.0";
     
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
     [paramDict setObject:userName forKey:@"uid"];
     [paramDict setObject:password forKey:@"pwd"];
+    [paramDict setObject:version forKey:@"version"];
     
     __weak __typeof(&*self)weakSelf = self;
     
     [self.loginReqeust postRequestWithSoapNamespace:@"UserLogin" params:paramDict successBlock:^(id result) {
         DLog(@"login success result = %@", result);
-        
+        weakSelf.loginReqeust = nil;
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
         [weakSelf parseDataWithResult:result];
         
     } failureBlock:^(NSString *requestError) {
+        weakSelf.loginReqeust = nil;
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-        
+        SHOW_BAD_NETWORK_TOAST(weakSelf.view);
         
     } errorBlock:^(NSMutableString *errorStr) {
+        weakSelf.loginReqeust = nil;
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-        
+        [weakSelf.view makeToast:errorStr];
     }];
 
 }

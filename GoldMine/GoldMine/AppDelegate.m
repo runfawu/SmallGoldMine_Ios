@@ -65,8 +65,10 @@
     
     LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
     loginController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:loginController];
+    loginController.navigationController.navigationBarHidden = YES;
     
-    [self.window.rootViewController presentViewController:loginController animated:NO completion:nil];
+    [self.window.rootViewController presentViewController:navi animated:NO completion:nil];
 //    self.window.rootViewController=[[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];;
 //    loginController=nil;
 }

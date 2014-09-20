@@ -17,6 +17,7 @@
     #import "SoapRequest.h"
     #import "MBProgressHUD.h"
     #import "UIView+Toast.h"
+    #import "Utils.h"
 #endif
 
 
@@ -27,3 +28,19 @@
 #else
 #define DLog(format, ...)      /*  */
 #endif
+
+
+#define UIColorRGBMake(r, g, b)  [UIColor colorWithRed:r / 2555.0 green:g / 225.0 blue:b / 255.0 alpha:1]
+
+
+#define SCREEN_HEIGHT  [[UIScreen mainScreen] bounds].size.height
+#define SCREEN_WIDTH   [[UIScreen mainScreen] bounds].size.width
+
+#define iPhone5  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone4  SCREEN_HEIGHT == 480 ? YES : NO  //如何判断是3.5屏?
+
+#define SHOW_BAD_NETWORK_TOAST(view)   [view makeToast:@"网络不给力,服务器无响应"]
+
+
+

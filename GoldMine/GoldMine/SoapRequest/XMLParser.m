@@ -73,7 +73,6 @@ didStartElement:(NSString *)elementName
 {
     if ([elementName isEqualToString:matchElement]) {
         elementFound = NO;
-        DLog(@"这里进几次啊");
         [xmlParser abortParsing];
         if (self.finishBlock) {
             self.finishBlock(parseResult == nil ? nil : parseResult);

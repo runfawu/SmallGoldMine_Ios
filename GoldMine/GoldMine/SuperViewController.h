@@ -13,9 +13,13 @@
 {
     BOOL      _bNeedShowRightBarButtonItem;
     BOOL      _bNeedShowLogoView;
+    BOOL      _bNeedShowBackBarButtonItem;
     UIImageView *_logoView;
 }
 
+//@property (nonatomic, assign) BOOL needBack;
+
 - (void)drawView;
+- (void)clickedBack:(id)sender;
 
 @end

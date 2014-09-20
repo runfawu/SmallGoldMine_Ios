@@ -14,6 +14,7 @@
 
 @implementation SuperViewController
 
+#pragma mark - Lifecycle
 - (id) init
 {
 	self = [super init];
@@ -21,6 +22,7 @@
 	{
         _bNeedShowRightBarButtonItem = NO;
         _bNeedShowLogoView = NO;
+        _bNeedShowBackBarButtonItem = NO;
 	}
 	return self;
 }
@@ -56,12 +58,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    [self configNaviTitle];
+    [self configLeftBarButtonItem];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    //FIXME: 放到这里会有一闪才出现的bug
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     [self.navigationController setNavigationBarHidden:NO];
     self.navigationController.navigationBar.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
@@ -69,6 +75,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
     if (IS_IOS7) {
         self.view.frame = self.view.superview.bounds;
     }
@@ -80,6 +88,37 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - NaviBar configuration
+- (void)configLeftBarButtonItem
+{
+    if (_bNeedShowBackBarButtonItem) {
+        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        backButton.frame = CGRectMake(0, 0, 20, 28);
+        [backButton setImage:[UIImage imageNamed:@"navi_back"] forState:UIControlStateNormal];
+        [backButton setImage:[UIImage imageNamed:@"navi_back"] forState:UIControlStateHighlighted];
+        [backButton addTarget:self action:@selector(clickedBack:) forControlEvents:UIControlEventTouchUpInside];
+        
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+        backButton = nil;
+    }
+}
+
+- (void)configNaviTitle
+{
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowOffset = CGSizeMake(-1, 0);
+    shadow.shadowBlurRadius = 5;
+    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:18],
+                                                                    NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                                    NSShadowAttributeName : shadow
+                                                                    };
+}
+
+#pragma mark - Button events
+- (void)clickedBack:(id)sender
+{
+    
+}
 
 
 @end

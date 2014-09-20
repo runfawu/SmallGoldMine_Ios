@@ -26,13 +26,15 @@
 -(id)init{
     self=[super init];
     if (self) {
-        UILabel *titleLable=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 100.0, 44.0)];
-        titleLable.text=@"小V聚宝";
-        titleLable.font=[UIFont systemFontOfSize:24.0];
-        titleLable.textAlignment=NSTextAlignmentCenter;
-        titleLable.textColor=[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];;
-        self.navigationItem.titleView=titleLable;
-        titleLable=nil;
+//        UILabel *titleLable=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 100.0, 44.0)];
+//        titleLable.text=@"小V聚宝";
+//        titleLable.font=[UIFont systemFontOfSize:24.0];
+//        titleLable.textAlignment=NSTextAlignmentCenter;
+//        titleLable.textColor=[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];;
+//        self.navigationItem.titleView=titleLable;
+//        titleLable=nil;
+        
+        self.title = @"小V聚宝";
         
         UIButton* leftBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
         [leftBarbutton setImage:[UIImage imageNamed:@"personal"] forState:UIControlStateNormal];
@@ -119,7 +121,7 @@
     return [brandArray count];
 }
 
--(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 82.0;
 }
 
