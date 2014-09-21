@@ -20,6 +20,9 @@
 
 #import "SmallGoldMineSideDrawerViewController.h"
 #import "DrawerLeftTableViewCell.h"
+#import "WealthViewController.h"
+#import "UIViewController+MMDrawerController.h"
+#import "RankViewController.h"
 
 
 @implementation SmallGoldMineSideDrawerViewController
@@ -176,5 +179,31 @@
     }
 }
 
+#pragma mar - MenuTopPhotoViewDelegate
+- (void)tapPhotoView
+{
+    [self.view makeToast:@"点了头像"];
+}
+
+- (void)tapWealthImageView:(MenuTopPhotoView *)photoView
+{
+    WealthViewController *wealthController = [[WealthViewController alloc] initWithNibName:@"WealthViewController" bundle:nil];
+    UINavigationController *wealthNavi = [[UINavigationController alloc] initWithRootViewController:wealthController];
+    
+    [self.mm_drawerController setCenterViewController:wealthNavi withCloseAnimation:YES completion:nil];
+}
+
+- (void)tapRankImageView:(MenuTopPhotoView *)photoView
+{
+    RankViewController *rankController = [[RankViewController alloc] initWithNibName:@"RankViewController" bundle:nil];
+    UINavigationController *rankNavi = [[UINavigationController alloc] initWithRootViewController:rankController];
+    
+    [self.mm_drawerController setCenterViewController:rankNavi withCloseAnimation:YES completion:nil];
+}
+
+- (void)tapGuysImageView:(MenuTopPhotoView *)photoView
+{
+    
+}
 
 @end

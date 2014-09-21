@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class MenuTopPhotoView;
 @protocol MenuTopPhotoViewDelegate <NSObject>
 
 -(void)tapPhotoView;
+- (void)tapWealthImageView:(MenuTopPhotoView *)photoView;
+- (void)tapRankImageView:(MenuTopPhotoView *)photoView;
+- (void)tapGuysImageView:(MenuTopPhotoView *)photoView;
 
 @end
 

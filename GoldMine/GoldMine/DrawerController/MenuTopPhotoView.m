@@ -109,9 +109,31 @@
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if ([self.delegate respondsToSelector:@selector(tapPhotoView)]) {
-        [self.delegate performSelector:@selector(tapPhotoView) withObject:nil];
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self];
+    
+    if (CGRectContainsPoint(self.photo.frame, point)) {
+        if ([self.delegate respondsToSelector:@selector(tapPhotoView)]) {
+            [self.delegate performSelector:@selector(tapPhotoView) withObject:nil];
+        }
+    } else if (CGRectContainsPoint(self.wealthImageView.frame, point)) {
+        if ([self.delegate respondsToSelector:@selector(tapWealthImageView:)]) {
+            [self.delegate tapWealthImageView:self];
+        }
+    } else if (CGRectContainsPoint(self.rankImageView.frame, point)) {
+        if ([self.delegate respondsToSelector:@selector(tapRankImageView:)]) {
+            [self.delegate tapRankImageView:self];
+        }
+    } else if (CGRectContainsPoint(self.guysImageView.frame, point)) {
+        if ([self.delegate respondsToSelector:@selector(tapGuysImageView:)]) {
+            [self.delegate tapGuysImageView:self];
+        }
     }
+    
+    
+    
+    
+    
 }
 
 
