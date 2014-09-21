@@ -9,6 +9,7 @@
 #import "WealthViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "WealthCell.h"
+#import "IntegrationDetailController.h"
 
 @interface WealthViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -81,6 +82,10 @@
 {
     WealthCell *cell = (WealthCell *)button.superview.superview.superview;
     DLog(@"cell = %@", cell);
+    
+    IntegrationDetailController *detailController = [[IntegrationDetailController alloc] initWithNibName:@"IntegrationDetailController" bundle:nil];
+    
+    [self.navigationController pushViewController:detailController animated:YES];
 }
 
 #pragma mark - Override
