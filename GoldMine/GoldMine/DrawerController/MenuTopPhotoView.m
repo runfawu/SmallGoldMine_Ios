@@ -24,7 +24,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _photo = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width/2-32.5f, 20.0f, 65.0f, 65.0f)];
-        [_photo setImage:[UIImage imageNamed:@"default_portrait"]];
+        [_photo setImage:[UIImage imageNamed:@"logo_icon"]];
         _photo.layer.masksToBounds=YES;
         _photo.layer.cornerRadius=32.5;
         _photo.layer.borderWidth=1.0;

@@ -14,6 +14,10 @@
 		031B51F319CF176200FEA536 /* IntegrationDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031B51F119CF176200FEA536 /* IntegrationDetailController.xib */; };
 		031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 031B51F519CF18CC00FEA536 /* IntegrationDetailCell.m */; };
 		031B51F819CF18CC00FEA536 /* IntegrationDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031B51F619CF18CC00FEA536 /* IntegrationDetailCell.xib */; };
+		031B544419D1AEC900FEA536 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B544119D1AEC900FEA536 /* Default-568h@2x.png */; };
+		031B544519D1AEC900FEA536 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B544219D1AEC900FEA536 /* Default@2x.png */; };
+		031B544619D1AEC900FEA536 /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B544319D1AEC900FEA536 /* Icon120.png */; };
+		031B544819D1AF2400FEA536 /* logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B544719D1AF2400FEA536 /* logo_icon.png */; };
 		033F738119CD1D4D00F5DF52 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F738019CD1D4D00F5DF52 /* Utils.m */; };
 		033F738519CD1E3500F5DF52 /* register_verifyCode_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F738219CD1E3500F5DF52 /* register_verifyCode_h.png */; };
 		033F738619CD1E3500F5DF52 /* register_verifyCode_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F738319CD1E3500F5DF52 /* register_verifyCode_n.png */; };
@@ -153,6 +157,10 @@
 		031B51F419CF18CC00FEA536 /* IntegrationDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationDetailCell.h; sourceTree = "<group>"; };
 		031B51F519CF18CC00FEA536 /* IntegrationDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationDetailCell.m; sourceTree = "<group>"; };
 		031B51F619CF18CC00FEA536 /* IntegrationDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegrationDetailCell.xib; sourceTree = "<group>"; };
+		031B544119D1AEC900FEA536 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		031B544219D1AEC900FEA536 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		031B544319D1AEC900FEA536 /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
+		031B544719D1AF2400FEA536 /* logo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_icon.png; sourceTree = "<group>"; };
 		033F737F19CD1D4D00F5DF52 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		033F738019CD1D4D00F5DF52 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		033F738219CD1E3500F5DF52 /* register_verifyCode_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_verifyCode_h.png; sourceTree = "<group>"; };
@@ -358,6 +366,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031B544019D1AEC900FEA536 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				031B544119D1AEC900FEA536 /* Default-568h@2x.png */,
+				031B544219D1AEC900FEA536 /* Default@2x.png */,
+				031B544319D1AEC900FEA536 /* Icon120.png */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
 		033F737E19CD1D2500F5DF52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +604,7 @@
 		04FC3D3D191F4FD200CB8F80 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				031B544019D1AEC900FEA536 /* Default */,
 				71AD9D0519C4377300061009 /* LoginRegister */,
 				04FC3D63191F88AD00CB8F80 /* SmallGoldMine */,
 				04FC3D3E191F4FD200CB8F80 /* LeftMenu */,
@@ -596,6 +615,7 @@
 		04FC3D3E191F4FD200CB8F80 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
+				031B544719D1AF2400FEA536 /* logo_icon.png */,
 				036163F119CEC08500FDC231 /* rankCell_round.png */,
 				036163EB19CEBEC100FDC231 /* rankCell_one.png */,
 				036163EC19CEBEC100FDC231 /* rankCell_three.png */,
@@ -846,6 +866,7 @@
 				0318673719CD0FF0004C6DBD /* navi_back@2x.png in Resources */,
 				04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */,
 				036163E519CE956B00FDC231 /* RankCell.xib in Resources */,
+				031B544519D1AEC900FEA536 /* Default@2x.png in Resources */,
 				036163EE19CEBEC100FDC231 /* rankCell_one.png in Resources */,
 				71AD9D1319C4377300061009 /* login_password.png in Resources */,
 				04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */,
@@ -885,10 +906,13 @@
 				036163EA19CE95A900FDC231 /* RankViewController.xib in Resources */,
 				04FC3D58191F4FD200CB8F80 /* wealth_bg@2x.png in Resources */,
 				71AD9D1119C4377300061009 /* login_logo.png in Resources */,
+				031B544819D1AF2400FEA536 /* logo_icon.png in Resources */,
 				04FC3D52191F4FD200CB8F80 /* portrait_bg@2x.png in Resources */,
 				036163DF19CE8ED100FDC231 /* wealthCell_arrow.png in Resources */,
 				04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */,
 				0318673519CD0CAE004C6DBD /* RegisterController.xib in Resources */,
+				031B544619D1AEC900FEA536 /* Icon120.png in Resources */,
+				031B544419D1AEC900FEA536 /* Default-568h@2x.png in Resources */,
 				033F738619CD1E3500F5DF52 /* register_verifyCode_n.png in Resources */,
 				04FC3D56191F4FD200CB8F80 /* vip_phonebook@2x.png in Resources */,
 				71AD9D1419C4377300061009 /* login_register_h.png in Resources */,
@@ -1090,8 +1114,6 @@
 		04FC3D1F191F2CD100CB8F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
@@ -1104,8 +1126,6 @@
 		04FC3D20191F2CD100CB8F80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
