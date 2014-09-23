@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0318673419CD0CAE004C6DBD /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0318673219CD0CAE004C6DBD /* RegisterController.m */; };
+		0318673519CD0CAE004C6DBD /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0318673319CD0CAE004C6DBD /* RegisterController.xib */; };
+		0318673719CD0FF0004C6DBD /* navi_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0318673619CD0FF0004C6DBD /* navi_back@2x.png */; };
+		031B51F219CF176200FEA536 /* IntegrationDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031B51F019CF176200FEA536 /* IntegrationDetailController.m */; };
+		031B51F319CF176200FEA536 /* IntegrationDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031B51F119CF176200FEA536 /* IntegrationDetailController.xib */; };
+		031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 031B51F519CF18CC00FEA536 /* IntegrationDetailCell.m */; };
+		031B51F819CF18CC00FEA536 /* IntegrationDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031B51F619CF18CC00FEA536 /* IntegrationDetailCell.xib */; };
+		033F738119CD1D4D00F5DF52 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F738019CD1D4D00F5DF52 /* Utils.m */; };
+		033F738519CD1E3500F5DF52 /* register_verifyCode_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F738219CD1E3500F5DF52 /* register_verifyCode_h.png */; };
+		033F738619CD1E3500F5DF52 /* register_verifyCode_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F738319CD1E3500F5DF52 /* register_verifyCode_n.png */; };
+		033F738719CD1E3500F5DF52 /* register_verifyThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F738419CD1E3500F5DF52 /* register_verifyThumb.png */; };
+		033F738D19CD3A1E00F5DF52 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F738B19CD3A1E00F5DF52 /* ScanViewController.m */; };
+		033F738E19CD3A1E00F5DF52 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033F738C19CD3A1E00F5DF52 /* ScanViewController.xib */; };
+		033F739219CD3BDA00F5DF52 /* InputBarcodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F739019CD3BDA00F5DF52 /* InputBarcodeController.m */; };
+		033F739319CD3BDA00F5DF52 /* InputBarcodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033F739119CD3BDA00F5DF52 /* InputBarcodeController.xib */; };
+		033F739919CD3D7B00F5DF52 /* input_cancel_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F739419CD3D7B00F5DF52 /* input_cancel_h.png */; };
+		033F739A19CD3D7B00F5DF52 /* input_cancel_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F739519CD3D7B00F5DF52 /* input_cancel_n.png */; };
+		033F739B19CD3D7B00F5DF52 /* input_confirm_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F739619CD3D7B00F5DF52 /* input_confirm_h.png */; };
+		033F739C19CD3D7B00F5DF52 /* input_confirm_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F739719CD3D7B00F5DF52 /* input_confirm_n.png */; };
+		033F739D19CD3D7B00F5DF52 /* input_textField.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F739819CD3D7B00F5DF52 /* input_textField.png */; };
+		036163D519CE857200FDC231 /* WealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036163D319CE857200FDC231 /* WealthViewController.m */; };
+		036163D619CE857200FDC231 /* WealthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036163D419CE857200FDC231 /* WealthViewController.xib */; };
+		036163DA19CE890D00FDC231 /* WealthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036163D819CE890D00FDC231 /* WealthCell.m */; };
+		036163DB19CE890D00FDC231 /* WealthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036163D919CE890D00FDC231 /* WealthCell.xib */; };
+		036163DF19CE8ED100FDC231 /* wealthCell_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163DD19CE8ED100FDC231 /* wealthCell_arrow.png */; };
+		036163E019CE8ED100FDC231 /* wealthCell_integeration.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163DE19CE8ED100FDC231 /* wealthCell_integeration.png */; };
+		036163E419CE956B00FDC231 /* RankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036163E219CE956B00FDC231 /* RankCell.m */; };
+		036163E519CE956B00FDC231 /* RankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036163E319CE956B00FDC231 /* RankCell.xib */; };
+		036163E919CE95A900FDC231 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036163E719CE95A900FDC231 /* RankViewController.m */; };
+		036163EA19CE95A900FDC231 /* RankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036163E819CE95A900FDC231 /* RankViewController.xib */; };
+		036163EE19CEBEC100FDC231 /* rankCell_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163EB19CEBEC100FDC231 /* rankCell_one.png */; };
+		036163EF19CEBEC100FDC231 /* rankCell_three.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163EC19CEBEC100FDC231 /* rankCell_three.png */; };
+		036163F019CEBEC100FDC231 /* rankCell_two.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163ED19CEBEC100FDC231 /* rankCell_two.png */; };
+		036163F219CEC08500FDC231 /* rankCell_round.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163F119CEC08500FDC231 /* rankCell_round.png */; };
 		04806AF019C6B29100772BEF /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04806AEF19C6B29100772BEF /* TaskTableViewCell.m */; };
 		04806AF519C6B7A400772BEF /* task_tel_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF119C6B7A400772BEF /* task_tel_down@2x.png */; };
 		04806AF619C6B7A400772BEF /* task_tel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF219C6B7A400772BEF /* task_tel@2x.png */; };
@@ -109,6 +143,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0318673119CD0CAE004C6DBD /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
+		0318673219CD0CAE004C6DBD /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterController.m; sourceTree = "<group>"; };
+		0318673319CD0CAE004C6DBD /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
+		0318673619CD0FF0004C6DBD /* navi_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_back@2x.png"; sourceTree = "<group>"; };
+		031B51EF19CF176200FEA536 /* IntegrationDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationDetailController.h; sourceTree = "<group>"; };
+		031B51F019CF176200FEA536 /* IntegrationDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationDetailController.m; sourceTree = "<group>"; };
+		031B51F119CF176200FEA536 /* IntegrationDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegrationDetailController.xib; sourceTree = "<group>"; };
+		031B51F419CF18CC00FEA536 /* IntegrationDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationDetailCell.h; sourceTree = "<group>"; };
+		031B51F519CF18CC00FEA536 /* IntegrationDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationDetailCell.m; sourceTree = "<group>"; };
+		031B51F619CF18CC00FEA536 /* IntegrationDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegrationDetailCell.xib; sourceTree = "<group>"; };
+		033F737F19CD1D4D00F5DF52 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		033F738019CD1D4D00F5DF52 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		033F738219CD1E3500F5DF52 /* register_verifyCode_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_verifyCode_h.png; sourceTree = "<group>"; };
+		033F738319CD1E3500F5DF52 /* register_verifyCode_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_verifyCode_n.png; sourceTree = "<group>"; };
+		033F738419CD1E3500F5DF52 /* register_verifyThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_verifyThumb.png; sourceTree = "<group>"; };
+		033F738A19CD3A1E00F5DF52 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		033F738B19CD3A1E00F5DF52 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		033F738C19CD3A1E00F5DF52 /* ScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
+		033F738F19CD3BDA00F5DF52 /* InputBarcodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputBarcodeController.h; sourceTree = "<group>"; };
+		033F739019CD3BDA00F5DF52 /* InputBarcodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBarcodeController.m; sourceTree = "<group>"; };
+		033F739119CD3BDA00F5DF52 /* InputBarcodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputBarcodeController.xib; sourceTree = "<group>"; };
+		033F739419CD3D7B00F5DF52 /* input_cancel_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_cancel_h.png; sourceTree = "<group>"; };
+		033F739519CD3D7B00F5DF52 /* input_cancel_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_cancel_n.png; sourceTree = "<group>"; };
+		033F739619CD3D7B00F5DF52 /* input_confirm_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_confirm_h.png; sourceTree = "<group>"; };
+		033F739719CD3D7B00F5DF52 /* input_confirm_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_confirm_n.png; sourceTree = "<group>"; };
+		033F739819CD3D7B00F5DF52 /* input_textField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_textField.png; sourceTree = "<group>"; };
+		036163D219CE857200FDC231 /* WealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WealthViewController.h; sourceTree = "<group>"; };
+		036163D319CE857200FDC231 /* WealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WealthViewController.m; sourceTree = "<group>"; };
+		036163D419CE857200FDC231 /* WealthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WealthViewController.xib; sourceTree = "<group>"; };
+		036163D719CE890D00FDC231 /* WealthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WealthCell.h; sourceTree = "<group>"; };
+		036163D819CE890D00FDC231 /* WealthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WealthCell.m; sourceTree = "<group>"; };
+		036163D919CE890D00FDC231 /* WealthCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WealthCell.xib; sourceTree = "<group>"; };
+		036163DD19CE8ED100FDC231 /* wealthCell_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wealthCell_arrow.png; sourceTree = "<group>"; };
+		036163DE19CE8ED100FDC231 /* wealthCell_integeration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wealthCell_integeration.png; sourceTree = "<group>"; };
+		036163E119CE956B00FDC231 /* RankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankCell.h; sourceTree = "<group>"; };
+		036163E219CE956B00FDC231 /* RankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankCell.m; sourceTree = "<group>"; };
+		036163E319CE956B00FDC231 /* RankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankCell.xib; sourceTree = "<group>"; };
+		036163E619CE95A900FDC231 /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
+		036163E719CE95A900FDC231 /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
+		036163E819CE95A900FDC231 /* RankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankViewController.xib; sourceTree = "<group>"; };
+		036163EB19CEBEC100FDC231 /* rankCell_one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_one.png; sourceTree = "<group>"; };
+		036163EC19CEBEC100FDC231 /* rankCell_three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_three.png; sourceTree = "<group>"; };
+		036163ED19CEBEC100FDC231 /* rankCell_two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_two.png; sourceTree = "<group>"; };
+		036163F119CEC08500FDC231 /* rankCell_round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_round.png; sourceTree = "<group>"; };
 		04806AEE19C6B29100772BEF /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		04806AEF19C6B29100772BEF /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 		04806AF119C6B7A400772BEF /* task_tel_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_tel_down@2x.png"; sourceTree = "<group>"; };
@@ -280,6 +358,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033F737E19CD1D2500F5DF52 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				033F737F19CD1D4D00F5DF52 /* Utils.h */,
+				033F738019CD1D4D00F5DF52 /* Utils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		033F738919CD392E00F5DF52 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				033F738F19CD3BDA00F5DF52 /* InputBarcodeController.h */,
+				033F739019CD3BDA00F5DF52 /* InputBarcodeController.m */,
+				033F739119CD3BDA00F5DF52 /* InputBarcodeController.xib */,
+				033F738A19CD3A1E00F5DF52 /* ScanViewController.h */,
+				033F738B19CD3A1E00F5DF52 /* ScanViewController.m */,
+				033F738C19CD3A1E00F5DF52 /* ScanViewController.xib */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		036163D119CE855000FDC231 /* LeftControllers */ = {
+			isa = PBXGroup;
+			children = (
+				036163D219CE857200FDC231 /* WealthViewController.h */,
+				036163D319CE857200FDC231 /* WealthViewController.m */,
+				036163D419CE857200FDC231 /* WealthViewController.xib */,
+				031B51EF19CF176200FEA536 /* IntegrationDetailController.h */,
+				031B51F019CF176200FEA536 /* IntegrationDetailController.m */,
+				031B51F119CF176200FEA536 /* IntegrationDetailController.xib */,
+				036163E619CE95A900FDC231 /* RankViewController.h */,
+				036163E719CE95A900FDC231 /* RankViewController.m */,
+				036163E819CE95A900FDC231 /* RankViewController.xib */,
+				036163DC19CE891500FDC231 /* View */,
+			);
+			path = LeftControllers;
+			sourceTree = "<group>";
+		};
+		036163DC19CE891500FDC231 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				036163E119CE956B00FDC231 /* RankCell.h */,
+				036163E219CE956B00FDC231 /* RankCell.m */,
+				036163E319CE956B00FDC231 /* RankCell.xib */,
+				036163D719CE890D00FDC231 /* WealthCell.h */,
+				036163D819CE890D00FDC231 /* WealthCell.m */,
+				036163D919CE890D00FDC231 /* WealthCell.xib */,
+				031B51F419CF18CC00FEA536 /* IntegrationDetailCell.h */,
+				031B51F519CF18CC00FEA536 /* IntegrationDetailCell.m */,
+				031B51F619CF18CC00FEA536 /* IntegrationDetailCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		04806AED19C6B27600772BEF /* Task */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +432,7 @@
 				04B36411192071E7001FD570 /* SmallGoldMineCell.m */,
 				04B36412192071E7001FD570 /* SmallGoldMineViewController.h */,
 				04B36413192071E7001FD570 /* SmallGoldMineViewController.m */,
+				033F738919CD392E00F5DF52 /* Scan */,
 			);
 			path = SmallGoldMine;
 			sourceTree = "<group>";
@@ -376,11 +510,6 @@
 		04FC3CF5191F2CD000CB8F80 /* GoldMine */ = {
 			isa = PBXGroup;
 			children = (
-				04B3640F192071E7001FD570 /* SmallGoldMine */,
-				71A9871019C1E2AF008402FF /* SoapRequest */,
-				04FC3D6C191F98E700CB8F80 /* Lib */,
-				04FC3D3D191F4FD200CB8F80 /* Images */,
-				04FC3D24191F2D0300CB8F80 /* DrawerController */,
 				04FC3CFE191F2CD000CB8F80 /* AppDelegate.h */,
 				04FC3CFF191F2CD000CB8F80 /* AppDelegate.m */,
 				04FC3D60191F755900CB8F80 /* SuperViewController.h */,
@@ -389,7 +518,13 @@
 				04FC3D04191F2CD000CB8F80 /* ViewController.h */,
 				04FC3D05191F2CD000CB8F80 /* ViewController.m */,
 				71A9873A19C1E870008402FF /* Login */,
-				04FC3D07191F2CD000CB8F80 /* Images.xcassets */,
+				04B3640F192071E7001FD570 /* SmallGoldMine */,
+				04FC3D24191F2D0300CB8F80 /* DrawerController */,
+				036163D119CE855000FDC231 /* LeftControllers */,
+				71A9871019C1E2AF008402FF /* SoapRequest */,
+				033F737E19CD1D2500F5DF52 /* Utils */,
+				04FC3D6C191F98E700CB8F80 /* Lib */,
+				04FC3D3D191F4FD200CB8F80 /* Images */,
 				04FC3CF6191F2CD000CB8F80 /* Supporting Files */,
 			);
 			path = GoldMine;
@@ -398,6 +533,7 @@
 		04FC3CF6191F2CD000CB8F80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04FC3D07191F2CD000CB8F80 /* Images.xcassets */,
 				04FC3CF7191F2CD000CB8F80 /* GoldMine-Info.plist */,
 				04FC3CF8191F2CD000CB8F80 /* InfoPlist.strings */,
 				04FC3CFB191F2CD000CB8F80 /* main.m */,
@@ -460,6 +596,12 @@
 		04FC3D3E191F4FD200CB8F80 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
+				036163F119CEC08500FDC231 /* rankCell_round.png */,
+				036163EB19CEBEC100FDC231 /* rankCell_one.png */,
+				036163EC19CEBEC100FDC231 /* rankCell_three.png */,
+				036163ED19CEBEC100FDC231 /* rankCell_two.png */,
+				036163DD19CE8ED100FDC231 /* wealthCell_arrow.png */,
+				036163DE19CE8ED100FDC231 /* wealthCell_integeration.png */,
 				04FC3D3F191F4FD200CB8F80 /* cell_seperate_line@2x.png */,
 				04FC3D40191F4FD200CB8F80 /* credit@2x.png */,
 				04FC3D41191F4FD200CB8F80 /* credit_git@2x.png */,
@@ -480,6 +622,12 @@
 		04FC3D63191F88AD00CB8F80 /* SmallGoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				033F739419CD3D7B00F5DF52 /* input_cancel_h.png */,
+				033F739519CD3D7B00F5DF52 /* input_cancel_n.png */,
+				033F739619CD3D7B00F5DF52 /* input_confirm_h.png */,
+				033F739719CD3D7B00F5DF52 /* input_confirm_n.png */,
+				033F739819CD3D7B00F5DF52 /* input_textField.png */,
+				0318673619CD0FF0004C6DBD /* navi_back@2x.png */,
 				04806AF119C6B7A400772BEF /* task_tel_down@2x.png */,
 				04806AF219C6B7A400772BEF /* task_tel@2x.png */,
 				04806AF319C6B7A400772BEF /* task_vip_down@2x.png */,
@@ -568,6 +716,9 @@
 				71A9873B19C1E8F4008402FF /* LoginController.h */,
 				71A9873C19C1E8F4008402FF /* LoginController.m */,
 				71A9873D19C1E8F4008402FF /* LoginController.xib */,
+				0318673119CD0CAE004C6DBD /* RegisterController.h */,
+				0318673219CD0CAE004C6DBD /* RegisterController.m */,
+				0318673319CD0CAE004C6DBD /* RegisterController.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -584,6 +735,9 @@
 		71AD9D0519C4377300061009 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
+				033F738219CD1E3500F5DF52 /* register_verifyCode_h.png */,
+				033F738319CD1E3500F5DF52 /* register_verifyCode_n.png */,
+				033F738419CD1E3500F5DF52 /* register_verifyThumb.png */,
 				71AD9D0619C4377300061009 /* login_button_h.png */,
 				71AD9D0719C4377300061009 /* login_button_n.png */,
 				71AD9D0819C4377300061009 /* login_logo.png */,
@@ -682,41 +836,65 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033F739B19CD3D7B00F5DF52 /* input_confirm_h.png in Resources */,
 				04FC3D4C191F4FD200CB8F80 /* cell_seperate_line@2x.png in Resources */,
 				04806AF619C6B7A400772BEF /* task_tel@2x.png in Resources */,
 				04FC3D6B191F88AD00CB8F80 /* scan@2x.png in Resources */,
+				033F739C19CD3D7B00F5DF52 /* input_confirm_n.png in Resources */,
 				04806AF719C6B7A400772BEF /* task_vip_down@2x.png in Resources */,
 				04FC3D4D191F4FD200CB8F80 /* credit@2x.png in Resources */,
+				0318673719CD0FF0004C6DBD /* navi_back@2x.png in Resources */,
 				04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */,
+				036163E519CE956B00FDC231 /* RankCell.xib in Resources */,
+				036163EE19CEBEC100FDC231 /* rankCell_one.png in Resources */,
 				71AD9D1319C4377300061009 /* login_password.png in Resources */,
 				04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */,
 				04FC3D53191F4FD200CB8F80 /* rank@2x.png in Resources */,
 				71AD9D1019C4377300061009 /* login_button_n.png in Resources */,
+				036163DB19CE890D00FDC231 /* WealthCell.xib in Resources */,
+				033F738519CD1E3500F5DF52 /* register_verifyCode_h.png in Resources */,
+				033F738719CD1E3500F5DF52 /* register_verifyThumb.png in Resources */,
 				04FC3D08191F2CD000CB8F80 /* Images.xcassets in Resources */,
 				04FC3D68191F88AD00CB8F80 /* add_ brand@2x.png in Resources */,
 				04FC3CFA191F2CD000CB8F80 /* InfoPlist.strings in Resources */,
+				036163EF19CEBEC100FDC231 /* rankCell_three.png in Resources */,
 				04806AF819C6B7A400772BEF /* task_vip@2x.png in Resources */,
+				031B51F819CF18CC00FEA536 /* IntegrationDetailCell.xib in Resources */,
+				036163F219CEC08500FDC231 /* rankCell_round.png in Resources */,
 				04FC3D55191F4FD200CB8F80 /* task_release@2x.png in Resources */,
 				71AD9D1219C4377300061009 /* login_mobile.png in Resources */,
+				033F739A19CD3D7B00F5DF52 /* input_cancel_n.png in Resources */,
 				04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */,
+				033F738E19CD3A1E00F5DF52 /* ScanViewController.xib in Resources */,
 				04FC3D50191F4FD200CB8F80 /* hot_product@2x.png in Resources */,
+				033F739D19CD3D7B00F5DF52 /* input_textField.png in Resources */,
 				71AD9D1719C4377300061009 /* login_textField.png in Resources */,
 				04FC3D57191F4FD200CB8F80 /* wealth@2x.png in Resources */,
+				036163F019CEBEC100FDC231 /* rankCell_two.png in Resources */,
 				04FC3D54191F4FD200CB8F80 /* setting@2x.png in Resources */,
+				036163D619CE857200FDC231 /* WealthViewController.xib in Resources */,
+				036163E019CE8ED100FDC231 /* wealthCell_integeration.png in Resources */,
 				04FC3D75191FA99400CB8F80 /* vsquare_good@2x.png in Resources */,
 				71AD9D1619C4377300061009 /* login_separateLine.png in Resources */,
 				71AD9D1519C4377300061009 /* login_register_n.png in Resources */,
 				71AD9D0F19C4377300061009 /* login_button_h.png in Resources */,
 				04FC3D4E191F4FD200CB8F80 /* credit_git@2x.png in Resources */,
+				033F739919CD3D7B00F5DF52 /* input_cancel_h.png in Resources */,
 				04FC3D4F191F4FD200CB8F80 /* guys@2x.png in Resources */,
 				71A9873F19C1E8F4008402FF /* LoginController.xib in Resources */,
+				036163EA19CE95A900FDC231 /* RankViewController.xib in Resources */,
 				04FC3D58191F4FD200CB8F80 /* wealth_bg@2x.png in Resources */,
 				71AD9D1119C4377300061009 /* login_logo.png in Resources */,
 				04FC3D52191F4FD200CB8F80 /* portrait_bg@2x.png in Resources */,
+				036163DF19CE8ED100FDC231 /* wealthCell_arrow.png in Resources */,
 				04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */,
+				0318673519CD0CAE004C6DBD /* RegisterController.xib in Resources */,
+				033F738619CD1E3500F5DF52 /* register_verifyCode_n.png in Resources */,
 				04FC3D56191F4FD200CB8F80 /* vip_phonebook@2x.png in Resources */,
 				71AD9D1419C4377300061009 /* login_register_h.png in Resources */,
+				031B51F319CF176200FEA536 /* IntegrationDetailController.xib in Resources */,
 				04806AF519C6B7A400772BEF /* task_tel_down@2x.png in Resources */,
+				033F739319CD3BDA00F5DF52 /* InputBarcodeController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,6 +913,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033F738119CD1D4D00F5DF52 /* Utils.m in Sources */,
 				71A9873719C1E416008402FF /* Reachability.m in Sources */,
 				04FC3D62191F755900CB8F80 /* SuperViewController.m in Sources */,
 				04B5FDF219C6829B00102BC1 /* SDWebImageManager.m in Sources */,
@@ -752,7 +931,9 @@
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
 				71A9873319C1E416008402FF /* ASIFormDataRequest.m in Sources */,
 				71A9873119C1E416008402FF /* ASIDataDecompressor.m in Sources */,
+				033F739219CD3BDA00F5DF52 /* InputBarcodeController.m in Sources */,
 				04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */,
+				033F738D19CD3A1E00F5DF52 /* ScanViewController.m in Sources */,
 				71A9871619C1E3BA008402FF /* SoapRequest.m in Sources */,
 				04B5FDF519C6829C00102BC1 /* UIImage+GIF.m in Sources */,
 				71A9873419C1E416008402FF /* ASIHTTPRequest.m in Sources */,
@@ -765,19 +946,26 @@
 				04B5FDF019C6829B00102BC1 /* SDWebImageDownloader.m in Sources */,
 				04B5FDF719C6829C00102BC1 /* UIImage+WebP.m in Sources */,
 				04B5FDF619C6829C00102BC1 /* UIImage+MultiFormat.m in Sources */,
+				031B51F219CF176200FEA536 /* IntegrationDetailController.m in Sources */,
 				71A9872F19C1E416008402FF /* ASIAuthenticationDialog.m in Sources */,
 				04FC3D00191F2CD000CB8F80 /* AppDelegate.m in Sources */,
+				036163DA19CE890D00FDC231 /* WealthCell.m in Sources */,
 				04FC3D3B191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m in Sources */,
 				04B5FDEE19C6829B00102BC1 /* SDWebImageCompat.m in Sources */,
 				71A9873519C1E416008402FF /* ASIInputStream.m in Sources */,
 				04B5FDEF19C6829B00102BC1 /* SDWebImageDecoder.m in Sources */,
+				0318673419CD0CAE004C6DBD /* RegisterController.m in Sources */,
 				04B5FDED19C6829B00102BC1 /* SDImageCache.m in Sources */,
 				04B5FDEB19C6829B00102BC1 /* MKAnnotationView+WebCache.m in Sources */,
 				04FC3CFC191F2CD000CB8F80 /* main.m in Sources */,
+				036163E919CE95A900FDC231 /* RankViewController.m in Sources */,
 				71AD9D1B19C43EFF00061009 /* UIView+Toast.m in Sources */,
 				04FC3D35191F2D0300CB8F80 /* DrawerLeftTableViewCell.m in Sources */,
+				036163D519CE857200FDC231 /* WealthViewController.m in Sources */,
 				71A9873219C1E416008402FF /* ASIDownloadCache.m in Sources */,
 				04B5FDEC19C6829B00102BC1 /* NSData+ImageContentType.m in Sources */,
+				031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */,
+				036163E419CE956B00FDC231 /* RankCell.m in Sources */,
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,
 				71AD9D0419C41DA900061009 /* MBProgressHUD.m in Sources */,
 			);

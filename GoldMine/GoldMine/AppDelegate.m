@@ -63,6 +63,8 @@
 //    transition.subtype = kCATransitionFromRight;
 //    [self.view.window.layer addAnimation:transition forKey:nil];
     
+    //
+    //
     LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
     loginController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:loginController];
