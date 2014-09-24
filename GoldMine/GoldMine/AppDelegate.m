@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "MMDrawerController.h"
 #import "SmallGoldMineSideDrawerViewController.h"
 #import "MMDrawerVisualState.h"
 #import "SmallGoldMineDrawerVisualStateManager.h"
@@ -29,13 +28,17 @@
     SmallGoldMineViewController *smallGoldMineVC=[[SmallGoldMineViewController alloc] init];
     UINavigationController *goldMineNavGation=[[UINavigationController alloc] initWithRootViewController:smallGoldMineVC];
     
-    MMDrawerController * drawerController = [[MMDrawerController alloc]
-                                             initWithCenterViewController:goldMineNavGation leftDrawerViewController:leftMenuNav];
-    [drawerController setMaximumRightDrawerWidth:277.0];
-    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    MMDrawerController * tmpDrawerController = [[MMDrawerController alloc]initWithCenterViewController:goldMineNavGation leftDrawerViewController:leftMenuNav];
+    self.drawerController = tmpDrawerController;
+    tmpDrawerController=nil;
     
-    [drawerController
+//    MMDrawerController * drawerController = [[MMDrawerController alloc]
+//                                             initWithCenterViewController:goldMineNavGation leftDrawerViewController:leftMenuNav];
+    [ self.drawerController setMaximumRightDrawerWidth:277.0];
+    [ self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [ self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [ self.drawerController
      setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
          MMDrawerControllerDrawerVisualStateBlock block;
          block = [[SmallGoldMineDrawerVisualStateManager sharedManager]
@@ -45,7 +48,7 @@
          }
      }];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController=drawerController;
+    self.window.rootViewController= self.drawerController;
     [self.window makeKeyAndVisible];
     
 //    [self presentLoginVC];
