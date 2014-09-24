@@ -10,6 +10,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "WealthCell.h"
 #import "IntegrationDetailController.h"
+#import "AppDelegate.h"
 
 @interface WealthViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -93,6 +94,9 @@
 {
     
     [self.view makeToast:@"如何回去?"];
+    
+    AppDelegate *delegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate.drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     
     //    [self.mm_drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
     //        [self.navigationController popViewControllerAnimated:NO];
