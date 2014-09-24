@@ -30,7 +30,7 @@
 #endif
 
 
-#define UIColorRGBMake(r, g, b)  [UIColor colorWithRed:r / 2555.0 green:g / 225.0 blue:b / 255.0 alpha:1]
+#define UIColorRGBMake(r, g, b)  [UIColor colorWithRed:r / 255.0 green:g / 225.0 blue:b / 255.0 alpha:1]
 
 
 #define SCREEN_HEIGHT  [[UIScreen mainScreen] bounds].size.height

@@ -109,6 +109,11 @@
 		04FC3D6B191F88AD00CB8F80 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D67191F88AD00CB8F80 /* scan@2x.png */; };
 		04FC3D70191F98E700CB8F80 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */; };
 		04FC3D75191FA99400CB8F80 /* vsquare_good@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D74191FA99400CB8F80 /* vsquare_good@2x.png */; };
+		71A6D43519D2609B00DECF5D /* GoldenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A6D43319D2609B00DECF5D /* GoldenViewController.m */; };
+		71A6D43619D2609B00DECF5D /* GoldenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71A6D43419D2609B00DECF5D /* GoldenViewController.xib */; };
+		71A6D43819D263FB00DECF5D /* golden_redBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 71A6D43719D263FB00DECF5D /* golden_redBg.png */; };
+		71A6D43C19D26ADC00DECF5D /* GoldenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A6D43A19D26ADC00DECF5D /* GoldenCell.m */; };
+		71A6D43D19D26ADC00DECF5D /* GoldenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71A6D43B19D26ADC00DECF5D /* GoldenCell.xib */; };
 		71A9871319C1E2DC008402FF /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A9871219C1E2DC008402FF /* XMLParser.m */; };
 		71A9871619C1E3BA008402FF /* SoapRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A9871519C1E3BA008402FF /* SoapRequest.m */; };
 		71A9872F19C1E416008402FF /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A9871919C1E416008402FF /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -296,6 +301,13 @@
 		04FC3D6E191F98E700CB8F80 /* CustomSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedControl.h; sourceTree = "<group>"; };
 		04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedControl.m; sourceTree = "<group>"; };
 		04FC3D74191FA99400CB8F80 /* vsquare_good@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vsquare_good@2x.png"; sourceTree = "<group>"; };
+		71A6D43219D2609B00DECF5D /* GoldenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldenViewController.h; sourceTree = "<group>"; };
+		71A6D43319D2609B00DECF5D /* GoldenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldenViewController.m; sourceTree = "<group>"; };
+		71A6D43419D2609B00DECF5D /* GoldenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoldenViewController.xib; sourceTree = "<group>"; };
+		71A6D43719D263FB00DECF5D /* golden_redBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golden_redBg.png; sourceTree = "<group>"; };
+		71A6D43919D26ADC00DECF5D /* GoldenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldenCell.h; sourceTree = "<group>"; };
+		71A6D43A19D26ADC00DECF5D /* GoldenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldenCell.m; sourceTree = "<group>"; };
+		71A6D43B19D26ADC00DECF5D /* GoldenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoldenCell.xib; sourceTree = "<group>"; };
 		71A9871119C1E2DC008402FF /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
 		71A9871219C1E2DC008402FF /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
 		71A9871419C1E3BA008402FF /* SoapRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapRequest.h; sourceTree = "<group>"; };
@@ -450,6 +462,7 @@
 				04B36411192071E7001FD570 /* SmallGoldMineCell.m */,
 				04B36412192071E7001FD570 /* SmallGoldMineViewController.h */,
 				04B36413192071E7001FD570 /* SmallGoldMineViewController.m */,
+				71A6D43119D2603100DECF5D /* Golden */,
 				033F738919CD392E00F5DF52 /* Scan */,
 			);
 			path = SmallGoldMine;
@@ -642,6 +655,7 @@
 		04FC3D63191F88AD00CB8F80 /* SmallGoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				71A6D43719D263FB00DECF5D /* golden_redBg.png */,
 				033F739419CD3D7B00F5DF52 /* input_cancel_h.png */,
 				033F739519CD3D7B00F5DF52 /* input_cancel_n.png */,
 				033F739619CD3D7B00F5DF52 /* input_confirm_h.png */,
@@ -680,6 +694,19 @@
 				04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */,
 			);
 			path = CustomSegmentControl;
+			sourceTree = "<group>";
+		};
+		71A6D43119D2603100DECF5D /* Golden */ = {
+			isa = PBXGroup;
+			children = (
+				71A6D43219D2609B00DECF5D /* GoldenViewController.h */,
+				71A6D43319D2609B00DECF5D /* GoldenViewController.m */,
+				71A6D43419D2609B00DECF5D /* GoldenViewController.xib */,
+				71A6D43919D26ADC00DECF5D /* GoldenCell.h */,
+				71A6D43A19D26ADC00DECF5D /* GoldenCell.m */,
+				71A6D43B19D26ADC00DECF5D /* GoldenCell.xib */,
+			);
+			path = Golden;
 			sourceTree = "<group>";
 		};
 		71A9871019C1E2AF008402FF /* SoapRequest */ = {
@@ -886,13 +913,16 @@
 				71AD9D1219C4377300061009 /* login_mobile.png in Resources */,
 				033F739A19CD3D7B00F5DF52 /* input_cancel_n.png in Resources */,
 				04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */,
+				71A6D43D19D26ADC00DECF5D /* GoldenCell.xib in Resources */,
 				033F738E19CD3A1E00F5DF52 /* ScanViewController.xib in Resources */,
 				04FC3D50191F4FD200CB8F80 /* hot_product@2x.png in Resources */,
 				033F739D19CD3D7B00F5DF52 /* input_textField.png in Resources */,
+				71A6D43619D2609B00DECF5D /* GoldenViewController.xib in Resources */,
 				71AD9D1719C4377300061009 /* login_textField.png in Resources */,
 				04FC3D57191F4FD200CB8F80 /* wealth@2x.png in Resources */,
 				036163F019CEBEC100FDC231 /* rankCell_two.png in Resources */,
 				04FC3D54191F4FD200CB8F80 /* setting@2x.png in Resources */,
+				71A6D43819D263FB00DECF5D /* golden_redBg.png in Resources */,
 				036163D619CE857200FDC231 /* WealthViewController.xib in Resources */,
 				036163E019CE8ED100FDC231 /* wealthCell_integeration.png in Resources */,
 				04FC3D75191FA99400CB8F80 /* vsquare_good@2x.png in Resources */,
@@ -953,6 +983,7 @@
 				04806AFB19C6BAD200772BEF /* TaskHeadView.m in Sources */,
 				04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */,
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
+				71A6D43C19D26ADC00DECF5D /* GoldenCell.m in Sources */,
 				71A9873319C1E416008402FF /* ASIFormDataRequest.m in Sources */,
 				71A9873119C1E416008402FF /* ASIDataDecompressor.m in Sources */,
 				033F739219CD3BDA00F5DF52 /* InputBarcodeController.m in Sources */,
@@ -986,6 +1017,7 @@
 				71AD9D1B19C43EFF00061009 /* UIView+Toast.m in Sources */,
 				04FC3D35191F2D0300CB8F80 /* DrawerLeftTableViewCell.m in Sources */,
 				036163D519CE857200FDC231 /* WealthViewController.m in Sources */,
+				71A6D43519D2609B00DECF5D /* GoldenViewController.m in Sources */,
 				71A9873219C1E416008402FF /* ASIDownloadCache.m in Sources */,
 				04B5FDEC19C6829B00102BC1 /* NSData+ImageContentType.m in Sources */,
 				031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */,

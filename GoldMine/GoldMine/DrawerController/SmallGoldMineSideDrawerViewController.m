@@ -63,6 +63,7 @@
 {
     [super viewDidLoad];
     
+    DLog(@"left tableView frame = %@", NSStringFromCGRect(self.view.frame));
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     [self.tableView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
                                                        green:51.0/255.0
