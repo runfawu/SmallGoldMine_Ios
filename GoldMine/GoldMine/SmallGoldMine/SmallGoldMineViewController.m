@@ -90,6 +90,8 @@
     self.vSquareTableView=[[UITableView alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY(bannerSeperateLine.frame), self.view.frame.size.width, self.view.frame.size.height-250.0)];
     self.vSquareTableView.dataSource=self;
     self.vSquareTableView.delegate=self;
+    self.vSquareTableView.showsHorizontalScrollIndicator = NO;
+    self.vSquareTableView.showsVerticalScrollIndicator = NO;
     self.vSquareTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.vSquareTableView];
     
@@ -162,6 +164,16 @@
 //    [paramDict setObject:@"001" forKey:@"uid"];
 //    [paramDict setObject:[NSNumber numberWithInteger:type] forKey:@"num"];
     
+    //FIXME:fake data
+    for (int i = 0; i < 10; i ++) {
+        NSMutableDictionary *fakeDict = [NSMutableDictionary dictionary];
+        [fakeDict setObject:@"好奇Huggies超厚倍柔(专为儿童打造)" forKey:@"BardName"];
+        [fakeDict setObject:@"好奇Huggies超厚倍柔(专为儿童打造)" forKey:@"BardAbout"];
+        
+        [brandArray addObject:fakeDict];
+    }
+    
+    /*
     self.loginReqeust = [[SoapRequest alloc] init];
     //CusPhone  Souye
     [self.loginReqeust postRequestWithSoapNamespace:@"CusPhone" params:paramDict successBlock:^(id result) {
@@ -184,6 +196,7 @@
     }];
     paramDict=nil;
 //    self.loginReqeust=nil;
+     */
 }
 
 -(void)selectedVSquareButton:(id)sender{

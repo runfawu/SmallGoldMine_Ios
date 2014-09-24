@@ -13,7 +13,6 @@
 @property (nonatomic,strong) UIImageView *goodsImageView;
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UILabel *goodsDescribeLabel;
-@property (nonatomic,strong) UIView *cellSeperateView;
 
 -(void)setSmallGoldMineCellWithDictionary:(NSDictionary *)brandDic;
 
