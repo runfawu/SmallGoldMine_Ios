@@ -92,15 +92,8 @@
 #pragma mark - Override
 - (void)clickedBack:(id)sender
 {
-    
-    [self.view makeToast:@"如何回去?"];
-    
     AppDelegate *delegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
     [delegate.drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-    
-    //    [self.mm_drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
-    //        [self.navigationController popViewControllerAnimated:NO];
-    //    }];
 }
 
 @end

@@ -24,7 +24,7 @@
         self.contactNameLabel.textColor=[UIColor colorWithRed:117.0/255 green:117.0/255 blue:117.0/255 alpha:1.0];
         [self addSubview:self.contactNameLabel];
         
-        self.telNoLabel=[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.contactNameLabel.frame)+20.0, self.contactNameLabel.frame.origin.y, 80.0, 25.0)];
+        self.telNoLabel=[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.contactNameLabel.frame)+20.0, self.contactNameLabel.frame.origin.y, 120.0, 25.0)];
         self.telNoLabel.textColor=[UIColor colorWithRed:117.0/255 green:117.0/255 blue:117.0/255 alpha:1.0];
         [self addSubview:self.telNoLabel];
         
@@ -39,11 +39,29 @@
         [self addSubview:self.vipInfoButton];
         
         self.cellSeperateView=[[UIView alloc] initWithFrame:CGRectMake(0.0, 45.0, self.frame.size.width, 1)];
-        self.cellSeperateView.backgroundColor=[UIColor colorWithRed:208.0/255 green:208.0/2585 blue:208.0/255 alpha:1.0];
+        self.cellSeperateView.backgroundColor=[UIColor colorWithRed:208.0/255 green:208.0/255 blue:208.0/255 alpha:1.0];
         [self addSubview:self.cellSeperateView];
+        
+        self.taskNameLabel=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
+        self.taskNameLabel.font=[UIFont systemFontOfSize:16.0];
+        self.taskNameLabel.textColor=[UIColor colorWithRed:253.0/255 green:253.0/255 blue:253.0/255 alpha:1.0];
+        self.taskNameLabel.hidden=YES;
+        [self addSubview:self.taskNameLabel];
     }
     return self;
 }
+
+-(void)setTaskTableViewCellWithDictionary:(NSDictionary *)taskDic{
+    self.contactNameLabel.text=[NSString stringWithFormat:@"     %@",[taskDic objectForKey:@"CusName"]];
+    self.telNoLabel.text=[taskDic objectForKey:@"CusPhone"];
+}
+
+
+-(void)setTaskNameWithString:(NSString *)taskString andBackgroundColorWithColor:(UIColor *)bgColor{
+    self.taskNameLabel.backgroundColor=[UIColor colorWithCGColor:bgColor.CGColor];
+    self.taskNameLabel.text=taskString;
+}
+
 
 
 @end

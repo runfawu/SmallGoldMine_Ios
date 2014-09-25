@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "MMDrawerController.h"
+#import "Reachability.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    
+    NetworkStatus netWorkStatus;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (nonatomic,strong) UINavigationController *goldMineNav;
 
 @property(nonatomic,retain) MMDrawerController *drawerController;
+@property (nonatomic,assign)NetworkStatus netWorkStatus;
 
 @end

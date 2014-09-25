@@ -12,6 +12,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "InputBarcodeController.h"
 
+
 @interface SmallGoldMineViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) SoapRequest *loginReqeust;
@@ -206,6 +207,9 @@
     [UIView animateWithDuration:0.2 animations:^{
         self.segmentedControl.flagView.frame=CGRectMake(0.0,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
     }];
+    if (taskViewController) {
+        [self.view sendSubviewToBack:taskViewController.view];
+    }
 }
 
 -(void)selectedTaskButton:(id)sender{
@@ -215,6 +219,13 @@
     [UIView animateWithDuration:0.2 animations:^{
     self.segmentedControl.flagView.frame=CGRectMake(segmentedControl.taskButton.frame.origin.x,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
          }];
+    if (!taskViewController) {
+        taskViewController=[[TaskViewController alloc] init];
+        taskViewController.view.frame = CGRectMake(0, CGRectGetMaxY(self.segmentedControl.frame), self.view.frame.size.width, self.view.frame.size.height-CGRectGetMaxY(self.segmentedControl.frame));
+        [self.view addSubview:taskViewController.view];
+    }else{
+        [self.view bringSubviewToFront:taskViewController.view];
+    }
 }
 
 -(void)selectedGoldMineButton:(id)sender{
@@ -250,7 +261,6 @@
 - (void)jumpToInputBarcode
 {
     InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
-    
     [self.navigationController pushViewController:inputController animated:YES];
 }
 

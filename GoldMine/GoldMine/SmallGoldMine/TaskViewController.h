@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TaskViewController : UIViewController
+@interface TaskViewController : UIViewController{
+    NSMutableArray *taskArray;
+    
+    NSMutableArray *taskOne;
+    NSMutableArray *taskTwo;
+    NSMutableArray *taskThree;
+}
+
+@property (nonatomic,strong) UITableView *taskTableView;
+
+-(void)getMyTaskDataRequestWithUId:(NSString *)uId andVersion:(NSString *)version;
 
 @end

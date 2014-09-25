@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomSegmentedControl.h"
+#import "TaskViewController.h"
 
 @interface SmallGoldMineViewController :SuperViewController{
      NSMutableArray *brandArray;
+    
+    TaskViewController *taskViewController;
 }
 
 @property (nonatomic,strong) CustomSegmentedControl *segmentedControl;
