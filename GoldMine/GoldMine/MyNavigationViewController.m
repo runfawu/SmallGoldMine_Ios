@@ -29,7 +29,8 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
 #import "MyNavigationViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <math.h>
-#import "IShowLivePlayerViewController.h"
+//#import "Tools.h"
+#import "SmallGoldMineViewController.h"
 
 @interface MyNavigationViewController()
 {
@@ -140,7 +141,8 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
     frame.origin.x = x;
     self.view.frame = frame;
     
-    UIView * keyBoard = [Tools getGlobalKeyBoardView];
+//    UIView * keyBoard = [Tools getGlobalKeyBoardView];
+    UIView * keyBoard=nil;
     frame = keyBoard.frame;
     frame.origin.x = x;
     keyBoard.frame = frame;
@@ -178,7 +180,6 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
 }
 
 #pragma mark - Gesture Recognizer -
-
 - (void)paningGestureReceive:(UIPanGestureRecognizer *)recoginzer
 {
     if (self.viewControllers.count <= 1 || !self.canDragBack) return;
@@ -220,14 +221,13 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
                                                 lastScreenShotView.frame.size.width)];
         
         [self.backgroundView insertSubview:lastScreenShotView belowSubview:blackMask];
-        IShowLivePlayerViewController * iShowLivePlayer = nil;
+        SmallGoldMineViewController *smallGoldMineVC = nil;
         int count = self.viewControllers.count;
         if (count>=2) {
-            iShowLivePlayer = [self.viewControllers objectAtIndex:count-2];
+            smallGoldMineVC = [self.viewControllers objectAtIndex:count-2];
         }
-        if (iShowLivePlayer!=nil&&[iShowLivePlayer isKindOfClass:[IShowLivePlayerViewController class]]&&iShowLivePlayer.moviePlayer!=nil) {
-            iShowLivePlayer.moviePlayer.view.frame = CGRectMake(0, 0, MOVIE_PLAYER_WIDTH, MOVIE_PLAYER_HEIGTH);
-            [lastScreenShotView addSubview:iShowLivePlayer.moviePlayer.view];
+        if (smallGoldMineVC!=nil&&[smallGoldMineVC isKindOfClass:[SmallGoldMineViewController class]]) {
+            [lastScreenShotView addSubview:smallGoldMineVC.view];
         }
         
         
@@ -239,9 +239,9 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
                 [self moveViewWithX:320];
             } completion:^(BOOL finished) {
                 
-                IShowLivePlayerViewController * iShowLivePlayer = [self.viewControllers lastObject];
-                if ([iShowLivePlayer isKindOfClass:[IShowLivePlayerViewController class]]) {
-                     [iShowLivePlayer performSelector:@selector(receiveRemoteNotification)];
+                SmallGoldMineViewController * smallGoldMineVC = [self.viewControllers lastObject];
+                if ([smallGoldMineVC isKindOfClass:[SmallGoldMineViewController class]]) {
+                    
                 }
                 else
                 {
@@ -251,7 +251,8 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
                 CGRect frame = self.view.frame;
                 frame.origin.x = 0;
                 self.view.frame = frame;
-                UIView * keyBoard = [Tools getGlobalKeyBoardView];
+//                UIView * keyBoard = [Tools getGlobalKeyBoardView];
+                UIView * keyBoard=nil;
                 frame = keyBoard.frame;
                 frame.origin.x = 0;
                 keyBoard.frame = frame;
@@ -294,7 +295,7 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
     if (self.viewControllers.count <= 1) return NO;
     if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
         CGPoint translationPoint = [(UIPanGestureRecognizer*)gestureRecognizer translationInView:gestureRecognizer.view];
-        iShowDebug(@"MyNavigation panGestureRecognizerBegin %@",[NSValue valueWithCGPoint:translationPoint]);
+        //iShowDebug(@"MyNavigation panGestureRecognizerBegin %@",[NSValue valueWithCGPoint:translationPoint]);
         if (fabs(translationPoint.x)<fabs(translationPoint.y)) {
             return NO;
         }
