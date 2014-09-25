@@ -89,7 +89,7 @@
 #pragma mark - Override
 - (void)clickedBack:(id)sender
 {
-
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

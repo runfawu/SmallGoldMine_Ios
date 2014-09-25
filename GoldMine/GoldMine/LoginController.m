@@ -101,12 +101,11 @@
     
     NSString *userName = self.userNameTextField.text;
     NSString *password = self.passwordTextField.text;
-    NSString *version = @"1.0";
-    
+
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
     [paramDict setObject:userName forKey:@"uid"];
     [paramDict setObject:password forKey:@"pwd"];
-    [paramDict setObject:version forKey:@"version"];
+    [paramDict setObject:[Tools getAppVersion] forKey:@"version"];
     
     __weak __typeof(&*self)weakSelf = self;
     

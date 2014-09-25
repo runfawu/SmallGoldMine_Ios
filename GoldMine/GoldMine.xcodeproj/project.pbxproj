@@ -18,6 +18,8 @@
 		031B544519D1AEC900FEA536 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B544219D1AEC900FEA536 /* Default@2x.png */; };
 		031B544619D1AEC900FEA536 /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B544319D1AEC900FEA536 /* Icon120.png */; };
 		031B544819D1AF2400FEA536 /* logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B544719D1AF2400FEA536 /* logo_icon.png */; };
+		031B544D19D45F8900FEA536 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031B544B19D45F8900FEA536 /* ProfileViewController.m */; };
+		031B544E19D45F8900FEA536 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031B544C19D45F8900FEA536 /* ProfileViewController.xib */; };
 		033F738119CD1D4D00F5DF52 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F738019CD1D4D00F5DF52 /* Utils.m */; };
 		033F738519CD1E3500F5DF52 /* register_verifyCode_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F738219CD1E3500F5DF52 /* register_verifyCode_h.png */; };
 		033F738619CD1E3500F5DF52 /* register_verifyCode_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F738319CD1E3500F5DF52 /* register_verifyCode_n.png */; };
@@ -177,6 +179,9 @@
 		031B544219D1AEC900FEA536 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		031B544319D1AEC900FEA536 /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
 		031B544719D1AF2400FEA536 /* logo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_icon.png; sourceTree = "<group>"; };
+		031B544A19D45F8900FEA536 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		031B544B19D45F8900FEA536 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		031B544C19D45F8900FEA536 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		033F737F19CD1D4D00F5DF52 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		033F738019CD1D4D00F5DF52 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		033F738219CD1E3500F5DF52 /* register_verifyCode_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_verifyCode_h.png; sourceTree = "<group>"; };
@@ -417,6 +422,16 @@
 			path = Default;
 			sourceTree = "<group>";
 		};
+		031B544919D45F2000FEA536 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				031B544A19D45F8900FEA536 /* ProfileViewController.h */,
+				031B544B19D45F8900FEA536 /* ProfileViewController.m */,
+				031B544C19D45F8900FEA536 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		033F737E19CD1D2500F5DF52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,6 +457,7 @@
 		036163D119CE855000FDC231 /* LeftControllers */ = {
 			isa = PBXGroup;
 			children = (
+				031B544919D45F2000FEA536 /* Profile */,
 				036163D219CE857200FDC231 /* WealthViewController.h */,
 				036163D319CE857200FDC231 /* WealthViewController.m */,
 				036163D419CE857200FDC231 /* WealthViewController.xib */,
@@ -956,6 +972,7 @@
 				0318673719CD0FF0004C6DBD /* navi_back@2x.png in Resources */,
 				04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */,
 				036163E519CE956B00FDC231 /* RankCell.xib in Resources */,
+				031B544E19D45F8900FEA536 /* ProfileViewController.xib in Resources */,
 				031B544519D1AEC900FEA536 /* Default@2x.png in Resources */,
 				036163EE19CEBEC100FDC231 /* rankCell_one.png in Resources */,
 				71AD9D1319C4377300061009 /* login_password.png in Resources */,
@@ -1043,6 +1060,7 @@
 				04FC3D3A191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m in Sources */,
 				04FC3D36191F2D0300CB8F80 /* MenuTopPhotoView.m in Sources */,
 				71A9871319C1E2DC008402FF /* XMLParser.m in Sources */,
+				031B544D19D45F8900FEA536 /* ProfileViewController.m in Sources */,
 				04B5FDF119C6829B00102BC1 /* SDWebImageDownloaderOperation.m in Sources */,
 				04B36415192071E7001FD570 /* SmallGoldMineViewController.m in Sources */,
 				71A9873019C1E416008402FF /* ASIDataCompressor.m in Sources */,

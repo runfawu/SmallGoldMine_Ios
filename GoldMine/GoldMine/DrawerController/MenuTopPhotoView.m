@@ -17,6 +17,7 @@
 @synthesize wealthImageView=_wealthImageView;
 @synthesize guysImageView=_guysImageView;
 @synthesize rankImageView=_rankImageView;
+@synthesize wealthBgIV;
 
 @synthesize delegate=_delegate;
 
@@ -38,7 +39,7 @@
         self.numberLabel.text=@"编号: 34150412211";
         [self addSubview:self.numberLabel];
         
-        UIImageView *wealthBgIV=[[UIImageView alloc] initWithFrame:CGRectMake((self.frame.size.width-158.0)/2.0, CGRectGetMaxY(self.numberLabel.frame)+5, 158.0, 21.0)];
+        wealthBgIV=[[UIImageView alloc] initWithFrame:CGRectMake((self.frame.size.width-158.0)/2.0, CGRectGetMaxY(self.numberLabel.frame)+5, 158.0, 21.0)];
         wealthBgIV.image=[UIImage imageNamed:@"wealth_bg"];
         [self addSubview:wealthBgIV];
         
@@ -90,7 +91,6 @@
         [self addSubview:rankLabel];
         rankLabel=nil;
         
-        wealthBgIV=nil;
     }
     return self;
 }
@@ -112,28 +112,25 @@
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInView:self];
     
-    if (CGRectContainsPoint(self.photo.frame, point)) {
+    if (CGRectContainsPoint(self.photo.frame, point) ||
+        CGRectContainsPoint(self.numberLabel.frame, point) ||
+        CGRectContainsPoint(self.wealthBgIV.frame, point)) {  //点击头像、编号、昵称
         if ([self.delegate respondsToSelector:@selector(tapPhotoView)]) {
             [self.delegate performSelector:@selector(tapPhotoView) withObject:nil];
         }
-    } else if (CGRectContainsPoint(self.wealthImageView.frame, point)) {
+    } else if (CGRectContainsPoint(self.wealthImageView.frame, point)) {  //点击财富
         if ([self.delegate respondsToSelector:@selector(tapWealthImageView:)]) {
             [self.delegate tapWealthImageView:self];
         }
-    } else if (CGRectContainsPoint(self.rankImageView.frame, point)) {
+    } else if (CGRectContainsPoint(self.rankImageView.frame, point)) {  //点击排名
         if ([self.delegate respondsToSelector:@selector(tapRankImageView:)]) {
             [self.delegate tapRankImageView:self];
         }
-    } else if (CGRectContainsPoint(self.guysImageView.frame, point)) {
+    } else if (CGRectContainsPoint(self.guysImageView.frame, point)) {  //点击小伙伴
         if ([self.delegate respondsToSelector:@selector(tapGuysImageView:)]) {
             [self.delegate tapGuysImageView:self];
         }
     }
-    
-    
-    
-    
-    
 }
 
 

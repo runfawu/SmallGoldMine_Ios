@@ -129,7 +129,7 @@
     [UIView animateWithDuration:0.2 animations:^{
     self.segmentedControl.flagView.frame=CGRectMake(segmentedControl.taskButton.frame.origin.x,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
          }];
-    [self.vSquareScrollView setContentOffset:CGPointMake(self.view.frame.size.width, 0)];
+    [self.vSquareScrollView setContentOffset:CGPointMake(self.view.frame.size.width, 0) animated:YES];
 //    if (!taskViewController) {
 //        taskViewController=[[TaskViewController alloc] init];
 //        taskViewController.view.frame = CGRectMake(0, CGRectGetMaxY(self.segmentedControl.frame), self.view.frame.size.width, self.view.frame.size.height-CGRectGetMaxY(self.segmentedControl.frame));
@@ -147,7 +147,7 @@
     [UIView animateWithDuration:0.2 animations:^{
     self.segmentedControl.flagView.frame=CGRectMake(segmentedControl.goldMineButton.frame.origin.x,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
      }];
-    [self.vSquareScrollView setContentOffset:CGPointMake(self.view.frame.size.width*2, 0)];
+    [self.vSquareScrollView setContentOffset:CGPointMake(self.view.frame.size.width*2, 0) animated:YES];
 //    if (!goldenViewController) {
 //        goldenViewController=[[GoldenViewController alloc] initWithNibName:@"GoldenViewController" bundle:nil];
 //        goldenViewController.view.frame = CGRectMake(0, CGRectGetMaxY(self.segmentedControl.frame), self.view.frame.size.width, self.view.frame.size.height-CGRectGetMaxY(self.segmentedControl.frame));

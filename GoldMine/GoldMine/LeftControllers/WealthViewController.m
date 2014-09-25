@@ -92,8 +92,6 @@
 #pragma mark - Override
 - (void)clickedBack:(id)sender
 {
-//    AppDelegate *delegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
-//    [delegate.drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
