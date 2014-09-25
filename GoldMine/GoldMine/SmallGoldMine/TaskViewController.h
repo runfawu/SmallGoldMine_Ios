@@ -8,15 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TaskViewControllerDelegate <NSObject>
+
+-(void)seeVipDetailInfomationWithCustomeId:(NSString *)customeId;
+
+@end
+
 @interface TaskViewController : UIViewController{
     NSMutableArray *taskArray;
     
     NSMutableArray *taskOne;
     NSMutableArray *taskTwo;
     NSMutableArray *taskThree;
+    
+    __weak id<TaskViewControllerDelegate> _delegate;
 }
 
 @property (nonatomic,strong) UITableView *taskTableView;
+@property (nonatomic,weak) id<TaskViewControllerDelegate> delegate;
 
 -(void)getMyTaskDataRequestWithUId:(NSString *)uId andVersion:(NSString *)version;
 

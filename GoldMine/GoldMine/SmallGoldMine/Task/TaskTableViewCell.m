@@ -16,6 +16,8 @@
 @synthesize vipInfoButton;
 @synthesize cellSeperateView;
 
+@synthesize delegate=_delegate;
+
 //高度45
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -31,11 +33,13 @@
         self.telephoneButton=[[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width-93.0, 7.5, 31.0, 30.0)];
         [self.telephoneButton setBackgroundImage:[UIImage imageNamed:@"task_tel"] forState:UIControlStateNormal];
         [self.telephoneButton setBackgroundImage:[UIImage imageNamed:@"task_tel_down"] forState:UIControlStateHighlighted];
+        [self.telephoneButton addTarget:self action:@selector(call:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.telephoneButton];
         
         self.vipInfoButton=[[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.telephoneButton.frame)+25.0, self.telephoneButton.frame.origin.y, 31.0, 30.0)];
         [self.vipInfoButton setBackgroundImage:[UIImage imageNamed:@"task_vip"] forState:UIControlStateNormal];
         [self.vipInfoButton setBackgroundImage:[UIImage imageNamed:@"task_vip_down"] forState:UIControlStateHighlighted];
+        [self.vipInfoButton addTarget:self action:@selector(seeVipInfomation:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.vipInfoButton];
         
         self.cellSeperateView=[[UIView alloc] initWithFrame:CGRectMake(0.0, 45.0, self.frame.size.width, 1)];
@@ -52,16 +56,27 @@
 }
 
 -(void)setTaskTableViewCellWithDictionary:(NSDictionary *)taskDic{
-    self.contactNameLabel.text=[NSString stringWithFormat:@"     %@",[taskDic objectForKey:@"CusName"]];
+    self.contactNameLabel.text=[NSString stringWithFormat:@"%@",[taskDic objectForKey:@"CusName"]];
     self.telNoLabel.text=[taskDic objectForKey:@"CusPhone"];
 }
-
 
 -(void)setTaskNameWithString:(NSString *)taskString andBackgroundColorWithColor:(UIColor *)bgColor{
     self.taskNameLabel.backgroundColor=[UIColor colorWithCGColor:bgColor.CGColor];
     self.taskNameLabel.text=taskString;
 }
 
+//拨打电话
+-(void)call:(id)sender{
+    if ([_delegate respondsToSelector:@selector(callTheTelephoneNum:andTaskViewCell:)]) {
+        [_delegate callTheTelephoneNum:self.telNoLabel.text andTaskViewCell:self];
+    }
+}
 
+//查看VIP详细信息
+-(void)seeVipInfomation:(id)sender{
+    if ([_delegate respondsToSelector:@selector(seeVipDetailInfoWithCustomeId:andTaskViewCell:)]) {
+        [_delegate seeVipDetailInfoWithCustomeId:nil andTaskViewCell:self];
+    }
+}
 
 @end

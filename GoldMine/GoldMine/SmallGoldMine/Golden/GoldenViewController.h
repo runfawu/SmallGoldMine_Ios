@@ -8,6 +8,6 @@
 
 #import "SuperViewController.h"
 
-@interface GoldenViewController : SuperViewController
+@interface GoldenViewController : UIViewController
 
 @end

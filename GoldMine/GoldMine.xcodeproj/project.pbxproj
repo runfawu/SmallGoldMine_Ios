@@ -45,6 +45,13 @@
 		036163EF19CEBEC100FDC231 /* rankCell_three.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163EC19CEBEC100FDC231 /* rankCell_three.png */; };
 		036163F019CEBEC100FDC231 /* rankCell_two.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163ED19CEBEC100FDC231 /* rankCell_two.png */; };
 		036163F219CEC08500FDC231 /* rankCell_round.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163F119CEC08500FDC231 /* rankCell_round.png */; };
+		0423481119D402EE00A058F4 /* VIPDetailedInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423481019D402EE00A058F4 /* VIPDetailedInformationViewController.m */; };
+		0423481619D4157F00A058F4 /* vip_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481519D4157F00A058F4 /* vip_delete@2x.png */; };
+		0423481819D4189D00A058F4 /* vip_ headBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481719D4189D00A058F4 /* vip_ headBg@2x.png */; };
+		0423481B19D418A400A058F4 /* vip_info_seperate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481919D418A400A058F4 /* vip_info_seperate@2x.png */; };
+		0423481C19D418A400A058F4 /* vip_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481A19D418A400A058F4 /* vip_share@2x.png */; };
+		0423482119D41A4A00A058F4 /* VIPDetailInfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423482019D41A4A00A058F4 /* VIPDetailInfoHeadView.m */; };
+		047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AC29F19D3EEBA0010A9DD /* VSquareViewController.m */; };
 		04806AF019C6B29100772BEF /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04806AEF19C6B29100772BEF /* TaskTableViewCell.m */; };
 		04806AF519C6B7A400772BEF /* task_tel_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF119C6B7A400772BEF /* task_tel_down@2x.png */; };
 		04806AF619C6B7A400772BEF /* task_tel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF219C6B7A400772BEF /* task_tel@2x.png */; };
@@ -204,6 +211,16 @@
 		036163EC19CEBEC100FDC231 /* rankCell_three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_three.png; sourceTree = "<group>"; };
 		036163ED19CEBEC100FDC231 /* rankCell_two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_two.png; sourceTree = "<group>"; };
 		036163F119CEC08500FDC231 /* rankCell_round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_round.png; sourceTree = "<group>"; };
+		0423480F19D402EE00A058F4 /* VIPDetailedInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPDetailedInformationViewController.h; sourceTree = "<group>"; };
+		0423481019D402EE00A058F4 /* VIPDetailedInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPDetailedInformationViewController.m; sourceTree = "<group>"; };
+		0423481519D4157F00A058F4 /* vip_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_delete@2x.png"; sourceTree = "<group>"; };
+		0423481719D4189D00A058F4 /* vip_ headBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_ headBg@2x.png"; sourceTree = "<group>"; };
+		0423481919D418A400A058F4 /* vip_info_seperate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_info_seperate@2x.png"; sourceTree = "<group>"; };
+		0423481A19D418A400A058F4 /* vip_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_share@2x.png"; sourceTree = "<group>"; };
+		0423481F19D41A4A00A058F4 /* VIPDetailInfoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPDetailInfoHeadView.h; sourceTree = "<group>"; };
+		0423482019D41A4A00A058F4 /* VIPDetailInfoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPDetailInfoHeadView.m; sourceTree = "<group>"; };
+		047AC29E19D3EEBA0010A9DD /* VSquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSquareViewController.h; sourceTree = "<group>"; };
+		047AC29F19D3EEBA0010A9DD /* VSquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSquareViewController.m; sourceTree = "<group>"; };
 		04806AEE19C6B29100772BEF /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		04806AEF19C6B29100772BEF /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 		04806AF119C6B7A400772BEF /* task_tel_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_tel_down@2x.png"; sourceTree = "<group>"; };
@@ -254,8 +271,8 @@
 		04C6F7D619D266AC00863A86 /* vip_phonebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_phonebook@2x.png"; sourceTree = "<group>"; };
 		04C6F7DB19D2682A00863A86 /* MyNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationViewController.h; sourceTree = "<group>"; };
 		04C6F7DC19D2682A00863A86 /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
-		04C6F7E219D26C0600863A86 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
-		04C6F7E319D26C0600863A86 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
+		04C6F7E219D26C0600863A86 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskViewController.h; path = GoldMine/SmallGoldMine/TaskViewController.h; sourceTree = SOURCE_ROOT; };
+		04C6F7E319D26C0600863A86 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskViewController.m; path = GoldMine/SmallGoldMine/TaskViewController.m; sourceTree = SOURCE_ROOT; };
 		04C6F7E619D26C0600863A86 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		04C6F7E719D26C0600863A86 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		04C6F7EA19D26C0600863A86 /* StorageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageTools.h; sourceTree = "<group>"; };
@@ -462,6 +479,12 @@
 				04806AEF19C6B29100772BEF /* TaskTableViewCell.m */,
 				04806AF919C6BAD200772BEF /* TaskHeadView.h */,
 				04806AFA19C6BAD200772BEF /* TaskHeadView.m */,
+				0423480F19D402EE00A058F4 /* VIPDetailedInformationViewController.h */,
+				0423481019D402EE00A058F4 /* VIPDetailedInformationViewController.m */,
+				04C6F7E219D26C0600863A86 /* TaskViewController.h */,
+				04C6F7E319D26C0600863A86 /* TaskViewController.m */,
+				0423481F19D41A4A00A058F4 /* VIPDetailInfoHeadView.h */,
+				0423482019D41A4A00A058F4 /* VIPDetailInfoHeadView.m */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -472,14 +495,11 @@
 				04806AED19C6B27600772BEF /* Task */,
 				04B36410192071E7001FD570 /* SmallGoldMineCell.h */,
 				04B36411192071E7001FD570 /* SmallGoldMineCell.m */,
+				047AC29E19D3EEBA0010A9DD /* VSquareViewController.h */,
+				047AC29F19D3EEBA0010A9DD /* VSquareViewController.m */,
 				04B36412192071E7001FD570 /* SmallGoldMineViewController.h */,
 				04B36413192071E7001FD570 /* SmallGoldMineViewController.m */,
-
-				04C6F7E219D26C0600863A86 /* TaskViewController.h */,
-				04C6F7E319D26C0600863A86 /* TaskViewController.m */,
-
 				71A6D43119D2603100DECF5D /* Golden */,
-
 				033F738919CD392E00F5DF52 /* Scan */,
 			);
 			path = SmallGoldMine;
@@ -694,6 +714,10 @@
 		04FC3D63191F88AD00CB8F80 /* SmallGoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				0423481919D418A400A058F4 /* vip_info_seperate@2x.png */,
+				0423481A19D418A400A058F4 /* vip_share@2x.png */,
+				0423481719D4189D00A058F4 /* vip_ headBg@2x.png */,
+				0423481519D4157F00A058F4 /* vip_delete@2x.png */,
 				71A6D43719D263FB00DECF5D /* golden_redBg.png */,
 				033F739419CD3D7B00F5DF52 /* input_cancel_h.png */,
 				033F739519CD3D7B00F5DF52 /* input_cancel_n.png */,
@@ -936,6 +960,7 @@
 				036163EE19CEBEC100FDC231 /* rankCell_one.png in Resources */,
 				71AD9D1319C4377300061009 /* login_password.png in Resources */,
 				04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */,
+				0423481B19D418A400A058F4 /* vip_info_seperate@2x.png in Resources */,
 				04FC3D53191F4FD200CB8F80 /* rank@2x.png in Resources */,
 				71AD9D1019C4377300061009 /* login_button_n.png in Resources */,
 				04C6F7D719D266AC00863A86 /* credit_git@2x.png in Resources */,
@@ -958,6 +983,7 @@
 				033F739D19CD3D7B00F5DF52 /* input_textField.png in Resources */,
 				71A6D43619D2609B00DECF5D /* GoldenViewController.xib in Resources */,
 				71AD9D1719C4377300061009 /* login_textField.png in Resources */,
+				0423481819D4189D00A058F4 /* vip_ headBg@2x.png in Resources */,
 				04FC3D57191F4FD200CB8F80 /* wealth@2x.png in Resources */,
 				036163F019CEBEC100FDC231 /* rankCell_two.png in Resources */,
 				04FC3D54191F4FD200CB8F80 /* setting@2x.png in Resources */,
@@ -972,6 +998,7 @@
 				04FC3D4F191F4FD200CB8F80 /* guys@2x.png in Resources */,
 				71A9873F19C1E8F4008402FF /* LoginController.xib in Resources */,
 				036163EA19CE95A900FDC231 /* RankViewController.xib in Resources */,
+				0423481619D4157F00A058F4 /* vip_delete@2x.png in Resources */,
 				04FC3D58191F4FD200CB8F80 /* wealth_bg@2x.png in Resources */,
 				71AD9D1119C4377300061009 /* login_logo.png in Resources */,
 				031B544819D1AF2400FEA536 /* logo_icon.png in Resources */,
@@ -979,6 +1006,7 @@
 				036163DF19CE8ED100FDC231 /* wealthCell_arrow.png in Resources */,
 				04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */,
 				0318673519CD0CAE004C6DBD /* RegisterController.xib in Resources */,
+				0423481C19D418A400A058F4 /* vip_share@2x.png in Resources */,
 				031B544619D1AEC900FEA536 /* Icon120.png in Resources */,
 				031B544419D1AEC900FEA536 /* Default-568h@2x.png in Resources */,
 				033F738619CD1E3500F5DF52 /* register_verifyCode_n.png in Resources */,
@@ -1019,7 +1047,9 @@
 				04B36415192071E7001FD570 /* SmallGoldMineViewController.m in Sources */,
 				71A9873019C1E416008402FF /* ASIDataCompressor.m in Sources */,
 				04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */,
+				0423482119D41A4A00A058F4 /* VIPDetailInfoHeadView.m in Sources */,
 				04806AFB19C6BAD200772BEF /* TaskHeadView.m in Sources */,
+				0423481119D402EE00A058F4 /* VIPDetailedInformationViewController.m in Sources */,
 				04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */,
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
 				71A6D43C19D26ADC00DECF5D /* GoldenCell.m in Sources */,
@@ -1064,6 +1094,7 @@
 				71A9873219C1E416008402FF /* ASIDownloadCache.m in Sources */,
 				04B5FDEC19C6829B00102BC1 /* NSData+ImageContentType.m in Sources */,
 				031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */,
+				047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */,
 				036163E419CE956B00FDC231 /* RankCell.m in Sources */,
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,
 				71AD9D0419C41DA900061009 /* MBProgressHUD.m in Sources */,
@@ -1132,7 +1163,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Tan (AULAKXL2EW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi Tan (AULAKXL2EW)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1150,6 +1182,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "1228DF69-C25B-44BF-9F79-39B8A3713AAC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1170,7 +1203,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Tan (AULAKXL2EW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi Tan (AULAKXL2EW)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1181,6 +1215,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "1228DF69-C25B-44BF-9F79-39B8A3713AAC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1189,11 +1224,14 @@
 		04FC3D1F191F2CD100CB8F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Tan (AULAKXL2EW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi Tan (AULAKXL2EW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1228DF69-C25B-44BF-9F79-39B8A3713AAC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1201,11 +1239,14 @@
 		04FC3D20191F2CD100CB8F80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Tan (AULAKXL2EW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi Tan (AULAKXL2EW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1228DF69-C25B-44BF-9F79-39B8A3713AAC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -191,7 +191,8 @@
     WealthViewController *wealthController = [[WealthViewController alloc] initWithNibName:@"WealthViewController" bundle:nil];
     UINavigationController *wealthNavi = [[UINavigationController alloc] initWithRootViewController:wealthController];
     
-    [self.mm_drawerController setCenterViewController:wealthNavi withCloseAnimation:YES completion:nil];
+//    [self.mm_drawerController setCenterViewController:wealthNavi withCloseAnimation:YES completion:nil];
+    [self presentViewController:wealthNavi animated:YES completion:nil];
 }
 
 - (void)tapRankImageView:(MenuTopPhotoView *)photoView

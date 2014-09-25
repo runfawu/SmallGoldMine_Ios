@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TaskTableViewCell : UITableViewCell
+@class TaskTableViewCell;
+
+@protocol TaskTabelViewCellDelegate <NSObject>
+
+-(void)callTheTelephoneNum:(NSString *)telNum andTaskViewCell:(TaskTableViewCell *)cell;
+
+-(void)seeVipDetailInfoWithCustomeId:(NSString *)customeId andTaskViewCell:(TaskTableViewCell *)cell;
+
+@end
+
+@interface TaskTableViewCell : UITableViewCell{
+    __weak id <TaskTabelViewCellDelegate> _delegate;
+}
 
 @property (nonatomic,strong) UILabel *contactNameLabel;
 @property (nonatomic,strong) UILabel *telNoLabel;
@@ -17,6 +29,10 @@
 @property (nonatomic,strong) UIView *cellSeperateView;
 
 @property (nonatomic,strong) UILabel *taskNameLabel;
+
+@property (nonatomic,strong) NSIndexPath *currentIndexPath;
+
+@property (nonatomic,weak) id<TaskTabelViewCellDelegate> delegate;
 
 -(void)setTaskTableViewCellWithDictionary:(NSDictionary *)taskDic;
 

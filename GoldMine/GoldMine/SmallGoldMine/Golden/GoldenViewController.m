@@ -13,6 +13,14 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *tableHeaderView;
+@property (weak,nonatomic) IBOutlet UILabel *vBoon;
+@property (weak,nonatomic) IBOutlet UILabel *vOrder;
+@property (weak,nonatomic) IBOutlet UILabel *vips;
+@property (weak,nonatomic) IBOutlet UILabel *services;
+@property (weak,nonatomic) IBOutlet UILabel *money;
+@property (weak,nonatomic) IBOutlet UILabel *dOrder;
+
+@property (nonatomic, strong) SoapRequest *loginReqeust;
 
 @end
 
@@ -30,15 +38,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self setup];
     
+    self.loginReqeust = [[SoapRequest alloc] init];
+    [self getMyMarkDataWithUId:@"001" andVersion:[Tools getAppVersion]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-
 }
 
 - (void)setup
@@ -92,9 +100,6 @@ static const float goldenCellHeight = 55.0;
     static NSString *identifier = @"GoldenCell";
     GoldenCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    
-    
-    
     return cell;
 }
 
@@ -102,6 +107,48 @@ static const float goldenCellHeight = 55.0;
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+}
+
+//获取我的成绩
+-(void)getMyMarkDataWithUId:(NSString *)uid andVersion:(NSString *)version{
+    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
+    [paramDict setObject:uid forKey:@"uid"];
+    [paramDict setObject:version forKey:@"version"];
+
+    [self.loginReqeust postRequestWithSoapNamespace:@"MyMark" params:paramDict successBlock:^(id result) {
+        DLog(@"MyMark result=%@", result);
+        
+        self.vBoon.text=[(NSDictionary *)result objectForKey:@"Vboon"];
+        self.vOrder.text=[(NSDictionary *)result objectForKey:@"VOrder"];
+        self.vips.text=[(NSDictionary *)result objectForKey:@"Vips"];
+        self.services.text=[(NSDictionary *)result objectForKey:@"Services"];
+        self.money.text=[(NSDictionary *)result objectForKey:@"Money"];
+        self.dOrder.text=[(NSDictionary *)result objectForKey:@"DOrder"];
+        
+    } failureBlock:^(NSString *requestError) {
+        NSLog(@"MyMark fail!!!");
+    } errorBlock:^(NSMutableString *errorStr) {
+        NSLog(@"MyMark error!!!!");
+    }];
+    paramDict=nil;
+}
+
+//获取我的VIP
+-(void)getMyVipsDataWithNum:(NSString *)num andUId:(NSString *)uId andVID:(NSString *)vId andVersion:(NSString *)version{
+    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
+    [paramDict setObject:num forKey:@"num"];
+    [paramDict setObject:vId forKey:@"vid"];
+    [paramDict setObject:uId forKey:@"uid"];
+    [paramDict setObject:version forKey:@"version"];
+    [self.loginReqeust postRequestWithSoapNamespace:@"MyVips" params:paramDict successBlock:^(id result) {
+        DLog(@"MyMark result=%@", result);
+        
+    } failureBlock:^(NSString *requestError) {
+        
+    } errorBlock:^(NSMutableString *errorStr) {
+        
+    }];
+    paramDict=nil;
 }
 
 @end

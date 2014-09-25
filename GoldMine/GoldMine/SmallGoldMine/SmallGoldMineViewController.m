@@ -7,15 +7,12 @@
 //
 
 #import "SmallGoldMineViewController.h"
-#import "SmallGoldMineCell.h"
 #import "LoginController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "InputBarcodeController.h"
+#import "VIPDetailedInformationViewController.h"
 
-
-@interface SmallGoldMineViewController ()<UITableViewDataSource,UITableViewDelegate>
-
-@property (nonatomic, strong) SoapRequest *loginReqeust;
+@interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate>
 
 @end
 
@@ -23,26 +20,17 @@
 @implementation SmallGoldMineViewController
 
 @synthesize segmentedControl;
-@synthesize vSquareTableView=_vSquareTableView;
+@synthesize vSquareScrollView=_vSquareScrollView;
 
 -(id)init{
     self=[super init];
     if (self) {
-//        UILabel *titleLable=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 100.0, 44.0)];
-//        titleLable.text=@"小V聚宝";
-//        titleLable.font=[UIFont systemFontOfSize:24.0];
-//        titleLable.textAlignment=NSTextAlignmentCenter;
-//        titleLable.textColor=[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];;
-//        self.navigationItem.titleView=titleLable;
-//        titleLable=nil;
-        
         self.title = @"小V聚宝";
         
         UIButton* leftBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
         [leftBarbutton setImage:[UIImage imageNamed:@"personal"] forState:UIControlStateNormal];
         [leftBarbutton setImage:[UIImage imageNamed:@"personal"] forState:UIControlStateHighlighted];
 
-        
         if (IS_IOS7) {
 //            [leftBarbutton setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
         }
@@ -63,8 +51,6 @@
 }
 
 -(void)viewDidLoad{
-    brandArray=[[NSMutableArray alloc] init];
-    
     if (IS_IOS7) {
         self.segmentedControl = [[CustomSegmentedControl alloc] initWithFrame:CGRectMake(0.0, 60.0, 320.0, 40)];
         self.segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
@@ -76,34 +62,31 @@
     [self.segmentedControl.taskButton addTarget:self action:@selector(selectedTaskButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.segmentedControl.goldMineButton addTarget:self action:@selector(selectedGoldMineButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:segmentedControl];
-    //    segmentedControl=nil;
     
-    NSLog(@"bannerImageView y=:%f",CGRectGetMaxY(self.segmentedControl.frame));
-    UIImageView *bannerImageView=[[UIImageView alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY(self.segmentedControl.frame)-65.0, self.view.frame.size.width, 150.0)];
-    bannerImageView.userInteractionEnabled=YES;
-    bannerImageView.image=[UIImage imageNamed:@"banner"];
-    [self.view addSubview:bannerImageView];
+    self.vSquareScrollView=[[UIScrollView alloc] initWithFrame:CGRectMake(0.0,CGRectGetMaxY(self.segmentedControl.frame)-65.0,self.view.frame.size.width,self.view.frame.size.height-65.0)];
+    self.vSquareScrollView.showsHorizontalScrollIndicator=NO;
+    self.vSquareScrollView.showsVerticalScrollIndicator=NO;
+    self.vSquareScrollView.delegate=self;
+    self.vSquareScrollView.pagingEnabled=YES;
+    self.vSquareScrollView.bounces=NO;
+    self.vSquareScrollView.contentSize=CGSizeMake(self.view.frame.size.width*3,self.vSquareScrollView.frame.size.height);
+    [self.view addSubview:self.vSquareScrollView];
     
-    UIImageView *bannerSeperateLine=[[UIImageView alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY(bannerImageView.frame), self.view.frame.size.width, 3.0)];
-    bannerSeperateLine.image=[UIImage imageNamed:@"banner_seperateLine"];
-    [self.view addSubview:bannerSeperateLine];
+    vSquareViewController=[[VSquareViewController alloc] init];
+    vSquareViewController.view.frame=CGRectMake(0.0,0.0, self.view.frame.size.width,self.vSquareScrollView.frame.size.height);
+    [self.vSquareScrollView addSubview:vSquareViewController.view];
     
-    self.vSquareTableView=[[UITableView alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY(bannerSeperateLine.frame), self.view.frame.size.width, self.view.frame.size.height-250.0)];
-    self.vSquareTableView.dataSource=self;
-    self.vSquareTableView.delegate=self;
-    self.vSquareTableView.showsHorizontalScrollIndicator = NO;
-    self.vSquareTableView.showsVerticalScrollIndicator = NO;
-    self.vSquareTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-    [self.view addSubview:self.vSquareTableView];
+    taskViewController=[[TaskViewController alloc] init];
+    taskViewController.delegate=self;
+    taskViewController.view.frame = CGRectMake(self.view.frame.size.width,0.0, self.view.frame.size.width,self.vSquareScrollView.frame.size.height);
+    [self.vSquareScrollView addSubview:taskViewController.view];
     
-    bannerSeperateLine=nil;
-    bannerImageView=nil;
-    
-    [self getSmallGoldMineDataRequest:4];
-    
+    goldenViewController=[[GoldenViewController alloc] init];
+    goldenViewController.view.frame = CGRectMake(self.view.frame.size.width*2,0.0, self.view.frame.size.width,self.vSquareScrollView.frame.size.height);
+    [self.vSquareScrollView addSubview:goldenViewController.view];
+
     [super viewDidLoad];
 }
-
 
 -(void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBarHidden = NO;
@@ -117,101 +100,28 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-//    [super viewDidAppear:animated];
-//    [self presentLoginVC];
+    [super viewDidAppear:animated];
+
 }
 
-#pragma mark -
-#pragma mark UITABLEVIEW DELEGATE
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [brandArray count];
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 82.0;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellIdentifier=@"CellIndentifier";
-    SmallGoldMineCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell=[[SmallGoldMineCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    
-    [cell setSmallGoldMineCellWithDictionary:[brandArray objectAtIndex:indexPath.row]];
-    return cell;
-}
-
--(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    
-    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(tableView.bounds), 8.0)];
-    [headerView setBackgroundColor:[UIColor colorWithRed:242.0/255.0
-                                                   green:243.0/255.0
-                                                    blue:240.0/255.0
-                                                   alpha:1.0]];
-    return headerView;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 8.0;
-}
-
--(void)getSmallGoldMineDataRequest:(NSInteger)type{
-    
-    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
-//    [paramDict setObject:@"001" forKey:@"uid"];
-//    [paramDict setObject:[NSNumber numberWithInteger:type] forKey:@"num"];
-    
-    //FIXME:fake data
-    for (int i = 0; i < 10; i ++) {
-        NSMutableDictionary *fakeDict = [NSMutableDictionary dictionary];
-        [fakeDict setObject:@"好奇Huggies超厚倍柔(专为儿童打造)" forKey:@"BardName"];
-        [fakeDict setObject:@"好奇Huggies超厚倍柔(专为儿童打造)" forKey:@"BardAbout"];
-        
-        [brandArray addObject:fakeDict];
-    }
-    
-    /*
-    self.loginReqeust = [[SoapRequest alloc] init];
-    //CusPhone  Souye
-    [self.loginReqeust postRequestWithSoapNamespace:@"CusPhone" params:paramDict successBlock:^(id result) {
-        DLog(@"login success result = %@", result);
-        if (type==4) {
-            if ([brandArray count]>0) {
-                [brandArray removeAllObjects];
-            }
-            
-            NSArray *brandInfo=[result objectForKey:@"BardInfo"];
-            for (NSDictionary *brandDic in brandInfo) {
-                [brandArray addObject:brandDic];
-            }
-            [self.vSquareTableView reloadData];
-        }
-    } failureBlock:^(NSString *requestError) {
-        
-    } errorBlock:^(NSMutableString *errorStr) {
-        
-    }];
-    paramDict=nil;
-//    self.loginReqeust=nil;
-     */
-}
-
+//V广场
 -(void)selectedVSquareButton:(id)sender{
     [self.segmentedControl.vSquareButton setTitleColor:[UIColor colorWithRed:249.0/255 green:186.0/255 blue:8.0/255 alpha:1.0] forState:UIControlStateNormal];
     [self.segmentedControl.taskButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]  forState:UIControlStateNormal];
     [self.segmentedControl.goldMineButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]  forState:UIControlStateNormal];
     [UIView animateWithDuration:0.2 animations:^{
         self.segmentedControl.flagView.frame=CGRectMake(0.0,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
+        [self.vSquareScrollView setContentOffset:CGPointMake(0, 0)];
     }];
-    if (taskViewController) {
-        [self.view sendSubviewToBack:taskViewController.view];
-    }
+//    if (taskViewController) {
+//        [self.view sendSubviewToBack:taskViewController.view];
+//    }
+//    if (goldenViewController) {
+//        [self.view sendSubviewToBack:goldenViewController.view];
+//    }
 }
 
+//任务
 -(void)selectedTaskButton:(id)sender{
     [self.segmentedControl.vSquareButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0] forState:UIControlStateNormal];
     [self.segmentedControl.taskButton setTitleColor:[UIColor colorWithRed:249.0/255 green:186.0/255 blue:8.0/255 alpha:1.0]  forState:UIControlStateNormal];
@@ -219,15 +129,17 @@
     [UIView animateWithDuration:0.2 animations:^{
     self.segmentedControl.flagView.frame=CGRectMake(segmentedControl.taskButton.frame.origin.x,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
          }];
-    if (!taskViewController) {
-        taskViewController=[[TaskViewController alloc] init];
-        taskViewController.view.frame = CGRectMake(0, CGRectGetMaxY(self.segmentedControl.frame), self.view.frame.size.width, self.view.frame.size.height-CGRectGetMaxY(self.segmentedControl.frame));
-        [self.view addSubview:taskViewController.view];
-    }else{
-        [self.view bringSubviewToFront:taskViewController.view];
-    }
+    [self.vSquareScrollView setContentOffset:CGPointMake(self.view.frame.size.width, 0)];
+//    if (!taskViewController) {
+//        taskViewController=[[TaskViewController alloc] init];
+//        taskViewController.view.frame = CGRectMake(0, CGRectGetMaxY(self.segmentedControl.frame), self.view.frame.size.width, self.view.frame.size.height-CGRectGetMaxY(self.segmentedControl.frame));
+//        [self.view addSubview:taskViewController.view];
+//    }else{
+//        [self.view bringSubviewToFront:taskViewController.view];
+//    }
 }
 
+//聚宝
 -(void)selectedGoldMineButton:(id)sender{
     [self.segmentedControl.vSquareButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0] forState:UIControlStateNormal];
     [self.segmentedControl.taskButton setTitleColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]  forState:UIControlStateNormal];
@@ -235,6 +147,27 @@
     [UIView animateWithDuration:0.2 animations:^{
     self.segmentedControl.flagView.frame=CGRectMake(segmentedControl.goldMineButton.frame.origin.x,CGRectGetMaxY(segmentedControl.vSquareButton.frame)-5.0, 106.0, 5.0);
      }];
+    [self.vSquareScrollView setContentOffset:CGPointMake(self.view.frame.size.width*2, 0)];
+//    if (!goldenViewController) {
+//        goldenViewController=[[GoldenViewController alloc] initWithNibName:@"GoldenViewController" bundle:nil];
+//        goldenViewController.view.frame = CGRectMake(0, CGRectGetMaxY(self.segmentedControl.frame), self.view.frame.size.width, self.view.frame.size.height-CGRectGetMaxY(self.segmentedControl.frame));
+//        [self.view addSubview:goldenViewController.view];
+//    }else{
+//        [self.view bringSubviewToFront:goldenViewController.view];
+//    }
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    CGFloat pageWidth=self.vSquareScrollView.frame.size.width;
+    int page=floorf((self.vSquareScrollView.contentOffset.x-pageWidth/2)/pageWidth)+1;
+ 
+    if (page==0) {
+        [self selectedVSquareButton:nil];
+    }else if (page==1){
+        [self selectedTaskButton:nil];
+    }else if (page==2){
+        [self selectedGoldMineButton:nil];
+    }
 }
 
 #pragma mark - Present to login
@@ -262,6 +195,14 @@
 {
     InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
     [self.navigationController pushViewController:inputController animated:YES];
+}
+
+#pragma mark -
+#pragma mark TaskViewController Delegate
+-(void)seeVipDetailInfomationWithCustomeId:(NSString *)customeId{
+    VIPDetailedInformationViewController *vipDetailInfomationVC=[[VIPDetailedInformationViewController alloc] initWithCustomeID:customeId];
+    [self.navigationController pushViewController:vipDetailInfomationVC animated:YES];
+    vipDetailInfomationVC=nil;
 }
 
 @end

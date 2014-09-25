@@ -29,7 +29,6 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
 #import "MyNavigationViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <math.h>
-//#import "Tools.h"
 #import "SmallGoldMineViewController.h"
 
 @interface MyNavigationViewController()
@@ -38,7 +37,6 @@ ok！可能这样写，你会一头污水，那还是直接看代码吧。
     
     UIImageView *lastScreenShotView;
     UIView *blackMask;
-    
 }
 
 @property (nonatomic,strong) UIView *backgroundView;

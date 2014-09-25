@@ -8,17 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomSegmentedControl.h"
+#import "VSquareViewController.h"
 #import "TaskViewController.h"
+#import "Golden/GoldenViewController.h"
 
 @interface SmallGoldMineViewController :SuperViewController{
-     NSMutableArray *brandArray;
-    
+    VSquareViewController *vSquareViewController;
     TaskViewController *taskViewController;
+    GoldenViewController *goldenViewController;
 }
 
 @property (nonatomic,strong) CustomSegmentedControl *segmentedControl;
 
-@property (nonatomic,strong) UITableView *vSquareTableView;
+@property (nonatomic,strong) UIScrollView *vSquareScrollView;
 
 - (void)presentLoginVC;
 
