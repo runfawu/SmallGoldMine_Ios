@@ -31,7 +31,7 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="-1" height="0.0"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDd-Hz-qE2">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDd-Hz-qE2" customClass="LoopButton">
                     <rect key="frame" x="278" y="21" width="31" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="scan_torch_auto.png">
@@ -74,7 +74,7 @@
                 <outlet property="integrationScanButton" destination="HF1-Xy-JjJ" id="Yth-3C-9yX"/>
                 <outlet property="manualInputButton" destination="fYn-LU-gpb" id="DNk-AK-5qP"/>
                 <outlet property="queryGoodsButton" destination="7TX-Zu-fXs" id="NWa-T9-Rwk"/>
-                <outlet property="torchButton" destination="uDd-Hz-qE2" id="7lC-21-4zM"/>
+                <outlet property="torchButton" destination="uDd-Hz-qE2" id="Ys5-4y-fi0"/>
             </connections>
         </view>
     </objects>

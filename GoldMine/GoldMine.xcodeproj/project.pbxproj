@@ -45,6 +45,9 @@
 		036163EF19CEBEC100FDC231 /* rankCell_three.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163EC19CEBEC100FDC231 /* rankCell_three.png */; };
 		036163F019CEBEC100FDC231 /* rankCell_two.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163ED19CEBEC100FDC231 /* rankCell_two.png */; };
 		036163F219CEC08500FDC231 /* rankCell_round.png in Resources */ = {isa = PBXBuildFile; fileRef = 036163F119CEC08500FDC231 /* rankCell_round.png */; };
+		03FAD92019D84D3E00B6937D /* LoopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FAD91F19D84D3E00B6937D /* LoopButton.m */; };
+		03FAD92319D852BF00B6937D /* ImageCropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FAD92219D852BF00B6937D /* ImageCropController.m */; };
+		03FAD92519D85F8C00B6937D /* cell_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FAD92419D85F8C00B6937D /* cell_arrow.png */; };
 		0423481119D402EE00A058F4 /* VIPDetailedInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423481019D402EE00A058F4 /* VIPDetailedInformationViewController.m */; };
 		0423481619D4157F00A058F4 /* vip_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481519D4157F00A058F4 /* vip_delete@2x.png */; };
 		0423481819D4189D00A058F4 /* vip_ headBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481719D4189D00A058F4 /* vip_ headBg@2x.png */; };
@@ -237,6 +240,11 @@
 		036163EC19CEBEC100FDC231 /* rankCell_three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_three.png; sourceTree = "<group>"; };
 		036163ED19CEBEC100FDC231 /* rankCell_two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_two.png; sourceTree = "<group>"; };
 		036163F119CEC08500FDC231 /* rankCell_round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankCell_round.png; sourceTree = "<group>"; };
+		03FAD91E19D84D3E00B6937D /* LoopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopButton.h; sourceTree = "<group>"; };
+		03FAD91F19D84D3E00B6937D /* LoopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopButton.m; sourceTree = "<group>"; };
+		03FAD92119D852BF00B6937D /* ImageCropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCropController.h; sourceTree = "<group>"; };
+		03FAD92219D852BF00B6937D /* ImageCropController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCropController.m; sourceTree = "<group>"; };
+		03FAD92419D85F8C00B6937D /* cell_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_arrow.png; sourceTree = "<group>"; };
 		0423480F19D402EE00A058F4 /* VIPDetailedInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPDetailedInformationViewController.h; sourceTree = "<group>"; };
 		0423481019D402EE00A058F4 /* VIPDetailedInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPDetailedInformationViewController.m; sourceTree = "<group>"; };
 		0423481519D4157F00A058F4 /* vip_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_delete@2x.png"; sourceTree = "<group>"; };
@@ -506,6 +514,8 @@
 				031B544A19D45F8900FEA536 /* ProfileViewController.h */,
 				031B544B19D45F8900FEA536 /* ProfileViewController.m */,
 				031B544C19D45F8900FEA536 /* ProfileViewController.xib */,
+				03FAD92119D852BF00B6937D /* ImageCropController.h */,
+				03FAD92219D852BF00B6937D /* ImageCropController.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -534,6 +544,8 @@
 				71A8F10F19D7D9B8009572EB /* ScanNaviView.h */,
 				71A8F11019D7D9B8009572EB /* ScanNaviView.m */,
 				71A8F11219D7D9C8009572EB /* ScanNaviView.xib */,
+				03FAD91E19D84D3E00B6937D /* LoopButton.h */,
+				03FAD91F19D84D3E00B6937D /* LoopButton.m */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -796,6 +808,7 @@
 		04FC3D3E191F4FD200CB8F80 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
+				03FAD92419D85F8C00B6937D /* cell_arrow.png */,
 				031B544719D1AF2400FEA536 /* logo_icon.png */,
 				04C6F7D319D266AC00863A86 /* credit_git@2x.png */,
 				04C6F7D419D266AC00863A86 /* hot_product@2x.png */,
@@ -1168,6 +1181,7 @@
 				04806AF819C6B7A400772BEF /* task_vip@2x.png in Resources */,
 				031B51F819CF18CC00FEA536 /* IntegrationDetailCell.xib in Resources */,
 				036163F219CEC08500FDC231 /* rankCell_round.png in Resources */,
+				03FAD92519D85F8C00B6937D /* cell_arrow.png in Resources */,
 				71AD9D1219C4377300061009 /* login_mobile.png in Resources */,
 				71A8F17419D7EEDF009572EB /* scan_torch_off.png in Resources */,
 				033F739A19CD3D7B00F5DF52 /* input_cancel_n.png in Resources */,
@@ -1253,6 +1267,7 @@
 				04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */,
 				0423482119D41A4A00A058F4 /* VIPDetailInfoHeadView.m in Sources */,
 				04806AFB19C6BAD200772BEF /* TaskHeadView.m in Sources */,
+				03FAD92319D852BF00B6937D /* ImageCropController.m in Sources */,
 				0423481119D402EE00A058F4 /* VIPDetailedInformationViewController.m in Sources */,
 				04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */,
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
@@ -1287,6 +1302,7 @@
 				71A9873519C1E416008402FF /* ASIInputStream.m in Sources */,
 				04B5FDEF19C6829B00102BC1 /* SDWebImageDecoder.m in Sources */,
 				0318673419CD0CAE004C6DBD /* RegisterController.m in Sources */,
+				03FAD92019D84D3E00B6937D /* LoopButton.m in Sources */,
 				04B5FDED19C6829B00102BC1 /* SDImageCache.m in Sources */,
 				04B5FDEB19C6829B00102BC1 /* MKAnnotationView+WebCache.m in Sources */,
 				04FC3CFC191F2CD000CB8F80 /* main.m in Sources */,

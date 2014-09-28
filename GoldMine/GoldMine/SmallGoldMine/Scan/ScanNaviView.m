@@ -19,6 +19,17 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    UIImage *torchOnImage = [UIImage imageNamed:@"scan_torch_on"];
+    UIImage *torchOffImage = [UIImage imageNamed:@"scan_torch_off"];
+    UIImage *torchAutoImage = [UIImage imageNamed:@"scan_torch_auto"];
+    
+    self.torchButton.images = @[torchAutoImage, torchOnImage, torchOffImage];
+}
+
 + (ScanNaviView *)loadNibInstance
 {
     NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"ScanNaviView" owner:self options:nil];

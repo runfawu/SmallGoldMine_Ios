@@ -17,6 +17,7 @@
 #import "UIButton+Addition.h"
 #import "InputBarcodeController.h"
 #import "GoodsBarResultController.h"
+#import "LoopButton.h"
 
 typedef NS_ENUM(NSInteger, ScanBarType) {
     scanBarIntegrationType = 112,
@@ -213,11 +214,12 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
 }
 
 /******************** Scan Module ***************************/
+
 #pragma mark -
 #pragma mark Scan Module
 - (void)beginScanBarcode
 {
-    /**
+    /*
      扫描二维码部分：
      导入ZBarSDK文件并引入一下框架
      AVFoundation.framework
@@ -231,6 +233,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
      - (void) imagePickerController: (UIImagePickerController*) reader didFinishPickingMediaWithInfo: (NSDictionary*) info
      最后读取并显示了条形码的图片和内容。
      */
+ 
     if (self.reader) {
         [self.reader removeFromParentViewController];
         self.reader = nil;
@@ -333,9 +336,15 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
     [self.reader dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)changeTorchValue:(UIButton *)button
+- (void)changeTorchValue:(LoopButton *)button
 {
+    if (button.currentIndex == 0) {
     
+    } else if (button.currentIndex == 1) {
+        _reader.readerView.torchMode = 1;
+    } else if (button.currentIndex == 2) {
+        _reader.readerView.torchMode = 0;
+    }
 }
 
 - (void)integrationScanType:(UIButton *)button

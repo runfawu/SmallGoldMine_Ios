@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoopButton.h"
 
 @interface ScanNaviView : UIView
 
-@property (weak, nonatomic) IBOutlet UIButton *torchButton;
+@property (weak, nonatomic) IBOutlet LoopButton *torchButton;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *integrationScanButton;
