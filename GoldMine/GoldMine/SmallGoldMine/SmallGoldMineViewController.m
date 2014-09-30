@@ -11,7 +11,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "InputBarcodeController.h"
 #import "VIPDetailedInformationViewController.h"
-#import "ZBarSDK.h"
+//#import "ZBarSDK.h"
 @import AVFoundation;
 #import "ScanNaviView.h"
 #import "UIButton+Addition.h"
@@ -24,9 +24,9 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
     ScanBarQueryCodeType,
 };
 
-@interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate, ZBarReaderDelegate>
+@interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate> //, ZBarReaderDelegate>
 
-@property (nonatomic, strong) ZBarReaderViewController *reader;
+//@property (nonatomic, strong) ZBarReaderViewController *reader;
 @property (nonatomic, assign) ScanBarType scanType;
 
 @end
@@ -214,12 +214,12 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
 }
 
 /******************** Scan Module ***************************/
-
+/*
 #pragma mark -
 #pragma mark Scan Module
 - (void)beginScanBarcode
 {
-    /*
+ 
      扫描二维码部分：
      导入ZBarSDK文件并引入一下框架
      AVFoundation.framework
@@ -232,7 +232,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
      
      - (void) imagePickerController: (UIImagePickerController*) reader didFinishPickingMediaWithInfo: (NSDictionary*) info
      最后读取并显示了条形码的图片和内容。
-     */
+ 
  
     if (self.reader) {
         [self.reader removeFromParentViewController];
@@ -396,6 +396,6 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
     [self.navigationController pushViewController:inputController animated:YES];
     
 }
-
+*/
 
 @end
