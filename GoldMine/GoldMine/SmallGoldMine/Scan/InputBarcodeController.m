@@ -7,11 +7,12 @@
 //
 
 #import "InputBarcodeController.h"
-#import "ScanViewController.h"
 
 @interface InputBarcodeController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *barcodeTextField;
+@property (weak, nonatomic) IBOutlet UIButton *integrationButton;
+@property (weak, nonatomic) IBOutlet UIButton *queryButton;
 
 @property (nonatomic, strong) SoapRequest *barcodeRequest;
 
@@ -37,6 +38,15 @@
     [self setup];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (self.barString.length > 0) {
+        self.barcodeTextField.text = self.barString;
+    }
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -50,6 +60,10 @@
 }
 
 #pragma mark - Private methods
+- (IBAction)closeKeyboard:(id)sender {
+    [self.barcodeTextField resignFirstResponder];
+}
+
 - (void)setup
 {
     self.view.backgroundColor = [Utils colorWithHexString:@"F2F3F0"];
@@ -65,9 +79,10 @@
             break;
         case 251: //切换扫描
         {
-            ScanViewController *scanController = [[ScanViewController alloc] initWithNibName:@"ScanViewController" bundle:nil];
-            
-            [self.navigationController pushViewController:scanController animated:YES];
+            [self.navigationController popViewControllerAnimated:NO];
+            if (self.jumpToScanBlock) {
+                self.jumpToScanBlock();
+            }
         }
             break;
         case 252: //取消

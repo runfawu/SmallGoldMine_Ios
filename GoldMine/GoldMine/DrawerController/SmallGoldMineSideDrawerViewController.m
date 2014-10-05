@@ -23,6 +23,7 @@
 #import "WealthViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "RankViewController.h"
+#import "ProfileViewController.h"
 
 
 @implementation SmallGoldMineSideDrawerViewController
@@ -183,7 +184,10 @@
 #pragma mar - MenuTopPhotoViewDelegate
 - (void)tapPhotoView
 {
-    [self.view makeToast:@"点了头像"];
+    ProfileViewController *profileController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:profileController];
+    
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 - (void)tapWealthImageView:(MenuTopPhotoView *)photoView
@@ -200,7 +204,7 @@
     RankViewController *rankController = [[RankViewController alloc] initWithNibName:@"RankViewController" bundle:nil];
     UINavigationController *rankNavi = [[UINavigationController alloc] initWithRootViewController:rankController];
     
-    [self.mm_drawerController setCenterViewController:rankNavi withCloseAnimation:YES completion:nil];
+    [self presentViewController:rankNavi animated:YES completion:nil];
 }
 
 - (void)tapGuysImageView:(MenuTopPhotoView *)photoView

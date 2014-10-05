@@ -8,6 +8,12 @@
 
 #import "SuperViewController.h"
 
+typedef void (^JumpToScanBlock)();
+
 @interface InputBarcodeController : SuperViewController
+
+@property (nonatomic, copy) JumpToScanBlock jumpToScanBlock;
+
+@property (nonatomic, strong) NSString *barString;
 
 @end

@@ -27,6 +27,7 @@
 
 @property (nonatomic,strong) UIImageView* photo;
 @property (nonatomic,strong) UILabel *numberLabel;
+@property (nonatomic,strong) UIImageView *wealthBgIV;
 @property (nonatomic,strong) UILabel *creditLabel;
 @property (nonatomic,strong) UIImageView *wealthImageView;
 @property (nonatomic,strong) UIImageView *guysImageView;
