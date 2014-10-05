@@ -18,13 +18,15 @@
 #import "InputBarcodeController.h"
 #import "GoodsBarResultController.h"
 #import "LoopButton.h"
+#import "BrandIntroduceViewController.h"
+#import "AddBrandViewController.h"
 
 typedef NS_ENUM(NSInteger, ScanBarType) {
     scanBarIntegrationType = 112,
     ScanBarQueryCodeType,
 };
 
-@interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate> //, ZBarReaderDelegate>
+@interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate,VSquareViewControllerDelegate> //, ZBarReaderDelegate>
 
 //@property (nonatomic, strong) ZBarReaderViewController *reader;
 @property (nonatomic, assign) ScanBarType scanType;
@@ -88,6 +90,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
     [self.view addSubview:self.vSquareScrollView];
     
     vSquareViewController=[[VSquareViewController alloc] init];
+    vSquareViewController.delegate=self;
     vSquareViewController.view.frame=CGRectMake(0.0,0.0, self.view.frame.size.width,self.vSquareScrollView.frame.size.height);
     [self.vSquareScrollView addSubview:vSquareViewController.view];
     
@@ -211,6 +214,18 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
     VIPDetailedInformationViewController *vipDetailInfomationVC=[[VIPDetailedInformationViewController alloc] initWithCustomeID:customeId];
     [self.navigationController pushViewController:vipDetailInfomationVC animated:YES];
     vipDetailInfomationVC=nil;
+}
+
+#pragma mark -
+#pragma mark VSQuareViewController Delegate
+-(void)brandIntroduceWithIndexpath:(NSIndexPath *)currentIndexPath{
+    BrandIntroduceViewController *brandIntVC=[[BrandIntroduceViewController alloc] initWithNibName:@"BrandIntroduceViewController" bundle:nil];
+    [self.navigationController pushViewController:brandIntVC animated:YES];
+}
+
+-(void)addBrand{
+    AddBrandViewController *addBrandVC=[[AddBrandViewController alloc] init];
+    [self.navigationController pushViewController:addBrandVC animated:YES];
 }
 
 /******************** Scan Module ***************************/

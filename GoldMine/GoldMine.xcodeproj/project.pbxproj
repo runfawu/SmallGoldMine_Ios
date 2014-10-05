@@ -80,6 +80,10 @@
 		04B5FDF819C6829C00102BC1 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5FDEA19C6829B00102BC1 /* UIImageView+WebCache.m */; };
 		04BB6813193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6811193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m */; };
 		04BB6814193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BB6812193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib */; };
+		04BB681719E127EF0003AB75 /* AdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB681619E127EF0003AB75 /* AdvertisementView.m */; };
+		04BB681B19E1365B0003AB75 /* BrandIntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB681919E1365B0003AB75 /* BrandIntroduceViewController.m */; };
+		04BB681C19E1365B0003AB75 /* BrandIntroduceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BB681A19E1365B0003AB75 /* BrandIntroduceViewController.xib */; };
+		04BB681F19E13BBB0003AB75 /* AddBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB681E19E13BBB0003AB75 /* AddBrandViewController.m */; };
 		04C6F7D719D266AC00863A86 /* credit_git@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D319D266AC00863A86 /* credit_git@2x.png */; };
 		04C6F7D819D266AC00863A86 /* hot_product@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D419D266AC00863A86 /* hot_product@2x.png */; };
 		04C6F7D919D266AC00863A86 /* task_release@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D519D266AC00863A86 /* task_release@2x.png */; };
@@ -307,6 +311,13 @@
 		04BB6810193EBF070003AB75 /* VIPDetailedInformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPDetailedInformationTableViewCell.h; sourceTree = "<group>"; };
 		04BB6811193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPDetailedInformationTableViewCell.m; sourceTree = "<group>"; };
 		04BB6812193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VIPDetailedInformationTableViewCell.xib; sourceTree = "<group>"; };
+		04BB681519E127EF0003AB75 /* AdvertisementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisementView.h; sourceTree = "<group>"; };
+		04BB681619E127EF0003AB75 /* AdvertisementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertisementView.m; sourceTree = "<group>"; };
+		04BB681819E1365B0003AB75 /* BrandIntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandIntroduceViewController.h; sourceTree = "<group>"; };
+		04BB681919E1365B0003AB75 /* BrandIntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandIntroduceViewController.m; sourceTree = "<group>"; };
+		04BB681A19E1365B0003AB75 /* BrandIntroduceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandIntroduceViewController.xib; sourceTree = "<group>"; };
+		04BB681D19E13BBB0003AB75 /* AddBrandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBrandViewController.h; sourceTree = "<group>"; };
+		04BB681E19E13BBB0003AB75 /* AddBrandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBrandViewController.m; sourceTree = "<group>"; };
 		04C6F7D319D266AC00863A86 /* credit_git@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit_git@2x.png"; sourceTree = "<group>"; };
 		04C6F7D419D266AC00863A86 /* hot_product@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot_product@2x.png"; sourceTree = "<group>"; };
 		04C6F7D519D266AC00863A86 /* task_release@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_release@2x.png"; sourceTree = "<group>"; };
@@ -617,6 +628,13 @@
 		04B3640F192071E7001FD570 /* SmallGoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				04BB681519E127EF0003AB75 /* AdvertisementView.h */,
+				04BB681619E127EF0003AB75 /* AdvertisementView.m */,
+				04BB681819E1365B0003AB75 /* BrandIntroduceViewController.h */,
+				04BB681919E1365B0003AB75 /* BrandIntroduceViewController.m */,
+				04BB681A19E1365B0003AB75 /* BrandIntroduceViewController.xib */,
+				04BB681D19E13BBB0003AB75 /* AddBrandViewController.h */,
+				04BB681E19E13BBB0003AB75 /* AddBrandViewController.m */,
 				04806AED19C6B27600772BEF /* Task */,
 				04B36410192071E7001FD570 /* SmallGoldMineCell.h */,
 				04B36411192071E7001FD570 /* SmallGoldMineCell.m */,
@@ -1173,6 +1191,7 @@
 				036163E519CE956B00FDC231 /* RankCell.xib in Resources */,
 				71A8F16A19D7EEDF009572EB /* scan_bg.png in Resources */,
 				031B544E19D45F8900FEA536 /* ProfileViewController.xib in Resources */,
+				04BB681C19E1365B0003AB75 /* BrandIntroduceViewController.xib in Resources */,
 				71A8F11319D7D9C8009572EB /* ScanNaviView.xib in Resources */,
 				031B544519D1AEC900FEA536 /* Default@2x.png in Resources */,
 				036163EE19CEBEC100FDC231 /* rankCell_one.png in Resources */,
@@ -1289,6 +1308,7 @@
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
 				71A6D43C19D26ADC00DECF5D /* GoldenCell.m in Sources */,
 				71A9873319C1E416008402FF /* ASIFormDataRequest.m in Sources */,
+				04BB681B19E1365B0003AB75 /* BrandIntroduceViewController.m in Sources */,
 				71A9873119C1E416008402FF /* ASIDataDecompressor.m in Sources */,
 				033F739219CD3BDA00F5DF52 /* InputBarcodeController.m in Sources */,
 				04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */,
@@ -1312,6 +1332,7 @@
 				71A9872F19C1E416008402FF /* ASIAuthenticationDialog.m in Sources */,
 				04FC3D00191F2CD000CB8F80 /* AppDelegate.m in Sources */,
 				04C6F7DD19D2682A00863A86 /* MyNavigationViewController.m in Sources */,
+				04BB681719E127EF0003AB75 /* AdvertisementView.m in Sources */,
 				036163DA19CE890D00FDC231 /* WealthCell.m in Sources */,
 				04FC3D3B191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m in Sources */,
 				04B5FDEE19C6829B00102BC1 /* SDWebImageCompat.m in Sources */,
@@ -1330,6 +1351,7 @@
 				71A6D43519D2609B00DECF5D /* GoldenViewController.m in Sources */,
 				71A9873219C1E416008402FF /* ASIDownloadCache.m in Sources */,
 				04B5FDEC19C6829B00102BC1 /* NSData+ImageContentType.m in Sources */,
+				04BB681F19E13BBB0003AB75 /* AddBrandViewController.m in Sources */,
 				031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */,
 				047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */,
 				036163E419CE956B00FDC231 /* RankCell.m in Sources */,

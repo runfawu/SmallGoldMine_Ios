@@ -10,7 +10,7 @@
 #import "VIPDetailInfoHeadView.h"
 #import "VIPDetailedInformationTableViewCell.h"
 
-@interface VIPDetailedInformationViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface VIPDetailedInformationViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,strong) SoapRequest *myVipsRequest;
 @property (nonatomic,strong) SoapRequest *myVipsRequestWithNumTwo;
@@ -158,12 +158,22 @@
 
 //删除VIP信息
 -(void)deleteVipInfomation:(id)sender{
-    
+    UIAlertView *deleteView=[[UIAlertView alloc] initWithTitle:nil message:@"确认删除" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+    [deleteView show];
+    deleteView=nil;
 }
 
 //分享VIP
 -(void)shareVipInfomation:(id)sender{
     
+}
+
+#pragma mark -
+#pragma mark UIALERTVIEW DELEGATE
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex==1) {
+        
+    }
 }
 
 @end
