@@ -51,6 +51,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
         if (IS_IOS7) {
 //            [leftBarbutton setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
         }
+        
         UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBarbutton];
         self.navigationItem.leftBarButtonItem = leftBarButtonItem;
         leftBarbutton=nil;
@@ -221,11 +222,13 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
 -(void)brandIntroduceWithIndexpath:(NSIndexPath *)currentIndexPath{
     BrandIntroduceViewController *brandIntVC=[[BrandIntroduceViewController alloc] initWithNibName:@"BrandIntroduceViewController" bundle:nil];
     [self.navigationController pushViewController:brandIntVC animated:YES];
+    brandIntVC=nil;
 }
 
 -(void)addBrand{
     AddBrandViewController *addBrandVC=[[AddBrandViewController alloc] init];
     [self.navigationController pushViewController:addBrandVC animated:YES];
+    addBrandVC=nil;
 }
 
 /******************** Scan Module ***************************/

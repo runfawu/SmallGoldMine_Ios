@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AddBrandViewController : SuperViewController
+{
+    NSMutableArray *brandArray;
+}
+
+@property (nonatomic,strong) UITableView *addBrandTableView;
 
 @end

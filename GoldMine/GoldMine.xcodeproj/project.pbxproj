@@ -84,6 +84,14 @@
 		04BB681B19E1365B0003AB75 /* BrandIntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB681919E1365B0003AB75 /* BrandIntroduceViewController.m */; };
 		04BB681C19E1365B0003AB75 /* BrandIntroduceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BB681A19E1365B0003AB75 /* BrandIntroduceViewController.xib */; };
 		04BB681F19E13BBB0003AB75 /* AddBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB681E19E13BBB0003AB75 /* AddBrandViewController.m */; };
+		04C6DB3E19E2422400F0E9F5 /* brand_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6DB3919E2422400F0E9F5 /* brand_bg@2x.png */; };
+		04C6DB3F19E2422400F0E9F5 /* confime_addBrand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6DB3A19E2422400F0E9F5 /* confime_addBrand@2x.png */; };
+		04C6DB4019E2422400F0E9F5 /* noselect_brand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6DB3B19E2422400F0E9F5 /* noselect_brand@2x.png */; };
+		04C6DB4119E2422400F0E9F5 /* select_allBrand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6DB3C19E2422400F0E9F5 /* select_allBrand@2x.png */; };
+		04C6DB4219E2422400F0E9F5 /* selected_brand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6DB3D19E2422400F0E9F5 /* selected_brand@2x.png */; };
+		04C6DB4619E2436200F0E9F5 /* BrandAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C6DB4519E2436200F0E9F5 /* BrandAssets.m */; };
+		04C6DB4A19E249E600F0E9F5 /* AddBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C6DB4819E249E600F0E9F5 /* AddBrandTableViewCell.m */; };
+		04C6DB4B19E249E600F0E9F5 /* AddBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C6DB4919E249E600F0E9F5 /* AddBrandTableViewCell.xib */; };
 		04C6F7D719D266AC00863A86 /* credit_git@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D319D266AC00863A86 /* credit_git@2x.png */; };
 		04C6F7D819D266AC00863A86 /* hot_product@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D419D266AC00863A86 /* hot_product@2x.png */; };
 		04C6F7D919D266AC00863A86 /* task_release@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C6F7D519D266AC00863A86 /* task_release@2x.png */; };
@@ -318,6 +326,16 @@
 		04BB681A19E1365B0003AB75 /* BrandIntroduceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandIntroduceViewController.xib; sourceTree = "<group>"; };
 		04BB681D19E13BBB0003AB75 /* AddBrandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBrandViewController.h; sourceTree = "<group>"; };
 		04BB681E19E13BBB0003AB75 /* AddBrandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBrandViewController.m; sourceTree = "<group>"; };
+		04C6DB3919E2422400F0E9F5 /* brand_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brand_bg@2x.png"; sourceTree = "<group>"; };
+		04C6DB3A19E2422400F0E9F5 /* confime_addBrand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "confime_addBrand@2x.png"; sourceTree = "<group>"; };
+		04C6DB3B19E2422400F0E9F5 /* noselect_brand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noselect_brand@2x.png"; sourceTree = "<group>"; };
+		04C6DB3C19E2422400F0E9F5 /* select_allBrand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_allBrand@2x.png"; sourceTree = "<group>"; };
+		04C6DB3D19E2422400F0E9F5 /* selected_brand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected_brand@2x.png"; sourceTree = "<group>"; };
+		04C6DB4419E2436200F0E9F5 /* BrandAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandAssets.h; sourceTree = "<group>"; };
+		04C6DB4519E2436200F0E9F5 /* BrandAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandAssets.m; sourceTree = "<group>"; };
+		04C6DB4719E249E600F0E9F5 /* AddBrandTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBrandTableViewCell.h; sourceTree = "<group>"; };
+		04C6DB4819E249E600F0E9F5 /* AddBrandTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBrandTableViewCell.m; sourceTree = "<group>"; };
+		04C6DB4919E249E600F0E9F5 /* AddBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddBrandTableViewCell.xib; sourceTree = "<group>"; };
 		04C6F7D319D266AC00863A86 /* credit_git@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit_git@2x.png"; sourceTree = "<group>"; };
 		04C6F7D419D266AC00863A86 /* hot_product@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot_product@2x.png"; sourceTree = "<group>"; };
 		04C6F7D519D266AC00863A86 /* task_release@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_release@2x.png"; sourceTree = "<group>"; };
@@ -635,6 +653,9 @@
 				04BB681A19E1365B0003AB75 /* BrandIntroduceViewController.xib */,
 				04BB681D19E13BBB0003AB75 /* AddBrandViewController.h */,
 				04BB681E19E13BBB0003AB75 /* AddBrandViewController.m */,
+				04C6DB4719E249E600F0E9F5 /* AddBrandTableViewCell.h */,
+				04C6DB4819E249E600F0E9F5 /* AddBrandTableViewCell.m */,
+				04C6DB4919E249E600F0E9F5 /* AddBrandTableViewCell.xib */,
 				04806AED19C6B27600772BEF /* Task */,
 				04B36410192071E7001FD570 /* SmallGoldMineCell.h */,
 				04B36411192071E7001FD570 /* SmallGoldMineCell.m */,
@@ -685,6 +706,27 @@
 				04B5FDEA19C6829B00102BC1 /* UIImageView+WebCache.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		04C6DB3819E2422400F0E9F5 /* AddBrand */ = {
+			isa = PBXGroup;
+			children = (
+				04C6DB3919E2422400F0E9F5 /* brand_bg@2x.png */,
+				04C6DB3A19E2422400F0E9F5 /* confime_addBrand@2x.png */,
+				04C6DB3B19E2422400F0E9F5 /* noselect_brand@2x.png */,
+				04C6DB3C19E2422400F0E9F5 /* select_allBrand@2x.png */,
+				04C6DB3D19E2422400F0E9F5 /* selected_brand@2x.png */,
+			);
+			path = AddBrand;
+			sourceTree = "<group>";
+		};
+		04C6DB4319E2431800F0E9F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04C6DB4419E2436200F0E9F5 /* BrandAssets.h */,
+				04C6DB4519E2436200F0E9F5 /* BrandAssets.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		04C6F7E519D26C0600863A86 /* Utility */ = {
@@ -748,6 +790,7 @@
 		04FC3CF5191F2CD000CB8F80 /* GoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				04C6DB4319E2431800F0E9F5 /* Models */,
 				04C6F7DB19D2682A00863A86 /* MyNavigationViewController.h */,
 				04C6F7DC19D2682A00863A86 /* MyNavigationViewController.m */,
 				04FC3CFE191F2CD000CB8F80 /* AppDelegate.h */,
@@ -867,6 +910,7 @@
 		04FC3D63191F88AD00CB8F80 /* SmallGoldMine */ = {
 			isa = PBXGroup;
 			children = (
+				04C6DB3819E2422400F0E9F5 /* AddBrand */,
 				71A8F15D19D7EEDF009572EB /* Scan */,
 				0423481919D418A400A058F4 /* vip_info_seperate@2x.png */,
 				0423481A19D418A400A058F4 /* vip_share@2x.png */,
@@ -1196,6 +1240,7 @@
 				031B544519D1AEC900FEA536 /* Default@2x.png in Resources */,
 				036163EE19CEBEC100FDC231 /* rankCell_one.png in Resources */,
 				71AD9D1319C4377300061009 /* login_password.png in Resources */,
+				04C6DB3E19E2422400F0E9F5 /* brand_bg@2x.png in Resources */,
 				04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */,
 				0423481B19D418A400A058F4 /* vip_info_seperate@2x.png in Resources */,
 				04FC3D53191F4FD200CB8F80 /* rank@2x.png in Resources */,
@@ -1208,6 +1253,7 @@
 				04FC3D08191F2CD000CB8F80 /* Images.xcassets in Resources */,
 				71A8F16B19D7EEDF009572EB /* scan_goods_nor.png in Resources */,
 				04C6F7D819D266AC00863A86 /* hot_product@2x.png in Resources */,
+				04C6DB4119E2422400F0E9F5 /* select_allBrand@2x.png in Resources */,
 				04FC3D68191F88AD00CB8F80 /* add_ brand@2x.png in Resources */,
 				04FC3CFA191F2CD000CB8F80 /* InfoPlist.strings in Resources */,
 				036163EF19CEBEC100FDC231 /* rankCell_three.png in Resources */,
@@ -1216,8 +1262,11 @@
 				036163F219CEC08500FDC231 /* rankCell_round.png in Resources */,
 				03FAD92519D85F8C00B6937D /* cell_arrow.png in Resources */,
 				71AD9D1219C4377300061009 /* login_mobile.png in Resources */,
+				04C6DB3F19E2422400F0E9F5 /* confime_addBrand@2x.png in Resources */,
 				71A8F17419D7EEDF009572EB /* scan_torch_off.png in Resources */,
+				04C6DB4B19E249E600F0E9F5 /* AddBrandTableViewCell.xib in Resources */,
 				033F739A19CD3D7B00F5DF52 /* input_cancel_n.png in Resources */,
+				04C6DB4219E2422400F0E9F5 /* selected_brand@2x.png in Resources */,
 				71A8F16F19D7EEDF009572EB /* scan_input_sel.png in Resources */,
 				71A8F17119D7EEDF009572EB /* scan_integration_sel.png in Resources */,
 				04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */,
@@ -1228,6 +1277,7 @@
 				71AD9D1719C4377300061009 /* login_textField.png in Resources */,
 				0423481819D4189D00A058F4 /* vip_ headBg@2x.png in Resources */,
 				04FC3D57191F4FD200CB8F80 /* wealth@2x.png in Resources */,
+				04C6DB4019E2422400F0E9F5 /* noselect_brand@2x.png in Resources */,
 				036163F019CEBEC100FDC231 /* rankCell_two.png in Resources */,
 				04FC3D54191F4FD200CB8F80 /* setting@2x.png in Resources */,
 				71A6D43819D263FB00DECF5D /* golden_redBg.png in Resources */,
@@ -1307,6 +1357,7 @@
 				04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */,
 				04FC3D38191F2D0300CB8F80 /* MMDrawerController.m in Sources */,
 				71A6D43C19D26ADC00DECF5D /* GoldenCell.m in Sources */,
+				04C6DB4619E2436200F0E9F5 /* BrandAssets.m in Sources */,
 				71A9873319C1E416008402FF /* ASIFormDataRequest.m in Sources */,
 				04BB681B19E1365B0003AB75 /* BrandIntroduceViewController.m in Sources */,
 				71A9873119C1E416008402FF /* ASIDataDecompressor.m in Sources */,
@@ -1353,6 +1404,7 @@
 				04B5FDEC19C6829B00102BC1 /* NSData+ImageContentType.m in Sources */,
 				04BB681F19E13BBB0003AB75 /* AddBrandViewController.m in Sources */,
 				031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */,
+				04C6DB4A19E249E600F0E9F5 /* AddBrandTableViewCell.m in Sources */,
 				047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */,
 				036163E419CE956B00FDC231 /* RankCell.m in Sources */,
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,
