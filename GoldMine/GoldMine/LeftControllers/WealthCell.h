@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WealthEntity.h"
 
 @interface WealthCell : UITableViewCell
 
@@ -17,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *remainIntegrationLabel;
 @property (weak, nonatomic) IBOutlet UIButton *listButton;
 
+@property (nonatomic, strong) WealthEntity *wealthEntity;
 
 @end

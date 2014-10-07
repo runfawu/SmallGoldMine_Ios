@@ -10,4 +10,6 @@
 
 @interface IntegrationDetailController : SuperViewController
 
+@property (nonatomic, strong) NSString *brandId;
+
 @end

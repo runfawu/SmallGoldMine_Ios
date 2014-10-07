@@ -7,6 +7,7 @@
 //
 
 #import "IntegrationDetailCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation IntegrationDetailCell
 
@@ -20,6 +21,16 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setIntegrationEntity:(IntegrationDetaiEntity *)integrationEntity
+{
+    _integrationEntity = integrationEntity;
+    
+    self.timeLabel.text = _integrationEntity.GetTime;
+    self.contentLabel.text = _integrationEntity.ProName;
+    self.integrationLabel.text = [NSString stringWithFormat:@"+%@ 积分", _integrationEntity.Idot];
+    [self.thumbImageView setImageWithURL:[NSURL URLWithString:_integrationEntity.ProImg] placeholderImage:[UIImage imageNamed:@"logo_icon"]];
 }
 
 @end

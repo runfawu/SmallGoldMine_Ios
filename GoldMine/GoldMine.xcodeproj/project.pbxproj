@@ -138,6 +138,12 @@
 		04FC3D70191F98E700CB8F80 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */; };
 		04FC3D75191FA99400CB8F80 /* vsquare_good@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D74191FA99400CB8F80 /* vsquare_good@2x.png */; };
 		71731BE019E3C2C2001F90C1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 71731BDF19E3C2C2001F90C1 /* Utils.m */; };
+		71731BE519E3D45A001F90C1 /* WealthEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71731BE419E3D45A001F90C1 /* WealthEntity.m */; };
+		71731BE819E3DB52001F90C1 /* IntegrationDetaiEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71731BE719E3DB52001F90C1 /* IntegrationDetaiEntity.m */; };
+		71731BED19E3E2FB001F90C1 /* IntegrationExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71731BEB19E3E2FB001F90C1 /* IntegrationExchangeController.m */; };
+		71731BEE19E3E2FB001F90C1 /* IntegrationExchangeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71731BEC19E3E2FB001F90C1 /* IntegrationExchangeController.xib */; };
+		71731BF219E3E8FE001F90C1 /* HotGiftsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71731BF019E3E8FE001F90C1 /* HotGiftsController.m */; };
+		71731BF319E3E8FE001F90C1 /* HotGiftsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71731BF119E3E8FE001F90C1 /* HotGiftsController.xib */; };
 		71A4F7C319E3AD5E00A886D6 /* integration_confirm_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 71A4F7BE19E3AD5E00A886D6 /* integration_confirm_h.png */; };
 		71A4F7C419E3AD5E00A886D6 /* integration_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 71A4F7BF19E3AD5E00A886D6 /* integration_line.png */; };
 		71A4F7C519E3AD5E00A886D6 /* integration_nerd.png in Resources */ = {isa = PBXBuildFile; fileRef = 71A4F7C019E3AD5E00A886D6 /* integration_nerd.png */; };
@@ -407,6 +413,16 @@
 		71731BDE19E3C2C2001F90C1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		71731BDF19E3C2C2001F90C1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		71731BE119E3C300001F90C1 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		71731BE319E3D45A001F90C1 /* WealthEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WealthEntity.h; sourceTree = "<group>"; };
+		71731BE419E3D45A001F90C1 /* WealthEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WealthEntity.m; sourceTree = "<group>"; };
+		71731BE619E3DB52001F90C1 /* IntegrationDetaiEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationDetaiEntity.h; sourceTree = "<group>"; };
+		71731BE719E3DB52001F90C1 /* IntegrationDetaiEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationDetaiEntity.m; sourceTree = "<group>"; };
+		71731BEA19E3E2FB001F90C1 /* IntegrationExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationExchangeController.h; sourceTree = "<group>"; };
+		71731BEB19E3E2FB001F90C1 /* IntegrationExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationExchangeController.m; sourceTree = "<group>"; };
+		71731BEC19E3E2FB001F90C1 /* IntegrationExchangeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegrationExchangeController.xib; sourceTree = "<group>"; };
+		71731BEF19E3E8FE001F90C1 /* HotGiftsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotGiftsController.h; sourceTree = "<group>"; };
+		71731BF019E3E8FE001F90C1 /* HotGiftsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotGiftsController.m; sourceTree = "<group>"; };
+		71731BF119E3E8FE001F90C1 /* HotGiftsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotGiftsController.xib; sourceTree = "<group>"; };
 		71A4F7BE19E3AD5E00A886D6 /* integration_confirm_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = integration_confirm_h.png; sourceTree = "<group>"; };
 		71A4F7BF19E3AD5E00A886D6 /* integration_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = integration_line.png; sourceTree = "<group>"; };
 		71A4F7C019E3AD5E00A886D6 /* integration_nerd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = integration_nerd.png; sourceTree = "<group>"; };
@@ -592,6 +608,7 @@
 		036163D119CE855000FDC231 /* LeftControllers */ = {
 			isa = PBXGroup;
 			children = (
+				71731BE919E3E2BD001F90C1 /* IntegragtionExchange */,
 				031B544919D45F2000FEA536 /* Profile */,
 				036163D219CE857200FDC231 /* WealthViewController.h */,
 				036163D319CE857200FDC231 /* WealthViewController.m */,
@@ -602,6 +619,7 @@
 				036163E619CE95A900FDC231 /* RankViewController.h */,
 				036163E719CE95A900FDC231 /* RankViewController.m */,
 				036163E819CE95A900FDC231 /* RankViewController.xib */,
+				71731BE219E3D42F001F90C1 /* Model */,
 				036163DC19CE891500FDC231 /* View */,
 			);
 			path = LeftControllers;
@@ -962,6 +980,30 @@
 			path = CustomSegmentControl;
 			sourceTree = "<group>";
 		};
+		71731BE219E3D42F001F90C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71731BE319E3D45A001F90C1 /* WealthEntity.h */,
+				71731BE419E3D45A001F90C1 /* WealthEntity.m */,
+				71731BE619E3DB52001F90C1 /* IntegrationDetaiEntity.h */,
+				71731BE719E3DB52001F90C1 /* IntegrationDetaiEntity.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		71731BE919E3E2BD001F90C1 /* IntegragtionExchange */ = {
+			isa = PBXGroup;
+			children = (
+				71731BEA19E3E2FB001F90C1 /* IntegrationExchangeController.h */,
+				71731BEB19E3E2FB001F90C1 /* IntegrationExchangeController.m */,
+				71731BEC19E3E2FB001F90C1 /* IntegrationExchangeController.xib */,
+				71731BEF19E3E8FE001F90C1 /* HotGiftsController.h */,
+				71731BF019E3E8FE001F90C1 /* HotGiftsController.m */,
+				71731BF119E3E8FE001F90C1 /* HotGiftsController.xib */,
+			);
+			path = IntegragtionExchange;
+			sourceTree = "<group>";
+		};
 		71A6D43119D2603100DECF5D /* Golden */ = {
 			isa = PBXGroup;
 			children = (
@@ -1268,6 +1310,7 @@
 				04FC3CFA191F2CD000CB8F80 /* InfoPlist.strings in Resources */,
 				036163EF19CEBEC100FDC231 /* rankCell_three.png in Resources */,
 				04806AF819C6B7A400772BEF /* task_vip@2x.png in Resources */,
+				71731BF319E3E8FE001F90C1 /* HotGiftsController.xib in Resources */,
 				031B51F819CF18CC00FEA536 /* IntegrationDetailCell.xib in Resources */,
 				036163F219CEC08500FDC231 /* rankCell_round.png in Resources */,
 				03FAD92519D85F8C00B6937D /* cell_arrow.png in Resources */,
@@ -1327,6 +1370,7 @@
 				04C6F7D919D266AC00863A86 /* task_release@2x.png in Resources */,
 				04806AF519C6B7A400772BEF /* task_tel_down@2x.png in Resources */,
 				033F739319CD3BDA00F5DF52 /* InputBarcodeController.xib in Resources */,
+				71731BEE19E3E2FB001F90C1 /* IntegrationExchangeController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1373,6 +1417,7 @@
 				71A6D43C19D26ADC00DECF5D /* GoldenCell.m in Sources */,
 				04C6DB4619E2436200F0E9F5 /* BrandAssets.m in Sources */,
 				71A9873319C1E416008402FF /* ASIFormDataRequest.m in Sources */,
+				71731BE519E3D45A001F90C1 /* WealthEntity.m in Sources */,
 				04BB681B19E1365B0003AB75 /* BrandIntroduceViewController.m in Sources */,
 				71A9873119C1E416008402FF /* ASIDataDecompressor.m in Sources */,
 				033F739219CD3BDA00F5DF52 /* InputBarcodeController.m in Sources */,
@@ -1383,6 +1428,7 @@
 				04FC3D39191F2D0300CB8F80 /* MMDrawerVisualState.m in Sources */,
 				71A9873E19C1E8F4008402FF /* LoginController.m in Sources */,
 				04C6F7E419D26C0600863A86 /* TaskViewController.m in Sources */,
+				71731BED19E3E2FB001F90C1 /* IntegrationExchangeController.m in Sources */,
 				04FC3D70191F98E700CB8F80 /* CustomSegmentedControl.m in Sources */,
 				04B5FDF419C6829C00102BC1 /* UIButton+WebCache.m in Sources */,
 				04806AF019C6B29100772BEF /* TaskTableViewCell.m in Sources */,
@@ -1414,11 +1460,13 @@
 				71A8F17F19D8096A009572EB /* IntegrationBarResultController.m in Sources */,
 				036163D519CE857200FDC231 /* WealthViewController.m in Sources */,
 				71A6D43519D2609B00DECF5D /* GoldenViewController.m in Sources */,
+				71731BF219E3E8FE001F90C1 /* HotGiftsController.m in Sources */,
 				71A9873219C1E416008402FF /* ASIDownloadCache.m in Sources */,
 				04B5FDEC19C6829B00102BC1 /* NSData+ImageContentType.m in Sources */,
 				04BB681F19E13BBB0003AB75 /* AddBrandViewController.m in Sources */,
 				031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */,
 				04C6DB4A19E249E600F0E9F5 /* AddBrandTableViewCell.m in Sources */,
+				71731BE819E3DB52001F90C1 /* IntegrationDetaiEntity.m in Sources */,
 				047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */,
 				036163E419CE956B00FDC231 /* RankCell.m in Sources */,
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,

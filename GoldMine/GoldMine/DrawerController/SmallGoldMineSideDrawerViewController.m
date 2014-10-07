@@ -24,6 +24,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "RankViewController.h"
 #import "ProfileViewController.h"
+#import "IntegrationExchangeController.h"
 
 
 @implementation SmallGoldMineSideDrawerViewController
@@ -167,9 +168,12 @@
         
     }else if (indexPath.row==1){
         //积分换礼
-//            SearchSameCityViewController *searchSameCityVC=[[SearchSameCityViewController alloc] init];
-//            MyNavigationViewController *searchAnchorPageNav=[[MyNavigationViewController alloc] initWithRootViewController:searchSameCityVC];
-//            [self.mm_drawerController setCenterViewController:searchAnchorPageNav withCloseAnimation:YES completion:nil];
+        IntegrationExchangeController *exchangeController = [[IntegrationExchangeController alloc] initWithNibName:@"IntegrationExchangeController" bundle:nil];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:exchangeController];
+        
+        [self presentViewController:navi animated:YES completion:nil];
+
+        
     }else if (indexPath.row==2) {
         //任务发布
 //        SearchAnchorViewController *searchAnchorVC=[[SearchAnchorViewController alloc] init];
