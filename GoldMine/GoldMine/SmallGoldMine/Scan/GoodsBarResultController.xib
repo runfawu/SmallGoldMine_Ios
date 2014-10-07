@@ -49,7 +49,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WEs-40-stk">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="WEs-40-stk">
             <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WEs-40-stk" id="JgI-Ho-5Ny">
@@ -71,7 +71,7 @@
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eve-Es-DTd">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="eve-Es-DTd">
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eve-Es-DTd" id="tHk-LD-3Eq">
@@ -95,7 +95,7 @@
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Tkg-qV-5TL">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Tkg-qV-5TL">
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tkg-qV-5TL" id="EMC-R2-yvZ">
@@ -119,7 +119,7 @@
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gIj-GS-jR3">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="gIj-GS-jR3">
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gIj-GS-jR3" id="rp4-K5-wvI">
@@ -143,7 +143,7 @@
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cPQ-92-vBP">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cPQ-92-vBP">
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cPQ-92-vBP" id="DJr-s4-jl4">
@@ -167,7 +167,7 @@
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ALR-2H-JeA">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ALR-2H-JeA">
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ALR-2H-JeA" id="oAd-Pi-Ase">
@@ -191,7 +191,7 @@
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FbQ-Uy-lpb">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="FbQ-Uy-lpb">
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FbQ-Uy-lpb" id="fsB-2u-rV5">
@@ -215,7 +215,7 @@
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fBD-JU-v3W">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="fBD-JU-v3W">
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBD-JU-v3W" id="D9B-fF-kqw">
@@ -239,7 +239,7 @@
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Sar-EK-QC7">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Sar-EK-QC7">
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sar-EK-QC7" id="SNg-Nn-DxH">

@@ -150,17 +150,6 @@
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
-#define kBirthday      @"kBirthday"
-#define kPicture       @"kPicture"
-#define kSex           @"kSex"
-#define kSignature     @"kSignature"
-#define kUserId        @"kUserId"
-#define kUserName      @"kUserName"
-#define kUserPhone     @"kUserPhone"
-#define kUserType      @"kUserType"
-#define USERINFO       @"userInfo"
-#define USERDEFAULT   [NSUserDefaults standardUserDefaults]
-
 #pragma mark - Parse data
 - (void)parseDataWithResult:(id)result
 {

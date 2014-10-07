@@ -8,7 +8,7 @@
 
 #import "GoodsBarResultController.h"
 
-@interface GoodsBarResultController ()
+@interface GoodsBarResultController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITableViewCell *firstCell;
@@ -56,6 +56,21 @@
     [self requestDataOfGoodsInfo];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.goodsNameLabel.text = @"--";
+    self.shopRewardLabel.text = @"--";
+    self.clerkRewardLabel.text = @"--";
+    self.integrationLabel.text = @"--";
+    self.brandLabel.text = @"--";
+    self.standardLabel.text = @"--";
+    self.productNumberLabel.text = @"--";
+    self.productDateLabel.text = @"--";
+    self.productorLabel.text = @"--";
+}
+
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
@@ -87,12 +102,14 @@
     [self.goodsInfoRequest postRequestWithSoapNamespace:@"getProInfo" params:paramDict successBlock:^(id result) {
         [MBProgressHUD hideHUDForView:weakSelf.tableView animated:YES];
         weakSelf.goodsInfoRequest = nil;
-        DLog(@"goodsResultView.frame = %@", NSStringFromCGRect(weakSelf.view.superview.frame));
         DLog(@"扫描的商品详情 ＝ %@", result);
+        [weakSelf updateUIWithResult:result];
+        
     } failureBlock:^(NSString *requestError) {
-        [weakSelf.view makeToast:@"请求服务器失败"];
+        SHOW_BAD_NETWORK_TOAST(weakSelf.view);
         [MBProgressHUD hideHUDForView:weakSelf.tableView animated:YES];
         weakSelf.goodsInfoRequest = nil;
+        
     } errorBlock:^(NSMutableString *errorStr) {
         [weakSelf.view makeToast:errorStr];
         [MBProgressHUD hideHUDForView:weakSelf.tableView animated:YES];
@@ -100,10 +117,40 @@
     }];
 }
 
+- (void)updateUIWithResult:(id)result
+{
+    NSDictionary *resultDict = (NSDictionary *)result;
+    if ([Utils isValidResult:resultDict]) {
+        //self.goodsImageView.image =
+        self.goodsNameLabel.text = [NSString stringWithFormat:@"%@分", resultDict[@"ProName"]];
+        self.shopRewardLabel.text = [NSString stringWithFormat:@"%@分", resultDict[@"ShopIdot"]];
+        self.clerkRewardLabel.text = [NSString stringWithFormat:@"%@分", resultDict[@"ClerkIdot"]];
+        self.integrationLabel.text = [NSString stringWithFormat:@"%@分", resultDict[@"Idot"]];
+        self.brandLabel.text = resultDict[@"ProName"];
+        self.standardLabel.text = resultDict[@"Spec"];
+        self.productNumberLabel.text = resultDict[@"Code"];
+        self.productDateLabel.text = resultDict[@"MadeDate"];
+        self.productorLabel.text = resultDict[@"EnterPrise"];
+    } else {
+        [self.view makeToast:@"物流码不存在"];
+    }
+}
+
 #pragma mark - UITableView dataSource && delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 1;
+    } else {
+        return 18;
+    }
+    
+    return 18;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

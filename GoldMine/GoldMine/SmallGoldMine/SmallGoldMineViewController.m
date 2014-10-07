@@ -21,6 +21,7 @@
 #import "BrandIntroduceViewController.h"
 #import "AddBrandViewController.h"
 #import "GoodsBarResultController.h"
+#import "IntegrationBarResultController.h"
 
 typedef NS_ENUM(NSInteger, ScanBarType) {
     scanBarIntegrationType = 112,
@@ -423,10 +424,14 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
 
 - (void)beginScanBarcode
 {
-    GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
-    goodsController.barString = @"10110010000001";
+//    GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
+//    goodsController.barString = @"10110010000001";
+//    
+//    [self.navigationController pushViewController:goodsController animated:YES];
+    IntegrationBarResultController *integrationController = [[IntegrationBarResultController alloc] initWithNibName:@"IntegrationBarResultController" bundle:nil];
+    integrationController.barString = @"1010010010000005";
     
-    [self.navigationController pushViewController:goodsController animated:YES];
+    [self.navigationController pushViewController:integrationController animated:YES];
 }
 
 @end
