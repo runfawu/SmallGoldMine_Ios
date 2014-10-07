@@ -63,6 +63,13 @@
     self.passwordTextField.text = @"123456";
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
+}
+
 #pragma mark - TextField && Keyboard
 - (IBAction)textFieldReturn:(UITextField *)sender {
     [self UIControlHideKeyboard:sender];

@@ -20,6 +20,7 @@
 #import "LoopButton.h"
 #import "BrandIntroduceViewController.h"
 #import "AddBrandViewController.h"
+#import "GoodsBarResultController.h"
 
 typedef NS_ENUM(NSInteger, ScanBarType) {
     scanBarIntegrationType = 112,
@@ -412,5 +413,13 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
     
 }
 */
+
+- (void)beginScanBarcode
+{
+    GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
+    goodsController.barString = @"10110010000001";
+    
+    [self.navigationController pushViewController:goodsController animated:YES];
+}
 
 @end
