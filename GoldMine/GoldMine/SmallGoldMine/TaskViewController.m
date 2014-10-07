@@ -38,7 +38,7 @@
     taskTwo=[[NSMutableArray alloc] init];
     taskThree=[[NSMutableArray alloc] init];
     
-    self.taskTableView=[[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    self.taskTableView=[[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height-104.0) style:UITableViewStylePlain];
     self.taskTableView.dataSource=self;
     self.taskTableView.delegate=self;
     self.taskTableView.showsHorizontalScrollIndicator = NO;
@@ -76,7 +76,7 @@
     if (indexPath.section==0) {
         if (indexPath.row==0&&taskOne.count!=0) {
             cell.taskNameLabel.hidden=NO;
-            [cell setTaskNameWithString:[[taskOne objectAtIndex:0] objectForKey:@"SerName"] andBackgroundColorWithColor:[UIColor colorWithRed:255.0/255 green:91.0/255 blue:84.0/255 alpha:1.0] ];
+            [cell setTaskNameWithString:[NSString stringWithFormat:@"  任务一: %@",[[taskOne objectAtIndex:0] objectForKey:@"SerName"]] andBackgroundColorWithColor:[UIColor colorWithRed:255.0/255 green:91.0/255 blue:84.0/255 alpha:1.0] ];
         }else{
             if (taskOne.count!=0) {
                 cell.taskNameLabel.hidden=YES;
@@ -93,7 +93,7 @@
     }else if (indexPath.section==1&&taskTwo.count!=0){
         if (indexPath.row==0) {
             cell.taskNameLabel.hidden=NO;
-            [cell setTaskNameWithString:[[taskTwo objectAtIndex:0] objectForKey:@"SerName"] andBackgroundColorWithColor:[UIColor colorWithRed:0.0 green:168.0/255 blue:98.0/255 alpha:1.0] ];
+            [cell setTaskNameWithString:[NSString stringWithFormat:@"  任务二: %@",[[taskTwo objectAtIndex:0] objectForKey:@"SerName"]] andBackgroundColorWithColor:[UIColor colorWithRed:0.0 green:168.0/255 blue:98.0/255 alpha:1.0] ];
         }else{
             if (taskTwo.count!=0) {
                 cell.taskNameLabel.hidden=YES;
@@ -109,7 +109,7 @@
     }else if (indexPath.section==2&&taskThree.count!=0){
         if (indexPath.row==0) {
             cell.taskNameLabel.hidden=NO;
-            [cell setTaskNameWithString:[[taskThree objectAtIndex:0] objectForKey:@"SerName"] andBackgroundColorWithColor:[UIColor colorWithRed:0.0 green:149.0/255 blue:229.0/255 alpha:1.0] ];
+            [cell setTaskNameWithString:[NSString stringWithFormat:@"  任务三: %@",[[taskThree objectAtIndex:0] objectForKey:@"SerName"]] andBackgroundColorWithColor:[UIColor colorWithRed:0.0 green:149.0/255 blue:229.0/255 alpha:1.0] ];
         }else{
             if (taskThree.count!=0) {
                 cell.taskNameLabel.hidden=YES;

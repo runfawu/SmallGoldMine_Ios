@@ -56,6 +56,14 @@
     DLog(@"register frame = %@", NSStringFromCGRect(self.view.frame));
     //{{0, 64}, {320, 504}} ？
 }
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

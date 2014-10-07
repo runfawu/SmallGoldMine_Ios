@@ -85,6 +85,8 @@
         [self addSubview:orderServer];
         
         _orderServerLabel=[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(orderServer.frame), orderServer.frame.origin.y, 250.0, 20.0)];
+        
+        NSLog(@"_orderServerLabel.frame origin=:%f height=:%f",_orderServerLabel.frame.origin.y,_orderServerLabel.frame.size.height);
         _orderServerLabel.textColor=[Utils colorWithHexString:@"979797"];
         _orderServerLabel.font=[UIFont systemFontOfSize:13.0];
         [self addSubview:_orderServerLabel];

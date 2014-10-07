@@ -11,22 +11,25 @@
 #import "UIViewController+MMDrawerController.h"
 #import "InputBarcodeController.h"
 #import "VIPDetailedInformationViewController.h"
-#import "ZBarSDK.h"
+//#import "ZBarSDK.h"
 @import AVFoundation;
 #import "ScanNaviView.h"
 #import "UIButton+Addition.h"
 #import "InputBarcodeController.h"
 #import "GoodsBarResultController.h"
 #import "LoopButton.h"
+#import "BrandIntroduceViewController.h"
+#import "AddBrandViewController.h"
+#import "GoodsBarResultController.h"
 
 typedef NS_ENUM(NSInteger, ScanBarType) {
     scanBarIntegrationType = 112,
     ScanBarQueryGoodsType,
 };
 
-@interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate, ZBarReaderDelegate>
+@interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate,VSquareViewControllerDelegate> //, ZBarReaderDelegate>
 
-@property (nonatomic, strong) ZBarReaderViewController *reader;
+//@property (nonatomic, strong) ZBarReaderViewController *reader;
 @property (nonatomic, assign) ScanBarType scanType;
 
 @end
@@ -49,6 +52,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
         if (IS_IOS7) {
 //            [leftBarbutton setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
         }
+        
         UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBarbutton];
         self.navigationItem.leftBarButtonItem = leftBarButtonItem;
         leftBarbutton=nil;
@@ -88,6 +92,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
     [self.view addSubview:self.vSquareScrollView];
     
     vSquareViewController=[[VSquareViewController alloc] init];
+    vSquareViewController.delegate=self;
     vSquareViewController.view.frame=CGRectMake(0.0,0.0, self.view.frame.size.width,self.vSquareScrollView.frame.size.height);
     [self.vSquareScrollView addSubview:vSquareViewController.view];
     
@@ -213,13 +218,27 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
     vipDetailInfomationVC=nil;
 }
 
-/******************** Scan Module ***************************/
+#pragma mark -
+#pragma mark VSQuareViewController Delegate
+-(void)brandIntroduceWithIndexpath:(NSIndexPath *)currentIndexPath{
+    BrandIntroduceViewController *brandIntVC=[[BrandIntroduceViewController alloc] initWithNibName:@"BrandIntroduceViewController" bundle:nil];
+    [self.navigationController pushViewController:brandIntVC animated:YES];
+    brandIntVC=nil;
+}
 
+-(void)addBrand{
+    AddBrandViewController *addBrandVC=[[AddBrandViewController alloc] init];
+    [self.navigationController pushViewController:addBrandVC animated:YES];
+    addBrandVC=nil;
+}
+
+/******************** Scan Module ***************************/
+/*
 #pragma mark -
 #pragma mark Scan Module
 - (void)beginScanBarcode
 {
-    /*
+ 
      扫描二维码部分：
      导入ZBarSDK文件并引入一下框架
      AVFoundation.framework
@@ -232,7 +251,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
      
      - (void) imagePickerController: (UIImagePickerController*) reader didFinishPickingMediaWithInfo: (NSDictionary*) info
      最后读取并显示了条形码的图片和内容。
-     */
+ 
  
     if (self.reader) {
         [self.reader removeFromParentViewController];
@@ -400,6 +419,14 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
     [self.navigationController pushViewController:inputController animated:YES];
     
 }
+*/
 
+- (void)beginScanBarcode
+{
+    GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
+    goodsController.barString = @"10110010000001";
+    
+    [self.navigationController pushViewController:goodsController animated:YES];
+}
 
 @end
