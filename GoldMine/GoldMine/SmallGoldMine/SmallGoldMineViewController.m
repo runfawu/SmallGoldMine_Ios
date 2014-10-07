@@ -21,7 +21,7 @@
 
 typedef NS_ENUM(NSInteger, ScanBarType) {
     scanBarIntegrationType = 112,
-    ScanBarQueryCodeType,
+    ScanBarQueryGoodsType,
 };
 
 @interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate, ZBarReaderDelegate>
@@ -309,13 +309,17 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         }
     }
 
-    if (self.scanType == scanBarIntegrationType) { //跳到手动输入
+    if (self.scanType == scanBarIntegrationType) { //积分，跳到手动输入
         InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
-        inputController.barString = barString;
-        
+        inputController.barString = @"1010010010000001"; //barString;
+                
+        __weak typeof(&*self) weakSelf = self;
+        inputController.jumpToScanBlock = ^ {
+            [weakSelf beginScanBarcode];
+        };
         [self.navigationController pushViewController:inputController animated:YES];
         
-    } else if (self.scanType == ScanBarQueryCodeType) { //跳到商品查询
+    } else if (self.scanType == ScanBarQueryGoodsType) { //查询，跳到商品查询
         GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
         goodsController.barString = barString;
         
@@ -367,7 +371,7 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         return;
     }
     
-    self.scanType = ScanBarQueryCodeType;
+    self.scanType = ScanBarQueryGoodsType;
     
     button.selected = !button.selected;
     ScanNaviView *naviView = (ScanNaviView *)button.superview;
@@ -386,7 +390,7 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
     naviView.queryGoodsButton.selected = NO;
     naviView.integrationScanButton.selected = NO;
     
-    [_reader dismissViewControllerAnimated:YES completion:nil];
+    [_reader dismissViewControllerAnimated:NO completion:nil];
     
     __weak typeof(&*self) weakSelf = self;
     InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];

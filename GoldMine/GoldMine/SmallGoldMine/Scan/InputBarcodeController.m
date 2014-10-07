@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *integrationButton;
 @property (weak, nonatomic) IBOutlet UIButton *queryButton;
 
-@property (nonatomic, strong) SoapRequest *barcodeRequest;
+@property (nonatomic, strong) SoapRequest *queryRequest;
 
 @end
 
@@ -67,6 +67,8 @@
 - (void)setup
 {
     self.view.backgroundColor = [Utils colorWithHexString:@"F2F3F0"];
+    
+    self.queryRequest = [[SoapRequest alloc] init];
 }
 
 #pragma mark - Button events
