@@ -48,6 +48,9 @@
 
 #define USERDEFAULT   [NSUserDefaults standardUserDefaults]
 
+#define GRAY_COLOR  [Utils colorWithHexString:@"F2F3F0"]
+#define RED_COLOR   [Utils colorWithHexString:@"ED1D1B"]
+
 /**
  * 红色rgb值：237,29,27
  * hex值：#ED1D1B

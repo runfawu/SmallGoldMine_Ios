@@ -205,6 +205,16 @@
 		71AD9D1619C4377300061009 /* login_separateLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 71AD9D0D19C4377300061009 /* login_separateLine.png */; };
 		71AD9D1719C4377300061009 /* login_textField.png in Resources */ = {isa = PBXBuildFile; fileRef = 71AD9D0E19C4377300061009 /* login_textField.png */; };
 		71AD9D1B19C43EFF00061009 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AD9D1A19C43EFF00061009 /* UIView+Toast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		71BCB2A219EA54B10068C302 /* GiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BCB2A119EA54B10068C302 /* GiftView.m */; };
+		71BCB2A419EA56F30068C302 /* GiftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2A319EA56F30068C302 /* GiftView.xib */; };
+		71BCB2A919EA59260068C302 /* gift_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2A519EA59260068C302 /* gift_bg.png */; };
+		71BCB2AA19EA59260068C302 /* gift_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2A619EA59260068C302 /* gift_icon.png */; };
+		71BCB2AB19EA59260068C302 /* gift_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2A719EA59260068C302 /* gift_line.png */; };
+		71BCB2AC19EA59260068C302 /* gift_utilBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2A819EA59260068C302 /* gift_utilBg.png */; };
+		71BCB2AF19EA680D0068C302 /* GiftEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BCB2AE19EA680D0068C302 /* GiftEntity.m */; };
+		71BCB2B119EA6D830068C302 /* gift_defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2B019EA6D830068C302 /* gift_defaultImage.png */; };
+		71BCB2B519EA7B150068C302 /* ExchangeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BCB2B319EA7B150068C302 /* ExchangeDetailController.m */; };
+		71BCB2B619EA7B150068C302 /* ExchangeDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2B419EA7B150068C302 /* ExchangeDetailController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -529,6 +539,19 @@
 		71AD9D0E19C4377300061009 /* login_textField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_textField.png; sourceTree = "<group>"; };
 		71AD9D1919C43EFF00061009 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		71AD9D1A19C43EFF00061009 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		71BCB2A019EA54B10068C302 /* GiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftView.h; sourceTree = "<group>"; };
+		71BCB2A119EA54B10068C302 /* GiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftView.m; sourceTree = "<group>"; };
+		71BCB2A319EA56F30068C302 /* GiftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftView.xib; sourceTree = "<group>"; };
+		71BCB2A519EA59260068C302 /* gift_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_bg.png; sourceTree = "<group>"; };
+		71BCB2A619EA59260068C302 /* gift_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_icon.png; sourceTree = "<group>"; };
+		71BCB2A719EA59260068C302 /* gift_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_line.png; sourceTree = "<group>"; };
+		71BCB2A819EA59260068C302 /* gift_utilBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_utilBg.png; sourceTree = "<group>"; };
+		71BCB2AD19EA680D0068C302 /* GiftEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftEntity.h; sourceTree = "<group>"; };
+		71BCB2AE19EA680D0068C302 /* GiftEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftEntity.m; sourceTree = "<group>"; };
+		71BCB2B019EA6D830068C302 /* gift_defaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_defaultImage.png; sourceTree = "<group>"; };
+		71BCB2B219EA7B150068C302 /* ExchangeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailController.h; sourceTree = "<group>"; };
+		71BCB2B319EA7B150068C302 /* ExchangeDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDetailController.m; sourceTree = "<group>"; };
+		71BCB2B419EA7B150068C302 /* ExchangeDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeDetailController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -904,6 +927,11 @@
 		04FC3D3E191F4FD200CB8F80 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
+				71BCB2B019EA6D830068C302 /* gift_defaultImage.png */,
+				71BCB2A519EA59260068C302 /* gift_bg.png */,
+				71BCB2A619EA59260068C302 /* gift_icon.png */,
+				71BCB2A719EA59260068C302 /* gift_line.png */,
+				71BCB2A819EA59260068C302 /* gift_utilBg.png */,
 				03FAD92419D85F8C00B6937D /* cell_arrow.png */,
 				031B544719D1AF2400FEA536 /* logo_icon.png */,
 				04C6F7D319D266AC00863A86 /* credit_git@2x.png */,
@@ -1000,6 +1028,14 @@
 				71731BEF19E3E8FE001F90C1 /* HotGiftsController.h */,
 				71731BF019E3E8FE001F90C1 /* HotGiftsController.m */,
 				71731BF119E3E8FE001F90C1 /* HotGiftsController.xib */,
+				71BCB2B219EA7B150068C302 /* ExchangeDetailController.h */,
+				71BCB2B319EA7B150068C302 /* ExchangeDetailController.m */,
+				71BCB2B419EA7B150068C302 /* ExchangeDetailController.xib */,
+				71BCB2A019EA54B10068C302 /* GiftView.h */,
+				71BCB2A119EA54B10068C302 /* GiftView.m */,
+				71BCB2A319EA56F30068C302 /* GiftView.xib */,
+				71BCB2AD19EA680D0068C302 /* GiftEntity.h */,
+				71BCB2AE19EA680D0068C302 /* GiftEntity.m */,
 			);
 			path = IntegragtionExchange;
 			sourceTree = "<group>";
@@ -1296,6 +1332,7 @@
 				04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */,
 				0423481B19D418A400A058F4 /* vip_info_seperate@2x.png in Resources */,
 				04FC3D53191F4FD200CB8F80 /* rank@2x.png in Resources */,
+				71BCB2AC19EA59260068C302 /* gift_utilBg.png in Resources */,
 				71AD9D1019C4377300061009 /* login_button_n.png in Resources */,
 				04C6F7D719D266AC00863A86 /* credit_git@2x.png in Resources */,
 				71A8F17519D7EEDF009572EB /* scan_torch_on.png in Resources */,
@@ -1312,6 +1349,7 @@
 				04806AF819C6B7A400772BEF /* task_vip@2x.png in Resources */,
 				71731BF319E3E8FE001F90C1 /* HotGiftsController.xib in Resources */,
 				031B51F819CF18CC00FEA536 /* IntegrationDetailCell.xib in Resources */,
+				71BCB2AA19EA59260068C302 /* gift_icon.png in Resources */,
 				036163F219CEC08500FDC231 /* rankCell_round.png in Resources */,
 				03FAD92519D85F8C00B6937D /* cell_arrow.png in Resources */,
 				71AD9D1219C4377300061009 /* login_mobile.png in Resources */,
@@ -1342,9 +1380,11 @@
 				71AD9D1519C4377300061009 /* login_register_n.png in Resources */,
 				71A4F7C519E3AD5E00A886D6 /* integration_nerd.png in Resources */,
 				71AD9D0F19C4377300061009 /* login_button_h.png in Resources */,
+				71BCB2B119EA6D830068C302 /* gift_defaultImage.png in Resources */,
 				71A4F7C319E3AD5E00A886D6 /* integration_confirm_h.png in Resources */,
 				71A8F17319D7EEDF009572EB /* scan_torch_auto.png in Resources */,
 				71A8F18519D80BD7009572EB /* GoodsBarResultController.xib in Resources */,
+				71BCB2AB19EA59260068C302 /* gift_line.png in Resources */,
 				033F739919CD3D7B00F5DF52 /* input_cancel_h.png in Resources */,
 				04FC3D4F191F4FD200CB8F80 /* guys@2x.png in Resources */,
 				71A9873F19C1E8F4008402FF /* LoginController.xib in Resources */,
@@ -1361,11 +1401,14 @@
 				71A8F16C19D7EEDF009572EB /* scan_goods_sel.png in Resources */,
 				0318673519CD0CAE004C6DBD /* RegisterController.xib in Resources */,
 				0423481C19D418A400A058F4 /* vip_share@2x.png in Resources */,
+				71BCB2B619EA7B150068C302 /* ExchangeDetailController.xib in Resources */,
 				031B544619D1AEC900FEA536 /* Icon120.png in Resources */,
 				031B544419D1AEC900FEA536 /* Default-568h@2x.png in Resources */,
 				033F738619CD1E3500F5DF52 /* register_verifyCode_n.png in Resources */,
 				71AD9D1419C4377300061009 /* login_register_h.png in Resources */,
 				04C6F7DA19D266AC00863A86 /* vip_phonebook@2x.png in Resources */,
+				71BCB2A419EA56F30068C302 /* GiftView.xib in Resources */,
+				71BCB2A919EA59260068C302 /* gift_bg.png in Resources */,
 				031B51F319CF176200FEA536 /* IntegrationDetailController.xib in Resources */,
 				04C6F7D919D266AC00863A86 /* task_release@2x.png in Resources */,
 				04806AF519C6B7A400772BEF /* task_tel_down@2x.png in Resources */,
@@ -1423,6 +1466,7 @@
 				033F739219CD3BDA00F5DF52 /* InputBarcodeController.m in Sources */,
 				04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */,
 				71A9871619C1E3BA008402FF /* SoapRequest.m in Sources */,
+				71BCB2AF19EA680D0068C302 /* GiftEntity.m in Sources */,
 				04B5FDF519C6829C00102BC1 /* UIImage+GIF.m in Sources */,
 				71A9873419C1E416008402FF /* ASIHTTPRequest.m in Sources */,
 				04FC3D39191F2D0300CB8F80 /* MMDrawerVisualState.m in Sources */,
@@ -1450,6 +1494,7 @@
 				71A9873519C1E416008402FF /* ASIInputStream.m in Sources */,
 				04B5FDEF19C6829B00102BC1 /* SDWebImageDecoder.m in Sources */,
 				0318673419CD0CAE004C6DBD /* RegisterController.m in Sources */,
+				71BCB2B519EA7B150068C302 /* ExchangeDetailController.m in Sources */,
 				03FAD92019D84D3E00B6937D /* LoopButton.m in Sources */,
 				04B5FDED19C6829B00102BC1 /* SDImageCache.m in Sources */,
 				04B5FDEB19C6829B00102BC1 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1470,6 +1515,7 @@
 				047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */,
 				036163E419CE956B00FDC231 /* RankCell.m in Sources */,
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,
+				71BCB2A219EA54B10068C302 /* GiftView.m in Sources */,
 				71AD9D0419C41DA900061009 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1598,7 +1644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi Tan (AULAKXL2EW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
@@ -1617,7 +1663,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi Tan (AULAKXL2EW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";

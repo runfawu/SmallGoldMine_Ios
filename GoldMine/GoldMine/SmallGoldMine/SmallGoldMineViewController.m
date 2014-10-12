@@ -24,7 +24,7 @@
 #import "IntegrationBarResultController.h"
 
 typedef NS_ENUM(NSInteger, ScanBarType) {
-    scanBarIntegrationType = 112,
+    ScanBarIntegrationType = 120,
     ScanBarQueryGoodsType,
 };
 
@@ -283,7 +283,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
     [naviView.torchButton addTarget:self action:@selector(changeTorchValue:) forControlEvents:UIControlEventTouchUpInside];
     [naviView.integrationScanButton addTarget:self action:@selector(integrationScanType:) forControlEvents:UIControlEventTouchUpInside];
     naviView.integrationScanButton.selected = YES;
-    self.scanType = scanBarIntegrationType;
+    self.scanType = ScanBarIntegrationType;
     [naviView.queryGoodsButton addTarget:self action:@selector(queryGoodsType:) forControlEvents:UIControlEventTouchUpInside];
     [naviView.manualInputButton addTarget:self action:@selector(manualInputType:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -329,9 +329,9 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         }
     }
 
-    if (self.scanType == scanBarIntegrationType) { //积分，跳到手动输入
+    if (self.scanType == ScanBarIntegrationType) { //积分，跳到手动输入
         InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
-        inputController.barString = @"1010010010000001"; //barString;
+        inputController.barString = @"1010010010000005"; //barString;
                 
         __weak typeof(&*self) weakSelf = self;
         inputController.jumpToScanBlock = ^ {
@@ -341,10 +341,9 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         
     } else if (self.scanType == ScanBarQueryGoodsType) { //查询，跳到商品查询
         GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
-        goodsController.barString = barString;
+        goodsController.barString = @"1010010010000001"; //barString;
         
         [self.navigationController pushViewController:goodsController animated:YES];
-        
     }
 }
 
@@ -377,7 +376,7 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         return;
     }
     
-    self.scanType = scanBarIntegrationType;
+    self.scanType = ScanBarIntegrationType;
     
     button.selected = !button.selected;
     ScanNaviView *naviView = (ScanNaviView *)button.superview;
@@ -417,6 +416,11 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
     inputController.jumpToScanBlock = ^ {
         [weakSelf beginScanBarcode];
     };
+    if (self.scanType == ScanBarIntegrationType) {
+        inputController.queryType = QueryBarCodeIntegrationType;
+    } else if (self.scanType == ScanBarQueryGoodsType) {
+        inputController.queryType = QueryBarCodeGoodType;
+    }
     [self.navigationController pushViewController:inputController animated:YES];
     
 }

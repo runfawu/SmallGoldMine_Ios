@@ -7,12 +7,13 @@
 //
 
 #import "InputBarcodeController.h"
+#import "GoodsBarResultController.h"
+#import "IntegrationBarResultController.h"
 
 @interface InputBarcodeController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *barcodeTextField;
-@property (weak, nonatomic) IBOutlet UIButton *integrationButton;
-@property (weak, nonatomic) IBOutlet UIButton *queryButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (nonatomic, strong) SoapRequest *queryRequest;
 
@@ -27,6 +28,7 @@
     if (self) {
         _bNeedShowBackBarButtonItem = YES;
         self.title = @"扫一扫";
+        self.queryType = QueryBarCodeIntegrationType;
     }
     return self;
 }
@@ -51,6 +53,11 @@
 {
     [super viewDidAppear:animated];
     
+    if (self.queryType == QueryBarCodeIntegrationType) {
+        self.segmentedControl.selectedSegmentIndex = 0;
+    } else if (self.queryType == QueryBarCodeGoodType) {
+        self.segmentedControl.selectedSegmentIndex = 1;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,14 +76,26 @@
     self.view.backgroundColor = [Utils colorWithHexString:@"F2F3F0"];
     
     self.queryRequest = [[SoapRequest alloc] init];
+    
+    NSDictionary *attrDict = @{NSFontAttributeName: [UIFont systemFontOfSize:15]};
+    [self.segmentedControl setTitleTextAttributes:attrDict forState:UIControlStateNormal];
 }
+
+- (IBAction)segmentedControlValueChanged:(id)sender {
+    
+}
+
 
 #pragma mark - Button events
 - (IBAction)buttonEvents:(UIButton *)sender {
     switch (sender.tag) {
         case 250: //确定
         {
-            [self queryBarcodeInfo];
+            if (self.barcodeTextField.text.length == 0) {
+                [self.view makeToast:@"请输入条码"];
+                return;
+            }
+            [self jumpToNextPage];
         }
             break;
         case 251: //切换扫描
@@ -98,26 +117,22 @@
     }
 }
 
-- (void)queryBarcodeInfo
+#pragma mark - Jump to next page
+- (void)jumpToNextPage
 {
-    if (self.barcodeTextField.text.length == 0) {
-        [self.view makeToast:@"请输入条码"];
-        return;
+    if (self.queryType == QueryBarCodeIntegrationType) { //积分，跳到积分结果
+        IntegrationBarResultController *integrationController = [[IntegrationBarResultController alloc] initWithNibName:@"IntegrationBarResultController" bundle:nil];
+        integrationController.barString = @"1010010010000005"; //self.barcodeTextField.text;
+        
+        [self.navigationController pushViewController:integrationController animated:YES];
+    } else if (self.queryType == QueryBarCodeGoodType) { //查询，跳到商品结果
+        GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
+        goodsController.barString = @"1010010010000001"; //self.barcodeTextField.text;
+        
+        [self.navigationController pushViewController:goodsController animated:YES];
     }
-    
-    if ( ! [Utils isValidMobile:self.barcodeTextField.text]) {
-        [self.view makeToast:@"请输入条码数字"];
-        return;
-    }
-    
-    [self requestDataOfBarcode];
 }
 
-#pragma mark - Request data
-- (void)requestDataOfBarcode
-{
-    //TODO: 暂无查询条码信息接口
-}
 
 
 #pragma mark - Override

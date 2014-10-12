@@ -15,10 +15,11 @@ typedef NS_ENUM(NSInteger, QueryBarCodeType) {
 
 typedef void (^JumpToScanBlock)();
 
+
 @interface InputBarcodeController : SuperViewController
 
 @property (nonatomic, copy) JumpToScanBlock jumpToScanBlock;
-
+@property (nonatomic, assign) QueryBarCodeType queryType;
 @property (nonatomic, strong) NSString *barString;
 
 @end

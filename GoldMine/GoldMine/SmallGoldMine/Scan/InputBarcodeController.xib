@@ -8,8 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputBarcodeController">
             <connections>
                 <outlet property="barcodeTextField" destination="3IC-3L-ZPC" id="Ed7-XT-DzH"/>
-                <outlet property="integrationButton" destination="IgI-Lb-nm6" id="1xW-We-ugq"/>
-                <outlet property="queryButton" destination="0r8-fw-wHi" id="3Db-XS-DAA"/>
+                <outlet property="segmentedControl" destination="MOW-gZ-wNj" id="wQG-L7-tG5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="NVj-IW-h24"/>
             </connections>
         </placeholder>
@@ -90,28 +89,18 @@
                         <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="M9O-f3-RC9"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-Lb-nm6">
-                    <rect key="frame" x="20" y="30" width="136" height="30"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MOW-gZ-wNj">
+                    <rect key="frame" x="11" y="28" width="298" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.76470588240000004" green="0.77647058820000003" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="积分">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="selected">
-                        <color key="titleColor" red="0.92941176469999998" green="0.1137254902" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r8-fw-wHi">
-                    <rect key="frame" x="164" y="30" width="136" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.76470588240000004" green="0.77647058820000003" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="查询">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="selected">
-                        <color key="titleColor" red="0.92941176469999998" green="0.1137254902" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                </button>
+                    <segments>
+                        <segment title="积分"/>
+                        <segment title="查询"/>
+                    </segments>
+                    <color key="tintColor" red="0.92941176470588238" green="0.11372549019607843" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="segmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="sOE-nU-AEp"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

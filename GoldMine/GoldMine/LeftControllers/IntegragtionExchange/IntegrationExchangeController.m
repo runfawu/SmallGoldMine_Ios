@@ -8,8 +8,9 @@
 
 #import "IntegrationExchangeController.h"
 #import "HotGiftsController.h"
+#import "ExchangeDetailController.h"
 
-@interface IntegrationExchangeController ()<UIScrollViewDelegate>
+@interface IntegrationExchangeController ()<UIScrollViewDelegate, HotGiftsDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -50,7 +51,7 @@
     [super viewDidLayoutSubviews];
     
     DLog(@"integrationExchange view frame = %@", NSStringFromCGRect(self.view.frame));
-    self.scrollView.frame = CGRectMake(0, 53, self.view.frame.size.width, self.view.bounds.size.height - 53);
+    self.scrollView.frame = CGRectMake(0, 40, self.view.frame.size.width, self.view.bounds.size.height - 40);
     self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, self.scrollView.frame.size.height);
     
     CGRect frame = self.hotGitfsController.view.frame;
@@ -65,6 +66,8 @@
 
 - (void)setup
 {
+    self.view.backgroundColor = GRAY_COLOR;
+    
     NSDictionary *attrDict = @{NSFontAttributeName: [UIFont systemFontOfSize:15]};
     [self.segmentedControl setTitleTextAttributes:attrDict forState:UIControlStateNormal];
     
@@ -75,6 +78,7 @@
     if ( ! self.hotGitfsController) {
         self.hotGitfsController = [[HotGiftsController alloc] initWithNibName:@"HotGiftsController" bundle:nil];
         self.hotGitfsController.isHot = YES;
+        self.hotGitfsController.delegate = self;
         
         [self.scrollView addSubview:self.hotGitfsController.view];
     }
@@ -82,11 +86,22 @@
     if ( ! self.totalGiftsController) {
         self.totalGiftsController = [[HotGiftsController alloc] initWithNibName:@"HotGiftsController" bundle:nil];
         self.totalGiftsController.isHot = NO;
+        self.totalGiftsController.delegate = self;
         
         [self.scrollView addSubview:self.totalGiftsController.view];
     }
 }
 
+#pragma mark - HotGifts delegate
+- (void)hotGiftsController:(HotGiftsController *)giftsController didSelectGiftWithCode:(NSString *)giftCode
+{
+    ExchangeDetailController *exchangeController = [[ExchangeDetailController alloc] initWithNibName:@"ExchangeDetailController" bundle:nil];
+    exchangeController.giftCode = giftCode;
+    
+    [self.navigationController pushViewController:exchangeController animated:YES];
+}
+
+#pragma mark - Segment event
 - (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender {
     NSInteger index = sender.selectedSegmentIndex;
     [self.scrollView setContentOffset:CGPointMake(index * self.scrollView.frame.size.width, 0) animated:YES];

@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HotGiftsController;
+@protocol HotGiftsDelegate <NSObject>
+
+- (void)hotGiftsController:(HotGiftsController *)giftsController didSelectGiftWithCode:(NSString *)giftCode;
+
+@end
 
 @interface HotGiftsController : UIViewController
 
 @property (nonatomic) BOOL isHot;
+@property (nonatomic, weak) id<HotGiftsDelegate> delegate;
 
 @end
