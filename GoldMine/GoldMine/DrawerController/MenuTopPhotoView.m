@@ -49,7 +49,7 @@
         
         self.creditLabel=[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(creditIV.frame)+10.0, 3.0, 100.0, 15.0)];
         self.creditLabel.font=[UIFont systemFontOfSize:13.0];
-        self.creditLabel.text=@"hello world";
+        self.creditLabel.text=@"V宝: 32";
         [wealthBgIV addSubview:self.creditLabel];
         
         _wealthImageView=[[UIImageView alloc] initWithFrame:CGRectMake(25.0, CGRectGetMaxY(wealthBgIV.frame)+10.0, 35.0, 35.0)];

@@ -51,7 +51,7 @@
     self.window.rootViewController= self.drawerController;
     [self.window makeKeyAndVisible];
     
-//    [self presentLoginVC];
+    [self presentLoginVC];
     smallGoldMineVC=nil;
 
     return YES;

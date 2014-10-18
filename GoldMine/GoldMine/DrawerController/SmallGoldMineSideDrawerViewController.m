@@ -25,6 +25,8 @@
 #import "RankViewController.h"
 #import "ProfileViewController.h"
 #import "IntegrationExchangeController.h"
+#import "UIImageView+WebCache.h"
+#import "MoreViewController.h"
 
 
 @implementation SmallGoldMineSideDrawerViewController
@@ -36,21 +38,15 @@
 -(id)init{
     self=[super init];
     if (self) {
-        self.titleArray=[NSArray arrayWithObjects:@"VIP通讯录",@"积分换礼",@"任务发布",@"主推产品",nil];
+        self.titleArray=[NSArray arrayWithObjects:@"VIP通讯录",@"积分换礼",nil];
         self.imageStringArray=[NSArray arrayWithObjects:@"vip_phonebook",@"credit_git",@"task_release",@"hot_product",nil];
         
-        UILabel *titleLable=[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 100.0, 44.0)];
-        titleLable.text=@"我的";
-        titleLable.font=[UIFont systemFontOfSize:24.0];
-        titleLable.textAlignment=NSTextAlignmentCenter;
-        titleLable.textColor=[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];;
-        self.navigationItem.titleView=titleLable;
-        titleLable=nil;
+        self.title = @"我的";
         
         UIButton* leftBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
         [leftBarbutton setImage:[UIImage imageNamed:@"setting"] forState:UIControlStateNormal];
         [leftBarbutton setImage:[UIImage imageNamed:@"setting"] forState:UIControlStateHighlighted];
-        
+        [leftBarbutton addTarget:self action:@selector(JumpToMore) forControlEvents:UIControlEventTouchUpInside];
         if (IS_IOS7) {
             //            [leftBarbutton setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)];
         }
@@ -66,7 +62,7 @@
     [super viewDidLoad];
     
     DLog(@"left tableView frame = %@", NSStringFromCGRect(self.view.frame));
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0, self.view.frame.size.width, self.view.frame.size.height - NAVI_HEIGHT) style:UITableViewStylePlain];
     [self.tableView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
                                                        green:51.0/255.0
                                                         blue:51.0/255.0
@@ -76,24 +72,37 @@
     [self.tableView setDataSource:self];
     [self.view addSubview:self.tableView];
     
-    DLog(@"sideDrawer frame = %@", NSStringFromCGRect(self.view.frame));
-    
     if (_photoView == nil) {
         _photoView = [[MenuTopPhotoView alloc] initWithFrame:CGRectMake(0.0, 0.0, 277.0f, 220.0f)];
         [_photoView setBackgroundColor:[UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]];
     }
     [_photoView setDelegate:self];
     _tableView.tableHeaderView=_photoView;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    NSDictionary *userDict = [USERDEFAULT objectForKey:USERINFO];
+    _photoView.numberLabel.text = [NSString stringWithFormat:@"编号: %@", userDict[kUserId]];
+    [_photoView.photo setImageWithURL:[NSURL URLWithString:userDict[kPicture]]];
+    //TODO: V宝数据
+    //_photoView.creditLabel.text = userDict
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)JumpToMore
+{
+    MoreViewController *moreController = [[MoreViewController alloc] initWithNibName:@"MoreViewController" bundle:nil];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:moreController];
+    
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -125,33 +134,6 @@
 }
 
 
-//-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    
-//    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
-//        self.edgesForExtendedLayout = UIRectEdgeNone;
-//    
-//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(tableView.bounds), 150.0)];
-//    [headerView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
-//                                                   green:51.0/255.0
-//                                                    blue:51.0/255.0
-//                                                   alpha:1.0]];
-//  
-////    if (_photoView == nil) {
-////        _photoView = [[MenuTopPhotoView alloc] initWithFrame:CGRectMake(0.0, 0.0, 240.f, 200.0f)];
-////        [_photoView setBackgroundColor:[UIColor colorWithRed:51.0/255.0
-////                                                       green:51.0/255.0
-////                                                        blue:51.0/255.0
-////                                                       alpha:1.0]];
-////    }
-////    [headerView addSubview:_photoView];
-////    [_photoView setDelegate:self];
-//    return headerView;
-//}
-
-//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    
-//}
-
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 66.0;
 }
@@ -162,9 +144,6 @@
     [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
     if (indexPath.row==0) {
         //VIP通讯录
-
-//        [self.mm_drawerController setCenterViewController:appDelegateTabbar withCloseAnimation:YES completion:nil];
-//        [self.mm_drawerController setRightDrawerViewController:nil];
         
     }else if (indexPath.row==1){
         //积分换礼
@@ -172,16 +151,6 @@
         UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:exchangeController];
         
         [self presentViewController:navi animated:YES completion:nil];
-
-        
-    }else if (indexPath.row==2) {
-        //任务发布
-//        SearchAnchorViewController *searchAnchorVC=[[SearchAnchorViewController alloc] init];
-//        MyNavigationViewController *searchAnchorNav=[[MyNavigationViewController alloc] initWithRootViewController:searchAnchorVC];
-//        [self.mm_drawerController setCenterViewController:searchAnchorNav withCloseAnimation:YES completion:nil];
-//        [self.mm_drawerController setRightDrawerViewController:nil];
-    }else if (indexPath.row==3){
-        //主推产品
     }
 }
 
@@ -199,7 +168,6 @@
     WealthViewController *wealthController = [[WealthViewController alloc] initWithNibName:@"WealthViewController" bundle:nil];
     UINavigationController *wealthNavi = [[UINavigationController alloc] initWithRootViewController:wealthController];
     
-//    [self.mm_drawerController setCenterViewController:wealthNavi withCloseAnimation:YES completion:nil];
     [self presentViewController:wealthNavi animated:YES completion:nil];
 }
 

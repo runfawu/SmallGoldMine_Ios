@@ -147,7 +147,7 @@
     CFIndex selfRetainCount = CFGetRetainCount((__bridge CFTypeRef)self);
     DLog(@"loginRetainCount = %lu", selfRetainCount);
     
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Parse data
