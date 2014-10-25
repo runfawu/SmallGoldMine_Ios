@@ -118,7 +118,6 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    DLog(@"alert = %d", buttonIndex);
     if (buttonIndex == 0) { //取消
         
     } else if (buttonIndex == 1) { //确定

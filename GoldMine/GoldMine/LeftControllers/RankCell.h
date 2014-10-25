@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RankEntity.h"
 
 @interface RankCell : UITableViewCell
 
@@ -16,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *integrationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *vMoneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rankLabel;
+
+@property (nonatomic, strong) RankEntity *rankEntity;
 
 @end

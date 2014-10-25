@@ -220,6 +220,9 @@
 		71AD9D1619C4377300061009 /* login_separateLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 71AD9D0D19C4377300061009 /* login_separateLine.png */; };
 		71AD9D1719C4377300061009 /* login_textField.png in Resources */ = {isa = PBXBuildFile; fileRef = 71AD9D0E19C4377300061009 /* login_textField.png */; };
 		71AD9D1B19C43EFF00061009 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AD9D1A19C43EFF00061009 /* UIView+Toast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		71B673BA19FB4C6C007085E2 /* RankEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B673B919FB4C6C007085E2 /* RankEntity.m */; };
+		71B673BE19FB6B89007085E2 /* PersonalInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B673BC19FB6B89007085E2 /* PersonalInfoController.m */; };
+		71B673BF19FB6B89007085E2 /* PersonalInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B673BD19FB6B89007085E2 /* PersonalInfoController.xib */; };
 		71BCB2A219EA54B10068C302 /* GiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BCB2A119EA54B10068C302 /* GiftView.m */; };
 		71BCB2A419EA56F30068C302 /* GiftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2A319EA56F30068C302 /* GiftView.xib */; };
 		71BCB2A919EA59260068C302 /* gift_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2A519EA59260068C302 /* gift_bg.png */; };
@@ -573,6 +576,11 @@
 		71AD9D0E19C4377300061009 /* login_textField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_textField.png; sourceTree = "<group>"; };
 		71AD9D1919C43EFF00061009 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		71AD9D1A19C43EFF00061009 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		71B673B819FB4C6C007085E2 /* RankEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankEntity.h; sourceTree = "<group>"; };
+		71B673B919FB4C6C007085E2 /* RankEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankEntity.m; sourceTree = "<group>"; };
+		71B673BB19FB6B89007085E2 /* PersonalInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoController.h; sourceTree = "<group>"; };
+		71B673BC19FB6B89007085E2 /* PersonalInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoController.m; sourceTree = "<group>"; };
+		71B673BD19FB6B89007085E2 /* PersonalInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalInfoController.xib; sourceTree = "<group>"; };
 		71BCB2A019EA54B10068C302 /* GiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftView.h; sourceTree = "<group>"; };
 		71BCB2A119EA54B10068C302 /* GiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftView.m; sourceTree = "<group>"; };
 		71BCB2A319EA56F30068C302 /* GiftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftView.xib; sourceTree = "<group>"; };
@@ -1076,6 +1084,8 @@
 				71731BE419E3D45A001F90C1 /* WealthEntity.m */,
 				71731BE619E3DB52001F90C1 /* IntegrationDetaiEntity.h */,
 				71731BE719E3DB52001F90C1 /* IntegrationDetaiEntity.m */,
+				71B673B819FB4C6C007085E2 /* RankEntity.h */,
+				71B673B919FB4C6C007085E2 /* RankEntity.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1247,6 +1257,9 @@
 				0318673119CD0CAE004C6DBD /* RegisterController.h */,
 				0318673219CD0CAE004C6DBD /* RegisterController.m */,
 				0318673319CD0CAE004C6DBD /* RegisterController.xib */,
+				71B673BB19FB6B89007085E2 /* PersonalInfoController.h */,
+				71B673BC19FB6B89007085E2 /* PersonalInfoController.m */,
+				71B673BD19FB6B89007085E2 /* PersonalInfoController.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1374,6 +1387,7 @@
 				71A8F17019D7EEDF009572EB /* scan_integration_nor.png in Resources */,
 				04FC3D6B191F88AD00CB8F80 /* scan@2x.png in Resources */,
 				71A8F17219D7EEDF009572EB /* scan_line.png in Resources */,
+				71B673BF19FB6B89007085E2 /* PersonalInfoController.xib in Resources */,
 				033F739C19CD3D7B00F5DF52 /* input_confirm_n.png in Resources */,
 				7103196519F26E0B00339930 /* more_indecator.png in Resources */,
 				04806AF719C6B7A400772BEF /* task_vip_down@2x.png in Resources */,
@@ -1560,6 +1574,7 @@
 				031B51F219CF176200FEA536 /* IntegrationDetailController.m in Sources */,
 				71A9872F19C1E416008402FF /* ASIAuthenticationDialog.m in Sources */,
 				04FC3D00191F2CD000CB8F80 /* AppDelegate.m in Sources */,
+				71B673BE19FB6B89007085E2 /* PersonalInfoController.m in Sources */,
 				04C6F7DD19D2682A00863A86 /* MyNavigationViewController.m in Sources */,
 				04BB681719E127EF0003AB75 /* AdvertisementView.m in Sources */,
 				036163DA19CE890D00FDC231 /* WealthCell.m in Sources */,
@@ -1592,6 +1607,7 @@
 				036163E419CE956B00FDC231 /* RankCell.m in Sources */,
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,
 				71BCB2A219EA54B10068C302 /* GiftView.m in Sources */,
+				71B673BA19FB4C6C007085E2 /* RankEntity.m in Sources */,
 				71AD9D0419C41DA900061009 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1719,18 +1735,18 @@
 		04FC3D1F191F2CD100CB8F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoldMine/Lib/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf85438-3a95-4e27-bc38-3cecfdb0107b";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1738,18 +1754,18 @@
 		04FC3D20191F2CD100CB8F80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoldMine/Lib/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf85438-3a95-4e27-bc38-3cecfdb0107b";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,6 +7,7 @@
 //
 
 #import "RegisterController.h"
+#import "PersonalInfoController.h"
 
 @interface RegisterController ()<UITextFieldDelegate>
 
@@ -52,9 +53,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    DLog(@"register frame = %@", NSStringFromCGRect(self.view.frame));
-    //{{0, 64}, {320, 504}} ？
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -158,6 +156,13 @@
     //TODO: 暂未开放注册接口
 }
 
+//TODO: 注册成功跳到填写资料界面
+- (void)jumpToCompletePersonalInfo
+{
+    PersonalInfoController *infoController = [[PersonalInfoController alloc] initWithNibName:@"PersonalInfoController" bundle:nil];
+    [self.navigationController pushViewController:infoController animated:YES];
+}
+
 #pragma mark - Button events
 - (IBAction)getVerifyCode:(UIButton *)sender {
     if ([self isValidMobile]) {
@@ -167,20 +172,21 @@
 }
 
 - (IBAction)registerNewAccount:(id)sender {
-    if ([self isValidMobile]) {
-        if (self.passwordTextField.text.length == 0) {
-            [self.view makeToast:@"请填写密码"];
-            return;
-        } else if (self.confirmTextField.text.length == 0) {
-            [self.view makeToast:@"请再次填写密码"];
-            return;
-        } else if ( ! [self.confirmTextField.text isEqualToString:self.passwordTextField.text]) {
-            [self.view makeToast:@"两次输入的密码不一致"];
-            return;
-        }
-        
-        [self requestDataOfRegister];
-    }
+//    if ([self isValidMobile]) {
+//        if (self.passwordTextField.text.length == 0) {
+//            [self.view makeToast:@"请填写密码"];
+//            return;
+//        } else if (self.confirmTextField.text.length == 0) {
+//            [self.view makeToast:@"请再次填写密码"];
+//            return;
+//        } else if ( ! [self.confirmTextField.text isEqualToString:self.passwordTextField.text]) {
+//            [self.view makeToast:@"两次输入的密码不一致"];
+//            return;
+//        }
+//        
+//        [self requestDataOfRegister];
+//    }
+    [self jumpToCompletePersonalInfo];
 }
 
 
