@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IntegrationDetaiEntity.h"
 
 @interface IntegrationDetailCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *thumbImageView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *integrationLabel;
+
+@property (nonatomic, strong) IntegrationDetaiEntity *integrationEntity;
 
 @end

@@ -63,6 +63,13 @@
     self.passwordTextField.text = @"123456";
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
+}
+
 #pragma mark - TextField && Keyboard
 - (IBAction)textFieldReturn:(UITextField *)sender {
     [self UIControlHideKeyboard:sender];
@@ -140,19 +147,8 @@
     CFIndex selfRetainCount = CFGetRetainCount((__bridge CFTypeRef)self);
     DLog(@"loginRetainCount = %lu", selfRetainCount);
     
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-#define kBirthday      @"kBirthday"
-#define kPicture       @"kPicture"
-#define kSex           @"kSex"
-#define kSignature     @"kSignature"
-#define kUserId        @"kUserId"
-#define kUserName      @"kUserName"
-#define kUserPhone     @"kUserPhone"
-#define kUserType      @"kUserType"
-#define USERINFO       @"userInfo"
-#define USERDEFAULT   [NSUserDefaults standardUserDefaults]
 
 #pragma mark - Parse data
 - (void)parseDataWithResult:(id)result

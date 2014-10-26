@@ -19,6 +19,7 @@
     #import "UIView+Toast.h"
     #import "Utils.h"
     #import "Tools.h"
+    #import "Constants.h"
 #endif
 
 
@@ -44,6 +45,11 @@
 #define SHOW_BAD_NETWORK_TOAST(view)   [view makeToast:@"网络不给力,服务器无响应"]
 
 #define NAVI_HEIGHT         64
+
+#define USERDEFAULT   [NSUserDefaults standardUserDefaults]
+
+#define GRAY_COLOR  [Utils colorWithHexString:@"F2F3F0"]
+#define RED_COLOR   [Utils colorWithHexString:@"ED1D1B"]
 
 /**
  * 红色rgb值：237,29,27

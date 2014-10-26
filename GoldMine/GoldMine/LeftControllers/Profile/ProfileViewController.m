@@ -10,6 +10,7 @@
 #import "ImageCropController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "ResetPwdController.h"
 
 @interface ProfileViewController ()<UITableViewDataSource,
                                     UITableViewDelegate,
@@ -60,9 +61,9 @@
     
 }
 
-- (void)viewWillLayoutSubviews
+- (void)viewDidLayoutSubviews
 {
-    [super viewWillLayoutSubviews];
+    [super viewDidLayoutSubviews];
     
     self.tableView.frame = self.view.bounds;
 }
@@ -75,6 +76,19 @@
 
 - (void)setup
 {
+    NSDictionary *userDict = [USERDEFAULT objectForKey:USERINFO];
+    NSString *photoURL = userDict[kPicture];
+    if (photoURL && photoURL.length > 0) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:photoURL]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.portraitImageView.image = [UIImage imageWithData:data];
+            });
+        });
+    }
+    self.IdLabel.text = [NSString stringWithFormat:@"编号: %@", userDict[kUserId]];
+    //TODO: V宝数据
+    //self.vMoney.text = userDict
     self.tableView.tableHeaderView = self.tableHeaderView;
     
     self.portraitImageView.layer.cornerRadius = self.portraitImageView.frame.size.width / 2;
@@ -154,6 +168,15 @@
     }
     
     return self.fifthCell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        ResetPwdController *resetController = [[ResetPwdController alloc] initWithNibName:@"ResetPwdController" bundle:nil];
+        
+        [self.navigationController pushViewController:resetController animated:YES];
+    }
 }
 
 #pragma mark - UIActionSheet delegate
@@ -331,7 +354,6 @@
     }];
     return result;
 }
-
 
 #pragma mark - Override
 - (void)clickedBack:(id)sender

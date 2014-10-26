@@ -20,10 +20,12 @@
 #import "LoopButton.h"
 #import "BrandIntroduceViewController.h"
 #import "AddBrandViewController.h"
+#import "GoodsBarResultController.h"
+#import "IntegrationBarResultController.h"
 
 typedef NS_ENUM(NSInteger, ScanBarType) {
-    scanBarIntegrationType = 112,
-    ScanBarQueryCodeType,
+    ScanBarIntegrationType = 120,
+    ScanBarQueryGoodsType,
 };
 
 @interface SmallGoldMineViewController ()<UIScrollViewDelegate,TaskViewControllerDelegate,VSquareViewControllerDelegate> //, ZBarReaderDelegate>
@@ -281,7 +283,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
     [naviView.torchButton addTarget:self action:@selector(changeTorchValue:) forControlEvents:UIControlEventTouchUpInside];
     [naviView.integrationScanButton addTarget:self action:@selector(integrationScanType:) forControlEvents:UIControlEventTouchUpInside];
     naviView.integrationScanButton.selected = YES;
-    self.scanType = scanBarIntegrationType;
+    self.scanType = ScanBarIntegrationType;
     [naviView.queryGoodsButton addTarget:self action:@selector(queryGoodsType:) forControlEvents:UIControlEventTouchUpInside];
     [naviView.manualInputButton addTarget:self action:@selector(manualInputType:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -327,18 +329,21 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         }
     }
 
-    if (self.scanType == scanBarIntegrationType) { //跳到手动输入
+    if (self.scanType == ScanBarIntegrationType) { //积分，跳到手动输入
         InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
-        inputController.barString = barString;
-        
+        inputController.barString = @"1010010010000005"; //barString;
+                
+        __weak typeof(&*self) weakSelf = self;
+        inputController.jumpToScanBlock = ^ {
+            [weakSelf beginScanBarcode];
+        };
         [self.navigationController pushViewController:inputController animated:YES];
         
-    } else if (self.scanType == ScanBarQueryCodeType) { //跳到商品查询
+    } else if (self.scanType == ScanBarQueryGoodsType) { //查询，跳到商品查询
         GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
-        goodsController.barString = barString;
+        goodsController.barString = @"1010010010000001"; //barString;
         
         [self.navigationController pushViewController:goodsController animated:YES];
-        
     }
 }
 
@@ -371,7 +376,7 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         return;
     }
     
-    self.scanType = scanBarIntegrationType;
+    self.scanType = ScanBarIntegrationType;
     
     button.selected = !button.selected;
     ScanNaviView *naviView = (ScanNaviView *)button.superview;
@@ -385,7 +390,7 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         return;
     }
     
-    self.scanType = ScanBarQueryCodeType;
+    self.scanType = ScanBarQueryGoodsType;
     
     button.selected = !button.selected;
     ScanNaviView *naviView = (ScanNaviView *)button.superview;
@@ -404,16 +409,33 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
     naviView.queryGoodsButton.selected = NO;
     naviView.integrationScanButton.selected = NO;
     
-    [_reader dismissViewControllerAnimated:YES completion:nil];
+    [_reader dismissViewControllerAnimated:NO completion:nil];
     
     __weak typeof(&*self) weakSelf = self;
     InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
     inputController.jumpToScanBlock = ^ {
         [weakSelf beginScanBarcode];
     };
+    if (self.scanType == ScanBarIntegrationType) {
+        inputController.queryType = QueryBarCodeIntegrationType;
+    } else if (self.scanType == ScanBarQueryGoodsType) {
+        inputController.queryType = QueryBarCodeGoodType;
+    }
     [self.navigationController pushViewController:inputController animated:YES];
     
 }
 */
+
+- (void)beginScanBarcode
+{
+//    GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
+//    goodsController.barString = @"10110010000001";
+//    
+//    [self.navigationController pushViewController:goodsController animated:YES];
+    IntegrationBarResultController *integrationController = [[IntegrationBarResultController alloc] initWithNibName:@"IntegrationBarResultController" bundle:nil];
+    integrationController.barString = @"1010010010000005";
+    
+    [self.navigationController pushViewController:integrationController animated:YES];
+}
 
 @end

@@ -10,4 +10,6 @@
 
 @interface IntegrationBarResultController : SuperViewController
 
+@property (nonatomic, strong) NSString *barString;
+
 @end

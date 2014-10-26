@@ -54,6 +54,10 @@
 
 + (BOOL)isValidMobile:(NSString *)mobile
 {
+    if ( ! mobile || mobile.length == 0) {
+        return NO;
+    }
+    
     NSString *phoneRegex = @"^1([3-5]|7|8)\\d{9}$";
     NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
     
@@ -66,6 +70,15 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegex];
     
     return [predicate evaluateWithObject:number];
+}
+
++ (BOOL)isValidResult:(NSDictionary *)resultDict
+{
+    if ([resultDict[@"Msg"] isEqualToString:@"1"]) {
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end
