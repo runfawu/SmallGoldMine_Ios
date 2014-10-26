@@ -165,7 +165,11 @@
 
 //分享VIP
 -(void)shareVipInfomation:(id)sender{
-    
+    UIAlertView *shareView=[[UIAlertView alloc] initWithTitle:nil message:@"分享" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"分享到小伙伴", nil];
+//    [shareView addButtonWithTitle:@"分享到小伙伴"];
+    shareView.alertViewStyle=UIAlertViewStyleDefault;
+    [shareView show];
+    shareView=nil;
 }
 
 #pragma mark -
