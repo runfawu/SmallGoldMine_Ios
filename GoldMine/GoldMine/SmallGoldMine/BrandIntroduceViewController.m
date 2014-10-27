@@ -6,9 +6,12 @@
 //  Copyright (c) 2014年 us. All rights reserved.
 //
 
-#import "BrandIntroduceViewController.h"
+#import "BrandIntroduceViewController.h"f
+#import "UIImageView+WebCache.h"
 
 @interface BrandIntroduceViewController ()
+
+@property (nonatomic, strong) SoapRequest *brandInfoReqeust;
 
 @end
 
@@ -29,7 +32,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.brandInfoReqeust=[[SoapRequest alloc] init];
+    
+    [self getBrandInfoRequestWithBId:@"001" andVersion:[Tools getAppVersion]];
     // Do any additional setup after loading the view from its nib.
+}
+
+//获取品牌信息
+-(void)getBrandInfoRequestWithBId:(NSString *)bId andVersion:(NSString *)version{
+    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
+    [paramDict setObject:bId forKey:@"bid"];
+    [paramDict setObject:version forKey:@"version"];
+    
+    [self.brandInfoReqeust postRequestWithSoapNamespace:@"BrandInfo" params:paramDict successBlock:^(id result) {
+        DLog(@"BrandInfo result=%@", result);
+        NSDictionary *brandInfo=(NSDictionary *)result;
+        [self.bardImageView  setImageWithURL:[NSURL URLWithString:[brandInfo objectForKey:@"BardImg"]] placeholderImage:nil];
+        
+        
+    } failureBlock:^(NSString *requestError) {
+        NSLog(@"BrandInfo failure!!!");
+    } errorBlock:^(NSMutableString *errorStr) {
+        NSLog(@"BrandInfo error!!!");
+    }];
+    paramDict=nil;
 }
 
 - (void)didReceiveMemoryWarning

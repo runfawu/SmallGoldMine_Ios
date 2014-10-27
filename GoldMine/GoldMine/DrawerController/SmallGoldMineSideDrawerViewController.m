@@ -24,6 +24,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "RankViewController.h"
 #import "ProfileViewController.h"
+#import "VIPAddressBookViewController.h"
 #import "IntegrationExchangeController.h"
 #import "UIImageView+WebCache.h"
 #import "MoreViewController.h"
@@ -39,8 +40,10 @@
     self=[super init];
     if (self) {
         self.titleArray=[NSArray arrayWithObjects:@"VIP通讯录",@"积分换礼",nil];
-        self.imageStringArray=[NSArray arrayWithObjects:@"vip_phonebook",@"credit_git",@"task_release",@"hot_product",nil];
-        
+
+        self.imageStringArray=[NSArray arrayWithObjects:@"vip_phonebook",@"credit_git",nil];
+
+
         self.title = @"我的";
         
         UIButton* leftBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
@@ -144,6 +147,14 @@
     [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
     if (indexPath.row==0) {
         //VIP通讯录
+
+        VIPAddressBookViewController *vipAddressBookVC=[[VIPAddressBookViewController alloc] init];
+        UINavigationController *vipAddressBookNav=[[UINavigationController alloc] initWithRootViewController:vipAddressBookVC];
+        [self.mm_drawerController setCenterViewController:vipAddressBookNav withCloseAnimation:YES completion:nil];
+        [self.mm_drawerController setRightDrawerViewController:nil];
+//        vipAddressBookNav=nil;
+//        vipAddressBookVC=nil;
+
         
     }else if (indexPath.row==1){
         //积分换礼
