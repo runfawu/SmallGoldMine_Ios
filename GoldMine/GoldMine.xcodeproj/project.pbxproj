@@ -152,6 +152,8 @@
 		7103196B19F2734500339930 /* FeedbackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7103196919F2734500339930 /* FeedbackController.xib */; };
 		7103196F19F276D700339930 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103196D19F276D700339930 /* AboutViewController.m */; };
 		7103197019F276D700339930 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7103196E19F276D700339930 /* AboutViewController.xib */; };
+		71377E9C19FE577B0087E98E /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71377E9B19FE577B0087E98E /* DatePickerView.m */; };
+		71377E9E19FE578B0087E98E /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71377E9D19FE578B0087E98E /* DatePickerView.xib */; };
 		71731BE019E3C2C2001F90C1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 71731BDF19E3C2C2001F90C1 /* Utils.m */; };
 		71731BE519E3D45A001F90C1 /* WealthEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71731BE419E3D45A001F90C1 /* WealthEntity.m */; };
 		71731BE819E3DB52001F90C1 /* IntegrationDetaiEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71731BE719E3DB52001F90C1 /* IntegrationDetaiEntity.m */; };
@@ -457,6 +459,9 @@
 		7103196C19F276D700339930 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		7103196D19F276D700339930 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		7103196E19F276D700339930 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		71377E9A19FE577B0087E98E /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		71377E9B19FE577B0087E98E /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		71377E9D19FE578B0087E98E /* DatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
 		71731BDE19E3C2C2001F90C1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		71731BDF19E3C2C2001F90C1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		71731BE119E3C300001F90C1 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -1260,6 +1265,9 @@
 				71B673BB19FB6B89007085E2 /* PersonalInfoController.h */,
 				71B673BC19FB6B89007085E2 /* PersonalInfoController.m */,
 				71B673BD19FB6B89007085E2 /* PersonalInfoController.xib */,
+				71377E9A19FE577B0087E98E /* DatePickerView.h */,
+				71377E9B19FE577B0087E98E /* DatePickerView.m */,
+				71377E9D19FE578B0087E98E /* DatePickerView.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1431,6 +1439,7 @@
 				036163F219CEC08500FDC231 /* rankCell_round.png in Resources */,
 				03FAD92519D85F8C00B6937D /* cell_arrow.png in Resources */,
 				71AD9D1219C4377300061009 /* login_mobile.png in Resources */,
+				71377E9E19FE578B0087E98E /* DatePickerView.xib in Resources */,
 				04C6DB3F19E2422400F0E9F5 /* confime_addBrand@2x.png in Resources */,
 				71A8F17419D7EEDF009572EB /* scan_torch_off.png in Resources */,
 				04C6DB4B19E249E600F0E9F5 /* AddBrandTableViewCell.xib in Resources */,
@@ -1608,6 +1617,7 @@
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,
 				71BCB2A219EA54B10068C302 /* GiftView.m in Sources */,
 				71B673BA19FB4C6C007085E2 /* RankEntity.m in Sources */,
+				71377E9C19FE577B0087E98E /* DatePickerView.m in Sources */,
 				71AD9D0419C41DA900061009 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1740,13 +1750,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoldMine/Lib/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1759,13 +1770,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoldMine/Lib/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

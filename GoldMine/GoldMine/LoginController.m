@@ -137,16 +137,6 @@
 
 - (void)dismiss
 {
-//    CATransition *transition = [CATransition animation];
-//    transition.duration = 0.3;
-//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    transition.type = kCATransitionPush;
-//    transition.subtype = kCATransitionFromLeft;
-//    [self.view.window.layer addAnimation:transition forKey:nil];
-    
-    CFIndex selfRetainCount = CFGetRetainCount((__bridge CFTypeRef)self);
-    DLog(@"loginRetainCount = %lu", selfRetainCount);
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -163,6 +153,8 @@
         NSString *userName = resultDict[@"UserName"];
         NSString *userPhone = resultDict[@"UserPhone"];
         NSString *userType = resultDict[@"UserType"];
+        NSString *alipay = resultDict[@"Alipay"];
+        NSString *isAuthenticate = resultDict[@"IsAuthenticate"];
         
         NSMutableDictionary *userDict = [NSMutableDictionary dictionary];
         if (birthday) {
@@ -188,6 +180,12 @@
         }
         if (userType) {
             [userDict setObject:userType forKey:kUserType];
+        }
+        if (alipay) {
+            [userDict setObject:alipay forKey:kAlipay];
+        }
+        if (isAuthenticate) {
+            [userDict setObject:isAuthenticate forKey:kIsAuthenticate];
         }
         
         [USERDEFAULT setObject:userDict forKey:USERINFO];

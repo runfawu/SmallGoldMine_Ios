@@ -22,4 +22,6 @@
 @property(nonatomic,retain) MMDrawerController *drawerController;
 @property (nonatomic,assign)NetworkStatus netWorkStatus;
 
+- (void)presentLoginVC;
+
 @end

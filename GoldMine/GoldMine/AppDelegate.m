@@ -59,26 +59,12 @@
 
 - (void)presentLoginVC
 {
-//    CATransition *transition = [CATransition animation];
-//    transition.duration = 0.3;
-//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    transition.type = kCATransitionPush;
-//    transition.subtype = kCATransitionFromRight;
-//    [self.view.window.layer addAnimation:transition forKey:nil];
-    
-    //
-    //
     LoginController *loginController = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
     loginController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:loginController];
     loginController.navigationController.navigationBarHidden = YES;
-    
-    
-    
-    
+
     [self.window.rootViewController presentViewController:navi animated:NO completion:nil];
-//    self.window.rootViewController=[[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];;
-//    loginController=nil;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

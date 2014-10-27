@@ -150,10 +150,61 @@
     //TODO: 暂未开放获取验证码接口
 }
 
+/*
+ 33、用户注册
+ Register(string phone, string pwd, string version)
+ 该方法用于用户手机号码注册
+ 参数解释：
+ 参数名	参数类型	参数说明
+ phone	字符串	手机号码
+ pwd	字符串	密码
+ version	字符串	版本号
+ 
+ 返回值：
+ {"Msg":""}
+ 返回值参数说明
+ 参数名	参数说明
+ Msg	返回结果标识：
+ 0：表示注册失败，原因该手机号码已经被注册过；
+ 1：表示注册成功；
+
+*/
 - (void)requestDataOfRegister
 {
-//    self.registerRequest = [[SoapRequest alloc] init];
-    //TODO: 暂未开放注册接口
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    NSString *userName = self.mobileTextField.text;
+    NSString *password = self.confirmTextField.text;
+    
+    NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
+    [paramDict setObject:userName forKey:@"phone"];
+    [paramDict setObject:password forKey:@"pwd"];
+    [paramDict setObject:[Tools getAppVersion] forKey:@"version"];
+    
+    __weak __typeof(&*self)weakSelf = self;
+    self.registerRequest = [[SoapRequest alloc] init];
+    [self.registerRequest postRequestWithSoapNamespace:@"UserLogin" params:paramDict successBlock:^(id result) {
+        DLog(@"register success result = %@", result);
+        weakSelf.registerRequest = nil;
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        NSDictionary *resultDict = result;
+        if ([resultDict[@"Msg"] isEqualToString:@"0"]) {
+            [weakSelf.view makeToast:@"注册失败，该手机号码已经被注册过."];
+        } else if ([resultDict[@"Msg"] isEqualToString:@"1"]) {
+            [weakSelf.view makeToast:@"注册成功"];
+            [weakSelf performSelector:@selector(jumpToCompletePersonalInfo) withObject:nil afterDelay:0.5];
+        }
+        
+    } failureBlock:^(NSString *requestError) {
+        weakSelf.registerRequest = nil;
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        SHOW_BAD_NETWORK_TOAST(weakSelf.view);
+        
+    } errorBlock:^(NSMutableString *errorStr) {
+        weakSelf.registerRequest = nil;
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        [weakSelf.view makeToast:errorStr];
+    }];
 }
 
 //TODO: 注册成功跳到填写资料界面
@@ -183,6 +234,10 @@
 //            [self.view makeToast:@"两次输入的密码不一致"];
 //            return;
 //        }
+////        else if ( self.verifyTextField.text.length == 0) {
+////            [self.view makeToast:@"请填写短信验证码"];
+////            return;
+////        }
 //        
 //        [self requestDataOfRegister];
 //    }

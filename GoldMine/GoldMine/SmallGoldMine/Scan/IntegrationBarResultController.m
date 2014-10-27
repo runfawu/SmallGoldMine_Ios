@@ -19,6 +19,7 @@
 
 @property (nonatomic, strong) SoapRequest *productInfoRequest;
 @property (nonatomic, strong) SoapRequest *integrationRequest;
+@property (nonatomic, strong) NSString *integrationCode;
 
 @end
 
@@ -114,10 +115,6 @@
         [self.view makeToast:@"积分失败,该积分码不存在或者销售记录中没有该积分码"];
         [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:2];
         
-    } else if ([resultDict[@"Msg"] isEqualToString:@"0"]) {
-        [self.view makeToast:@"积分失败,该VIP号码还未添加注册"];
-        [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:2];
-        
     } else if ([resultDict[@"Msg"] isEqualToString:@"-2"]) {
         [self.view makeToast:@"积分失败,该积分码已经被积分"];
         [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:2];
@@ -125,6 +122,14 @@
     }  else if ([resultDict[@"Msg"] isEqualToString:@"-3"]) {
         [self.view makeToast:@"积分失败,该积分码的产品不是VIP号码购买的"];
         [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:2];
+        
+    } else if ([resultDict[@"Msg"] isEqualToString:@"0"]) {
+        [self.view makeToast:@"积分失败,该VIP号码还未添加注册"];
+        [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:2];
+        
+    } else if ([resultDict[@"Msg"] isEqualToString:@"2"]) {
+        [self.view makeToast:@"新客积分成功"];
+        [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:1.5];
     }
 }
 
@@ -135,7 +140,7 @@
     NSDictionary *userInfoDict = [USERDEFAULT objectForKey:USERINFO];
     NSString *uid = userInfoDict[kUserId] == nil ? @"001" : userInfoDict[kUserId];
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
-    [paramDict setObject:self.barString forKey:@"code"];
+    [paramDict setObject:self.integrationCode forKey:@"code"];
     [paramDict setObject:[Tools getAppVersion] forKey:@"version"];
     [paramDict setObject:self.mobileTextField.text forKey:@"phone"];
     [paramDict setObject:uid forKey:@"uid"];
@@ -167,6 +172,7 @@
         self.productNameLabel.text = resultDict[@"ProName"];
         [self.productImageView setImageWithURL:[NSURL URLWithString:resultDict[@"ProImg"]] placeholderImage:[UIImage imageNamed:@"logo_icon"]];
         self.integrationValueLabel.text = [NSString stringWithFormat:@"积分值: %@分", resultDict[@"Idot"]];
+        self.integrationCode = resultDict[@"SmallCode"];
         
     } else if ([resultDict[@"Msg"] isEqualToString:@"-1"]) {
         [self.view makeToast:@"此积分码已积过分"];
@@ -189,6 +195,8 @@
     } else if ( ! [Utils isValidMobile:self.mobileTextField.text]) {
         [self.view makeToast:@"请填写或选择有效顾客电话"];
         return;
+    } if (self.integrationCode.length == 0) {
+        self.integrationCode = self.barString;
     }
     
     [self requestDataOfIntegrationCode];
