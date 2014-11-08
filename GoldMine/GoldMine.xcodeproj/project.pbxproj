@@ -241,6 +241,7 @@
 		71BCB2B119EA6D830068C302 /* gift_defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2B019EA6D830068C302 /* gift_defaultImage.png */; };
 		71BCB2B519EA7B150068C302 /* ExchangeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BCB2B319EA7B150068C302 /* ExchangeDetailController.m */; };
 		71BCB2B619EA7B150068C302 /* ExchangeDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BCB2B419EA7B150068C302 /* ExchangeDetailController.xib */; };
+		71D6BF971A0E139300EA16C6 /* PopListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D6BF961A0E139300EA16C6 /* PopListView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -612,6 +613,8 @@
 		71BCB2B219EA7B150068C302 /* ExchangeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDetailController.h; sourceTree = "<group>"; };
 		71BCB2B319EA7B150068C302 /* ExchangeDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDetailController.m; sourceTree = "<group>"; };
 		71BCB2B419EA7B150068C302 /* ExchangeDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeDetailController.xib; sourceTree = "<group>"; };
+		71D6BF951A0E139300EA16C6 /* PopListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopListView.h; sourceTree = "<group>"; };
+		71D6BF961A0E139300EA16C6 /* PopListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopListView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -687,6 +690,8 @@
 				71A8F11219D7D9C8009572EB /* ScanNaviView.xib */,
 				03FAD91E19D84D3E00B6937D /* LoopButton.h */,
 				03FAD91F19D84D3E00B6937D /* LoopButton.m */,
+				71D6BF951A0E139300EA16C6 /* PopListView.h */,
+				71D6BF961A0E139300EA16C6 /* PopListView.m */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -694,12 +699,9 @@
 		036163D119CE855000FDC231 /* LeftControllers */ = {
 			isa = PBXGroup;
 			children = (
-
 				04CA4D5C19F35D2E0060C934 /* VIPAddressBook */,
-
 				7103195919F26B4A00339930 /* More */,
 				71731BE919E3E2BD001F90C1 /* IntegragtionExchange */,
-
 				031B544919D45F2000FEA536 /* Profile */,
 				036163D219CE857200FDC231 /* WealthViewController.h */,
 				036163D319CE857200FDC231 /* WealthViewController.m */,
@@ -1504,12 +1506,9 @@
 				71A4F7C519E3AD5E00A886D6 /* integration_nerd.png in Resources */,
 				7103195319F2392F00339930 /* exchange_spot.png in Resources */,
 				71AD9D0F19C4377300061009 /* login_button_h.png in Resources */,
-
 				04CA4D6819F364ED0060C934 /* add_vip_addr@2x.png in Resources */,
-
 				71BCB2B119EA6D830068C302 /* gift_defaultImage.png in Resources */,
 				71A4F7C319E3AD5E00A886D6 /* integration_confirm_h.png in Resources */,
-
 				71A8F17319D7EEDF009572EB /* scan_torch_auto.png in Resources */,
 				71A8F18519D80BD7009572EB /* GoodsBarResultController.xib in Resources */,
 				71BCB2AB19EA59260068C302 /* gift_line.png in Resources */,
@@ -1587,6 +1586,7 @@
 				04CA4D5819F358A00060C934 /* UIImageView+WebCache.m in Sources */,
 				0423482119D41A4A00A058F4 /* VIPDetailInfoHeadView.m in Sources */,
 				04806AFB19C6BAD200772BEF /* TaskHeadView.m in Sources */,
+				71D6BF971A0E139300EA16C6 /* PopListView.m in Sources */,
 				03FAD92319D852BF00B6937D /* ImageCropController.m in Sources */,
 				0423481119D402EE00A058F4 /* VIPDetailedInformationViewController.m in Sources */,
 				04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */,
@@ -1605,12 +1605,8 @@
 				04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */,
 				7103196F19F276D700339930 /* AboutViewController.m in Sources */,
 				71A9871619C1E3BA008402FF /* SoapRequest.m in Sources */,
-
 				04CA4D5219F358A00060C934 /* SDWebImagePrefetcher.m in Sources */,
-
 				71BCB2AF19EA680D0068C302 /* GiftEntity.m in Sources */,
-				04B5FDF519C6829C00102BC1 /* UIImage+GIF.m in Sources */,
-
 				71A9873419C1E416008402FF /* ASIHTTPRequest.m in Sources */,
 				04FC3D39191F2D0300CB8F80 /* MMDrawerVisualState.m in Sources */,
 				71A9873E19C1E8F4008402FF /* LoginController.m in Sources */,
@@ -1636,11 +1632,7 @@
 				71BCB2B519EA7B150068C302 /* ExchangeDetailController.m in Sources */,
 				7103196A19F2734500339930 /* FeedbackController.m in Sources */,
 				03FAD92019D84D3E00B6937D /* LoopButton.m in Sources */,
-
-				04B5FDED19C6829B00102BC1 /* SDImageCache.m in Sources */,
 				7103195719F2616200339930 /* ResetPwdController.m in Sources */,
-				04B5FDEB19C6829B00102BC1 /* MKAnnotationView+WebCache.m in Sources */,
-
 				04FC3CFC191F2CD000CB8F80 /* main.m in Sources */,
 				04CA4D4F19F358A00060C934 /* SDWebImageDownloader.m in Sources */,
 				04CA4D4C19F358A00060C934 /* SDImageCache.m in Sources */,
@@ -1663,11 +1655,9 @@
 				036163E419CE956B00FDC231 /* RankCell.m in Sources */,
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,
 				04CA4D5019F358A00060C934 /* SDWebImageDownloaderOperation.m in Sources */,
-
 				71BCB2A219EA54B10068C302 /* GiftView.m in Sources */,
 				71B673BA19FB4C6C007085E2 /* RankEntity.m in Sources */,
 				71377E9C19FE577B0087E98E /* DatePickerView.m in Sources */,
-
 				71AD9D0419C41DA900061009 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1795,18 +1785,18 @@
 		04FC3D1F191F2CD100CB8F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoldMine/Lib/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dbf85438-3a95-4e27-bc38-3cecfdb0107b";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1815,18 +1805,18 @@
 		04FC3D20191F2CD100CB8F80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kaifa Qin (JRS5U6MZ74)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoldMine/GoldMine-Prefix.pch";
 				INFOPLIST_FILE = "GoldMine/GoldMine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoldMine/Lib/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dbf85438-3a95-4e27-bc38-3cecfdb0107b";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

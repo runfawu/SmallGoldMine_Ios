@@ -10,6 +10,7 @@
 #import "ImageCropController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "DatePickerView.h"
 
 @interface PersonalInfoController ()<UITableViewDataSource,
                                      UITableViewDelegate,
@@ -17,7 +18,8 @@
                                      UINavigationControllerDelegate,
                                      UIImagePickerControllerDelegate,
                                      UIActionSheetDelegate,
-                                     UITextFieldDelegate>
+                                     UITextFieldDelegate,
+                                     DatePickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellOne;
@@ -34,6 +36,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldFour;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldFive;
 
+@property (nonatomic, strong) DatePickerView *datePicker;
+@property (nonatomic, strong) SoapRequest *commitRequest;
 
 @end
 
@@ -74,7 +78,7 @@
 #pragma mark - UITableView dataSource && delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 3;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -93,8 +97,6 @@
     } else if (section == 1) {
         return 3;
     } else if (section == 2) {
-        return 1;
-    } else if (section == 3) {
         return 1;
     }
     
@@ -124,8 +126,6 @@
         }
     } else if (indexPath.section == 2) {
         return self.cellFive;
-    } else if (indexPath.section == 3) {
-        return self.cellSix;
     }
     
     return self.cellTwo;
@@ -134,19 +134,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) { //上传头像
-        [self editHeadImage];
+//        [self editHeadImage];
+        [self.view makeToast:@"后台没有上传头像接口"];
     }
-//    else if (indexPath.section == 1 && indexPath.row == 0) { //昵称
-//
-//    } else if (indexPath.section == 1 && indexPath.row == 1) { //店面名称
-//        
-//    } else if (indexPath.section == 1 && indexPath.row == 2) { //品牌名称
-//        
-//    } else if (indexPath.section == 2) { //账户性质
-//        
-//    } else if (indexPath.section == 3) { //所在区域
-//        
-//    }
 }
 
 - (void)editHeadImage
@@ -171,6 +161,25 @@
     }];
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if ([textField isEqual:self.textFieldTwo]) {
+        [self closeKeyboard:nil];
+        if (self.datePicker == nil) {
+            self.datePicker = [DatePickerView loadNibInstance];
+            self.datePicker.delegate = self;
+            [self.datePicker showInView:self.view];
+        } else {
+            [self.datePicker showInView:self.view];
+        }
+        
+        
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     CGRect frame = self.tableView.frame;
@@ -180,10 +189,59 @@
     }];
 }
 
+#pragma mark - DatePickerView delegate
+- (void)datePickerView:(DatePickerView *)datePickerView didSelectDate:(NSString *)dateString
+{
+    self.textFieldTwo.text = dateString;
+}
+
 #pragma mark - Button event
 - (IBAction)savePersonalInfo:(id)sender {
     //TODO: 保存资料
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self closeKeyboard:nil];
+    DLog(@"self.userID = %@", self.userId);
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
+    [paramDict setObject:self.userId forKey:@"uid"];
+    [paramDict setObject:self.textFieldOne.text forKey:@"name"];
+    [paramDict setObject:self.textFieldThree.text forKey:@"phone"];
+    [paramDict setObject:self.textFieldTwo.text forKey:@"birthday"];
+    [paramDict setObject:self.textFieldFour.text forKey:@"alipay"];
+    [paramDict setObject:[Tools getAppVersion] forKey:@"version"];
+    
+    __weak __typeof(&*self)weakSelf = self;
+    self.commitRequest = [[SoapRequest alloc] init];
+    [self.commitRequest postRequestWithSoapNamespace:@"RegisterInfo" params:paramDict successBlock:^(id result) {
+        DLog(@"registerInfo success result = %@", result);
+        weakSelf.commitRequest = nil;
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        NSDictionary *resultDict = result;
+        if ([resultDict[@"Msg"] isEqualToString:@"0"]) {
+            [weakSelf.view makeToast:@"提交失败, 用户不存在."];
+            
+        } else if ([resultDict[@"Msg"] isEqualToString:@"1"]) {
+            [weakSelf.view makeToast:@"提交成功"];
+            double delayInSeconds = 0.5;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+            });
+            
+        } else {
+            [weakSelf.view makeToast:@"提交失败"];
+        }
+        
+    } failureBlock:^(NSString *requestError) {
+        weakSelf.commitRequest = nil;
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        SHOW_BAD_NETWORK_TOAST(weakSelf.view);
+        
+    } errorBlock:^(NSMutableString *errorStr) {
+        weakSelf.commitRequest = nil;
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        [weakSelf.view makeToast:errorStr];
+    }];
 }
 
 

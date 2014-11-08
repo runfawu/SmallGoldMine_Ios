@@ -42,7 +42,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _bNeedShowBackBarButtonItem = YES;
-        self.title = @"积分换礼详情";
+        self.title = @"V宝换礼详情";
     }
     return self;
 }

@@ -20,4 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (nonatomic, weak) id<DatePickerViewDelegate> delegate;
 
++ (DatePickerView *)loadNibInstance;
+- (void)showInView:(UIView *)aView;
+
 @end

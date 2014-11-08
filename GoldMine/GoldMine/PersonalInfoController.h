@@ -10,4 +10,6 @@
 
 @interface PersonalInfoController : SuperViewController
 
+@property (nonatomic, strong) NSString *userId;
+
 @end

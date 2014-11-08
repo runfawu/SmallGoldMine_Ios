@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1A10058C3D904199847DBBBF93E37CE4A52993F9</key>
-		<string>ssh://github.com/runfawu/SmallGoldMine_Ios.git</string>
+		<string>github.com:runfawu/SmallGoldMine_Ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GoldMine/GoldMine.xcodeproj/project.xcworkspace</string>
+	<string>GoldMine/GoldMine.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1A10058C3D904199847DBBBF93E37CE4A52993F9</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/runfawu/SmallGoldMine_Ios.git</string>
+	<string>github.com:runfawu/SmallGoldMine_Ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>1A10058C3D904199847DBBBF93E37CE4A52993F9</string>
 			<key>IDESourceControlWCCName</key>
-			<string>SmallGoldMine_Ios</string>
+			<string>JuChuangRepository</string>
 		</dict>
 	</array>
 </dict>

@@ -10,6 +10,9 @@
 
 @interface IntegrationBarResultController : SuperViewController
 
+@property (nonatomic, assign) BOOL isFromInput;
 @property (nonatomic, strong) NSString *barString;
+@property (nonatomic, strong) NSString *brandId;
+@property (nonatomic, strong) NSString *phone;
 
 @end

@@ -155,6 +155,7 @@
         NSString *userType = resultDict[@"UserType"];
         NSString *alipay = resultDict[@"Alipay"];
         NSString *isAuthenticate = resultDict[@"IsAuthenticate"];
+        NSString *vBoon = resultDict[@"Vboon"];
         
         NSMutableDictionary *userDict = [NSMutableDictionary dictionary];
         if (birthday) {
@@ -187,7 +188,9 @@
         if (isAuthenticate) {
             [userDict setObject:isAuthenticate forKey:kIsAuthenticate];
         }
-        
+        if (vBoon) {
+            [userDict setObject:vBoon forKey:kVBoon];
+        }
         [USERDEFAULT setObject:userDict forKey:USERINFO];
         [USERDEFAULT synchronize];
         

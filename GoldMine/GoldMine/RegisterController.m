@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *confirmTextField;
 @property (weak, nonatomic) IBOutlet UITextField *verifyTextField;
 @property (weak, nonatomic) IBOutlet UIButton *verifyCodeButton;
+@property (weak, nonatomic) IBOutlet UIView *verifyView;
 
 @property (nonatomic, strong) SoapRequest *verifyCodeRequest;
 @property (nonatomic, strong) SoapRequest *registerRequest;
@@ -40,6 +41,8 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [Utils colorWithHexString:@"F2F3F0"];
+    self.verifyCodeButton.hidden = YES;
+    self.verifyView.hidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -183,16 +186,26 @@
     
     __weak __typeof(&*self)weakSelf = self;
     self.registerRequest = [[SoapRequest alloc] init];
-    [self.registerRequest postRequestWithSoapNamespace:@"UserLogin" params:paramDict successBlock:^(id result) {
+    [self.registerRequest postRequestWithSoapNamespace:@"Register" params:paramDict successBlock:^(id result) {
         DLog(@"register success result = %@", result);
         weakSelf.registerRequest = nil;
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
         NSDictionary *resultDict = result;
         if ([resultDict[@"Msg"] isEqualToString:@"0"]) {
             [weakSelf.view makeToast:@"注册失败，该手机号码已经被注册过."];
+            
         } else if ([resultDict[@"Msg"] isEqualToString:@"1"]) {
             [weakSelf.view makeToast:@"注册成功"];
-            [weakSelf performSelector:@selector(jumpToCompletePersonalInfo) withObject:nil afterDelay:0.5];
+                double delayInSeconds = 0.5;
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    PersonalInfoController *infoController = [[PersonalInfoController alloc] initWithNibName:@"PersonalInfoController" bundle:nil];
+                    infoController.userId = resultDict[@"UserID"];
+                    [weakSelf.navigationController pushViewController:infoController animated:YES];
+                });
+            
+        } else {
+            [weakSelf.view makeToast:@"注册失败"];
         }
         
     } failureBlock:^(NSString *requestError) {
@@ -216,32 +229,31 @@
 
 #pragma mark - Button events
 - (IBAction)getVerifyCode:(UIButton *)sender {
-    if ([self isValidMobile]) {
-        [self countDown:sender];
-        [self requestDataOfVerifyCode];
-    }
+//    if ([self isValidMobile]) {
+//        [self countDown:sender];
+//        [self requestDataOfVerifyCode];
+//    }
 }
 
 - (IBAction)registerNewAccount:(id)sender {
-//    if ([self isValidMobile]) {
-//        if (self.passwordTextField.text.length == 0) {
-//            [self.view makeToast:@"请填写密码"];
-//            return;
-//        } else if (self.confirmTextField.text.length == 0) {
-//            [self.view makeToast:@"请再次填写密码"];
-//            return;
-//        } else if ( ! [self.confirmTextField.text isEqualToString:self.passwordTextField.text]) {
-//            [self.view makeToast:@"两次输入的密码不一致"];
+    if ([self isValidMobile]) {
+        if (self.passwordTextField.text.length == 0) {
+            [self.view makeToast:@"请填写密码"];
+            return;
+        } else if (self.confirmTextField.text.length == 0) {
+            [self.view makeToast:@"请再次填写密码"];
+            return;
+        } else if ( ! [self.confirmTextField.text isEqualToString:self.passwordTextField.text]) {
+            [self.view makeToast:@"两次输入的密码不一致"];
+            return;
+        }
+//        else if ( self.verifyTextField.text.length == 0) {
+//            [self.view makeToast:@"请填写短信验证码"];
 //            return;
 //        }
-////        else if ( self.verifyTextField.text.length == 0) {
-////            [self.view makeToast:@"请填写短信验证码"];
-////            return;
-////        }
-//        
-//        [self requestDataOfRegister];
-//    }
-    [self jumpToCompletePersonalInfo];
+        
+        [self requestDataOfRegister];
+    }
 }
 
 

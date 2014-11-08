@@ -234,12 +234,13 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
 }
 
 /******************** Scan Module ***************************/
-/*
+
 #pragma mark -
 #pragma mark Scan Module
+ /*
 - (void)beginScanBarcode
 {
- 
+
      扫描二维码部分：
      导入ZBarSDK文件并引入一下框架
      AVFoundation.framework
@@ -316,34 +317,47 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
         break;
     }
     
-    [reader dismissViewControllerAnimated:YES completion:nil];
+    [reader dismissViewControllerAnimated:NO completion:nil];
     
     NSString *barString = symbol.data;
-    
-    NSString *regex = @"http+:[^\\s]*";
-    NSPredicate *httpPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
-    if ([httpPredicate evaluateWithObject:symbol.data]) {
-        NSRange range = [symbol.data rangeOfString:@"="];
-        if (range.length > 0) {
-            barString = [symbol.data substringWithRange:NSMakeRange(range.location + 1, symbol.data.length - range.location - 1)];
-        }
-    }
+    DLog(@"scan barString = %@", barString);
 
-    if (self.scanType == ScanBarIntegrationType) { //积分，跳到手动输入
-        InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
-        inputController.barString = @"1010010010000005"; //barString;
-                
-        __weak typeof(&*self) weakSelf = self;
-        inputController.jumpToScanBlock = ^ {
-            [weakSelf beginScanBarcode];
-        };
-        [self.navigationController pushViewController:inputController animated:YES];
+    if (self.scanType == ScanBarIntegrationType) { //积分，有http跳到积分信息界面，无http跳到手动输入界面
+        NSString *regex = @"http+:[^\\s]*";
+        NSPredicate *httpPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+        if ([httpPredicate evaluateWithObject:barString]) { //有
+            IntegrationBarResultController *intergrationResultVC = [[IntegrationBarResultController alloc] initWithNibName:@"IntegrationBarResultController" bundle:nil];
+            intergrationResultVC.barString = barString;
+            [self.navigationController pushViewController:intergrationResultVC animated:YES];
+        } else { //无
+            InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
+            inputController.barString = barString;
+            
+            __weak typeof(&*self) weakSelf = self;
+            inputController.jumpToScanBlock = ^ {
+                [weakSelf beginScanBarcode];
+            };
+            [self.navigationController pushViewController:inputController animated:YES];
+        }
         
-    } else if (self.scanType == ScanBarQueryGoodsType) { //查询，跳到商品查询
-        GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
-        goodsController.barString = @"1010010010000001"; //barString;
-        
-        [self.navigationController pushViewController:goodsController animated:YES];
+    } else if (self.scanType == ScanBarQueryGoodsType) { //查询，有http跳到查询信息界面，无http跳到手动输入界面
+        NSString *regex = @"http+:[^\\s]*";
+        NSPredicate *httpPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+        if ([httpPredicate evaluateWithObject:barString]) { //有
+            GoodsBarResultController *goodsController = [[GoodsBarResultController alloc] initWithNibName:@"GoodsBarResultController" bundle:nil];
+            goodsController.barString = barString;
+            
+            [self.navigationController pushViewController:goodsController animated:YES];
+        } else { //无
+            InputBarcodeController *inputController = [[InputBarcodeController alloc] initWithNibName:@"InputBarcodeController" bundle:nil];
+            inputController.barString = barString;
+            
+            __weak typeof(&*self) weakSelf = self;
+            inputController.jumpToScanBlock = ^ {
+                [weakSelf beginScanBarcode];
+            };
+            [self.navigationController pushViewController:inputController animated:YES];
+        }
     }
 }
 
@@ -437,5 +451,6 @@ didFinishPickingMediaWithInfo: (NSDictionary*) info
     
     [self.navigationController pushViewController:integrationController animated:YES];
 }
+
 
 @end

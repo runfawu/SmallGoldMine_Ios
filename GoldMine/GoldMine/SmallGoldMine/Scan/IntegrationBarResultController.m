@@ -9,7 +9,7 @@
 #import "IntegrationBarResultController.h"
 #import "UIImageView+WebCache.h"
 
-@interface IntegrationBarResultController ()<UITextFieldDelegate>
+@interface IntegrationBarResultController ()<UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
@@ -83,10 +83,20 @@
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
     [paramDict setObject:self.barString forKey:@"code"];
     [paramDict setObject:[Tools getAppVersion] forKey:@"version"];
-    
+    NSString *nameSpace = @"getScanResult";
+    if (self.isFromInput) {
+        /************ 未确定扫描和手动是否都是此界面积分 ************/
+        NSDictionary *userInfoDict = [USERDEFAULT objectForKey:USERINFO];
+        NSString *uid = userInfoDict[kUserId] == nil ? @"001" : userInfoDict[kUserId];
+        
+        [paramDict setObject:uid forKey:@"uid"];
+        [paramDict setObject:self.brandId forKey:@"bid"];
+        [paramDict setObject:self.phone forKey:@"phone"];
+        nameSpace = @"OneIntegrated";
+    }
     self.productInfoRequest = [[SoapRequest alloc] init];
     __weak typeof(&*self) weakSelf = self;
-    [self.productInfoRequest postRequestWithSoapNamespace:@"getScanResult" params:paramDict successBlock:^(id result) {
+    [self.productInfoRequest postRequestWithSoapNamespace:nameSpace params:paramDict successBlock:^(id result) {
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
         weakSelf.productInfoRequest = nil;
         DLog(@"积分详情 ＝ %@", result);
@@ -129,7 +139,19 @@
         
     } else if ([resultDict[@"Msg"] isEqualToString:@"2"]) {
         [self.view makeToast:@"新客积分成功"];
-        [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:1.5];
+        //TODO: 邀请成vip
+        if ([resultDict[@"IsVip"] isEqualToString:@"0"]) {
+            double delayInSeconds = 1.2;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                                message:@"您还不是我的VIP, 是否愿意成为我的Vip。"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"否"
+                                                      otherButtonTitles:@"是", nil];
+                [alert show];
+            });
+        }
     }
 }
 
@@ -170,16 +192,28 @@
     NSDictionary *resultDict = (NSDictionary *)result;
     if ([Utils isValidResult:resultDict]) {
         self.productNameLabel.text = resultDict[@"ProName"];
-        [self.productImageView setImageWithURL:[NSURL URLWithString:resultDict[@"ProImg"]] placeholderImage:[UIImage imageNamed:@"logo_icon"]];
+        [self.productImageView sd_setImageWithURL:[NSURL URLWithString:resultDict[@"ProImg"]] placeholderImage:[UIImage imageNamed:@"logo_icon"]];
         self.integrationValueLabel.text = [NSString stringWithFormat:@"积分值: %@分", resultDict[@"Idot"]];
         self.integrationCode = resultDict[@"SmallCode"];
         
     } else if ([resultDict[@"Msg"] isEqualToString:@"-1"]) {
-        [self.view makeToast:@"此积分码已积过分"];
+        [self.view makeToast:@"积分码已经积过分" duration:2.0 position:@"center"];
         [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:1.5];
+        
     } else {
-        [self.view makeToast:@"积分码不存在"];
+        [self.view makeToast:@"积分码不存在" duration:2.0 position:@"center"];
         [self performSelector:@selector(clickedBack:) withObject:nil afterDelay:1.5];
+    }
+}
+
+#pragma mark - UIAlertView
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) { //否
+        
+    } else if (buttonIndex == 1) { //是
+        //TODO:跳到添加VIP界面。
+        [self.view makeToast:@"跳到添加VIP界面"];
     }
 }
 

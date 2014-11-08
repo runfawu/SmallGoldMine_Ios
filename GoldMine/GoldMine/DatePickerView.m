@@ -35,7 +35,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd";
     NSString *date = [formatter stringFromDate:self.datePicker.date];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(dateCheckingResultWithRange:date:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(datePickerView:didSelectDate:)]) {
         [self.delegate datePickerView:self didSelectDate:date];
     }
     [self hide];
@@ -43,6 +43,8 @@
 
 - (void)showInView:(UIView *)aView
 {
+    [aView addSubview:self];
+    
     self.frame = CGRectMake(0, aView.frame.size.height, self.frame.size.width, self.frame.size.height);
     [UIView animateWithDuration:0.3 animations:^{
         self.frame = CGRectMake(0, aView.frame.size.height - self.frame.size.height, self.frame.size.width, self.frame.size.height);
@@ -52,9 +54,9 @@
 - (void)hide
 {
     [UIView animateWithDuration:0.3 animations:^{
-        [UIView animateWithDuration:0.3 animations:^{
-            self.frame = CGRectMake(0, SCREEN_HEIGHT, self.frame.size.width, self.frame.size.height);
-        }];
+        self.frame = CGRectMake(0, SCREEN_HEIGHT, self.frame.size.width, self.frame.size.height);
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
     }];
 }
 

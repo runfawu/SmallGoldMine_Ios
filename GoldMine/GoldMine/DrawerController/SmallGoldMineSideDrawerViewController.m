@@ -39,7 +39,7 @@
 -(id)init{
     self=[super init];
     if (self) {
-        self.titleArray=[NSArray arrayWithObjects:@"VIP通讯录",@"积分换礼",nil];
+        self.titleArray=[NSArray arrayWithObjects:@"VIP通讯录",@"V宝换礼",nil];
 
         self.imageStringArray=[NSArray arrayWithObjects:@"vip_phonebook",@"credit_git",nil];
 
@@ -157,7 +157,7 @@
 
         
     }else if (indexPath.row==1){
-        //积分换礼
+        //V宝换礼
         IntegrationExchangeController *exchangeController = [[IntegrationExchangeController alloc] initWithNibName:@"IntegrationExchangeController" bundle:nil];
         UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:exchangeController];
         

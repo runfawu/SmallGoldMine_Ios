@@ -21,6 +21,7 @@
 #define USERINFO       @"userInfo"
 #define kAlipay        @"kAlipay"
 #define kIsAuthenticate       @"kIsAuthenticate"
+#define kVBoon                @"kVBoon"
 
 
 #endif
