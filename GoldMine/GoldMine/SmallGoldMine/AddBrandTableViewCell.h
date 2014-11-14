@@ -10,12 +10,13 @@
 
 @interface AddBrandTableViewCell : UITableViewCell
 
-
+@property (nonatomic,weak) IBOutlet UIView *leftView;
 @property (nonatomic,weak) IBOutlet UIImageView *leftBrandImageView;
 @property (nonatomic,weak) IBOutlet UILabel *leftGoodsNameLabel;
 @property (nonatomic,weak) IBOutlet UILabel *leftBrandTypeLabel;
 @property (nonatomic,weak) IBOutlet UIImageView *leftSelecteImageView;
 
+@property (nonatomic,weak) IBOutlet UIView *rightView;
 @property (nonatomic,weak) IBOutlet UIImageView *rightBrandImageView;
 @property (nonatomic,weak) IBOutlet UILabel *rightGoodsNameLabel;
 @property (nonatomic,weak) IBOutlet UILabel *rightBrandTypeLabel;

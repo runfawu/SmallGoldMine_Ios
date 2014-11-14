@@ -28,6 +28,7 @@
 #import "IntegrationExchangeController.h"
 #import "UIImageView+WebCache.h"
 #import "MoreViewController.h"
+#import "BuddyViewController.h"
 
 
 @implementation SmallGoldMineSideDrawerViewController
@@ -42,7 +43,6 @@
         self.titleArray=[NSArray arrayWithObjects:@"VIP通讯录",@"积分换礼",nil];
 
         self.imageStringArray=[NSArray arrayWithObjects:@"vip_phonebook",@"credit_git",nil];
-
 
         self.title = @"我的";
         
@@ -81,7 +81,6 @@
     }
     [_photoView setDelegate:self];
     _tableView.tableHeaderView=_photoView;
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -148,7 +147,7 @@
     if (indexPath.row==0) {
         //VIP通讯录
 
-        VIPAddressBookViewController *vipAddressBookVC=[[VIPAddressBookViewController alloc] init];
+        VIPAddressBookViewController *vipAddressBookVC=[[VIPAddressBookViewController alloc] initWithNibName:@"VIPAddressBookViewController" bundle:nil];
         UINavigationController *vipAddressBookNav=[[UINavigationController alloc] initWithRootViewController:vipAddressBookVC];
         [self.mm_drawerController setCenterViewController:vipAddressBookNav withCloseAnimation:YES completion:nil];
         [self.mm_drawerController setRightDrawerViewController:nil];
@@ -192,7 +191,9 @@
 
 - (void)tapGuysImageView:(MenuTopPhotoView *)photoView
 {
-    
+    BuddyViewController *buddyVC=[[BuddyViewController alloc] initWithNibName:@"BuddyViewController" bundle:nil];
+    UINavigationController *buddyNav=[[UINavigationController alloc] initWithRootViewController:buddyVC];
+    [self presentViewController:buddyNav animated:YES completion:nil];
 }
 
 @end

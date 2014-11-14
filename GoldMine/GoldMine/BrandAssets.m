@@ -10,8 +10,10 @@
 
 @implementation BrandAssets
 
-@synthesize thumnail;
-@synthesize imageURL;
+//@synthesize thumnail;
+@synthesize brandAbout;
+@synthesize brandId;
+@synthesize brandImg;
 @synthesize brandName;
 @synthesize brandType;
 @synthesize selected;

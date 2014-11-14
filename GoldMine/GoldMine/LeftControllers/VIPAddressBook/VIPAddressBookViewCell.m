@@ -7,11 +7,13 @@
 //
 
 #import "VIPAddressBookViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation VIPAddressBookViewCell
 
 @synthesize headBgImageView;
 @synthesize nameLabel;
+@synthesize seprateLine;
 
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -24,8 +26,22 @@
         self.nameLabel.backgroundColor=[UIColor clearColor];
         self.nameLabel.font=[UIFont systemFontOfSize:13.0];
         [self addSubview:self.nameLabel];
+        
+        self.seprateLine=[[UIView alloc] initWithFrame:CGRectMake(8.0, 51.0, self.frame.size.width, 1)];
+        self.seprateLine.backgroundColor=[UIColor colorWithRed:227.0/255 green:227.0/255 blue:227.0/255 alpha:1.0];
+        [self addSubview:self.seprateLine];
     }
     return self;
+}
+
+-(void)setVIPAddressBookViewCellWithDictionary:(NSDictionary *)contactDic{
+    if ([contactDic objectForKey:@"CusName"]==nil ) {
+        [self.headBgImageView setImageWithURL:[NSURL URLWithString:[contactDic objectForKey:@"Picture"]] placeholderImage:nil];
+        self.nameLabel.text=[contactDic objectForKey:@"UserName"];
+    }else{
+        [self.headBgImageView setImageWithURL:[NSURL URLWithString:[contactDic objectForKey:@"CusImg"]] placeholderImage:nil];
+        self.nameLabel.text=[contactDic objectForKey:@"CusName"];
+    }
 }
 
 @end

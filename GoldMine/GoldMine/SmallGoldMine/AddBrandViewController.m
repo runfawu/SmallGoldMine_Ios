@@ -9,11 +9,16 @@
 #import "AddBrandViewController.h"
 #import "AddBrandTableViewCell.h"
 #import "BrandAssets.h"
+#import "UIImageView+WebCache.h"
 
 #define  ImageViewNumber 2
 
 @interface AddBrandViewController ()<UITableViewDataSource,UITableViewDelegate>
 
+@property (nonatomic,strong) UIButton *selectAllButton;
+@property (nonatomic,strong) UILabel *selectAllNotice;
+
+@property (nonatomic,strong) SoapRequest *getAllBrandRequest;
 @property (nonatomic,strong) SoapRequest *addBrandRequest;
 
 @end
@@ -45,22 +50,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor=[Utils colorWithHexString:@"F2F3F0"];
     brandArray=[[NSMutableArray alloc] init];
+    addBrandArray=[[NSMutableArray alloc] init];
+    
+    networkQueue = [[ASINetworkQueue alloc]init];
     self.addBrandRequest=[[SoapRequest alloc] init];
+    self.getAllBrandRequest=[[SoapRequest alloc] init];
     
     UIView *selectAllBg=[[UIView alloc] initWithFrame:CGRectMake(0.0, self.view.frame.size.height-113.0, self.view.frame.size.width, 49.0)];
     selectAllBg.backgroundColor=[Utils colorWithHexString:@"E6E6E6"];
     [self.view addSubview:selectAllBg];
     
-    UIButton *selectAllButton=[[UIButton alloc] initWithFrame:CGRectMake(35.0, 15.5, 18.0, 18.0)];
-    [selectAllButton setBackgroundImage:[UIImage imageNamed:@"select_allBrand"] forState:UIControlStateNormal];
-    [selectAllButton addTarget:self action:@selector(selectedAllBrand:) forControlEvents:UIControlEventTouchUpInside];
-    [selectAllBg addSubview:selectAllButton];
+    self.selectAllButton=[[UIButton alloc] initWithFrame:CGRectMake(35.0, 15.5, 18.0, 18.0)];
+    [self.selectAllButton setBackgroundImage:[UIImage imageNamed:@"select_allBrand"] forState:UIControlStateNormal];
+    [self.selectAllButton addTarget:self action:@selector(selectedAllBrand:) forControlEvents:UIControlEventTouchUpInside];
+    [selectAllBg addSubview:self.selectAllButton];
     
-    UILabel *selectAllNotice=[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(selectAllButton.frame)+14.0, 10.0, 50.0, 29.0)];
-    selectAllNotice.font=[UIFont systemFontOfSize:15.0];
-    selectAllNotice.text=@"全选";
-    [selectAllBg addSubview:selectAllNotice];
+    self.selectAllNotice=[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.selectAllButton.frame)+14.0, 10.0, 50.0, 29.0)];
+    self.selectAllNotice.font=[UIFont systemFontOfSize:15.0];
+    self.selectAllNotice.text=@"全选";
+    [selectAllBg addSubview:self.selectAllNotice];
     
     UIButton *confimeButton=[[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-115.0, 9.5, 80.0, 30.0)];
     [confimeButton setTitle:@"确 认" forState:UIControlStateNormal];
@@ -69,15 +79,15 @@
     [confimeButton addTarget:self action:@selector(addBrandRequest:) forControlEvents:UIControlEventTouchUpInside];
     [selectAllBg addSubview:confimeButton];
     selectAllBg=nil;
-    selectAllButton=nil;
-    selectAllNotice=nil;
     confimeButton=nil;
     
     self.addBrandTableView=[[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height-113.0)];
     self.addBrandTableView.dataSource=self;
     self.addBrandTableView.delegate=self;
+    self.addBrandTableView.backgroundColor=[UIColor clearColor];
     [self.view addSubview:self.addBrandTableView];
     
+    [self getAllBrandWithUId:@"001" andPage:1];
     
     // Do any additional setup after loading the view.
 }
@@ -85,7 +95,7 @@
 #pragma mark -
 #pragma mark TableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPat{
-	return 227.0;
+	return 234.0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -94,12 +104,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-//    if([brandArray count]<8){
-        return 2;
-//    }else{
-//        return  ceil((float)[brandArray count]/ImageViewNumber) ;
-//	}
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -134,28 +139,38 @@
 - (void)drawImageOfPosition:(NSInteger)position inRowOfTable:(NSInteger)row cellToDraw:(AddBrandTableViewCell*)cell tableView:(UITableView*)tableView{
 	
 	NSInteger indexInMutableArrayAlbum=row*ImageViewNumber+position-1;//根据在tableview的位置计算在mutableArrayMemberList中的位置
+    NSLog(@"current index tag:%d",indexInMutableArrayAlbum);
 	BrandAssets	 *brandAssets=[brandArray objectAtIndex:indexInMutableArrayAlbum];
-//    UIImage *checkImage=brandAssets.selected?[UIImage imageNamed:@"noselect_brand"]:[UIImage imageNamed:@"selected_brand"];
+    UIImage *checkImage=brandAssets.selected?[UIImage imageNamed:@"selected_brand"]:[UIImage imageNamed:@"noselect_brand"];
 	switch (position) {
 		case 1:{
-			[[cell leftBrandImageView] setTag:indexInMutableArrayAlbum];//将tag值改和brandArray的indexPath一致
-            if(brandAssets.thumnail!=nil){
-                [[cell leftBrandImageView] setImage:brandAssets.thumnail];
+			[[cell leftSelecteImageView] setTag:indexInMutableArrayAlbum];//将tag值改和brandArray的indexPath一致
+            if(brandAssets.brandImg!=nil){
+                [[cell leftBrandImageView] setImageWithURL:[NSURL URLWithString:brandAssets.brandImg] placeholderImage:nil];
             }else{
                 [[cell leftBrandImageView] setImage:[UIImage imageNamed:@"default_pic_offical"]];
             }
             
+            [cell leftGoodsNameLabel].text=[NSString stringWithFormat:@"产品名称:%@",brandAssets.brandAbout];
+            [cell leftBrandTypeLabel].text=brandAssets.brandName;
+            
+            cell.leftSelecteImageView.image=checkImage;
             [self chooseTapGestureForImageView:[cell leftSelecteImageView]];
         }
 			break;
 		case 2:{
 			[[cell rightBrandImageView] setHidden:NO];
-			[[cell rightBrandImageView] setTag:indexInMutableArrayAlbum];//将tag值改和brandArray的indexPath一致
-            if(brandAssets.thumnail!=nil){
-                [[cell rightBrandImageView] setImage:brandAssets.thumnail];
+			[[cell rightSelecteImageView] setTag:indexInMutableArrayAlbum];//将tag值改和brandArray的indexPath一致
+            if(brandAssets.brandImg!=nil){
+//                [[cell rightBrandImageView] setImage:brandAssets.thumnail];
+                [[cell rightBrandImageView] setImageWithURL:[NSURL URLWithString:brandAssets.brandImg] placeholderImage:nil];
             }else{
                 [[cell rightBrandImageView] setImage:[UIImage imageNamed:@"default_pic_offical"]];
             }
+            cell.rightGoodsNameLabel.text=[NSString stringWithFormat:@"产品名称:%@",brandAssets.brandAbout];
+            [cell rightBrandTypeLabel].text=brandAssets.brandName;
+            
+            cell.rightSelecteImageView.image=checkImage;
             [self chooseTapGestureForImageView:[cell rightSelecteImageView]];
         }
 			break;
@@ -181,6 +196,7 @@
     
     BrandAssets *brandAssets=[brandArray objectAtIndex:theTag];
     NSLog(@"theTag is %d",theTag);
+    NSLog(@"is selected:%d",brandAssets.selected);
     if(brandAssets.selected==NO){
         brandAssets.selected=YES;
     }else{
@@ -197,22 +213,25 @@
 		case 1:
 		{
 			if (brandAssets.selected==NO) {
-				[[cell leftSelecteImageView] setImage:checkImage];
-			}else {
 				[[cell leftSelecteImageView] setImage:checkSelectImage];
+//                brandAssets.selected=NO;
+			}else {
+				[[cell leftSelecteImageView] setImage:checkImage];
+//                brandAssets.selected=YES;
 			}
 		}
 			break;
 		case 2:
 		{
 			if (brandAssets.selected==NO) {
-				[cell rightSelecteImageView].image=checkImage;
-			}else {
 				[cell rightSelecteImageView].image=checkSelectImage;
+                brandAssets.selected=NO;
+			}else {
+				[cell rightSelecteImageView].image=checkImage;
+                brandAssets.selected=YES;
 			}
 		}
 			break;
-            
 		default:
 			break;
 	}
@@ -235,6 +254,41 @@
     [UIView commitAnimations];
 }
 
+//获取所有品牌信息
+-(void)getAllBrandWithUId:(NSString *)uId andPage:(NSInteger)page{
+    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
+    [paramDict setObject:uId forKey:@"uid"];
+    [paramDict setObject:[NSNumber numberWithInteger:page] forKey:@"page"];
+    [paramDict setObject:[NSNumber numberWithInteger:4] forKey:@"row"];
+    [paramDict setObject:[Tools getAppVersion] forKey:@"version"];
+    
+    [self.getAllBrandRequest postRequestWithSoapNamespace:@"getAllBrand" params:paramDict successBlock:^(id result) {
+        DLog(@"get all brand result=%@", result);
+        if ([brandArray count]>0) {
+            [brandArray removeAllObjects];
+        }
+        NSMutableArray *allBrand=(NSMutableArray *)[result objectForKey:@"Brands"];
+        for (NSDictionary *brandItem in allBrand) {
+            BrandAssets *assets=[[BrandAssets alloc] init];
+            NSLog(@"brand item:%@",brandItem);
+            assets.brandAbout=[brandItem objectForKey:@"BardAbout"];
+            assets.brandId=[brandItem objectForKey:@"BardID"];
+            assets.brandImg=[brandItem objectForKey:@"BardImg"];
+            assets.brandName=[brandItem objectForKey:@"BardName"];
+            assets.selected=NO;
+            
+            [brandArray addObject:assets];
+        }
+        
+        [self.addBrandTableView reloadData];
+    } failureBlock:^(NSString *requestError) {
+        DLog(@"add brand failure!!!");
+    } errorBlock:^(NSMutableString *errorStr) {
+        DLog(@"add brand error!!!");
+    }];
+    paramDict=nil;
+}
+
 //添加品牌
 -(void)addBrandWithUID:(NSString *)uID andBID:(NSString *)bID andVersion:(NSString *)version{
     NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
@@ -247,10 +301,10 @@
         NSString *msg=[(NSDictionary *)result objectForKey:@"Msg"];
         if ([msg isEqualToString:@"1"]) {
             //添加成功
+            
         }else{
             
         }
-        
     } failureBlock:^(NSString *requestError) {
         DLog(@"add brand failure!!!");
     } errorBlock:^(NSMutableString *errorStr) {
@@ -259,26 +313,74 @@
     paramDict=nil;
 }
 
-//选中所有品牌
+//选中或取消选中所有品牌
 -(void)selectedAllBrand:(id)sender{
-    for (int i=0; i<[brandArray count]; i++) {
-        BrandAssets *brandAssets=[brandArray objectAtIndex:i];
-        brandAssets.selected=YES;
+    if ([self.selectAllNotice.text isEqualToString:@"全选"]) {
+        self.selectAllNotice.text=@"取消选择";
+        [self.selectAllButton setBackgroundImage:[UIImage imageNamed:@"selected_brand"] forState:UIControlStateNormal];
+        for (int i=0; i<[brandArray count]; i++) {
+            BrandAssets *brandAssets=[brandArray objectAtIndex:i];
+            brandAssets.selected=YES;
+        }
+    }else{
+        self.selectAllNotice.text=@"全选";
+        [self.selectAllButton setBackgroundImage:[UIImage imageNamed:@"select_allBrand"] forState:UIControlStateNormal];
+        for (int i=0; i<[brandArray count]; i++) {
+            BrandAssets *brandAssets=[brandArray objectAtIndex:i];
+            brandAssets.selected=NO;
+        }
     }
-    [self.addBrandTableView reloadData];
-}
-
-//取消选择
--(void)cancelSelect{
-    for (int i=0; i<[brandArray count]; i++) {
-        BrandAssets *brandAssets=[brandArray objectAtIndex:i];
-        brandAssets.selected=YES;
-    }
+    
     [self.addBrandTableView reloadData];
 }
 
 -(void)addBrandRequest:(id)sender{
-    [self addBrandWithUID:@"001" andBID:@"012" andVersion:[Tools getAppVersion]];
+    [addBrandArray removeAllObjects];
+    for (int i=0; i<=[brandArray count]; i++) {
+        BrandAssets *assets=[brandArray objectAtIndex:i];
+        if (assets.selected==YES) {
+            [addBrandArray addObject:assets.brandId];
+        }
+    }
+    networkQueue.showAccurateProgress = NO;
+//    [networkQueue setRequestDidFinishSelector:@selector(uploadFinished:)];
+//    [networkQueue setRequestDidFailSelector:@selector(uploadFailed:)];
+    [networkQueue setDelegate:self];
+    [networkQueue setShouldCancelAllRequestsOnFailure:NO];
+    [networkQueue setUploadProgressDelegate:self];
+    [networkQueue setDownloadProgressDelegate:self];
+    
+    SoapRequest *request;
+    for (int i=0; i<[addBrandArray count]; i++) {
+
+        NSString *bid=[addBrandArray objectAtIndex:i];
+        
+        NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
+        [paramDict setObject:@"001" forKey:@"uid"];
+        [paramDict setObject:bid forKey:@"bid"];
+        [paramDict setObject:[Tools getAppVersion] forKey:@"version"];
+        
+        [request postRequestWithSoapNamespace:@"AddBrand" params:paramDict successBlock:^(id result) {
+            DLog(@"AddBrand result=%@", result);
+            NSString *msg=[(NSDictionary *)result objectForKey:@"Msg"];
+            if ([msg isEqualToString:@"1"]) {
+                //添加成功
+                
+            }else{
+                
+            }
+        } failureBlock:^(NSString *requestError) {
+            DLog(@"add brand failure!!!");
+        } errorBlock:^(NSMutableString *errorStr) {
+            DLog(@"add brand error!!!");
+        }];
+        paramDict=nil;
+       
+//        [networkQueue addOperation:request];
+    }
+    [networkQueue go];
+
+//    [self addBrandWithUID:@"001" andBID:@"003" andVersion:[Tools getAppVersion]];
 }
 
 - (void)didReceiveMemoryWarning

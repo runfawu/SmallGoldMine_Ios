@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger, ScanBarType) {
 -(id)init{
     self=[super init];
     if (self) {
-        self.title = @"小V聚宝";
+        [self configNaviTitle:@"小V聚宝"];
         
         UIButton* leftBarbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28.0, 27.0)];
         [leftBarbutton setImage:[UIImage imageNamed:@"personal"] forState:UIControlStateNormal];

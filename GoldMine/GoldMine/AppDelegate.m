@@ -21,6 +21,8 @@
 {
     // Override point for customization after application launch.
     
+    
+    
     //左侧栏
     SmallGoldMineSideDrawerViewController *leftMenuVC=[[SmallGoldMineSideDrawerViewController alloc] init];
     UINavigationController *leftMenuNav=[[UINavigationController alloc] initWithRootViewController:leftMenuVC];
@@ -53,6 +55,13 @@
     
     [self presentLoginVC];
     smallGoldMineVC=nil;
+    
+    //设置状态栏背景颜色
+    UIView *addStatusBar = [[UIView alloc] init];
+    addStatusBar.frame = CGRectMake(0, 0, self.window.rootViewController.view.frame.size.width, 20);
+    addStatusBar.backgroundColor = [UIColor colorWithRed:203.0/255 green:33.0/255 blue:39.0/255 alpha:1.0];
+    [self.window.rootViewController.view addSubview:addStatusBar];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
 
     return YES;
 }

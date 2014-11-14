@@ -21,4 +21,6 @@
 - (void)drawView;
 - (void)clickedBack:(id)sender;
 
+- (void)configNaviTitle:(NSString *)titleStr;
+
 @end

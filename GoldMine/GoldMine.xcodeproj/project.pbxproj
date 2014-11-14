@@ -51,7 +51,6 @@
 		0423481619D4157F00A058F4 /* vip_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481519D4157F00A058F4 /* vip_delete@2x.png */; };
 		0423481819D4189D00A058F4 /* vip_ headBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481719D4189D00A058F4 /* vip_ headBg@2x.png */; };
 		0423481B19D418A400A058F4 /* vip_info_seperate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481919D418A400A058F4 /* vip_info_seperate@2x.png */; };
-		0423481C19D418A400A058F4 /* vip_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0423481A19D418A400A058F4 /* vip_share@2x.png */; };
 		0423482119D41A4A00A058F4 /* VIPDetailInfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423482019D41A4A00A058F4 /* VIPDetailInfoHeadView.m */; };
 		0423482419D436E600A058F4 /* GoldenListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423482319D436E600A058F4 /* GoldenListTableViewCell.m */; };
 		047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AC29F19D3EEBA0010A9DD /* VSquareViewController.m */; };
@@ -61,6 +60,17 @@
 		04806AF719C6B7A400772BEF /* task_vip_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF319C6B7A400772BEF /* task_vip_down@2x.png */; };
 		04806AF819C6B7A400772BEF /* task_vip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04806AF419C6B7A400772BEF /* task_vip@2x.png */; };
 		04806AFB19C6BAD200772BEF /* TaskHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04806AFA19C6BAD200772BEF /* TaskHeadView.m */; };
+		0495A6751A11DF8200465855 /* BuddyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495A6731A11DF8200465855 /* BuddyViewController.m */; };
+		0495A6761A11DF8200465855 /* BuddyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495A6741A11DF8200465855 /* BuddyViewController.xib */; };
+		0495A67E1A11F04700465855 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495A67D1A11F04700465855 /* CustomSegmentedControl.m */; };
+		0495A6841A1201DA00465855 /* VIPAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495A6821A1201DA00465855 /* VIPAddressBookViewController.m */; };
+		0495A6851A1201DA00465855 /* VIPAddressBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495A6831A1201DA00465855 /* VIPAddressBookViewController.xib */; };
+		0495A6891A12093000465855 /* VIPAddressBookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495A6871A12093000465855 /* VIPAddressBookDetailViewController.m */; };
+		0495A68A1A12093000465855 /* VIPAddressBookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495A6881A12093000465855 /* VIPAddressBookDetailViewController.xib */; };
+		04A617151A0A3C66001FDAEE /* BuddyViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A617131A0A3C66001FDAEE /* BuddyViewDetailViewController.m */; };
+		04A617161A0A3C66001FDAEE /* BuddyViewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A617141A0A3C66001FDAEE /* BuddyViewDetailViewController.xib */; };
+		04A6171A1A0A439F001FDAEE /* VIPAddressBookDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A617181A0A439F001FDAEE /* VIPAddressBookDetailCell.m */; };
+		04A6171B1A0A439F001FDAEE /* VIPAddressBookDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A617191A0A439F001FDAEE /* VIPAddressBookDetailCell.xib */; };
 		04B36414192071E7001FD570 /* SmallGoldMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B36411192071E7001FD570 /* SmallGoldMineCell.m */; };
 		04B36415192071E7001FD570 /* SmallGoldMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B36413192071E7001FD570 /* SmallGoldMineViewController.m */; };
 		04BB6813193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6811193EBF070003AB75 /* VIPDetailedInformationTableViewCell.m */; };
@@ -102,9 +112,21 @@
 		04CA4D5819F358A00060C934 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4D4719F358A00060C934 /* UIImageView+WebCache.m */; };
 		04CA4D5919F358A00060C934 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4D4919F358A00060C934 /* UIView+WebCacheOperation.m */; };
 		04CA4D6219F35D810060C934 /* VIPAddressBookViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4D6119F35D810060C934 /* VIPAddressBookViewCell.m */; };
-		04CA4D6519F3607B0060C934 /* VIPAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4D6419F3607B0060C934 /* VIPAddressBookViewController.m */; };
 		04CA4D6819F364ED0060C934 /* add_vip_addr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CA4D6619F364ED0060C934 /* add_vip_addr@2x.png */; };
 		04CA4D6919F364ED0060C934 /* vip_headphotoBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CA4D6719F364ED0060C934 /* vip_headphotoBg@2x.png */; };
+		04D6310E1A13300D00E45203 /* JubaoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6310C1A13300D00E45203 /* JubaoListTableViewCell.m */; };
+		04D6310F1A13300D00E45203 /* JubaoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D6310D1A13300D00E45203 /* JubaoListTableViewCell.xib */; };
+		04D631131A133E5400E45203 /* EditVIPAddressBookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D631111A133E5400E45203 /* EditVIPAddressBookDetailViewController.m */; };
+		04D631141A133E5400E45203 /* EditVIPAddressBookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D631121A133E5400E45203 /* EditVIPAddressBookDetailViewController.xib */; };
+		04D631171A13429B00E45203 /* EditVipAddressBookTableFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D631161A13429B00E45203 /* EditVipAddressBookTableFootView.m */; };
+		04D631191A13429B00E45203 /* edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D631181A13429B00E45203 /* edit@2x.png */; };
+		04D6311B1A13429B00E45203 /* vip_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D6311A1A13429B00E45203 /* vip_share@2x.png */; };
+		04DF17EA1A0CA26800359182 /* vip_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DF17E91A0CA26800359182 /* vip_more@2x.png */; };
+		04E9EBA61A08D83800D2C302 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 04E9EBA41A08D83800D2C302 /* pinyin.c */; };
+		04EBB6031A14822D00921689 /* SessionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB6011A14822D00921689 /* SessionTableViewCell.m */; };
+		04EBB6041A14822D00921689 /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EBB6021A14822D00921689 /* SessionTableViewCell.xib */; };
+		04EBB6071A14CACE00921689 /* VipPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB6061A14CACE00921689 /* VipPopView.m */; };
+		04EBB6091A14CADE00921689 /* VipPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EBB6081A14CADE00921689 /* VipPopView.xib */; };
 		04FC3CF0191F2CD000CB8F80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CEF191F2CD000CB8F80 /* Foundation.framework */; };
 		04FC3CF2191F2CD000CB8F80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CF1191F2CD000CB8F80 /* CoreGraphics.framework */; };
 		04FC3CF4191F2CD000CB8F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC3CF3191F2CD000CB8F80 /* UIKit.framework */; };
@@ -141,7 +163,6 @@
 		04FC3D69191F88AD00CB8F80 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D65191F88AD00CB8F80 /* banner@2x.png */; };
 		04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D66191F88AD00CB8F80 /* personal@2x.png */; };
 		04FC3D6B191F88AD00CB8F80 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D67191F88AD00CB8F80 /* scan@2x.png */; };
-		04FC3D70191F98E700CB8F80 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */; };
 		04FC3D75191FA99400CB8F80 /* vsquare_good@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3D74191FA99400CB8F80 /* vsquare_good@2x.png */; };
 		7103195119F2392F00339930 /* exchange_confirm.png in Resources */ = {isa = PBXBuildFile; fileRef = 7103194E19F2392F00339930 /* exchange_confirm.png */; };
 		7103195219F2392F00339930 /* exchange_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 7103194F19F2392F00339930 /* exchange_gold.png */; };
@@ -308,7 +329,6 @@
 		0423481519D4157F00A058F4 /* vip_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_delete@2x.png"; sourceTree = "<group>"; };
 		0423481719D4189D00A058F4 /* vip_ headBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_ headBg@2x.png"; sourceTree = "<group>"; };
 		0423481919D418A400A058F4 /* vip_info_seperate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_info_seperate@2x.png"; sourceTree = "<group>"; };
-		0423481A19D418A400A058F4 /* vip_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_share@2x.png"; sourceTree = "<group>"; };
 		0423481F19D41A4A00A058F4 /* VIPDetailInfoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPDetailInfoHeadView.h; sourceTree = "<group>"; };
 		0423482019D41A4A00A058F4 /* VIPDetailInfoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPDetailInfoHeadView.m; sourceTree = "<group>"; };
 		0423482219D436E600A058F4 /* GoldenListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldenListTableViewCell.h; sourceTree = "<group>"; };
@@ -323,6 +343,23 @@
 		04806AF419C6B7A400772BEF /* task_vip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "task_vip@2x.png"; sourceTree = "<group>"; };
 		04806AF919C6BAD200772BEF /* TaskHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskHeadView.h; sourceTree = "<group>"; };
 		04806AFA19C6BAD200772BEF /* TaskHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskHeadView.m; sourceTree = "<group>"; };
+		0495A6721A11DF8200465855 /* BuddyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyViewController.h; sourceTree = "<group>"; };
+		0495A6731A11DF8200465855 /* BuddyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyViewController.m; sourceTree = "<group>"; };
+		0495A6741A11DF8200465855 /* BuddyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuddyViewController.xib; sourceTree = "<group>"; };
+		0495A67C1A11F04700465855 /* CustomSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedControl.h; sourceTree = "<group>"; };
+		0495A67D1A11F04700465855 /* CustomSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedControl.m; sourceTree = "<group>"; };
+		0495A6811A1201DA00465855 /* VIPAddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPAddressBookViewController.h; sourceTree = "<group>"; };
+		0495A6821A1201DA00465855 /* VIPAddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPAddressBookViewController.m; sourceTree = "<group>"; };
+		0495A6831A1201DA00465855 /* VIPAddressBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VIPAddressBookViewController.xib; sourceTree = "<group>"; };
+		0495A6861A12093000465855 /* VIPAddressBookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPAddressBookDetailViewController.h; sourceTree = "<group>"; };
+		0495A6871A12093000465855 /* VIPAddressBookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPAddressBookDetailViewController.m; sourceTree = "<group>"; };
+		0495A6881A12093000465855 /* VIPAddressBookDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VIPAddressBookDetailViewController.xib; sourceTree = "<group>"; };
+		04A617121A0A3C66001FDAEE /* BuddyViewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuddyViewDetailViewController.h; path = VIPAddressBook/BuddyViewDetailViewController.h; sourceTree = "<group>"; };
+		04A617131A0A3C66001FDAEE /* BuddyViewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuddyViewDetailViewController.m; path = VIPAddressBook/BuddyViewDetailViewController.m; sourceTree = "<group>"; };
+		04A617141A0A3C66001FDAEE /* BuddyViewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BuddyViewDetailViewController.xib; path = VIPAddressBook/BuddyViewDetailViewController.xib; sourceTree = "<group>"; };
+		04A617171A0A439F001FDAEE /* VIPAddressBookDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPAddressBookDetailCell.h; sourceTree = "<group>"; };
+		04A617181A0A439F001FDAEE /* VIPAddressBookDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPAddressBookDetailCell.m; sourceTree = "<group>"; };
+		04A617191A0A439F001FDAEE /* VIPAddressBookDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VIPAddressBookDetailCell.xib; sourceTree = "<group>"; };
 		04B36410192071E7001FD570 /* SmallGoldMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineCell.h; sourceTree = "<group>"; };
 		04B36411192071E7001FD570 /* SmallGoldMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallGoldMineCell.m; sourceTree = "<group>"; };
 		04B36412192071E7001FD570 /* SmallGoldMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallGoldMineViewController.h; sourceTree = "<group>"; };
@@ -394,10 +431,27 @@
 		04CA4D4919F358A00060C934 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		04CA4D6019F35D810060C934 /* VIPAddressBookViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPAddressBookViewCell.h; sourceTree = "<group>"; };
 		04CA4D6119F35D810060C934 /* VIPAddressBookViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPAddressBookViewCell.m; sourceTree = "<group>"; };
-		04CA4D6319F3607B0060C934 /* VIPAddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPAddressBookViewController.h; sourceTree = "<group>"; };
-		04CA4D6419F3607B0060C934 /* VIPAddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPAddressBookViewController.m; sourceTree = "<group>"; };
 		04CA4D6619F364ED0060C934 /* add_vip_addr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_vip_addr@2x.png"; sourceTree = "<group>"; };
 		04CA4D6719F364ED0060C934 /* vip_headphotoBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_headphotoBg@2x.png"; sourceTree = "<group>"; };
+		04D6310B1A13300D00E45203 /* JubaoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JubaoListTableViewCell.h; sourceTree = "<group>"; };
+		04D6310C1A13300D00E45203 /* JubaoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JubaoListTableViewCell.m; sourceTree = "<group>"; };
+		04D6310D1A13300D00E45203 /* JubaoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JubaoListTableViewCell.xib; sourceTree = "<group>"; };
+		04D631101A133E5400E45203 /* EditVIPAddressBookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditVIPAddressBookDetailViewController.h; sourceTree = "<group>"; };
+		04D631111A133E5400E45203 /* EditVIPAddressBookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditVIPAddressBookDetailViewController.m; sourceTree = "<group>"; };
+		04D631121A133E5400E45203 /* EditVIPAddressBookDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditVIPAddressBookDetailViewController.xib; sourceTree = "<group>"; };
+		04D631151A13429B00E45203 /* EditVipAddressBookTableFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditVipAddressBookTableFootView.h; sourceTree = "<group>"; };
+		04D631161A13429B00E45203 /* EditVipAddressBookTableFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditVipAddressBookTableFootView.m; sourceTree = "<group>"; };
+		04D631181A13429B00E45203 /* edit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit@2x.png"; sourceTree = "<group>"; };
+		04D6311A1A13429B00E45203 /* vip_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_share@2x.png"; sourceTree = "<group>"; };
+		04DF17E91A0CA26800359182 /* vip_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip_more@2x.png"; sourceTree = "<group>"; };
+		04E9EBA41A08D83800D2C302 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		04E9EBA51A08D83800D2C302 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		04EBB6001A14822D00921689 /* SessionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTableViewCell.h; sourceTree = "<group>"; };
+		04EBB6011A14822D00921689 /* SessionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTableViewCell.m; sourceTree = "<group>"; };
+		04EBB6021A14822D00921689 /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
+		04EBB6051A14CACE00921689 /* VipPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipPopView.h; sourceTree = "<group>"; };
+		04EBB6061A14CACE00921689 /* VipPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipPopView.m; sourceTree = "<group>"; };
+		04EBB6081A14CADE00921689 /* VipPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VipPopView.xib; sourceTree = "<group>"; };
 		04FC3CEC191F2CD000CB8F80 /* GoldMine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldMine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FC3CEF191F2CD000CB8F80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04FC3CF1191F2CD000CB8F80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -448,8 +502,6 @@
 		04FC3D65191F88AD00CB8F80 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
 		04FC3D66191F88AD00CB8F80 /* personal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personal@2x.png"; sourceTree = "<group>"; };
 		04FC3D67191F88AD00CB8F80 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
-		04FC3D6E191F98E700CB8F80 /* CustomSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedControl.h; sourceTree = "<group>"; };
-		04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedControl.m; sourceTree = "<group>"; };
 		04FC3D74191FA99400CB8F80 /* vsquare_good@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vsquare_good@2x.png"; sourceTree = "<group>"; };
 		7103194E19F2392F00339930 /* exchange_confirm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exchange_confirm.png; sourceTree = "<group>"; };
 		7103194F19F2392F00339930 /* exchange_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exchange_gold.png; sourceTree = "<group>"; };
@@ -689,12 +741,10 @@
 		036163D119CE855000FDC231 /* LeftControllers */ = {
 			isa = PBXGroup;
 			children = (
-
+				0495A6711A11DF5400465855 /* Buddy */,
 				04CA4D5C19F35D2E0060C934 /* VIPAddressBook */,
-
 				7103195919F26B4A00339930 /* More */,
 				71731BE919E3E2BD001F90C1 /* IntegragtionExchange */,
-
 				031B544919D45F2000FEA536 /* Profile */,
 				036163D219CE857200FDC231 /* WealthViewController.h */,
 				036163D319CE857200FDC231 /* WealthViewController.m */,
@@ -747,6 +797,34 @@
 				04BB6812193EBF070003AB75 /* VIPDetailedInformationTableViewCell.xib */,
 			);
 			path = Task;
+			sourceTree = "<group>";
+		};
+		0495A6711A11DF5400465855 /* Buddy */ = {
+			isa = PBXGroup;
+			children = (
+				0495A6721A11DF8200465855 /* BuddyViewController.h */,
+				0495A6731A11DF8200465855 /* BuddyViewController.m */,
+				0495A6741A11DF8200465855 /* BuddyViewController.xib */,
+				04A617121A0A3C66001FDAEE /* BuddyViewDetailViewController.h */,
+				04A617131A0A3C66001FDAEE /* BuddyViewDetailViewController.m */,
+				04A617141A0A3C66001FDAEE /* BuddyViewDetailViewController.xib */,
+				04EBB6001A14822D00921689 /* SessionTableViewCell.h */,
+				04EBB6011A14822D00921689 /* SessionTableViewCell.m */,
+				04EBB6021A14822D00921689 /* SessionTableViewCell.xib */,
+				04EBB6051A14CACE00921689 /* VipPopView.h */,
+				04EBB6061A14CACE00921689 /* VipPopView.m */,
+				04EBB6081A14CADE00921689 /* VipPopView.xib */,
+			);
+			name = Buddy;
+			sourceTree = "<group>";
+		};
+		0495A6781A11E4DD00465855 /* CustomSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				0495A67C1A11F04700465855 /* CustomSegmentedControl.h */,
+				0495A67D1A11F04700465855 /* CustomSegmentedControl.m */,
+			);
+			path = CustomSegmentControl;
 			sourceTree = "<group>";
 		};
 		04B3640F192071E7001FD570 /* SmallGoldMine */ = {
@@ -866,10 +944,34 @@
 			children = (
 				04CA4D6019F35D810060C934 /* VIPAddressBookViewCell.h */,
 				04CA4D6119F35D810060C934 /* VIPAddressBookViewCell.m */,
-				04CA4D6319F3607B0060C934 /* VIPAddressBookViewController.h */,
-				04CA4D6419F3607B0060C934 /* VIPAddressBookViewController.m */,
+				04A617171A0A439F001FDAEE /* VIPAddressBookDetailCell.h */,
+				04A617181A0A439F001FDAEE /* VIPAddressBookDetailCell.m */,
+				04A617191A0A439F001FDAEE /* VIPAddressBookDetailCell.xib */,
+				0495A6811A1201DA00465855 /* VIPAddressBookViewController.h */,
+				0495A6821A1201DA00465855 /* VIPAddressBookViewController.m */,
+				0495A6831A1201DA00465855 /* VIPAddressBookViewController.xib */,
+				0495A6861A12093000465855 /* VIPAddressBookDetailViewController.h */,
+				0495A6871A12093000465855 /* VIPAddressBookDetailViewController.m */,
+				0495A6881A12093000465855 /* VIPAddressBookDetailViewController.xib */,
+				04D6310B1A13300D00E45203 /* JubaoListTableViewCell.h */,
+				04D6310C1A13300D00E45203 /* JubaoListTableViewCell.m */,
+				04D6310D1A13300D00E45203 /* JubaoListTableViewCell.xib */,
+				04D631101A133E5400E45203 /* EditVIPAddressBookDetailViewController.h */,
+				04D631111A133E5400E45203 /* EditVIPAddressBookDetailViewController.m */,
+				04D631121A133E5400E45203 /* EditVIPAddressBookDetailViewController.xib */,
+				04D631151A13429B00E45203 /* EditVipAddressBookTableFootView.h */,
+				04D631161A13429B00E45203 /* EditVipAddressBookTableFootView.m */,
 			);
 			path = VIPAddressBook;
+			sourceTree = "<group>";
+		};
+		04E9EBA31A08D83800D2C302 /* pinyin */ = {
+			isa = PBXGroup;
+			children = (
+				04E9EBA41A08D83800D2C302 /* pinyin.c */,
+				04E9EBA51A08D83800D2C302 /* pinyin.h */,
+			);
+			path = pinyin;
 			sourceTree = "<group>";
 		};
 		04FC3CE3191F2CD000CB8F80 = {
@@ -1002,6 +1104,7 @@
 		04FC3D3E191F4FD200CB8F80 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
+				04D631181A13429B00E45203 /* edit@2x.png */,
 				7103195F19F26E0B00339930 /* more_about.png */,
 				7103196019F26E0B00339930 /* more_feedback.png */,
 				7103196119F26E0B00339930 /* more_indecator.png */,
@@ -1030,6 +1133,7 @@
 				036163DE19CE8ED100FDC231 /* wealthCell_integeration.png */,
 				04FC3D3F191F4FD200CB8F80 /* cell_seperate_line@2x.png */,
 				04FC3D40191F4FD200CB8F80 /* credit@2x.png */,
+				04DF17E91A0CA26800359182 /* vip_more@2x.png */,
 				04FC3D42191F4FD200CB8F80 /* guys@2x.png */,
 				04FC3D44191F4FD200CB8F80 /* more@2x.png */,
 				04FC3D45191F4FD200CB8F80 /* portrait_bg@2x.png */,
@@ -1047,7 +1151,6 @@
 				04C6DB3819E2422400F0E9F5 /* AddBrand */,
 				71A8F15D19D7EEDF009572EB /* Scan */,
 				0423481919D418A400A058F4 /* vip_info_seperate@2x.png */,
-				0423481A19D418A400A058F4 /* vip_share@2x.png */,
 				0423481719D4189D00A058F4 /* vip_ headBg@2x.png */,
 				0423481519D4157F00A058F4 /* vip_delete@2x.png */,
 				71A6D43719D263FB00DECF5D /* golden_redBg.png */,
@@ -1073,23 +1176,15 @@
 		04FC3D6C191F98E700CB8F80 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				0495A6781A11E4DD00465855 /* CustomSegmentControl */,
+				04E9EBA31A08D83800D2C302 /* pinyin */,
 				71A8F0E719D7BAD4009572EB /* ZBarSDK */,
 				04B5FDCA19C6829B00102BC1 /* SDWebImage */,
 				71AD9D1819C43EFF00061009 /* Toast */,
 				71AD9D0119C41DA900061009 /* MBProgressHUD */,
 				71A9871719C1E416008402FF /* ASIHttpRequest */,
-				04FC3D6D191F98E700CB8F80 /* CustomSegmentControl */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		04FC3D6D191F98E700CB8F80 /* CustomSegmentControl */ = {
-			isa = PBXGroup;
-			children = (
-				04FC3D6E191F98E700CB8F80 /* CustomSegmentedControl.h */,
-				04FC3D6F191F98E700CB8F80 /* CustomSegmentedControl.m */,
-			);
-			path = CustomSegmentControl;
 			sourceTree = "<group>";
 		};
 		7103195919F26B4A00339930 /* More */ = {
@@ -1210,6 +1305,7 @@
 		71A8F15D19D7EEDF009572EB /* Scan */ = {
 			isa = PBXGroup;
 			children = (
+				04D6311A1A13429B00E45203 /* vip_share@2x.png */,
 				71A4F7BE19E3AD5E00A886D6 /* integration_confirm_h.png */,
 				71A4F7BF19E3AD5E00A886D6 /* integration_line.png */,
 				71A4F7C019E3AD5E00A886D6 /* integration_nerd.png */,
@@ -1421,6 +1517,7 @@
 				71B673BF19FB6B89007085E2 /* PersonalInfoController.xib in Resources */,
 				033F739C19CD3D7B00F5DF52 /* input_confirm_n.png in Resources */,
 				7103196519F26E0B00339930 /* more_indecator.png in Resources */,
+				04D6311B1A13429B00E45203 /* vip_share@2x.png in Resources */,
 				04806AF719C6B7A400772BEF /* task_vip_down@2x.png in Resources */,
 				71A8F16D19D7EEDF009572EB /* scan_gray_bg.png in Resources */,
 				04FC3D4D191F4FD200CB8F80 /* credit@2x.png in Resources */,
@@ -1434,18 +1531,23 @@
 				04BB681C19E1365B0003AB75 /* BrandIntroduceViewController.xib in Resources */,
 				71A8F11319D7D9C8009572EB /* ScanNaviView.xib in Resources */,
 				031B544519D1AEC900FEA536 /* Default@2x.png in Resources */,
+				04D631141A133E5400E45203 /* EditVIPAddressBookDetailViewController.xib in Resources */,
 				036163EE19CEBEC100FDC231 /* rankCell_one.png in Resources */,
 				71AD9D1319C4377300061009 /* login_password.png in Resources */,
 				04C6DB3E19E2422400F0E9F5 /* brand_bg@2x.png in Resources */,
 				7103196319F26E0B00339930 /* more_about.png in Resources */,
 				04FC3D51191F4FD200CB8F80 /* more@2x.png in Resources */,
+				0495A68A1A12093000465855 /* VIPAddressBookDetailViewController.xib in Resources */,
 				0423481B19D418A400A058F4 /* vip_info_seperate@2x.png in Resources */,
+				04DF17EA1A0CA26800359182 /* vip_more@2x.png in Resources */,
 				04FC3D53191F4FD200CB8F80 /* rank@2x.png in Resources */,
 				71BCB2AC19EA59260068C302 /* gift_utilBg.png in Resources */,
+				0495A6851A1201DA00465855 /* VIPAddressBookViewController.xib in Resources */,
 				71AD9D1019C4377300061009 /* login_button_n.png in Resources */,
 				04C6F7D719D266AC00863A86 /* credit_git@2x.png in Resources */,
 				71A8F17519D7EEDF009572EB /* scan_torch_on.png in Resources */,
 				036163DB19CE890D00FDC231 /* WealthCell.xib in Resources */,
+				04EBB6091A14CADE00921689 /* VipPopView.xib in Resources */,
 				033F738519CD1E3500F5DF52 /* register_verifyCode_h.png in Resources */,
 				033F738719CD1E3500F5DF52 /* register_verifyThumb.png in Resources */,
 				04FC3D08191F2CD000CB8F80 /* Images.xcassets in Resources */,
@@ -1463,12 +1565,14 @@
 				036163F219CEC08500FDC231 /* rankCell_round.png in Resources */,
 				03FAD92519D85F8C00B6937D /* cell_arrow.png in Resources */,
 				71AD9D1219C4377300061009 /* login_mobile.png in Resources */,
+				04A617161A0A3C66001FDAEE /* BuddyViewDetailViewController.xib in Resources */,
 				04C6DB3F19E2422400F0E9F5 /* confime_addBrand@2x.png in Resources */,
 				71A8F17419D7EEDF009572EB /* scan_torch_off.png in Resources */,
 				04C6DB4B19E249E600F0E9F5 /* AddBrandTableViewCell.xib in Resources */,
 				033F739A19CD3D7B00F5DF52 /* input_cancel_n.png in Resources */,
 				04C6DB4219E2422400F0E9F5 /* selected_brand@2x.png in Resources */,
 				71A8F16F19D7EEDF009572EB /* scan_input_sel.png in Resources */,
+				04D6310F1A13300D00E45203 /* JubaoListTableViewCell.xib in Resources */,
 				71A8F17119D7EEDF009572EB /* scan_integration_sel.png in Resources */,
 				7103196419F26E0B00339930 /* more_feedback.png in Resources */,
 				04FC3D03191F2CD000CB8F80 /* Main.storyboard in Resources */,
@@ -1495,17 +1599,15 @@
 				71A4F7C519E3AD5E00A886D6 /* integration_nerd.png in Resources */,
 				7103195319F2392F00339930 /* exchange_spot.png in Resources */,
 				71AD9D0F19C4377300061009 /* login_button_h.png in Resources */,
-
 				04CA4D6819F364ED0060C934 /* add_vip_addr@2x.png in Resources */,
-
 				71BCB2B119EA6D830068C302 /* gift_defaultImage.png in Resources */,
 				71A4F7C319E3AD5E00A886D6 /* integration_confirm_h.png in Resources */,
-
 				71A8F17319D7EEDF009572EB /* scan_torch_auto.png in Resources */,
 				71A8F18519D80BD7009572EB /* GoodsBarResultController.xib in Resources */,
 				71BCB2AB19EA59260068C302 /* gift_line.png in Resources */,
 				033F739919CD3D7B00F5DF52 /* input_cancel_h.png in Resources */,
 				04FC3D4F191F4FD200CB8F80 /* guys@2x.png in Resources */,
+				0495A6761A11DF8200465855 /* BuddyViewController.xib in Resources */,
 				71A9873F19C1E8F4008402FF /* LoginController.xib in Resources */,
 				71A8F18019D8096A009572EB /* IntegrationBarResultController.xib in Resources */,
 				036163EA19CE95A900FDC231 /* RankViewController.xib in Resources */,
@@ -1517,12 +1619,14 @@
 				031B544819D1AF2400FEA536 /* logo_icon.png in Resources */,
 				04FC3D52191F4FD200CB8F80 /* portrait_bg@2x.png in Resources */,
 				7103197019F276D700339930 /* AboutViewController.xib in Resources */,
+				04A6171B1A0A439F001FDAEE /* VIPAddressBookDetailCell.xib in Resources */,
+				04EBB6041A14822D00921689 /* SessionTableViewCell.xib in Resources */,
 				036163DF19CE8ED100FDC231 /* wealthCell_arrow.png in Resources */,
 				71A4F7C419E3AD5E00A886D6 /* integration_line.png in Resources */,
+				04D631191A13429B00E45203 /* edit@2x.png in Resources */,
 				04FC3D6A191F88AD00CB8F80 /* personal@2x.png in Resources */,
 				71A8F16C19D7EEDF009572EB /* scan_goods_sel.png in Resources */,
 				0318673519CD0CAE004C6DBD /* RegisterController.xib in Resources */,
-				0423481C19D418A400A058F4 /* vip_share@2x.png in Resources */,
 				71BCB2B619EA7B150068C302 /* ExchangeDetailController.xib in Resources */,
 				031B544619D1AEC900FEA536 /* Icon120.png in Resources */,
 				031B544419D1AEC900FEA536 /* Default-568h@2x.png in Resources */,
@@ -1554,6 +1658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0495A6841A1201DA00465855 /* VIPAddressBookViewController.m in Sources */,
 				71A8F17B19D80799009572EB /* UIView+Addition.m in Sources */,
 				71A9873719C1E416008402FF /* Reachability.m in Sources */,
 				0423482419D436E600A058F4 /* GoldenListTableViewCell.m in Sources */,
@@ -1561,6 +1666,7 @@
 				04FC3D62191F755900CB8F80 /* SuperViewController.m in Sources */,
 				71A8F11119D7D9B8009572EB /* ScanNaviView.m in Sources */,
 				04FC3D3C191F2D0300CB8F80 /* UIViewController+MMDrawerController.m in Sources */,
+				0495A6751A11DF8200465855 /* BuddyViewController.m in Sources */,
 				04FC3D3A191F2D0300CB8F80 /* SmallGoldMineDrawerVisualStateManager.m in Sources */,
 				04FC3D36191F2D0300CB8F80 /* MenuTopPhotoView.m in Sources */,
 				71A9871319C1E2DC008402FF /* XMLParser.m in Sources */,
@@ -1574,6 +1680,7 @@
 				71A9873019C1E416008402FF /* ASIDataCompressor.m in Sources */,
 				04CA4D5319F358A00060C934 /* UIButton+WebCache.m in Sources */,
 				71A8F17819D7F989009572EB /* UIButton+Addition.m in Sources */,
+				04A6171A1A0A439F001FDAEE /* VIPAddressBookDetailCell.m in Sources */,
 				04FC3D37191F2D0300CB8F80 /* MMDrawerBarButtonItem.m in Sources */,
 				04CA4D5819F358A00060C934 /* UIImageView+WebCache.m in Sources */,
 				0423482119D41A4A00A058F4 /* VIPDetailInfoHeadView.m in Sources */,
@@ -1589,6 +1696,8 @@
 				71A9873319C1E416008402FF /* ASIFormDataRequest.m in Sources */,
 				71731BE519E3D45A001F90C1 /* WealthEntity.m in Sources */,
 				04BB681B19E1365B0003AB75 /* BrandIntroduceViewController.m in Sources */,
+				04A617151A0A3C66001FDAEE /* BuddyViewDetailViewController.m in Sources */,
+				0495A67E1A11F04700465855 /* CustomSegmentedControl.m in Sources */,
 				04CA4D4E19F358A00060C934 /* SDWebImageDecoder.m in Sources */,
 				71A9873119C1E416008402FF /* ASIDataDecompressor.m in Sources */,
 				033F739219CD3BDA00F5DF52 /* InputBarcodeController.m in Sources */,
@@ -1596,24 +1705,19 @@
 				04FC3D06191F2CD000CB8F80 /* ViewController.m in Sources */,
 				7103196F19F276D700339930 /* AboutViewController.m in Sources */,
 				71A9871619C1E3BA008402FF /* SoapRequest.m in Sources */,
-
 				04CA4D5219F358A00060C934 /* SDWebImagePrefetcher.m in Sources */,
-
 				71BCB2AF19EA680D0068C302 /* GiftEntity.m in Sources */,
-				04B5FDF519C6829C00102BC1 /* UIImage+GIF.m in Sources */,
-
 				71A9873419C1E416008402FF /* ASIHTTPRequest.m in Sources */,
 				04FC3D39191F2D0300CB8F80 /* MMDrawerVisualState.m in Sources */,
 				71A9873E19C1E8F4008402FF /* LoginController.m in Sources */,
 				04C6F7E419D26C0600863A86 /* TaskViewController.m in Sources */,
+				04E9EBA61A08D83800D2C302 /* pinyin.c in Sources */,
 				71731BED19E3E2FB001F90C1 /* IntegrationExchangeController.m in Sources */,
-				04FC3D70191F98E700CB8F80 /* CustomSegmentedControl.m in Sources */,
 				04806AF019C6B29100772BEF /* TaskTableViewCell.m in Sources */,
 				04C6F7E819D26C0600863A86 /* Tools.m in Sources */,
 				71A8F18419D80BD7009572EB /* GoodsBarResultController.m in Sources */,
 				04C6F7EC19D26C0600863A86 /* StorageTools.m in Sources */,
 				031B51F219CF176200FEA536 /* IntegrationDetailController.m in Sources */,
-				04CA4D6519F3607B0060C934 /* VIPAddressBookViewController.m in Sources */,
 				71A9872F19C1E416008402FF /* ASIAuthenticationDialog.m in Sources */,
 				04FC3D00191F2CD000CB8F80 /* AppDelegate.m in Sources */,
 				71B673BE19FB6B89007085E2 /* PersonalInfoController.m in Sources */,
@@ -1622,42 +1726,42 @@
 				04BB681719E127EF0003AB75 /* AdvertisementView.m in Sources */,
 				036163DA19CE890D00FDC231 /* WealthCell.m in Sources */,
 				04FC3D3B191F2D0300CB8F80 /* SmallGoldMineSideDrawerViewController.m in Sources */,
+				0495A6891A12093000465855 /* VIPAddressBookDetailViewController.m in Sources */,
 				71A9873519C1E416008402FF /* ASIInputStream.m in Sources */,
 				0318673419CD0CAE004C6DBD /* RegisterController.m in Sources */,
 				71BCB2B519EA7B150068C302 /* ExchangeDetailController.m in Sources */,
 				7103196A19F2734500339930 /* FeedbackController.m in Sources */,
 				03FAD92019D84D3E00B6937D /* LoopButton.m in Sources */,
-
-				04B5FDED19C6829B00102BC1 /* SDImageCache.m in Sources */,
 				7103195719F2616200339930 /* ResetPwdController.m in Sources */,
-				04B5FDEB19C6829B00102BC1 /* MKAnnotationView+WebCache.m in Sources */,
-
 				04FC3CFC191F2CD000CB8F80 /* main.m in Sources */,
 				04CA4D4F19F358A00060C934 /* SDWebImageDownloader.m in Sources */,
 				04CA4D4C19F358A00060C934 /* SDImageCache.m in Sources */,
 				036163E919CE95A900FDC231 /* RankViewController.m in Sources */,
 				04CA4D5119F358A00060C934 /* SDWebImageManager.m in Sources */,
+				04D631131A133E5400E45203 /* EditVIPAddressBookDetailViewController.m in Sources */,
 				04CA4D5519F358A00060C934 /* UIImage+MultiFormat.m in Sources */,
 				71AD9D1B19C43EFF00061009 /* UIView+Toast.m in Sources */,
+				04D6310E1A13300D00E45203 /* JubaoListTableViewCell.m in Sources */,
 				04FC3D35191F2D0300CB8F80 /* DrawerLeftTableViewCell.m in Sources */,
+				04EBB6031A14822D00921689 /* SessionTableViewCell.m in Sources */,
 				71A8F17F19D8096A009572EB /* IntegrationBarResultController.m in Sources */,
 				04CA4D5419F358A00060C934 /* UIImage+GIF.m in Sources */,
 				036163D519CE857200FDC231 /* WealthViewController.m in Sources */,
+				04EBB6071A14CACE00921689 /* VipPopView.m in Sources */,
 				71A6D43519D2609B00DECF5D /* GoldenViewController.m in Sources */,
 				71731BF219E3E8FE001F90C1 /* HotGiftsController.m in Sources */,
 				71A9873219C1E416008402FF /* ASIDownloadCache.m in Sources */,
 				04BB681F19E13BBB0003AB75 /* AddBrandViewController.m in Sources */,
 				031B51F719CF18CC00FEA536 /* IntegrationDetailCell.m in Sources */,
 				04C6DB4A19E249E600F0E9F5 /* AddBrandTableViewCell.m in Sources */,
+				04D631171A13429B00E45203 /* EditVipAddressBookTableFootView.m in Sources */,
 				71731BE819E3DB52001F90C1 /* IntegrationDetaiEntity.m in Sources */,
 				047AC2A019D3EEBA0010A9DD /* VSquareViewController.m in Sources */,
 				036163E419CE956B00FDC231 /* RankCell.m in Sources */,
 				71A9873619C1E416008402FF /* ASINetworkQueue.m in Sources */,
 				04CA4D5019F358A00060C934 /* SDWebImageDownloaderOperation.m in Sources */,
-
 				71BCB2A219EA54B10068C302 /* GiftView.m in Sources */,
 				71B673BA19FB4C6C007085E2 /* RankEntity.m in Sources */,
-
 				71AD9D0419C41DA900061009 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

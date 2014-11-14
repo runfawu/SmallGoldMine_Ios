@@ -41,5 +41,13 @@
 
 +(NSString*)getAppVersion;
 
++(BOOL)searchResult:(NSString *)contactName searchText:(NSString *)searchT;
+
+//小伙伴身份转换
++(NSString *)buddyNumberChangeToStringWithNumber:(NSString *)userType;
+
+//小伙伴名字格式
++(NSAttributedString *)setBuddyNameContectFormat:(NSString *)nameStr;
+
 
 @end

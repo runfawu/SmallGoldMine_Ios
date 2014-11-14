@@ -115,8 +115,6 @@
         }else{
             
         }
-        
-        
     } failureBlock:^(NSString *requestError) {
         
     } errorBlock:^(NSMutableString *errorStr) {

@@ -231,6 +231,45 @@
 #endif
 }
 
+
++(BOOL)searchResult:(NSString *)contactName searchText:(NSString *)searchT{
+    NSComparisonResult result = [contactName compare:searchT options:NSCaseInsensitiveSearch
+                                               range:NSMakeRange(0, searchT.length)];
+    if (result == NSOrderedSame)
+        return YES;
+    else
+        return NO;
+}
+
++(NSString *)buddyNumberChangeToStringWithNumber:(NSString *)userType{
+    if ([userType isEqualToString:@"1"]) {
+        return @"店员";
+    }else if ([userType isEqualToString:@"2"]){
+        return @"店长";
+    }else if ([userType isEqualToString:@"3"]){
+        return @"店老板";
+    }else if ([userType isEqualToString:@"4"]){
+        return @"业务员";
+    }else if ([userType isEqualToString:@"5"]){
+        return @"经销商";
+    }else
+        return @"品牌商";
+}
+
++(NSAttributedString *)setBuddyNameContectFormat:(NSString *)nameStr{
+    NSMutableAttributedString *str=[[NSMutableAttributedString alloc] initWithString:nameStr];
+    NSRange prefixStrRange=NSMakeRange(0, [nameStr length]-3);
+    NSRange laterStrRange=NSMakeRange([nameStr length]-3,3);
+    [str addAttribute:NSForegroundColorAttributeName value:[Utils colorWithHexString:@"202020"] range:prefixStrRange];
+    [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:25.0] range:prefixStrRange];
+    
+    [str addAttribute:NSForegroundColorAttributeName value:[Utils colorWithHexString:@"F8BB08"] range:laterStrRange];
+    [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15.0] range:laterStrRange];
+    
+    return str;
+}
+
+
 //+(NSString*)urlEncode:(NSString *)unencodedString{
 //    NSString *afterEncodeStr = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
 //                                                                                   (CFStringRef)unencodedString,

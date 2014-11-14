@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASINetworkQueue.h"
 
 @interface AddBrandViewController : SuperViewController
 {
     NSMutableArray *brandArray;
+    NSMutableArray *addBrandArray;
+    
+    ASINetworkQueue *networkQueue;
 }
 
 @property (nonatomic,strong) UITableView *addBrandTableView;

@@ -21,7 +21,6 @@
 	if (self != nil)
 	{
         _bNeedShowRightBarButtonItem = NO;
-        _bNeedShowLogoView = NO;
         _bNeedShowBackBarButtonItem = NO;
 	}
 	return self;
@@ -30,11 +29,15 @@
 - (void)loadView
 {
 	[super loadView];
+    
 	self.view.backgroundColor = [UIColor whiteColor];
     self.view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
-	[self drawView];
-}
+    
+    self.navigationController.navigationBar.barTintColor=[Utils colorWithHexString:@"EE1c24"];
+    self.navigationController.navigationBar.translucent=NO;
 
+//	[self drawView];
+}
 
 - (void)drawView
 {
@@ -59,18 +62,13 @@
 {
     [super viewDidLoad];
 
-    [self configNaviTitle];
+//    [self configNaviTitle];
     [self configLeftBarButtonItem];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    //FIXME: 放到这里会有一闪才出现的bug
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-    [self.navigationController setNavigationBarHidden:NO];
-    self.navigationController.navigationBar.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -103,15 +101,23 @@
     }
 }
 
-- (void)configNaviTitle
+- (void)configNaviTitle:(NSString *)titleStr
 {
-    NSShadow *shadow = [[NSShadow alloc] init];
-    shadow.shadowOffset = CGSizeMake(-1, 0);
-    shadow.shadowBlurRadius = 5;
-    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:18],
-                                                                    NSForegroundColorAttributeName : [UIColor whiteColor],
-                                                                    NSShadowAttributeName : shadow
-                                                                    };
+//    NSShadow *shadow = [[NSShadow alloc] init];
+//    shadow.shadowOffset = CGSizeMake(-1, 0);
+//    shadow.shadowBlurRadius = 5;
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:18],
+//                                                                    NSForegroundColorAttributeName : [UIColor whiteColor],
+//                                                                    NSShadowAttributeName : shadow
+//                                                                    };
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 , 400, 44)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont systemFontOfSize:18];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = titleStr;
+    self.navigationItem.titleView = titleLabel;
+    titleLabel=nil;
 }
 
 #pragma mark - Button events

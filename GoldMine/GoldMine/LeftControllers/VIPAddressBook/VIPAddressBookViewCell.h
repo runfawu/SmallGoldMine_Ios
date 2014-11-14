@@ -12,5 +12,8 @@
 
 @property (nonatomic,strong) UIImageView *headBgImageView;
 @property (nonatomic,strong) UILabel *nameLabel;
+@property (nonatomic,strong) UIView *seprateLine;
+
+-(void)setVIPAddressBookViewCellWithDictionary:(NSDictionary *)contactDic;
 
 @end

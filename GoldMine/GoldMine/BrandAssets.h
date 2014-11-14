@@ -10,8 +10,9 @@
 
 @interface BrandAssets : NSObject
 
-@property(nonatomic,strong)  UIImage  *thumnail;
-@property(nonatomic,strong)  NSURL	  *imageURL; //图片url
+@property (nonatomic,strong) NSString *brandAbout;
+@property (nonatomic,strong) NSString *brandId;
+@property(nonatomic,strong)  NSString	  *brandImg; //图片url
 @property (nonatomic,strong) NSString *brandName; //产品名称
 @property (nonatomic,strong) NSString *brandType; //产品类别
 @property(nonatomic) Boolean selected; //是否选中

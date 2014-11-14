@@ -13,7 +13,13 @@
 - (void)awakeFromNib
 {
     // Initialization code
-    self.backgroundColor=[Utils colorWithHexString:@"F2F3F0"];
+    self.leftView.backgroundColor=[UIColor whiteColor];
+    self.leftView.layer.cornerRadius=5.0;
+    self.rightView.backgroundColor=[UIColor whiteColor];
+    self.rightView.layer.cornerRadius=5.0;
+    
+//    self.backgroundColor=[Utils colorWithHexString:@"F2F3F0"];
+    self.backgroundColor=[UIColor clearColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
