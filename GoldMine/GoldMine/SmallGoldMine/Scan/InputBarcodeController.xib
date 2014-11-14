@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputBarcodeController">
             <connections>
                 <outlet property="barcodeTextField" destination="3IC-3L-ZPC" id="Ed7-XT-DzH"/>
+                <outlet property="brandTextField" destination="4Yr-s5-OO3" id="Zgz-q3-KvN"/>
+                <outlet property="mobileTextField" destination="aWs-tt-6EJ" id="wqy-E0-kw7"/>
+                <outlet property="mobileView" destination="lGA-5N-jvw" id="bt0-a7-8c1"/>
                 <outlet property="segmentedControl" destination="MOW-gZ-wNj" id="wQG-L7-tG5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="NVj-IW-h24"/>
             </connections>
@@ -18,50 +21,99 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="请输入您要查询的商品条码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-ek-NPk">
-                    <rect key="frame" x="10" y="75" width="214" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="10" y="60" width="214" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5WH-eB-bJv">
-                    <rect key="frame" x="0.0" y="104" width="320" height="52"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="0.0" y="89" width="320" height="52"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="input_textField.png" translatesAutoresizingMaskIntoConstraints="NO" id="CCs-Kb-65l">
-                            <rect key="frame" x="10" y="10" width="229" height="32"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <rect key="frame" x="10" y="10" width="302" height="32"/>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入条码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3IC-3L-ZPC">
-                            <rect key="frame" x="15" y="11" width="218" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="15" y="11" width="289" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             <connections>
                                 <action selector="closeKeyboard:" destination="-1" eventType="editingDidEndOnExit" id="Kyp-iT-QsJ"/>
                             </connections>
                         </textField>
-                        <button opaque="NO" tag="250" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XR-KH-4Ca">
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MOW-gZ-wNj">
+                    <rect key="frame" x="11" y="18" width="298" height="29"/>
+                    <segments>
+                        <segment title="积分"/>
+                        <segment title="查询"/>
+                    </segments>
+                    <color key="tintColor" red="0.92941176470588238" green="0.11372549019607843" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="segmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="sOE-nU-AEp"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRO-nu-RQH">
+                    <rect key="frame" x="0.0" y="149" width="320" height="52"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="input_textField.png" translatesAutoresizingMaskIntoConstraints="NO" id="awK-yn-bty">
+                            <rect key="frame" x="10" y="10" width="229" height="32"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择品牌" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Yr-s5-OO3">
+                            <rect key="frame" x="15" y="11" width="218" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            <connections>
+                                <action selector="closeKeyboard:" destination="-1" eventType="editingDidEndOnExit" id="1p3-fH-mUy"/>
+                                <outlet property="delegate" destination="-1" id="zz2-ng-vfQ"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" tag="250" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKT-y9-fmY">
                             <rect key="frame" x="247" y="10" width="64" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <state key="normal" title="确定" backgroundImage="input_confirm_n.png">
-                                <color key="titleColor" red="0.92941176470588238" green="0.11372549019607843" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="选择" backgroundImage="input_confirm_n.png">
+                                <color key="titleColor" red="0.92941176469999998" green="0.1137254902" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <state key="highlighted" backgroundImage="input_confirm_h.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <connections>
-                                <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="OjO-3H-fMQ"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
-                <button opaque="NO" tag="251" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-Vz-o8k">
-                    <rect key="frame" x="14" y="212" width="142" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGA-5N-jvw">
+                    <rect key="frame" x="0.0" y="209" width="320" height="52"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="input_textField.png" translatesAutoresizingMaskIntoConstraints="NO" id="7ZW-ks-63w">
+                            <rect key="frame" x="10" y="10" width="229" height="32"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入顾客电话" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aWs-tt-6EJ">
+                            <rect key="frame" x="15" y="11" width="218" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            <connections>
+                                <action selector="closeKeyboard:" destination="-1" eventType="editingDidEndOnExit" id="RDr-VY-s3j"/>
+                                <outlet property="delegate" destination="-1" id="DeR-pK-Dgh"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" tag="251" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9o-Lz-6r6">
+                            <rect key="frame" x="247" y="10" width="64" height="32"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="选择" backgroundImage="input_confirm_n.png">
+                                <color key="titleColor" red="0.92941176469999998" green="0.1137254902" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="input_confirm_h.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" tag="252" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-Vz-o8k">
+                    <rect key="frame" x="14" y="278" width="142" height="32"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="切换扫描" backgroundImage="input_cancel_n.png">
                         <color key="titleColor" red="0.92941176469999998" green="0.1137254902" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,37 +126,19 @@
                         <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="Su1-69-aOg"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="252" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6L-WH-82x">
-                    <rect key="frame" x="164" y="212" width="142" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" tag="253" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6L-WH-82x">
+                    <rect key="frame" x="164" y="278" width="142" height="32"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="取消" backgroundImage="input_cancel_n.png">
+                    <state key="normal" title="确认" backgroundImage="input_cancel_n.png">
                         <color key="titleColor" red="0.92941176469999998" green="0.1137254902" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="highlighted" backgroundImage="input_cancel_h.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="M9O-f3-RC9"/>
-                    </connections>
                 </button>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MOW-gZ-wNj">
-                    <rect key="frame" x="11" y="28" width="298" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <segments>
-                        <segment title="积分"/>
-                        <segment title="查询"/>
-                    </segments>
-                    <color key="tintColor" red="0.92941176470588238" green="0.11372549019607843" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                    <connections>
-                        <action selector="segmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="sOE-nU-AEp"/>
-                    </connections>
-                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <action selector="closeKeyboard:" destination="-1" eventType="touchUpInside" id="MNO-3B-az9"/>
             </connections>
@@ -117,4 +151,9 @@
         <image name="input_confirm_n.png" width="128" height="64"/>
         <image name="input_textField.png" width="458" height="64"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

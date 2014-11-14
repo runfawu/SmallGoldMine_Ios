@@ -121,7 +121,7 @@
 {
     NSDictionary *resultDict = (NSDictionary *)result;
     if ([Utils isValidResult:resultDict]) {
-        //self.goodsImageView.image =
+        self.goodsImageView.image = resultDict[@"ProImg"];
         self.goodsNameLabel.text = [NSString stringWithFormat:@"%@分", resultDict[@"ProName"]];
         self.shopRewardLabel.text = [NSString stringWithFormat:@"%@分", resultDict[@"ShopIdot"]];
         self.clerkRewardLabel.text = [NSString stringWithFormat:@"%@分", resultDict[@"ClerkIdot"]];
@@ -133,6 +133,11 @@
         self.productorLabel.text = resultDict[@"EnterPrise"];
     } else {
         [self.view makeToast:@"物流码不存在"];
+        double delayInSeconds = 0.5;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        });
     }
 }
 

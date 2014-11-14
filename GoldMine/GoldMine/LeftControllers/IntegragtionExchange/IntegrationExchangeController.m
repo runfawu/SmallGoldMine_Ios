@@ -28,7 +28,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _bNeedShowBackBarButtonItem = YES;
-        self.title = @"积分换礼";
+        self.title = @"V宝换礼";
     }
     return self;
 }
