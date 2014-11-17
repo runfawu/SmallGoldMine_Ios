@@ -8,6 +8,7 @@
 
 #import "IntegrationBarResultController.h"
 #import "UIImageView+WebCache.h"
+#import "VIPAddressBookViewController.h"
 
 @interface IntegrationBarResultController ()<UITextFieldDelegate, UIAlertViewDelegate>
 
@@ -76,30 +77,21 @@
 
 
 #pragma mark - Request data
+//查看扫描到的条码信息
 - (void)requestDataOfProductInfo
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        
+    
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
     [paramDict setObject:self.barString forKey:@"code"];
     [paramDict setObject:[Tools getAppVersion] forKey:@"version"];
-    NSString *nameSpace = @"getScanResult";
-    if (self.isFromInput) {
-        /************ 未确定扫描和手动是否都是此界面积分 ************/
-        NSDictionary *userInfoDict = [USERDEFAULT objectForKey:USERINFO];
-        NSString *uid = userInfoDict[kUserId] == nil ? @"001" : userInfoDict[kUserId];
-        
-        [paramDict setObject:uid forKey:@"uid"];
-        [paramDict setObject:self.brandId forKey:@"bid"];
-        [paramDict setObject:self.phone forKey:@"phone"];
-        nameSpace = @"OneIntegrated";
-    }
+    
     self.productInfoRequest = [[SoapRequest alloc] init];
     __weak typeof(&*self) weakSelf = self;
-    [self.productInfoRequest postRequestWithSoapNamespace:nameSpace params:paramDict successBlock:^(id result) {
+    [self.productInfoRequest postRequestWithSoapNamespace:@"getScanResult" params:paramDict successBlock:^(id result) {
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
         weakSelf.productInfoRequest = nil;
-        DLog(@"积分详情 ＝ %@", result);
+        DLog(@"积分码信息 ＝ %@", result);
         [weakSelf updateUIWithResult:result];
         
     } failureBlock:^(NSString *requestError) {
@@ -139,7 +131,7 @@
         
     } else if ([resultDict[@"Msg"] isEqualToString:@"2"]) {
         [self.view makeToast:@"新客积分成功"];
-        //TODO: 邀请成vip
+
         if ([resultDict[@"IsVip"] isEqualToString:@"0"]) {
             double delayInSeconds = 1.2;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
@@ -155,8 +147,17 @@
     }
 }
 
+//确定积分
 - (void)requestDataOfIntegrationCode
 {
+    if (self.mobileTextField.text.length == 0) {
+        [self.view makeToast:@"请输入顾客电话"];
+        return;
+    } else if ( ! [Utils isValidMobile:self.mobileTextField.text]) {
+        [self.view makeToast:@"请输入正确的电话"];
+        return;
+    }
+    
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     NSDictionary *userInfoDict = [USERDEFAULT objectForKey:USERINFO];
@@ -172,7 +173,7 @@
     [self.integrationRequest postRequestWithSoapNamespace:@"Integrated" params:paramDict successBlock:^(id result) {
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
         weakSelf.integrationRequest = nil;
-        DLog(@"扫描的积分码详情 ＝ %@", result);
+        DLog(@"扫描的积分码积分结果 ＝ %@", result);
         [weakSelf parseDataOfIntegrationCode:result];
         
     } failureBlock:^(NSString *requestError) {
@@ -219,7 +220,14 @@
 
 #pragma mark - Button events
 - (IBAction)selectCustomMobilePhone:(id)sender {
-    //TODO: 跳到小伙伴(通讯录)界面,选择后填充textField
+    VIPAddressBookViewController *vipAddressController = [[VIPAddressBookViewController alloc] initWithNibName:@"VIPAddressBookViewController" bundle:nil];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vipAddressController];
+    vipAddressController.comeFromInputPage = YES;
+    __weak typeof(&*self) weakSelf = self;
+    vipAddressController.renderPhoneBlock = ^(NSString *phone) {
+        weakSelf.mobileTextField.text = phone;
+    };
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 - (IBAction)confirmIntegration:(id)sender {

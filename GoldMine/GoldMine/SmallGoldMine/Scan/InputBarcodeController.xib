@@ -79,6 +79,9 @@
                             <state key="highlighted" backgroundImage="input_confirm_h.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="epq-Nl-nZg"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -108,6 +111,9 @@
                             <state key="highlighted" backgroundImage="input_confirm_h.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="YOR-Jp-uJB"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -123,7 +129,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="Su1-69-aOg"/>
+                        <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="BJx-k2-mTC"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="253" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6L-WH-82x">
@@ -136,6 +142,9 @@
                     <state key="highlighted" backgroundImage="input_cancel_h.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="buttonEvents:" destination="-1" eventType="touchUpInside" id="WFS-vJ-XXV"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>

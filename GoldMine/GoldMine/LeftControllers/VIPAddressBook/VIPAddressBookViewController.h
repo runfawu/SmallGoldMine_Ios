@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^RenderPhoneBlock)(NSString *phone);
+
 @interface VIPAddressBookViewController : SuperViewController{
     NSString *sectionName;
 }
@@ -17,5 +19,8 @@
 
 @property (nonatomic,weak) IBOutlet UISearchBar *vipSearchBar;
 @property (nonatomic,weak) IBOutlet UITableView *vipTableView;
+
+@property (nonatomic, assign) BOOL comeFromInputPage;  /**< 手动输码积分，选择电话号码后跳转到VIP通讯录 */
+@property (nonatomic, copy) RenderPhoneBlock renderPhoneBlock; 
 
 @end

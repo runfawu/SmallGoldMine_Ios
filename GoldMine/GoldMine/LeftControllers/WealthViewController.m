@@ -127,7 +127,12 @@
 #pragma mark - Button events
 - (void)jumpToListView:(UIButton *)button
 {
-    WealthCell *cell = (WealthCell *)button.superview.superview.superview;
+    WealthCell *cell = nil;
+    if (IS_IOS8) {
+        cell = (WealthCell *)button.superview.superview;
+    } else {
+        cell = (WealthCell *)button.superview.superview.superview;
+    }
     
     IntegrationDetailController *detailController = [[IntegrationDetailController alloc] initWithNibName:@"IntegrationDetailController" bundle:nil];
     detailController.brandId = cell.wealthEntity.BardID;

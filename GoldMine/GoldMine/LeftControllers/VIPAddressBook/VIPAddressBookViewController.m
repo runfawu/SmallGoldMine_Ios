@@ -155,11 +155,22 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    VIPAddressBookDetailViewController *detailVC=[[VIPAddressBookDetailViewController alloc] initWithNibName:@"VIPAddressBookDetailViewController" bundle:nil];
-    NSUInteger letterIndex=[ALPHA rangeOfString:[self.sectionNames objectAtIndex:indexPath.section]].location;
-    detailVC.customID=[[[self.contactLists objectAtIndex:letterIndex] objectAtIndex:indexPath.row] objectForKey:@"CusID"];
-    [self.navigationController pushViewController:detailVC animated:YES];
-    detailVC=nil;
+    
+    if (self.comeFromInputPage) {
+        NSUInteger letterIndex=[ALPHA rangeOfString:[self.sectionNames objectAtIndex:indexPath.section]].location;
+        NSString *phone = [[[self.contactLists objectAtIndex:letterIndex] objectAtIndex:indexPath.row] objectForKey:@"CusPhone"];
+        [self dismissViewControllerAnimated:YES completion:^{
+            if (self.renderPhoneBlock) {
+                self.renderPhoneBlock(phone);
+            }
+        }];
+    } else {
+        VIPAddressBookDetailViewController *detailVC=[[VIPAddressBookDetailViewController alloc] initWithNibName:@"VIPAddressBookDetailViewController" bundle:nil];
+        NSUInteger letterIndex=[ALPHA rangeOfString:[self.sectionNames objectAtIndex:indexPath.section]].location;
+        detailVC.customID=[[[self.contactLists objectAtIndex:letterIndex] objectAtIndex:indexPath.row] objectForKey:@"CusID"];
+        [self.navigationController pushViewController:detailVC animated:YES];
+        detailVC=nil;
+    }
 }
 
 -(void)getVipDataRequest{

@@ -25,7 +25,10 @@
 
 - (id)initWithTitle:(NSString *)title listArray:(NSMutableArray *)listArray
 {
-    CGRect rect = [[UIScreen mainScreen] applicationFrame];
+    CGRect rectOfApplication = [[UIScreen mainScreen] applicationFrame];
+    rectOfApplication.origin.y -= NAVI_HEIGHT;
+    CGRect rect = rectOfApplication;
+    
     self = [super initWithFrame:rect];
     if (self) {
         self.backgroundColor = [UIColor clearColor];

@@ -149,11 +149,8 @@
 
         VIPAddressBookViewController *vipAddressBookVC=[[VIPAddressBookViewController alloc] initWithNibName:@"VIPAddressBookViewController" bundle:nil];
         UINavigationController *vipAddressBookNav=[[UINavigationController alloc] initWithRootViewController:vipAddressBookVC];
-        [self.mm_drawerController setCenterViewController:vipAddressBookNav withCloseAnimation:YES completion:nil];
-        [self.mm_drawerController setRightDrawerViewController:nil];
-//        vipAddressBookNav=nil;
-//        vipAddressBookVC=nil;
-
+        
+        [self.navigationController pushViewController:vipAddressBookNav animated:YES];
         
     }else if (indexPath.row==1){
         //V宝换礼
